@@ -1,0 +1,14 @@
+{
+  "operationId": "searchSymbols",
+  "method": "GET",
+  "path": "/symbols/search/{symbol}",
+  "summary": "Returns an array of symbol data.",
+  "tags": [],
+  "parameters": [
+    {
+      "name": "symbol",
+      "in": "path",
+      "required": true
+    }
+  ]
+}

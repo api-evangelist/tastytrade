@@ -1,0 +1,16 @@
+{
+  "operationId": "getMarketTimeSessionsCurrent",
+  "method": "GET",
+  "path": "/market-time/sessions/current",
+  "summary": "Retrieve the current session timings for an instrument collection",
+  "tags": [
+    "market-time"
+  ],
+  "parameters": [
+    {
+      "name": "instrument-collections",
+      "in": "query",
+      "required": true
+    }
+  ]
+}

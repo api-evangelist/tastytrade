@@ -1,0 +1,324 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/instruments/Future",
+  "title": "Future",
+  "type": "object",
+  "properties": {
+    "active": {
+      "description": "",
+      "type": "boolean"
+    },
+    "active-month": {
+      "description": "",
+      "type": "boolean"
+    },
+    "back-month-first-calendar-symbol": {
+      "description": "",
+      "type": "boolean"
+    },
+    "closing-only-date": {
+      "description": "",
+      "type": "string",
+      "format": "date"
+    },
+    "contract-size": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "display-factor": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "exchange": {
+      "description": "",
+      "type": "string"
+    },
+    "exchange-data": {
+      "description": "",
+      "type": "object"
+    },
+    "expiration-date": {
+      "description": "",
+      "type": "string",
+      "format": "date"
+    },
+    "expires-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "first-notice-date": {
+      "description": "",
+      "type": "string",
+      "format": "date"
+    },
+    "product-group": {
+      "description": "",
+      "type": "string"
+    },
+    "is-closing-only": {
+      "description": "",
+      "type": "boolean"
+    },
+    "last-trade-date": {
+      "description": "",
+      "type": "string",
+      "format": "date"
+    },
+    "main-fraction": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "next-active-month": {
+      "description": "",
+      "type": "boolean"
+    },
+    "notional-multiplier": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "product-code": {
+      "description": "",
+      "type": "string"
+    },
+    "roll-target-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "security-id": {
+      "description": "",
+      "type": "string"
+    },
+    "stops-trading-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "streamer-exchange-code": {
+      "description": "",
+      "type": "string"
+    },
+    "streamer-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "sub-fraction": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "tick-size": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "is-tradeable": {
+      "description": "",
+      "type": "boolean"
+    },
+    "true-underlying-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "future-etf-equivalent": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "share-quantity": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "symbol": {
+          "description": "",
+          "type": "string"
+        }
+      }
+    },
+    "future-product": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "active-months": {
+          "description": "",
+          "type": "string"
+        },
+        "back-month-first-calendar-symbol": {
+          "description": "",
+          "type": "boolean"
+        },
+        "base-tick": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "cash-settled": {
+          "description": "",
+          "type": "boolean"
+        },
+        "code": {
+          "description": "",
+          "type": "string"
+        },
+        "contract-limit": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "display-factor": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "exchange": {
+          "description": "",
+          "type": "string"
+        },
+        "first-notice": {
+          "description": "",
+          "type": "boolean"
+        },
+        "listed-months": {
+          "description": "",
+          "type": "string"
+        },
+        "market-sector": {
+          "description": "",
+          "type": "string"
+        },
+        "notional-multiplier": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "price-format": {
+          "description": "",
+          "type": "string"
+        },
+        "product-subtype": {
+          "description": "",
+          "type": "string"
+        },
+        "product-type": {
+          "description": "",
+          "type": "string"
+        },
+        "security-group": {
+          "description": "",
+          "type": "string"
+        },
+        "small-notional": {
+          "description": "",
+          "type": "boolean"
+        },
+        "streamer-exchange-code": {
+          "description": "",
+          "type": "string"
+        },
+        "sub-tick": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "supported": {
+          "description": "",
+          "type": "boolean"
+        },
+        "root-symbol": {
+          "description": "",
+          "type": "string"
+        },
+        "tick-size": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "true-underlying-code": {
+          "description": "",
+          "type": "string"
+        },
+        "underlying-description": {
+          "description": "",
+          "type": "string"
+        },
+        "underlying-identifier": {
+          "description": "",
+          "type": "string"
+        }
+      }
+    },
+    "option-tick-sizes": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "symbol": {
+          "description": "",
+          "type": "string"
+        },
+        "threshold": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "value": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        }
+      }
+    },
+    "spread-tick-sizes": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "symbol": {
+          "description": "",
+          "type": "string"
+        },
+        "threshold": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "value": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        }
+      }
+    },
+    "tick-sizes": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "symbol": {
+          "description": "",
+          "type": "string"
+        },
+        "threshold": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "value": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        }
+      }
+    }
+  },
+  "description": "Future model"
+}

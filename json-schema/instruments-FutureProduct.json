@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/instruments/FutureProduct",
+  "title": "FutureProduct",
+  "type": "object",
+  "properties": {
+    "active-months": {
+      "description": "",
+      "type": "string"
+    },
+    "back-month-first-calendar-symbol": {
+      "description": "",
+      "type": "boolean"
+    },
+    "base-tick": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "cash-settled": {
+      "description": "",
+      "type": "boolean"
+    },
+    "code": {
+      "description": "",
+      "type": "string"
+    },
+    "contract-limit": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "description": {
+      "description": "",
+      "type": "string"
+    },
+    "display-factor": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "exchange": {
+      "description": "",
+      "type": "string"
+    },
+    "first-notice": {
+      "description": "",
+      "type": "boolean"
+    },
+    "listed-months": {
+      "description": "",
+      "type": "string"
+    },
+    "market-sector": {
+      "description": "",
+      "type": "string"
+    },
+    "notional-multiplier": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "price-format": {
+      "description": "",
+      "type": "string"
+    },
+    "product-subtype": {
+      "description": "",
+      "type": "string"
+    },
+    "product-type": {
+      "description": "",
+      "type": "string"
+    },
+    "security-group": {
+      "description": "",
+      "type": "string"
+    },
+    "small-notional": {
+      "description": "",
+      "type": "boolean"
+    },
+    "streamer-exchange-code": {
+      "description": "",
+      "type": "string"
+    },
+    "sub-tick": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "supported": {
+      "description": "",
+      "type": "boolean"
+    },
+    "root-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "tick-size": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "true-underlying-code": {
+      "description": "",
+      "type": "string"
+    },
+    "underlying-description": {
+      "description": "",
+      "type": "string"
+    },
+    "underlying-identifier": {
+      "description": "",
+      "type": "string"
+    }
+  },
+  "description": "FutureProduct model"
+}

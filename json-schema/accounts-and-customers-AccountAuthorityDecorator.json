@@ -1,0 +1,131 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/accounts-and-customers/AccountAuthorityDecorator",
+  "title": "AccountAuthorityDecorator",
+  "type": "object",
+  "properties": {
+    "account": {
+      "type": "object",
+      "properties": {
+        "account-number": {
+          "description": "",
+          "type": "string"
+        },
+        "account-type-name": {
+          "description": "",
+          "type": "string"
+        },
+        "closed-at": {
+          "description": "",
+          "type": "string",
+          "format": "date-time"
+        },
+        "created-at": {
+          "description": "",
+          "type": "string",
+          "format": "date-time"
+        },
+        "day-trader-status": {
+          "description": "",
+          "type": "string"
+        },
+        "ext-account-id": {
+          "description": "",
+          "type": "string"
+        },
+        "ext-crm-id": {
+          "description": "",
+          "type": "string"
+        },
+        "external-accounts": {
+          "description": "",
+          "type": "string"
+        },
+        "external-fdid": {
+          "description": "",
+          "type": "string"
+        },
+        "external-id": {
+          "description": "",
+          "type": "string"
+        },
+        "funding-date": {
+          "description": "",
+          "type": "string",
+          "format": "date"
+        },
+        "futures-account-purpose": {
+          "description": "",
+          "type": "string"
+        },
+        "investment-objective": {
+          "description": "",
+          "type": "string"
+        },
+        "investment-time-horizon": {
+          "description": "",
+          "type": "string"
+        },
+        "is-closed": {
+          "description": "",
+          "type": "boolean"
+        },
+        "is-firm-error": {
+          "description": "",
+          "type": "boolean"
+        },
+        "is-firm-proprietary": {
+          "description": "",
+          "type": "boolean"
+        },
+        "is-foreign": {
+          "description": "",
+          "type": "string"
+        },
+        "is-futures-approved": {
+          "description": "",
+          "type": "boolean"
+        },
+        "liquidity-needs": {
+          "description": "",
+          "type": "string"
+        },
+        "margin-or-cash": {
+          "description": "",
+          "type": "string"
+        },
+        "nickname": {
+          "description": "",
+          "type": "string"
+        },
+        "opened-at": {
+          "description": "",
+          "type": "string",
+          "format": "date-time"
+        },
+        "regulatory-domain": {
+          "description": "",
+          "type": "string"
+        },
+        "risk-tolerance": {
+          "description": "",
+          "type": "string"
+        },
+        "submitting-user-id": {
+          "description": "",
+          "type": "string"
+        },
+        "suitable-options-level": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "description": ""
+    },
+    "authority-level": {
+      "description": "",
+      "type": "string"
+    }
+  },
+  "description": "AccountAuthorityDecorator model"
+}

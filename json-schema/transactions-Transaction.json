@@ -1,0 +1,261 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/transactions/Transaction",
+  "title": "Transaction",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "account-number": {
+      "description": "",
+      "type": "string"
+    },
+    "action": {
+      "description": "",
+      "type": "string"
+    },
+    "agency-price": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "clearing-fees": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "clearing-fees-effect": {
+      "description": "",
+      "type": "string"
+    },
+    "commission": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "commission-effect": {
+      "description": "",
+      "type": "string"
+    },
+    "lots": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "string"
+        },
+        "executed-at": {
+          "description": "",
+          "type": "string",
+          "format": "date-time"
+        },
+        "price": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "quantity": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "quantity-direction": {
+          "description": "",
+          "type": "string"
+        },
+        "transaction-date": {
+          "description": "",
+          "type": "string",
+          "format": "date"
+        },
+        "transaction-id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "cost-basis-reconciliation-date": {
+      "description": "",
+      "type": "string",
+      "format": "date"
+    },
+    "created-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "currency": {
+      "description": "",
+      "type": "string"
+    },
+    "currency-conversion-fees": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "currency-conversion-fees-effect": {
+      "description": "",
+      "type": "string"
+    },
+    "description": {
+      "description": "",
+      "type": "string"
+    },
+    "destination-venue": {
+      "description": "",
+      "type": "string"
+    },
+    "exchange": {
+      "description": "",
+      "type": "string"
+    },
+    "exchange-affiliation-identifier": {
+      "description": "",
+      "type": "string"
+    },
+    "exec-id": {
+      "description": "",
+      "type": "string"
+    },
+    "executed-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "ext-exchange-order-number": {
+      "description": "",
+      "type": "string"
+    },
+    "ext-exec-id": {
+      "description": "",
+      "type": "string"
+    },
+    "ext-global-order-number": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "ext-group-fill-id": {
+      "description": "",
+      "type": "string"
+    },
+    "ext-group-id": {
+      "description": "",
+      "type": "string"
+    },
+    "instrument-type": {
+      "description": "",
+      "type": "string"
+    },
+    "is-estimated-fee": {
+      "description": "",
+      "type": "boolean"
+    },
+    "leg-count": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "net-value": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "net-value-effect": {
+      "description": "",
+      "type": "string"
+    },
+    "order-id": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "other-charge": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "other-charge-description": {
+      "description": "",
+      "type": "string"
+    },
+    "other-charge-effect": {
+      "description": "",
+      "type": "string"
+    },
+    "price": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "principal-price": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "proprietary-index-option-fees": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "proprietary-index-option-fees-effect": {
+      "description": "",
+      "type": "string"
+    },
+    "quantity": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "regulatory-fees": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "regulatory-fees-effect": {
+      "description": "",
+      "type": "string"
+    },
+    "reverses-id": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "transaction-date": {
+      "description": "",
+      "type": "string",
+      "format": "date"
+    },
+    "transaction-sub-type": {
+      "description": "",
+      "type": "string"
+    },
+    "transaction-type": {
+      "description": "",
+      "type": "string"
+    },
+    "underlying-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "value": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "value-effect": {
+      "description": "",
+      "type": "string"
+    }
+  },
+  "description": "Transaction model"
+}

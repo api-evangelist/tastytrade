@@ -1,0 +1,345 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/orders/Order",
+  "title": "Order",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "",
+      "type": "string"
+    },
+    "account-number": {
+      "description": "",
+      "type": "string"
+    },
+    "cancel-user-id": {
+      "description": "",
+      "type": "string"
+    },
+    "cancel-username": {
+      "description": "",
+      "type": "string"
+    },
+    "cancellable": {
+      "description": "",
+      "type": "boolean"
+    },
+    "cancelled-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "cancelled-size": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "complex-order-id": {
+      "description": "",
+      "type": "string"
+    },
+    "complex-order-tag": {
+      "description": "",
+      "type": "string"
+    },
+    "contingent-status": {
+      "description": "",
+      "type": "string"
+    },
+    "editable": {
+      "description": "",
+      "type": "boolean"
+    },
+    "edited": {
+      "description": "",
+      "type": "boolean"
+    },
+    "external-identifier": {
+      "description": "",
+      "type": "string"
+    },
+    "global-request-id": {
+      "description": "",
+      "type": "string"
+    },
+    "gtc-date": {
+      "description": "",
+      "type": "string",
+      "format": "date"
+    },
+    "in-flight-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "leg-count": {
+      "description": "",
+      "type": "string"
+    },
+    "live-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "order-type": {
+      "description": "",
+      "type": "string"
+    },
+    "preflight-id": {
+      "description": "",
+      "type": "string"
+    },
+    "price": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "price-effect": {
+      "description": "",
+      "type": "string"
+    },
+    "received-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "reject-reason": {
+      "description": "",
+      "type": "string"
+    },
+    "replaces-order-id": {
+      "description": "",
+      "type": "string"
+    },
+    "replacing-order-id": {
+      "description": "",
+      "type": "string"
+    },
+    "size": {
+      "description": "",
+      "type": "string"
+    },
+    "source": {
+      "description": "",
+      "type": "string"
+    },
+    "status": {
+      "description": "",
+      "type": "string"
+    },
+    "stop-trigger": {
+      "description": "",
+      "type": "string"
+    },
+    "terminal-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "time-in-force": {
+      "description": "",
+      "type": "string"
+    },
+    "underlying-instrument-type": {
+      "description": "",
+      "type": "string"
+    },
+    "underlying-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "updated-at": {
+      "description": "",
+      "type": "string"
+    },
+    "user-id": {
+      "description": "",
+      "type": "string"
+    },
+    "username": {
+      "description": "",
+      "type": "string"
+    },
+    "value": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "value-effect": {
+      "description": "",
+      "type": "string"
+    },
+    "legs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "description": "",
+            "type": "string"
+          },
+          "instrument-type": {
+            "description": "",
+            "type": "string"
+          },
+          "quantity": {
+            "description": "",
+            "type": "string"
+          },
+          "remaining-quantity": {
+            "description": "",
+            "type": "string"
+          },
+          "symbol": {
+            "description": "",
+            "type": "string"
+          },
+          "fills": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "destination-venue": {
+                  "description": "",
+                  "type": "string"
+                },
+                "ext-exec-id": {
+                  "description": "",
+                  "type": "string"
+                },
+                "ext-group-fill-id": {
+                  "description": "",
+                  "type": "string"
+                },
+                "fill-id": {
+                  "description": "",
+                  "type": "string"
+                },
+                "fill-price": {
+                  "description": "",
+                  "type": "number",
+                  "format": "double"
+                },
+                "filled-at": {
+                  "description": "",
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "quantity": {
+                  "description": "",
+                  "type": "string"
+                }
+              },
+              "description": ""
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "order-rule": {
+      "type": "object",
+      "properties": {
+        "cancel-at": {
+          "description": "",
+          "type": "string",
+          "format": "date-time"
+        },
+        "cancelled-at": {
+          "description": "",
+          "type": "string",
+          "format": "date-time"
+        },
+        "route-after": {
+          "description": "",
+          "type": "string",
+          "format": "date-time"
+        },
+        "routed-at": {
+          "description": "",
+          "type": "string",
+          "format": "date-time"
+        },
+        "order-conditions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "description": "",
+                "type": "string"
+              },
+              "action": {
+                "description": "",
+                "type": "string"
+              },
+              "comparator": {
+                "description": "",
+                "type": "string"
+              },
+              "indicator": {
+                "description": "",
+                "type": "string"
+              },
+              "instrument-type": {
+                "description": "",
+                "type": "string"
+              },
+              "is-threshold-based-on-notional": {
+                "description": "",
+                "type": "boolean"
+              },
+              "symbol": {
+                "description": "",
+                "type": "string"
+              },
+              "threshold": {
+                "description": "",
+                "type": "number",
+                "format": "double"
+              },
+              "triggered-at": {
+                "description": "",
+                "type": "string",
+                "format": "date-time"
+              },
+              "triggered-value": {
+                "description": "",
+                "type": "number",
+                "format": "double"
+              },
+              "price-components": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "instrument-type": {
+                      "description": "",
+                      "type": "string"
+                    },
+                    "quantity": {
+                      "description": "",
+                      "type": "string"
+                    },
+                    "quantity-direction": {
+                      "description": "",
+                      "type": "string"
+                    },
+                    "symbol": {
+                      "description": "",
+                      "type": "string"
+                    }
+                  },
+                  "description": ""
+                }
+              }
+            },
+            "description": ""
+          }
+        }
+      },
+      "description": ""
+    }
+  },
+  "description": "Order model"
+}

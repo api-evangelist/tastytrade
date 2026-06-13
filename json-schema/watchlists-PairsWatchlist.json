@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/watchlists/PairsWatchlist",
+  "title": "PairsWatchlist",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "",
+      "type": "string"
+    },
+    "pairs-equations": {
+      "description": "",
+      "type": "object"
+    },
+    "order-index": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    }
+  },
+  "description": "PairsWatchlist model"
+}

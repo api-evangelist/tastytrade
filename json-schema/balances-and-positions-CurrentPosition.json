@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/balances-and-positions/CurrentPosition",
+  "title": "CurrentPosition",
+  "type": "object",
+  "properties": {
+    "account-number": {
+      "description": "",
+      "type": "string"
+    },
+    "instrument-type": {
+      "description": "",
+      "type": "string"
+    },
+    "streamer-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "underlying-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "quantity": {
+      "description": "",
+      "type": "object"
+    },
+    "average-daily-market-close-price": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "average-open-price": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "average-yearly-market-close-price": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "close-price": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "cost-effect": {
+      "description": "",
+      "type": "string"
+    },
+    "is-frozen": {
+      "description": "",
+      "type": "boolean"
+    },
+    "is-suppressed": {
+      "description": "",
+      "type": "boolean"
+    },
+    "mark": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "mark-price": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "multiplier": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "quantity-direction": {
+      "description": "",
+      "type": "string"
+    },
+    "restricted-quantity": {
+      "description": "",
+      "type": "object"
+    },
+    "expires-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "deliverable-type": {
+      "description": "",
+      "type": "string"
+    },
+    "fixing-price": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "realized-day-gain": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "realized-day-gain-date": {
+      "description": "",
+      "type": "string",
+      "format": "date"
+    },
+    "realized-day-gain-effect": {
+      "description": "",
+      "type": "string"
+    },
+    "realized-today": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "realized-today-date": {
+      "description": "",
+      "type": "string",
+      "format": "date"
+    },
+    "realized-today-effect": {
+      "description": "",
+      "type": "string"
+    },
+    "face-value": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "par-size": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "created-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "order-id": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "update-type": {
+      "description": "",
+      "type": "string"
+    }
+  },
+  "description": "CurrentPosition model"
+}

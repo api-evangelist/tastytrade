@@ -1,0 +1,21 @@
+{
+  "operationId": "getAccountsAccountNumberMarginRequirementsUnderlyingSymbolEffective",
+  "method": "GET",
+  "path": "/accounts/{account_number}/margin-requirements/{underlying_symbol}/effective",
+  "summary": "Get effective margin requirements for account",
+  "tags": [
+    "accounts"
+  ],
+  "parameters": [
+    {
+      "name": "account_number",
+      "in": "path",
+      "required": true
+    },
+    {
+      "name": "underlying_symbol",
+      "in": "path",
+      "required": true
+    }
+  ]
+}

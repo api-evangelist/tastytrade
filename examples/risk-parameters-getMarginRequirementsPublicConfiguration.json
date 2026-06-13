@@ -1,0 +1,10 @@
+{
+  "operationId": "getMarginRequirementsPublicConfiguration",
+  "method": "GET",
+  "path": "/margin-requirements-public-configuration",
+  "summary": "Publicly accessible, read only margin configuration",
+  "tags": [
+    "margin-requirements-public-configuration"
+  ],
+  "parameters": []
+}

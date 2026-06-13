@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/instruments/Cryptocurrency",
+  "title": "Cryptocurrency",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "active": {
+      "description": "",
+      "type": "boolean"
+    },
+    "description": {
+      "description": "",
+      "type": "string"
+    },
+    "instrument-type": {
+      "description": "",
+      "type": "string"
+    },
+    "is-closing-only": {
+      "description": "",
+      "type": "boolean"
+    },
+    "short-description": {
+      "description": "",
+      "type": "string"
+    },
+    "streamer-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "tick-size": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    }
+  },
+  "description": "Cryptocurrency model"
+}

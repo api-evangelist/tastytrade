@@ -1,0 +1,4594 @@
+{
+  "name": "tastytrade API Vocabulary",
+  "description": "Terms and definitions extracted from tastytrade OpenAPI specifications",
+  "url": "https://developer.tastytrade.com/",
+  "version": "2026-06-13",
+  "tags": [
+    {
+      "name": "Instruments",
+      "description": "Allows an API client to fetch data about instruments."
+    },
+    {
+      "name": "Positions",
+      "description": "Allows an API client to fetch data about account positions."
+    },
+    {
+      "name": "accounts",
+      "description": "Operations about accounts"
+    },
+    {
+      "name": "api-quote-tokens",
+      "description": "Operations about api-quote-tokens"
+    },
+    {
+      "name": "balance-snapshots",
+      "description": "Operations about balance-snapshots"
+    },
+    {
+      "name": "complex-orders",
+      "description": "Allows an API client to retreive information about complex orders on a per account basis."
+    },
+    {
+      "name": "customers",
+      "description": "Operations about customers"
+    },
+    {
+      "name": "futures-option-chains",
+      "description": "Operations about futures-option-chains"
+    },
+    {
+      "name": "instruments",
+      "description": "Operations about instruments"
+    },
+    {
+      "name": "margin-requirements",
+      "description": "allows a client to fetch margin-requirements for positions and orders"
+    },
+    {
+      "name": "margin-requirements-public-configuration",
+      "description": "Operations about margin-requirements-public-configurations"
+    },
+    {
+      "name": "market-time",
+      "description": "Operations about market-times"
+    },
+    {
+      "name": "option-chains",
+      "description": "Operations about option-chains"
+    },
+    {
+      "name": "orders",
+      "description": "Allows an API client to view, filter, create, cancel and replace orders."
+    },
+    {
+      "name": "pairs-watchlists",
+      "description": "Allows an API client to fetch pairs watchlists."
+    },
+    {
+      "name": "positions",
+      "description": "Operations about positions"
+    },
+    {
+      "name": "public-watchlists",
+      "description": "Allows an API client to fetch tastyworks watchlists."
+    },
+    {
+      "name": "quote-alerts",
+      "description": "Operations about quote-alerts"
+    },
+    {
+      "name": "span",
+      "description": "Operations about spans"
+    },
+    {
+      "name": "trading-status",
+      "description": "Allows an API client to request information about the basic trade status of an account. \\\n                          This includes information about the strategies an account can trade."
+    },
+    {
+      "name": "transactions",
+      "description": "Operations about transactions"
+    },
+    {
+      "name": "user-watchlists",
+      "description": "Allows an API client to fetch a user's watchlists."
+    }
+  ],
+  "terms": [
+    {
+      "term": "ETA",
+      "type": "number",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "BacktestGet"
+    },
+    {
+      "term": "account",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "AccountAuthorityDecorator"
+    },
+    {
+      "term": "account-number",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "account-type-name",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "action",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "active",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "active-month",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "active-months",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureProduct"
+    },
+    {
+      "term": "address",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "advanced-instructions",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "postAccountsAccountNumberOrders"
+    },
+    {
+      "term": "afterDaysInTrade",
+      "type": "integer",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "ExitConditions"
+    },
+    {
+      "term": "agency-price",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "agreed-to-margining",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "agreed-to-terms",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "alert-external-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "quote-alerts",
+      "sourceDefinition": "QuoteAlertDeserializer"
+    },
+    {
+      "term": "amount",
+      "type": "number",
+      "format": "float",
+      "description": "Per share amount",
+      "source": "market-metrics",
+      "sourceDefinition": "DividendInfo"
+    },
+    {
+      "term": "apex-starting-day-margin-equity",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "are-deep-itm-carry-options-enabled",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "are-far-otm-net-options-restricted",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "are-options-values-restricted-to-nlv",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "are-single-tick-expiring-hedges-ignored",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "ask",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "askSize",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "atDaysToExpiration",
+      "type": "integer",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "ExitConditions"
+    },
+    {
+      "term": "authority-level",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "AccountAuthorityDecorator"
+    },
+    {
+      "term": "automated-source",
+      "type": "boolean",
+      "format": null,
+      "description": "If the order was placed from an automated source",
+      "source": "orders",
+      "sourceDefinition": "postAccountsAccountNumberOrders"
+    },
+    {
+      "term": "autotrade-account-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "available-trading-funds",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "average-daily-market-close-price",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "average-open-price",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "average-yearly-market-close-price",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "back-month-first-calendar-symbol",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "base-tick",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureProduct"
+    },
+    {
+      "term": "beta",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "bid",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "bidSize",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "birth-country",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "birth-date",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "bond-margin-requirement",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "borrow-rate",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Equity"
+    },
+    {
+      "term": "buying-power-adjustment",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "buying-power-adjustment-effect",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "buying-power-effect",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "PlacedOrderResponse"
+    },
+    {
+      "term": "bypass-manual-review",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Equity"
+    },
+    {
+      "term": "cancel-user-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "cancel-username",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "cancellable",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "cancelled-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "cancelled-size",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "cash-available-to-withdraw",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "cash-balance",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "cash-settle-balance",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "cash-settled",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOptionProduct"
+    },
+    {
+      "term": "category",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "SearchableInstrumentDeserializer"
+    },
+    {
+      "term": "citizenship-country",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "clearing-account-number",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "clearing-aggregation-identifier",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "clearing-fees",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "clearing-fees-effect",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "clearing-identifier",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "MarginRequirement"
+    },
+    {
+      "term": "close",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "close-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "market-sessions",
+      "sourceDefinition": "SimpleSessionDeserializer"
+    },
+    {
+      "term": "close-at-ext",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "market-sessions",
+      "sourceDefinition": "SimpleSessionDeserializer"
+    },
+    {
+      "term": "close-price",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "closeDateTime",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "Trial"
+    },
+    {
+      "term": "closePriceType",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "closed-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "closed-loop-available-balance",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "closing-fee-calculation",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "PlacedOrderResponse"
+    },
+    {
+      "term": "closing-only-date",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "cms-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "watchlists",
+      "sourceDefinition": "Watchlist"
+    },
+    {
+      "term": "cmta-override",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "code",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOptionProduct"
+    },
+    {
+      "term": "commission",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "commission-effect",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "completed-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "quote-alerts",
+      "sourceDefinition": "QuoteAlertDeserializer"
+    },
+    {
+      "term": "complex-order",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "PlacedOrderResponse"
+    },
+    {
+      "term": "complex-order-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "complex-order-tag",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "contingent-status",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "contract-limit",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureProduct"
+    },
+    {
+      "term": "contract-size",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "cost-basis-reconciliation-date",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "cost-effect",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "country-of-incorporation",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Equity"
+    },
+    {
+      "term": "country-of-taxation",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Equity"
+    },
+    {
+      "term": "created-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "cryptocurrency-margin-requirement",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "currency",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "currency-conversion-fees",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "currency-conversion-fees-effect",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "currentPriceOffset",
+      "type": "number",
+      "format": null,
+      "description": "Offset from current price when strikeSelection is currentPriceOffset related (max 50000)",
+      "source": "backtesting",
+      "sourceDefinition": "Leg"
+    },
+    {
+      "term": "cusip",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Warrant"
+    },
+    {
+      "term": "customer-suitability",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "dateTime",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "Snapshot"
+    },
+    {
+      "term": "day-equity-call-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "day-trade-count",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "day-trade-excess",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "day-trader-status",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "day-trading-buying-power",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "day-trading-call-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "dayClose",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "dayHigh",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "dayHighPrice",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "dayLow",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "dayLowPrice",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "dayOpen",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "days-to-expiration",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "daysUntilExpiration",
+      "type": "integer",
+      "format": null,
+      "description": "Days until expiration for this leg",
+      "source": "backtesting",
+      "sourceDefinition": "Leg"
+    },
+    {
+      "term": "deliverable-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "deliverables",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "CompactOptionChainSerializer"
+    },
+    {
+      "term": "delta",
+      "type": "number",
+      "format": null,
+      "description": "Delta value when strikeSelection is \"delta\" (expressed as integer from 1 to 100)",
+      "source": "backtesting",
+      "sourceDefinition": "Leg"
+    },
+    {
+      "term": "derivative-buying-power",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "description",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Cryptocurrency"
+    },
+    {
+      "term": "desk-customer-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "destination-venue",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "direction",
+      "type": "string",
+      "format": null,
+      "description": "The position direction",
+      "source": "backtesting",
+      "sourceDefinition": "Leg"
+    },
+    {
+      "term": "dismissed-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "quote-alerts",
+      "sourceDefinition": "QuoteAlertDeserializer"
+    },
+    {
+      "term": "display-factor",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "dividendAmount",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "dividendFrequency",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "dx-symbol",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "quote-alerts",
+      "sourceDefinition": "postQuoteAlerts"
+    },
+    {
+      "term": "dxlink-url",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "QuoteStreamerTokenAuthResult"
+    },
+    {
+      "term": "editable",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "edited",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "effective-cryptocurrency-buying-power",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "email",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "endDate",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "BacktestPost"
+    },
+    {
+      "term": "enhanced-fraud-safeguards-enabled-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "entity",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "entryConditions",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "BacktestPost"
+    },
+    {
+      "term": "eps",
+      "type": "number",
+      "format": "float",
+      "description": "Earnings per share amount",
+      "source": "market-metrics",
+      "sourceDefinition": "EarningsInfo"
+    },
+    {
+      "term": "equities-margin-calculation-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "equity-buying-power",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "equity-offering-margin-requirement",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "equity-option-order-size",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "PositionLimit"
+    },
+    {
+      "term": "equity-option-position-size",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "PositionLimit"
+    },
+    {
+      "term": "equity-order-size",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "PositionLimit"
+    },
+    {
+      "term": "equity-position-size",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "PositionLimit"
+    },
+    {
+      "term": "errors",
+      "type": "array",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "PlacedOrderResponse"
+    },
+    {
+      "term": "event-product-external-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "SearchableInstrumentDeserializer"
+    },
+    {
+      "term": "exchange",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "exchange-affiliation-identifier",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "exchange-data",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "exec-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "executed-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "exercise-style",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "exitConditions",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "BacktestPost"
+    },
+    {
+      "term": "expiration-date",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "expiration-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "EquityOption"
+    },
+    {
+      "term": "expirations",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "NestedOptionChainSerializer"
+    },
+    {
+      "term": "expired-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "quote-alerts",
+      "sourceDefinition": "QuoteAlertDeserializer"
+    },
+    {
+      "term": "expires-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "QuoteStreamerTokenAuthResult"
+    },
+    {
+      "term": "ext-account-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "ext-crm-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "ext-exchange-order-number",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "ext-exec-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "ext-global-order-number",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "ext-group-fill-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "ext-group-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "external-accounts",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "external-fdid",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "external-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "external-identifier",
+      "type": "string",
+      "format": null,
+      "description": "External identifier for the order",
+      "source": "orders",
+      "sourceDefinition": "postAccountsAccountNumberOrders"
+    },
+    {
+      "term": "face-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "family-member-names",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "fee-calculation",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "PlacedOrderResponse"
+    },
+    {
+      "term": "fee-schedule-name",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "field",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "quote-alerts",
+      "sourceDefinition": "postQuoteAlerts"
+    },
+    {
+      "term": "file-date",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "Row"
+    },
+    {
+      "term": "first-name",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "first-notice",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureProduct"
+    },
+    {
+      "term": "first-notice-date",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "first-surname",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "fixed-income-security-margin-requirement",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "fixing-price",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "foreign-tax-number",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "frequency",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "EntryConditions"
+    },
+    {
+      "term": "funding-date",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "future-etf-equivalent",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "future-option-order-size",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "PositionLimit"
+    },
+    {
+      "term": "future-option-position-size",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "PositionLimit"
+    },
+    {
+      "term": "future-option-product",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "future-order-size",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "PositionLimit"
+    },
+    {
+      "term": "future-position-size",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "PositionLimit"
+    },
+    {
+      "term": "future-price-ratio",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "future-product",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "futures",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FuturesNestedOptionChainSerializer"
+    },
+    {
+      "term": "futures-account-purpose",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "futures-intraday-margin-requirement",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "futures-margin-rate-multiplier",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "futures-margin-requirement",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "futures-overnight-margin-requirement",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "gender",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "global-request-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "group-name",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "watchlists",
+      "sourceDefinition": "Watchlist"
+    },
+    {
+      "term": "gtc-date",
+      "type": "string",
+      "format": "date",
+      "description": "The date in which a GTD order will expire. Can only be provided if time-in-force is GTD.",
+      "source": "orders",
+      "sourceDefinition": "postAccountsAccountNumberOrders"
+    },
+    {
+      "term": "haltEndTime",
+      "type": "integer",
+      "format": "int64",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "haltStartTime",
+      "type": "integer",
+      "format": "int64",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "halted-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Equity"
+    },
+    {
+      "term": "has-delayed-quotes",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "has-industry-affiliation",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "has-institutional-assets",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "has-intraday-equities-margin",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "has-listed-affiliation",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "has-pending-or-approved-application",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "has-political-affiliation",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "high",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "net-liquidating-value-history",
+      "sourceDefinition": "NetLiqOhlc"
+    },
+    {
+      "term": "highLimitPrice",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "home-phone-number",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "home-phone-number-details",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "id",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "identifiable-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "implied-volatility-index",
+      "type": "number",
+      "format": "float",
+      "description": "IV Index of underlying",
+      "source": "market-metrics",
+      "sourceDefinition": "MarketMetricInfo"
+    },
+    {
+      "term": "implied-volatility-index-5-day-change",
+      "type": "number",
+      "format": "float",
+      "description": "5 day change of IV index of underlying",
+      "source": "market-metrics",
+      "sourceDefinition": "MarketMetricInfo"
+    },
+    {
+      "term": "implied-volatility-percentile",
+      "type": "number",
+      "format": "float",
+      "description": "IV percentile of underlying",
+      "source": "market-metrics",
+      "sourceDefinition": "MarketMetricInfo"
+    },
+    {
+      "term": "implied-volatility-rank",
+      "type": "number",
+      "format": "float",
+      "description": "IV Rank of underlying",
+      "source": "market-metrics",
+      "sourceDefinition": "MarketMetricInfo"
+    },
+    {
+      "term": "in-flight-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "industry-affiliation-firm",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "instrument",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "instrument-collection",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "market-sessions",
+      "sourceDefinition": "SimpleSessionDeserializer"
+    },
+    {
+      "term": "instrument-sub-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Equity"
+    },
+    {
+      "term": "instrument-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "instrumentKey",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "Instrument"
+    },
+    {
+      "term": "instrumentType",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "Instrument"
+    },
+    {
+      "term": "intraday-equities-cash-amount",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "intraday-equities-cash-effect",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "intraday-equities-cash-effective-date",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "intraday-futures-cash-amount",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "intraday-futures-cash-effect",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "intraday-futures-cash-effective-date",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "investment-objective",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "investment-time-horizon",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "is-aggregated-at-clearing",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-am-settled",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOptionProduct"
+    },
+    {
+      "term": "is-ascend-event-contracts-enabled",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-closed",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-closing-only",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-confirmed",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "is-cryptocurrency-closing-only",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-cryptocurrency-enabled",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-deleted",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "MarginRequirement"
+    },
+    {
+      "term": "is-equity-offering-closing-only",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-equity-offering-enabled",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-estimated-fee",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "is-etf",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Equity"
+    },
+    {
+      "term": "is-exercisable-weekly",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "is-firm-error",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "is-firm-proprietary",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "is-foreign",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "is-fractional-quantity-eligible",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Equity"
+    },
+    {
+      "term": "is-frozen",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-full-equity-margin-required",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-futures-approved",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "is-futures-closing-only",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-futures-enabled",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-futures-intra-day-enabled",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-illiquid",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Equity"
+    },
+    {
+      "term": "is-in-day-trade-equity-maintenance-call",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-in-margin-call",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-index",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Equity"
+    },
+    {
+      "term": "is-investment-adviser",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "is-non-retail",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-options-closing-only",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Equity"
+    },
+    {
+      "term": "is-pattern-day-trader",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-portfolio-margin-enabled",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-primary-deliverable",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "is-professional",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "is-risk-reducing-only",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-roll-the-day-forward-enabled",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-small-notional-futures-intra-day-enabled",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "is-suppressed",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "is-tradeable",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "is-vanilla",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "issued-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "QuoteStreamerTokenAuthResult"
+    },
+    {
+      "term": "itm-rule",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOptionProduct"
+    },
+    {
+      "term": "last",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "last-name",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "last-trade-date",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "last-trade-time",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "lastExt",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "lastMkt",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "lastTradeTime",
+      "type": "integer",
+      "format": "int64",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "leg-count",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "legs",
+      "type": "array",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "BacktestPost"
+    },
+    {
+      "term": "lendability",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Equity"
+    },
+    {
+      "term": "level",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "QuoteStreamerTokenAuthResult"
+    },
+    {
+      "term": "liquidity",
+      "type": "number",
+      "format": "float",
+      "description": "liquidity of underlying",
+      "source": "market-metrics",
+      "sourceDefinition": "MarketMetricInfo"
+    },
+    {
+      "term": "liquidity-needs",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "liquidity-rank",
+      "type": "number",
+      "format": "float",
+      "description": "liquidity rank of underlying",
+      "source": "market-metrics",
+      "sourceDefinition": "MarketMetricInfo"
+    },
+    {
+      "term": "liquidity-rating",
+      "type": "number",
+      "format": "int32",
+      "description": "liquidity rating of underlying",
+      "source": "market-metrics",
+      "sourceDefinition": "MarketMetricInfo"
+    },
+    {
+      "term": "listed-affiliation-symbol",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "listed-market",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Equity"
+    },
+    {
+      "term": "listed-months",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureProduct"
+    },
+    {
+      "term": "live-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "long-bond-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "long-cryptocurrency-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "long-derivative-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "long-equity-initial",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "MarginRequirement"
+    },
+    {
+      "term": "long-equity-maintenance",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "MarginRequirement"
+    },
+    {
+      "term": "long-equity-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "long-fixed-income-security-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "long-futures-derivative-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "long-futures-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "long-index-derivative-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "long-margineable-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "lots",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "low",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "net-liquidating-value-history",
+      "sourceDefinition": "NetLiqOhlc"
+    },
+    {
+      "term": "lowLimitPrice",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "mailing-address",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "main-fraction",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "maintenance-call-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "maintenance-excess",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "maintenance-requirement",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "margin-equity",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "margin-or-cash",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "margin-settle-balance",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "mark",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "mark-price",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "market-half-days",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "market-sessions",
+      "sourceDefinition": "MarketCalendarDeserializer"
+    },
+    {
+      "term": "market-holidays",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "market-sessions",
+      "sourceDefinition": "MarketCalendarDeserializer"
+    },
+    {
+      "term": "market-sector",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOptionProduct"
+    },
+    {
+      "term": "market-time-instrument-collection",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Equity"
+    },
+    {
+      "term": "maturity-date",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "maximumActiveTrials",
+      "type": "integer",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "EntryConditions"
+    },
+    {
+      "term": "maximumActiveTrialsBehavior",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "EntryConditions"
+    },
+    {
+      "term": "maximumVIX",
+      "type": "integer",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "EntryConditions"
+    },
+    {
+      "term": "mid",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "middle-name",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "minimum-increment-precision",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "QuantityDecimalPrecision"
+    },
+    {
+      "term": "minimumVIX",
+      "type": "integer",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "EntryConditions"
+    },
+    {
+      "term": "mobile-phone-number",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "mobile-phone-number-details",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "multiplier",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "naked-option-floor",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "MarginRequirement"
+    },
+    {
+      "term": "naked-option-minimum",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "MarginRequirement"
+    },
+    {
+      "term": "naked-option-standard",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "MarginRequirement"
+    },
+    {
+      "term": "name",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "watchlists",
+      "sourceDefinition": "Watchlist"
+    },
+    {
+      "term": "net-liquidating-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "net-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "net-value-effect",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "next-active-month",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "next-session",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "market-sessions",
+      "sourceDefinition": "CurrentSessionDeserializer"
+    },
+    {
+      "term": "nickname",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "notes",
+      "type": "array",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "PlacedOrderResponse"
+    },
+    {
+      "term": "notices",
+      "type": "array",
+      "format": null,
+      "description": "Conditional annotations appearing if specific conditions are met (e.g. overlapping due to stock split)",
+      "source": "backtesting",
+      "sourceDefinition": "BacktestGet"
+    },
+    {
+      "term": "notional-multiplier",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "notional-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "occurred-date",
+      "type": "string",
+      "format": "date",
+      "description": "Date of dividend",
+      "source": "market-metrics",
+      "sourceDefinition": "DividendInfo"
+    },
+    {
+      "term": "old-security-number",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "EquityOption"
+    },
+    {
+      "term": "open",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "open-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "market-sessions",
+      "sourceDefinition": "SimpleSessionDeserializer"
+    },
+    {
+      "term": "openDateTime",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "Trial"
+    },
+    {
+      "term": "opened-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "operator",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "quote-alerts",
+      "sourceDefinition": "postQuoteAlerts"
+    },
+    {
+      "term": "option-chain-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "EquityOption"
+    },
+    {
+      "term": "option-chains",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FuturesNestedOptionChainSerializer"
+    },
+    {
+      "term": "option-expiration-implied-volatilities",
+      "type": "array",
+      "format": null,
+      "description": "List of option volatility data",
+      "source": "market-metrics",
+      "sourceDefinition": "MarketMetricInfo"
+    },
+    {
+      "term": "option-root-symbol",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "option-tick-sizes",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Equity"
+    },
+    {
+      "term": "option-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "options",
+      "type": "boolean",
+      "format": null,
+      "description": "Has listed options",
+      "source": "symbol-search",
+      "sourceDefinition": "SymbolData"
+    },
+    {
+      "term": "options-level",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "order",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "PlacedOrderResponse"
+    },
+    {
+      "term": "order-id",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "order-index",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "watchlists",
+      "sourceDefinition": "Watchlist"
+    },
+    {
+      "term": "order-rule",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "order-type",
+      "type": "string",
+      "format": null,
+      "description": "The type of order in regards to the price. i.e.\n                                    `Limit`, `Market`, `Marketable Limit`, `Notional Market`, `Stop` or `Stop Limit`",
+      "source": "orders",
+      "sourceDefinition": "postAccountsAccountNumberOrders"
+    },
+    {
+      "term": "orders",
+      "type": "array",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "ComplexOrder"
+    },
+    {
+      "term": "other-charge",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "other-charge-description",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "other-charge-effect",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "overnight-trading-permitted",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Equity"
+    },
+    {
+      "term": "pairs-equations",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "watchlists",
+      "sourceDefinition": "PairsWatchlist"
+    },
+    {
+      "term": "par-size",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "partition-key",
+      "type": "string",
+      "format": null,
+      "description": "Account partition key",
+      "source": "orders",
+      "sourceDefinition": "postAccountsAccountNumberOrders"
+    },
+    {
+      "term": "pdt-reset-on",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "pending-cash",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "pending-cash-effect",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "pending-margin-interest",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "pendingCashClose",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "net-liquidating-value-history",
+      "sourceDefinition": "NetLiqOhlc"
+    },
+    {
+      "term": "pendingCashHigh",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "net-liquidating-value-history",
+      "sourceDefinition": "NetLiqOhlc"
+    },
+    {
+      "term": "pendingCashLow",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "net-liquidating-value-history",
+      "sourceDefinition": "NetLiqOhlc"
+    },
+    {
+      "term": "pendingCashOpen",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "net-liquidating-value-history",
+      "sourceDefinition": "NetLiqOhlc"
+    },
+    {
+      "term": "percentageOTM",
+      "type": "number",
+      "format": null,
+      "description": "Percentage OTM when strikeSelection is \"percentageOTM\" or \"percentageOTMRelative\" (e.g. 0.1 for 10% OTM, -0.1 for 10% ITM)",
+      "source": "backtesting",
+      "sourceDefinition": "Leg"
+    },
+    {
+      "term": "permitted-account-types",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "person",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "political-organization",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "prefix-name",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "preflight-id",
+      "type": "string",
+      "format": null,
+      "description": "Transient order identifier used for matching preflight errors to an individual order",
+      "source": "orders",
+      "sourceDefinition": "postAccountsAccountNumberOrders"
+    },
+    {
+      "term": "premium",
+      "type": "number",
+      "format": null,
+      "description": "Premium value when strikeSelection is \"premium\" (max 50000)",
+      "source": "backtesting",
+      "sourceDefinition": "Leg"
+    },
+    {
+      "term": "prevClose",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "prevCloseDate",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "prevClosePriceType",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "prevDayClose",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "previous-date-cryptocurrency-fiat-effective-date",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "previous-day-cryptocurrency-fiat-amount",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "previous-day-cryptocurrency-fiat-effect",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "previous-session",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "market-sessions",
+      "sourceDefinition": "CurrentSessionDeserializer"
+    },
+    {
+      "term": "price",
+      "type": "number",
+      "format": "double",
+      "description": "The price of the Order. Required for limit and stop-limit orders.",
+      "source": "orders",
+      "sourceDefinition": "postAccountsAccountNumberOrders"
+    },
+    {
+      "term": "price-effect",
+      "type": "string",
+      "format": null,
+      "description": "If pay or receive payment for placing the order. i.e. `Credit` or `Debit`",
+      "source": "orders",
+      "sourceDefinition": "postAccountsAccountNumberOrders"
+    },
+    {
+      "term": "price-format",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureProduct"
+    },
+    {
+      "term": "price-increments",
+      "type": "string",
+      "format": null,
+      "description": "Price Increments",
+      "source": "symbol-search",
+      "sourceDefinition": "SymbolData"
+    },
+    {
+      "term": "principal-price",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "product-code",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "product-group",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "product-subtype",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOptionProduct"
+    },
+    {
+      "term": "product-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOptionProduct"
+    },
+    {
+      "term": "profitLoss",
+      "type": "number",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "Snapshot"
+    },
+    {
+      "term": "progress",
+      "type": "number",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "BacktestGet"
+    },
+    {
+      "term": "proprietary-index-option-fees",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "proprietary-index-option-fees-effect",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "provider",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "quote-alerts",
+      "sourceDefinition": "QuoteAlertDeserializer"
+    },
+    {
+      "term": "quantity",
+      "type": "integer",
+      "format": null,
+      "description": "Number of contracts or shares (1-10 for options, 1-100 for stocks)",
+      "source": "backtesting",
+      "sourceDefinition": "Leg"
+    },
+    {
+      "term": "quantity-direction",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "ratio-price-comparator",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "ComplexOrder"
+    },
+    {
+      "term": "ratio-price-is-threshold-based-on-notional",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "ComplexOrder"
+    },
+    {
+      "term": "ratio-price-threshold",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "ComplexOrder"
+    },
+    {
+      "term": "realized-day-gain",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "realized-day-gain-date",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "realized-day-gain-effect",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "realized-today",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "realized-today-date",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "realized-today-effect",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "received-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "reg-t-call-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "reg-t-margin-requirement",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "regulatory-domain",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "regulatory-fees",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "regulatory-fees-effect",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "reject-reason",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "related-orders",
+      "type": "array",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "ComplexOrder"
+    },
+    {
+      "term": "replaces-order-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "replacing-order-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "restricted-quantity",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "reverses-id",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "risk-free-rate",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "MarginRequirementsGlobalConfiguration"
+    },
+    {
+      "term": "risk-tolerance",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "roll-target-symbol",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "root-symbol",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "rootSymbol",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "Instrument"
+    },
+    {
+      "term": "row-data",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "Row"
+    },
+    {
+      "term": "row-index",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "Row"
+    },
+    {
+      "term": "rules",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "postAccountsAccountNumberOrders"
+    },
+    {
+      "term": "second-surname",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "security-group",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureProduct"
+    },
+    {
+      "term": "security-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "session-date",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "market-sessions",
+      "sourceDefinition": "NextSession"
+    },
+    {
+      "term": "settlement-delay-days",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOptionProduct"
+    },
+    {
+      "term": "settlement-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "shares-per-contract",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "EquityOption"
+    },
+    {
+      "term": "short-calls-enabled",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "short-cryptocurrency-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "short-derivative-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "short-description",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Cryptocurrency"
+    },
+    {
+      "term": "short-equity-initial",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "MarginRequirement"
+    },
+    {
+      "term": "short-equity-maintenance",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "MarginRequirement"
+    },
+    {
+      "term": "short-equity-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "short-futures-derivative-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "short-futures-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "short-index-derivative-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "short-margineable-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "side",
+      "type": "string",
+      "format": null,
+      "description": "The option side (only applicable for equity-option type)",
+      "source": "backtesting",
+      "sourceDefinition": "Leg"
+    },
+    {
+      "term": "signature-of-agreement",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "size",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "sma-equity-option-buying-power",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "small-notional",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureProduct"
+    },
+    {
+      "term": "small-notional-futures-margin-rate-multiplier",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "snapshot-date",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "snapshots",
+      "type": "array",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "BacktestGet"
+    },
+    {
+      "term": "source",
+      "type": "string",
+      "format": null,
+      "description": "The source the order is coming from",
+      "source": "orders",
+      "sourceDefinition": "postAccountsAccountNumberComplexOrders"
+    },
+    {
+      "term": "special-memorandum-account-apex-adjustment",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "special-memorandum-account-value",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "specificDays",
+      "type": "array",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "EntryConditions"
+    },
+    {
+      "term": "spread-tick-sizes",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "start-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "market-sessions",
+      "sourceDefinition": "SimpleSessionDeserializer"
+    },
+    {
+      "term": "startDate",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "BacktestPost"
+    },
+    {
+      "term": "state",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "market-sessions",
+      "sourceDefinition": "CurrentSessionDeserializer"
+    },
+    {
+      "term": "statistics",
+      "type": "array",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "BacktestGet"
+    },
+    {
+      "term": "status",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "BacktestGet"
+    },
+    {
+      "term": "stop-trigger",
+      "type": "number",
+      "format": "double",
+      "description": "The price trigger at which a stop or stop-limit order becomes valid.",
+      "source": "orders",
+      "sourceDefinition": "postAccountsAccountNumberOrders"
+    },
+    {
+      "term": "stopLossPercentage",
+      "type": "integer",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "ExitConditions"
+    },
+    {
+      "term": "stops-trading-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "streamer-exchange-code",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "streamer-symbol",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "streamer-symbols",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "CompactOptionChainSerializer"
+    },
+    {
+      "term": "strike-factor",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "strike-price",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "strikeRelativeLeg",
+      "type": "integer",
+      "format": null,
+      "description": "Index of the leg to use as reference when strike selection is relative to another leg",
+      "source": "backtesting",
+      "sourceDefinition": "Leg"
+    },
+    {
+      "term": "strikeSelection",
+      "type": "string",
+      "format": null,
+      "description": "How to select the strike for this leg",
+      "source": "backtesting",
+      "sourceDefinition": "Leg"
+    },
+    {
+      "term": "sub-fraction",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "sub-tick",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureProduct"
+    },
+    {
+      "term": "subject-to-tax-withholding",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "submitting-user-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "suffix-name",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "suitable-options-level",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Account"
+    },
+    {
+      "term": "summaryDate",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "supported",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOptionProduct"
+    },
+    {
+      "term": "symbol",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "BacktestPost"
+    },
+    {
+      "term": "symbols",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "CompactOptionChainSerializer"
+    },
+    {
+      "term": "takeProfitPercentage",
+      "type": "integer",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "ExitConditions"
+    },
+    {
+      "term": "tax-number",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "tax-number-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "terminal-at",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "ComplexOrder"
+    },
+    {
+      "term": "threshold",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "quote-alerts",
+      "sourceDefinition": "postQuoteAlerts"
+    },
+    {
+      "term": "threshold-numeric",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "quote-alerts",
+      "sourceDefinition": "postQuoteAlerts"
+    },
+    {
+      "term": "tick-size",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Cryptocurrency"
+    },
+    {
+      "term": "tick-sizes",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Equity"
+    },
+    {
+      "term": "time",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "net-liquidating-value-history",
+      "sourceDefinition": "NetLiqOhlc"
+    },
+    {
+      "term": "time-in-force",
+      "type": "string",
+      "format": null,
+      "description": "The length in time before the order expires. i.e.\n                                       `Day`, `Ext`, `Ext Overnight`, `GTC`, `GTC Ext`, `GTC Ext Overnight`, `GTD` or `IOC`",
+      "source": "orders",
+      "sourceDefinition": "postAccountsAccountNumberOrders"
+    },
+    {
+      "term": "time-of-day",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "token",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "QuoteStreamerTokenAuthResult"
+    },
+    {
+      "term": "total-pending-liquidity-pool-rebate",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "total-settle-balance",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "totalClose",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "net-liquidating-value-history",
+      "sourceDefinition": "NetLiqOhlc"
+    },
+    {
+      "term": "totalHigh",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "net-liquidating-value-history",
+      "sourceDefinition": "NetLiqOhlc"
+    },
+    {
+      "term": "totalLow",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "net-liquidating-value-history",
+      "sourceDefinition": "NetLiqOhlc"
+    },
+    {
+      "term": "totalOpen",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "net-liquidating-value-history",
+      "sourceDefinition": "NetLiqOhlc"
+    },
+    {
+      "term": "trading-hours",
+      "type": "string",
+      "format": null,
+      "description": "Trading Hours",
+      "source": "symbol-search",
+      "sourceDefinition": "SymbolData"
+    },
+    {
+      "term": "tradingHalted",
+      "type": "boolean",
+      "format": null,
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "tradingHaltedReason",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "transaction-date",
+      "type": "string",
+      "format": "date",
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "transaction-sub-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "transaction-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "transactions",
+      "sourceDefinition": "Transaction"
+    },
+    {
+      "term": "trials",
+      "type": "array",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "BacktestGet"
+    },
+    {
+      "term": "trigger-order",
+      "type": "object",
+      "format": null,
+      "description": "Order with complex-order-tag: '<type>::trigger-order'. For example, 'OTO::trigger-order for OTO complex orders.",
+      "source": "orders",
+      "sourceDefinition": "ComplexOrder"
+    },
+    {
+      "term": "triggered-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "quote-alerts",
+      "sourceDefinition": "QuoteAlertDeserializer"
+    },
+    {
+      "term": "true-underlying-code",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureProduct"
+    },
+    {
+      "term": "true-underlying-symbol",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Future"
+    },
+    {
+      "term": "type",
+      "type": "string",
+      "format": null,
+      "description": "The instrument type",
+      "source": "backtesting",
+      "sourceDefinition": "Leg"
+    },
+    {
+      "term": "underlying-count",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureOption"
+    },
+    {
+      "term": "underlying-description",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureProduct"
+    },
+    {
+      "term": "underlying-identifier",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "FutureProduct"
+    },
+    {
+      "term": "underlying-instrument-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "underlying-opening-order-limit",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "risk-parameters",
+      "sourceDefinition": "PositionLimit"
+    },
+    {
+      "term": "underlying-product",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "SearchableInstrumentDeserializer"
+    },
+    {
+      "term": "underlying-product-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "Equity"
+    },
+    {
+      "term": "underlying-symbol",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "underlyingInstrument",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "Instrument"
+    },
+    {
+      "term": "underlyingPrice",
+      "type": "number",
+      "format": null,
+      "description": "",
+      "source": "backtesting",
+      "sourceDefinition": "Snapshot"
+    },
+    {
+      "term": "unsettled-cryptocurrency-fiat-amount",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "unsettled-cryptocurrency-fiat-effect",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "update-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "CurrentPosition"
+    },
+    {
+      "term": "updated-at",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "account-status",
+      "sourceDefinition": "TradingStatus"
+    },
+    {
+      "term": "updatedAt",
+      "type": "string",
+      "format": "date-time",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "usa-citizenship-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "used-derivative-buying-power",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "balances-and-positions",
+      "sourceDefinition": "AccountBalance"
+    },
+    {
+      "term": "user-external-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "quote-alerts",
+      "sourceDefinition": "QuoteAlertDeserializer"
+    },
+    {
+      "term": "user-id",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "username",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "Order"
+    },
+    {
+      "term": "value",
+      "type": "integer",
+      "format": "int32",
+      "description": "",
+      "source": "instruments",
+      "sourceDefinition": "QuantityDecimalPrecision"
+    },
+    {
+      "term": "value-effect",
+      "type": "string",
+      "format": null,
+      "description": "If pay or receive payment for placing the notional market order. i.e. `Credit` or `Debit`",
+      "source": "orders",
+      "sourceDefinition": "postAccountsAccountNumberOrders"
+    },
+    {
+      "term": "visa-expiration-date",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "visa-type",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "volume",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "warnings",
+      "type": "array",
+      "format": null,
+      "description": "",
+      "source": "orders",
+      "sourceDefinition": "PlacedOrderResponse"
+    },
+    {
+      "term": "watchlist-entries",
+      "type": "object",
+      "format": null,
+      "description": "",
+      "source": "watchlists",
+      "sourceDefinition": "Watchlist"
+    },
+    {
+      "term": "websocket-url",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "QuoteStreamerTokenAuthResult"
+    },
+    {
+      "term": "work-phone-number",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "work-phone-number-details",
+      "type": "string",
+      "format": null,
+      "description": "",
+      "source": "accounts-and-customers",
+      "sourceDefinition": "Customer"
+    },
+    {
+      "term": "yearHighPrice",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    },
+    {
+      "term": "yearLowPrice",
+      "type": "number",
+      "format": "double",
+      "description": "",
+      "source": "market-data",
+      "sourceDefinition": "MarketData"
+    }
+  ]
+}

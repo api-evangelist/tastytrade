@@ -1,0 +1,21 @@
+{
+  "operationId": "postAccountsAccountNumberComplexOrdersDryRun",
+  "method": "POST",
+  "path": "/accounts/{account_number}/complex-orders/dry-run",
+  "summary": "Performs a dry-run for a new ComplexOrder from supplied params. Allows validation of potential orders.",
+  "tags": [
+    "complex-orders"
+  ],
+  "parameters": [
+    {
+      "name": "account_number",
+      "in": "path",
+      "required": true
+    },
+    {
+      "name": "postAccountsAccountNumberComplexOrdersDryRun",
+      "in": "body",
+      "required": true
+    }
+  ]
+}

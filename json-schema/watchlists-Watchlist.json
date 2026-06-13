@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/watchlists/Watchlist",
+  "title": "Watchlist",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "",
+      "type": "string"
+    },
+    "watchlist-entries": {
+      "description": "",
+      "type": "object"
+    },
+    "cms-id": {
+      "description": "",
+      "type": "string"
+    },
+    "group-name": {
+      "description": "",
+      "type": "string"
+    },
+    "order-index": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    }
+  },
+  "description": "Watchlist model"
+}

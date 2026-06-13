@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/backtesting/Trial",
+  "title": "Trial",
+  "type": "object",
+  "properties": {
+    "openDateTime": {
+      "type": "string"
+    },
+    "closeDateTime": {
+      "type": "string"
+    },
+    "profitLoss": {
+      "type": "number"
+    }
+  }
+}

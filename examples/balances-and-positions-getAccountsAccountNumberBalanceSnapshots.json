@@ -1,0 +1,51 @@
+{
+  "operationId": "getAccountsAccountNumberBalanceSnapshots",
+  "method": "GET",
+  "path": "/accounts/{account_number}/balance-snapshots",
+  "summary": "Returns most recent snapshot and current balance for an account",
+  "tags": [
+    "balance-snapshots"
+  ],
+  "parameters": [
+    {
+      "name": "account_number",
+      "in": "path",
+      "required": true
+    },
+    {
+      "name": "page-offset",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "per-page",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "currency",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "snapshot-date",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "time-of-day",
+      "in": "query",
+      "required": true
+    },
+    {
+      "name": "start-date",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "end-date",
+      "in": "query",
+      "required": false
+    }
+  ]
+}

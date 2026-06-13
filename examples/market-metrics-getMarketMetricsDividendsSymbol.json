@@ -1,0 +1,14 @@
+{
+  "operationId": "getMarketMetricsDividendsSymbol",
+  "method": "GET",
+  "path": "/market-metrics/historic-corporate-events/dividends/{symbol}",
+  "summary": "Get historical dividend data",
+  "tags": [],
+  "parameters": [
+    {
+      "name": "symbol",
+      "in": "path",
+      "required": true
+    }
+  ]
+}

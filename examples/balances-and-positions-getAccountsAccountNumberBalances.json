@@ -1,0 +1,16 @@
+{
+  "operationId": "getAccountsAccountNumberBalances",
+  "method": "GET",
+  "path": "/accounts/{account_number}/balances",
+  "summary": "Returns the current balances for an account",
+  "tags": [
+    "accounts"
+  ],
+  "parameters": [
+    {
+      "name": "account_number",
+      "in": "path",
+      "required": true
+    }
+  ]
+}

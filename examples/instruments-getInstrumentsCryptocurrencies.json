@@ -1,0 +1,16 @@
+{
+  "operationId": "getInstrumentsCryptocurrencies",
+  "method": "GET",
+  "path": "/instruments/cryptocurrencies",
+  "summary": "Retrieve a set of cryptocurrencies given an array of one or more symbols.",
+  "tags": [
+    "instruments"
+  ],
+  "parameters": [
+    {
+      "name": "symbol",
+      "in": "query",
+      "required": false
+    }
+  ]
+}

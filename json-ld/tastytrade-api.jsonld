@@ -1,0 +1,33 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "tastytrade": "https://developer.tastytrade.com/vocabulary#"
+  },
+  "@type": "schema:WebAPI",
+  "@id": "https://developer.tastytrade.com/",
+  "schema:name": "tastytrade Open API",
+  "schema:description": "Options-focused brokerage REST API providing real-time account data, market data, order execution, and streaming for equities, options, futures, and crypto.",
+  "schema:url": "https://developer.tastytrade.com/",
+  "schema:provider": {
+    "@type": "schema:Organization",
+    "schema:name": "tastytrade",
+    "schema:url": "https://tastytrade.com/"
+  },
+  "schema:documentation": "https://developer.tastytrade.com/",
+  "schema:termsOfService": "https://assets.tastyworks.com/production/documents/USA/open_api_terms_and_conditions.pdf",
+  "schema:contactPoint": {
+    "@type": "schema:ContactPoint",
+    "schema:email": "api.support@tastytrade.com",
+    "schema:contactType": "API Support"
+  },
+  "tastytrade:sandboxURL": "https://developer.tastytrade.com/sandbox/",
+  "tastytrade:authMethod": [
+    "OAuth 2.0",
+    "Session Token"
+  ],
+  "tastytrade:protocols": [
+    "REST/HTTPS",
+    "WebSocket/DXLink",
+    "WebSocket/AccountStreamer"
+  ]
+}

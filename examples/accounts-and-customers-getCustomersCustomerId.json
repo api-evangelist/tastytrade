@@ -1,0 +1,21 @@
+{
+  "operationId": "getCustomersCustomerId",
+  "method": "GET",
+  "path": "/customers/{customer_id}",
+  "summary": "Get a full customer resource.",
+  "tags": [
+    "customers"
+  ],
+  "parameters": [
+    {
+      "name": "customer_id",
+      "in": "path",
+      "required": true
+    },
+    {
+      "name": "allow-missing",
+      "in": "query",
+      "required": false
+    }
+  ]
+}

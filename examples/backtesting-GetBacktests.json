@@ -1,0 +1,14 @@
+{
+  "operationId": "GetBacktests",
+  "method": "GET",
+  "path": "/backtests/{id}",
+  "summary": "Get backtest",
+  "tags": [],
+  "parameters": [
+    {
+      "name": "id",
+      "in": "path",
+      "required": true
+    }
+  ]
+}

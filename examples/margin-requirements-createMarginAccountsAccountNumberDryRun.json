@@ -1,0 +1,21 @@
+{
+  "operationId": "createMarginAccountsAccountNumberDryRun",
+  "method": "POST",
+  "path": "/margin/accounts/{account_number}/dry-run",
+  "summary": "Estimate margin requirements for an order given an account",
+  "tags": [
+    "margin-requirements"
+  ],
+  "parameters": [
+    {
+      "name": "account_number",
+      "in": "path",
+      "required": true
+    },
+    {
+      "name": "order",
+      "in": "body",
+      "required": false
+    }
+  ]
+}

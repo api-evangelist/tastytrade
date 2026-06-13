@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/symbol-search/SymbolData",
+  "title": "SymbolData",
+  "type": "object",
+  "properties": {
+    "symbol": {
+      "type": "string",
+      "description": "Symbol"
+    },
+    "description": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "listed-market": {
+      "type": "string",
+      "description": "Listed Market"
+    },
+    "price-increments": {
+      "type": "string",
+      "description": "Price Increments"
+    },
+    "trading-hours": {
+      "type": "string",
+      "description": "Trading Hours"
+    },
+    "options": {
+      "type": "boolean",
+      "description": "Has listed options"
+    },
+    "instrument-type": {
+      "type": "string",
+      "description": "Instrument Type"
+    }
+  }
+}

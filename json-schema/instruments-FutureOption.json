@@ -1,0 +1,201 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/instruments/FutureOption",
+  "title": "FutureOption",
+  "type": "object",
+  "properties": {
+    "active": {
+      "description": "",
+      "type": "boolean"
+    },
+    "days-to-expiration": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "display-factor": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "exchange": {
+      "description": "",
+      "type": "string"
+    },
+    "exercise-style": {
+      "description": "",
+      "type": "string"
+    },
+    "expiration-date": {
+      "description": "",
+      "type": "string",
+      "format": "date"
+    },
+    "expires-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "future-price-ratio": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "is-closing-only": {
+      "description": "",
+      "type": "boolean"
+    },
+    "is-confirmed": {
+      "description": "",
+      "type": "boolean"
+    },
+    "is-exercisable-weekly": {
+      "description": "",
+      "type": "boolean"
+    },
+    "is-primary-deliverable": {
+      "description": "",
+      "type": "boolean"
+    },
+    "is-vanilla": {
+      "description": "",
+      "type": "boolean"
+    },
+    "last-trade-time": {
+      "description": "",
+      "type": "string"
+    },
+    "maturity-date": {
+      "description": "",
+      "type": "string",
+      "format": "date"
+    },
+    "multiplier": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "notional-value": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "option-root-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "option-type": {
+      "description": "",
+      "type": "string"
+    },
+    "product-code": {
+      "description": "",
+      "type": "string"
+    },
+    "root-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "security-id": {
+      "description": "",
+      "type": "string"
+    },
+    "settlement-type": {
+      "description": "",
+      "type": "string"
+    },
+    "stops-trading-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "streamer-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "strike-factor": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "strike-price": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "underlying-count": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "underlying-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "future-option-product": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "cash-settled": {
+          "description": "",
+          "type": "boolean"
+        },
+        "code": {
+          "description": "",
+          "type": "string"
+        },
+        "display-factor": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "exchange": {
+          "description": "",
+          "type": "string"
+        },
+        "expiration-type": {
+          "description": "",
+          "type": "string"
+        },
+        "is-am-settled": {
+          "description": "",
+          "type": "boolean"
+        },
+        "itm-rule": {
+          "description": "",
+          "type": "string"
+        },
+        "market-sector": {
+          "description": "",
+          "type": "string"
+        },
+        "product-subtype": {
+          "description": "",
+          "type": "string"
+        },
+        "product-type": {
+          "description": "",
+          "type": "string"
+        },
+        "root-symbol": {
+          "description": "",
+          "type": "string"
+        },
+        "settlement-delay-days": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "supported": {
+          "description": "",
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "description": "FutureOption model"
+}

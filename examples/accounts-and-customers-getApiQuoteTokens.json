@@ -1,0 +1,10 @@
+{
+  "operationId": "getApiQuoteTokens",
+  "method": "GET",
+  "path": "/api-quote-tokens",
+  "summary": "Returns the appropriate API quote streamer endpoint, level and identification token \\\n            for the current customer to receive market data.",
+  "tags": [
+    "api-quote-tokens"
+  ],
+  "parameters": []
+}

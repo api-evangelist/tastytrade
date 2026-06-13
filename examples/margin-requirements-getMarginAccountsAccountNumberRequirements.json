@@ -1,0 +1,16 @@
+{
+  "operationId": "getMarginAccountsAccountNumberRequirements",
+  "method": "GET",
+  "path": "/margin/accounts/{account_number}/requirements",
+  "summary": "Fetch current margin/captial requirements report for an account",
+  "tags": [
+    "margin-requirements"
+  ],
+  "parameters": [
+    {
+      "name": "account_number",
+      "in": "path",
+      "required": true
+    }
+  ]
+}

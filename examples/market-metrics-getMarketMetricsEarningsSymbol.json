@@ -1,0 +1,24 @@
+{
+  "operationId": "getMarketMetricsEarningsSymbol",
+  "method": "GET",
+  "path": "/market-metrics/historic-corporate-events/earnings-reports/{symbol}",
+  "summary": "Get historical earnings data",
+  "tags": [],
+  "parameters": [
+    {
+      "name": "symbol",
+      "in": "path",
+      "required": true
+    },
+    {
+      "name": "start-date",
+      "in": "query",
+      "required": true
+    },
+    {
+      "name": "end-date",
+      "in": "query",
+      "required": false
+    }
+  ]
+}

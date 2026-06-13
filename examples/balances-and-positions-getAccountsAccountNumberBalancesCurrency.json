@@ -1,0 +1,21 @@
+{
+  "operationId": "getAccountsAccountNumberBalancesCurrency",
+  "method": "GET",
+  "path": "/accounts/{account_number}/balances/{currency}",
+  "summary": "Returns the current balance values for an account and currency",
+  "tags": [
+    "accounts"
+  ],
+  "parameters": [
+    {
+      "name": "account_number",
+      "in": "path",
+      "required": true
+    },
+    {
+      "name": "currency",
+      "in": "path",
+      "required": true
+    }
+  ]
+}

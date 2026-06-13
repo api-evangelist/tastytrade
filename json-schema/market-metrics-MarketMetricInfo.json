@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/market-metrics/MarketMetricInfo",
+  "title": "MarketMetricInfo",
+  "type": "object",
+  "properties": {
+    "symbol": {
+      "description": "Symbol",
+      "type": "string"
+    },
+    "implied-volatility-index": {
+      "description": "IV Index of underlying",
+      "type": "number",
+      "format": "float"
+    },
+    "implied-volatility-index-5-day-change": {
+      "description": "5 day change of IV index of underlying",
+      "type": "number",
+      "format": "float"
+    },
+    "implied-volatility-rank": {
+      "description": "IV Rank of underlying",
+      "type": "number",
+      "format": "float"
+    },
+    "implied-volatility-percentile": {
+      "description": "IV percentile of underlying",
+      "type": "number",
+      "format": "float"
+    },
+    "liquidity": {
+      "description": "liquidity of underlying",
+      "type": "number",
+      "format": "float"
+    },
+    "liquidity-rank": {
+      "description": "liquidity rank of underlying",
+      "type": "number",
+      "format": "float"
+    },
+    "liquidity-rating": {
+      "description": "liquidity rating of underlying",
+      "type": "number",
+      "format": "int32"
+    },
+    "option-expiration-implied-volatilities": {
+      "description": "List of option volatility data",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "expiration-date": {
+            "description": "Option expiration date",
+            "type": "string",
+            "format": "date-time"
+          },
+          "settlement-type": {
+            "description": "AM or PM settlement",
+            "type": "string"
+          },
+          "option-chain-type": {
+            "description": "Option chain type i.e. Standard or Non-standard.",
+            "type": "string"
+          },
+          "implied-volatility": {
+            "description": "Implied volatility of option expiration",
+            "type": "number",
+            "format": "double"
+          }
+        }
+      }
+    }
+  },
+  "description": "Includes underlying volatility and liquidity data as well as option volatility data."
+}

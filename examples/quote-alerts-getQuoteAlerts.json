@@ -1,0 +1,10 @@
+{
+  "operationId": "getQuoteAlerts",
+  "method": "GET",
+  "path": "/quote-alerts",
+  "summary": "Get quote alerts for current user",
+  "tags": [
+    "quote-alerts"
+  ],
+  "parameters": []
+}

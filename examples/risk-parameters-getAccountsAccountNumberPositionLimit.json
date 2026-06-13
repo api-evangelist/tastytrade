@@ -1,0 +1,16 @@
+{
+  "operationId": "getAccountsAccountNumberPositionLimit",
+  "method": "GET",
+  "path": "/accounts/{account_number}/position-limit",
+  "summary": "Get the position limit",
+  "tags": [
+    "accounts"
+  ],
+  "parameters": [
+    {
+      "name": "account_number",
+      "in": "path",
+      "required": true
+    }
+  ]
+}

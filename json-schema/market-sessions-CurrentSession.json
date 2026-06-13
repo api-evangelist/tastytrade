@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/market-sessions/CurrentSession",
+  "title": "CurrentSession",
+  "type": "object",
+  "properties": {
+    "close-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "close-at-ext": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "instrument-collection": {
+      "description": "",
+      "type": "string"
+    },
+    "open-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "start-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "next-session": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "close-at": {
+          "description": "",
+          "type": "string",
+          "format": "date-time"
+        },
+        "close-at-ext": {
+          "description": "",
+          "type": "string",
+          "format": "date-time"
+        },
+        "instrument-collection": {
+          "description": "",
+          "type": "string"
+        },
+        "open-at": {
+          "description": "",
+          "type": "string",
+          "format": "date-time"
+        },
+        "session-date": {
+          "description": "",
+          "type": "string",
+          "format": "date"
+        },
+        "start-at": {
+          "description": "",
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "previous-session": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "close-at": {
+          "description": "",
+          "type": "string",
+          "format": "date-time"
+        },
+        "close-at-ext": {
+          "description": "",
+          "type": "string",
+          "format": "date-time"
+        },
+        "instrument-collection": {
+          "description": "",
+          "type": "string"
+        },
+        "open-at": {
+          "description": "",
+          "type": "string",
+          "format": "date-time"
+        },
+        "session-date": {
+          "description": "",
+          "type": "string",
+          "format": "date"
+        },
+        "start-at": {
+          "description": "",
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "state": {
+      "description": "",
+      "type": "string"
+    }
+  },
+  "description": "CurrentSession model"
+}

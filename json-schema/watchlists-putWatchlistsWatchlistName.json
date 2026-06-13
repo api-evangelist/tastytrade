@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/watchlists/putWatchlistsWatchlistName",
+  "title": "putWatchlistsWatchlistName",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The watchlist name"
+    },
+    "group-name": {
+      "type": "string",
+      "description": "The group to which this watchlist belongs to"
+    },
+    "order-index": {
+      "type": "integer",
+      "format": "int32",
+      "description": "The order index of the watchlist",
+      "default": 9999
+    },
+    "watchlist-entries": {
+      "type": "array",
+      "description": "The instruments being watched",
+      "items": {
+        "type": "object",
+        "properties": {
+          "symbol": {
+            "type": "string",
+            "description": "The instrument symbol"
+          },
+          "instrument-type": {
+            "type": "string",
+            "description": "The instrument type"
+          }
+        },
+        "required": [
+          "symbol"
+        ]
+      }
+    }
+  },
+  "required": [
+    "name",
+    "watchlist-entries"
+  ],
+  "description": "Replace all properties of an account watchlist"
+}

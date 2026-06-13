@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/backtesting/EntryConditions",
+  "title": "EntryConditions",
+  "type": "object",
+  "properties": {
+    "frequency": {
+      "type": "string",
+      "nullable": true,
+      "enum": [
+        "every day",
+        "on specific days of the week",
+        "on exact days to expiration match"
+      ]
+    },
+    "specificDays": {
+      "type": "array",
+      "nullable": true,
+      "items": {
+        "type": "integer"
+      }
+    },
+    "maximumActiveTrials": {
+      "type": "integer",
+      "nullable": true
+    },
+    "maximumActiveTrialsBehavior": {
+      "type": "string",
+      "nullable": true,
+      "enum": [
+        "don't enter",
+        "close oldest"
+      ]
+    },
+    "minimumVIX": {
+      "type": "integer",
+      "nullable": true
+    },
+    "maximumVIX": {
+      "type": "integer",
+      "nullable": true
+    }
+  }
+}

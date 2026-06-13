@@ -1,0 +1,14 @@
+{
+  "operationId": "getMarketMetricsIndex",
+  "method": "GET",
+  "path": "/market-metrics",
+  "summary": "Returns an array of volatility data for given symbols.",
+  "tags": [],
+  "parameters": [
+    {
+      "name": "symbols",
+      "in": "query",
+      "required": true
+    }
+  ]
+}

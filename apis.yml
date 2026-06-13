@@ -49,7 +49,41 @@ apis:
       - type: Documentation
         url: https://developer.tastytrade.com/
       - type: OpenAPI
-        url: https://developer.tastytrade.com/open-api-spec/account-status/
+        url: openapi/account-status.json
+      - type: OpenAPI
+        url: openapi/accounts-and-customers.json
+      - type: OpenAPI
+        url: openapi/backtesting.json
+      - type: OpenAPI
+        url: openapi/balances-and-positions.json
+      - type: OpenAPI
+        url: openapi/instruments.json
+      - type: OpenAPI
+        url: openapi/margin-requirements.json
+      - type: OpenAPI
+        url: openapi/market-data.json
+      - type: OpenAPI
+        url: openapi/market-metrics.json
+      - type: OpenAPI
+        url: openapi/market-sessions.json
+      - type: OpenAPI
+        url: openapi/net-liquidating-value-history.json
+      - type: OpenAPI
+        url: openapi/orders.json
+      - type: OpenAPI
+        url: openapi/quote-alerts.json
+      - type: OpenAPI
+        url: openapi/risk-parameters.json
+      - type: OpenAPI
+        url: openapi/symbol-search.json
+      - type: OpenAPI
+        url: openapi/transactions.json
+      - type: OpenAPI
+        url: openapi/watchlists.json
+      - type: JSONLd
+        url: json-ld/tastytrade-api.jsonld
+      - type: Vocabulary
+        url: vocabulary/tastytrade-vocabulary.json
       - type: Authentication
         url: https://developer.tastytrade.com/oauth/
       - type: Sandbox

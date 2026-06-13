@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/backtesting/Snapshot",
+  "title": "Snapshot",
+  "type": "object",
+  "properties": {
+    "dateTime": {
+      "type": "string"
+    },
+    "profitLoss": {
+      "type": "number"
+    },
+    "underlyingPrice": {
+      "type": "number"
+    }
+  }
+}

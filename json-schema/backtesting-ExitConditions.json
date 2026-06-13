@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/backtesting/ExitConditions",
+  "title": "ExitConditions",
+  "type": "object",
+  "properties": {
+    "takeProfitPercentage": {
+      "type": "integer",
+      "nullable": true
+    },
+    "stopLossPercentage": {
+      "type": "integer",
+      "nullable": true
+    },
+    "afterDaysInTrade": {
+      "type": "integer",
+      "nullable": true
+    },
+    "atDaysToExpiration": {
+      "type": "integer",
+      "nullable": true
+    },
+    "minimumVIX": {
+      "type": "integer",
+      "nullable": true
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/backtesting/BacktestGet",
+  "title": "BacktestGet",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "symbol": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "legs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Leg"
+          }
+        ]
+      }
+    },
+    "entryConditions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EntryConditions"
+        }
+      ]
+    },
+    "exitConditions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ExitConditions"
+        }
+      ]
+    },
+    "ETA": {
+      "type": "number"
+    },
+    "progress": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "running",
+        "completed"
+      ]
+    },
+    "statistics": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "trials": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Trial"
+          }
+        ]
+      }
+    },
+    "snapshots": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Snapshot"
+          }
+        ]
+      }
+    },
+    "notices": {
+      "description": "Conditional annotations appearing if specific conditions are met (e.g. overlapping due to stock split)",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

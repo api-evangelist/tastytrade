@@ -1,0 +1,628 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/orders/postAccountsAccountNumberComplexOrders",
+  "title": "postAccountsAccountNumberComplexOrders",
+  "type": "object",
+  "properties": {
+    "orders": {
+      "type": "array",
+      "description": "Array of orders for OCO/BLAST orders",
+      "items": {
+        "type": "object",
+        "properties": {
+          "gtc-date": {
+            "type": "string",
+            "format": "date",
+            "description": "The date in which a GTD order will expire. Can only be provided if time-in-force is GTD."
+          },
+          "order-type": {
+            "type": "string",
+            "description": "The type of order in regards to the price. i.e.\n                                    `Limit`, `Market`, `Marketable Limit`, `Notional Market`, `Stop` or `Stop Limit`",
+            "enum": [
+              "Limit",
+              "Market",
+              "Marketable Limit",
+              "Notional Market",
+              "Stop",
+              "Stop Limit"
+            ]
+          },
+          "stop-trigger": {
+            "type": "number",
+            "format": "double",
+            "description": "The price trigger at which a stop or stop-limit order becomes valid."
+          },
+          "time-in-force": {
+            "type": "string",
+            "description": "The length in time before the order expires. i.e.\n                                       `Day`, `Ext`, `Ext Overnight`, `GTC`, `GTC Ext`, `GTC Ext Overnight`, `GTD` or `IOC`",
+            "enum": [
+              "Day",
+              "Ext",
+              "Ext Overnight",
+              "GTC",
+              "GTC Ext",
+              "GTC Ext Overnight",
+              "GTD",
+              "IOC"
+            ]
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "description": "The price of the Order. Required for limit and stop-limit orders."
+          },
+          "price-effect": {
+            "type": "string",
+            "description": "If pay or receive payment for placing the order. i.e. `Credit` or `Debit`",
+            "enum": [
+              "Credit",
+              "Debit"
+            ]
+          },
+          "value": {
+            "type": "number",
+            "format": "double",
+            "description": "The notional value of the Order, required for notional market orders."
+          },
+          "value-effect": {
+            "type": "string",
+            "description": "If pay or receive payment for placing the notional market order. i.e. `Credit` or `Debit`",
+            "enum": [
+              "Credit",
+              "Debit"
+            ]
+          },
+          "automated-source": {
+            "type": "boolean",
+            "description": "If the order was placed from an automated source",
+            "default": false
+          },
+          "external-identifier": {
+            "type": "string",
+            "description": "External identifier for the order"
+          },
+          "partition-key": {
+            "type": "string",
+            "description": "Account partition key"
+          },
+          "preflight-id": {
+            "type": "string",
+            "description": "Transient order identifier used for matching preflight errors to an individual order"
+          },
+          "source": {
+            "type": "string",
+            "description": "The source the order is coming from"
+          },
+          "legs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "action": {
+                  "type": "string",
+                  "description": "The directional action of the leg. i.e.\n                                  `Allocate`, `Buy`, `Buy to Close`, `Buy to Open`, `Sell`, `Sell to Close` or `Sell to Open`.\n                                  Note: `Buy` and `Sell` are only applicable to Futures orders.",
+                  "enum": [
+                    "Allocate",
+                    "Buy",
+                    "Buy to Close",
+                    "Buy to Open",
+                    "Sell",
+                    "Sell to Close",
+                    "Sell to Open"
+                  ]
+                },
+                "instrument-type": {
+                  "type": "string",
+                  "description": "The type of Instrument. i.e.\n                                           `Cryptocurrency`, `Equity`, `Equity Option`, `Event Contract`, `Fixed Income Security`, `Future`, `Future Option` or `Liquidity Pool`",
+                  "enum": [
+                    "Cryptocurrency",
+                    "Equity",
+                    "Equity Option",
+                    "Event Contract",
+                    "Fixed Income Security",
+                    "Future",
+                    "Future Option",
+                    "Liquidity Pool"
+                  ]
+                },
+                "quantity": {
+                  "type": "number",
+                  "format": "double",
+                  "description": "The size of the contract. Required for all orders but notional market."
+                },
+                "symbol": {
+                  "type": "string",
+                  "description": "The Stock Ticker Symbol `AAPL`, OCC Option Symbol `AAPL  191004P00275000`, \\\n                                    TW Future Symbol `/ESZ9`, or TW Future Option Symbol `./ESZ9 EW4U9 190927P2975`"
+                }
+              },
+              "required": [
+                "action",
+                "instrument-type",
+                "symbol"
+              ]
+            }
+          },
+          "rules": {
+            "type": "object",
+            "properties": {
+              "cancel-at": {
+                "type": "string",
+                "format": "date-time",
+                "description": "Latest time an order should be canceled at"
+              },
+              "conditions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "action": {
+                      "type": "string",
+                      "description": "The action in which the trigger is enacted. i.e.\n                                    `cancel` and `route`",
+                      "enum": [
+                        "cancel",
+                        "route"
+                      ]
+                    },
+                    "instrument-type": {
+                      "type": "string",
+                      "description": "The instrument's type in relation to the condition. e.g. \\\n                                              `Equity` or `Future`",
+                      "enum": [
+                        "Bond",
+                        "Cryptocurrency",
+                        "Currency Pair",
+                        "Equity",
+                        "Equity Offering",
+                        "Equity Option",
+                        "Event Contract",
+                        "Fixed Income Security",
+                        "Future",
+                        "Future Option",
+                        "Index",
+                        "Liquidity Pool",
+                        "Unknown",
+                        "Warrant"
+                      ]
+                    },
+                    "symbol": {
+                      "type": "string",
+                      "description": "The symbol to apply the condition to. \\\n                                      e.g Stock Ticker Symbol `AAPL` or the TW Future Symbol `/ESZ9`"
+                    },
+                    "comparator": {
+                      "type": "string",
+                      "description": "How to compare against the threshold. \\\n                                        Currently Supports `gte` (Greater than or Equal To) or `lte` (Less than or Equal to)",
+                      "enum": [
+                        "gte",
+                        "lte"
+                      ]
+                    },
+                    "indicator": {
+                      "type": "string",
+                      "description": "The indicator for the trigger, currently only supports `last`",
+                      "enum": [
+                        "last",
+                        "nat"
+                      ]
+                    },
+                    "threshold": {
+                      "type": "number",
+                      "format": "double",
+                      "description": "The price at which the condition triggers."
+                    },
+                    "price-components": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "instrument-type": {
+                            "type": "string",
+                            "description": "The instrument's type in relation to the symbol.",
+                            "enum": [
+                              "Bond",
+                              "Cryptocurrency",
+                              "Currency Pair",
+                              "Equity",
+                              "Equity Offering",
+                              "Equity Option",
+                              "Event Contract",
+                              "Fixed Income Security",
+                              "Future",
+                              "Future Option",
+                              "Index",
+                              "Liquidity Pool",
+                              "Unknown",
+                              "Warrant"
+                            ]
+                          },
+                          "quantity": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The Ratio quantity in relation to the symbol"
+                          },
+                          "quantity-direction": {
+                            "type": "string",
+                            "description": "The quantity direction(ie Long or Short) in relation to the symbol",
+                            "enum": [
+                              "Long",
+                              "Short"
+                            ]
+                          },
+                          "symbol": {
+                            "type": "string",
+                            "description": "The symbol to apply the condition to. \\\n                                      e.g. Stock Ticker Symbol `AAPL` or the TW Future Symbol `/ESZ9`"
+                          }
+                        },
+                        "required": [
+                          "instrument-type",
+                          "quantity",
+                          "quantity-direction",
+                          "symbol"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "action",
+                    "comparator",
+                    "indicator",
+                    "threshold"
+                  ]
+                }
+              },
+              "route-after": {
+                "type": "string",
+                "format": "date-time",
+                "description": "Earliest time an order should route at"
+              }
+            }
+          },
+          "advanced-instructions": {
+            "type": "object",
+            "properties": {
+              "strict-position-effect-validation": {
+                "type": "boolean",
+                "description": "If the order should be rejected the open/close position effect is not valid",
+                "default": false
+              }
+            }
+          }
+        },
+        "required": [
+          "order-type",
+          "stop-trigger",
+          "time-in-force",
+          "price-effect",
+          "value-effect",
+          "legs"
+        ]
+      }
+    },
+    "trigger-order": {
+      "type": "object",
+      "description": "Initial live order for OTO based orders",
+      "properties": {
+        "gtc-date": {
+          "type": "string",
+          "format": "date",
+          "description": "The date in which a GTD order will expire. Can only be provided if time-in-force is GTD."
+        },
+        "order-type": {
+          "type": "string",
+          "description": "The type of order in regards to the price. i.e.\n                                    `Limit`, `Market`, `Marketable Limit`, `Notional Market`, `Stop` or `Stop Limit`",
+          "enum": [
+            "Limit",
+            "Market",
+            "Marketable Limit",
+            "Notional Market",
+            "Stop",
+            "Stop Limit"
+          ]
+        },
+        "stop-trigger": {
+          "type": "number",
+          "format": "double",
+          "description": "The price trigger at which a stop or stop-limit order becomes valid."
+        },
+        "time-in-force": {
+          "type": "string",
+          "description": "The length in time before the order expires. i.e.\n                                       `Day`, `Ext`, `Ext Overnight`, `GTC`, `GTC Ext`, `GTC Ext Overnight`, `GTD` or `IOC`",
+          "enum": [
+            "Day",
+            "Ext",
+            "Ext Overnight",
+            "GTC",
+            "GTC Ext",
+            "GTC Ext Overnight",
+            "GTD",
+            "IOC"
+          ]
+        },
+        "price": {
+          "type": "number",
+          "format": "double",
+          "description": "The price of the Order. Required for limit and stop-limit orders."
+        },
+        "price-effect": {
+          "type": "string",
+          "description": "If pay or receive payment for placing the order. i.e. `Credit` or `Debit`",
+          "enum": [
+            "Credit",
+            "Debit"
+          ]
+        },
+        "value": {
+          "type": "number",
+          "format": "double",
+          "description": "The notional value of the Order, required for notional market orders."
+        },
+        "value-effect": {
+          "type": "string",
+          "description": "If pay or receive payment for placing the notional market order. i.e. `Credit` or `Debit`",
+          "enum": [
+            "Credit",
+            "Debit"
+          ]
+        },
+        "automated-source": {
+          "type": "boolean",
+          "description": "If the order was placed from an automated source",
+          "default": false
+        },
+        "external-identifier": {
+          "type": "string",
+          "description": "External identifier for the order"
+        },
+        "partition-key": {
+          "type": "string",
+          "description": "Account partition key"
+        },
+        "preflight-id": {
+          "type": "string",
+          "description": "Transient order identifier used for matching preflight errors to an individual order"
+        },
+        "source": {
+          "type": "string",
+          "description": "The source the order is coming from"
+        },
+        "legs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "action": {
+                "type": "string",
+                "description": "The directional action of the leg. i.e.\n                                  `Allocate`, `Buy`, `Buy to Close`, `Buy to Open`, `Sell`, `Sell to Close` or `Sell to Open`.\n                                  Note: `Buy` and `Sell` are only applicable to Futures orders.",
+                "enum": [
+                  "Allocate",
+                  "Buy",
+                  "Buy to Close",
+                  "Buy to Open",
+                  "Sell",
+                  "Sell to Close",
+                  "Sell to Open"
+                ]
+              },
+              "instrument-type": {
+                "type": "string",
+                "description": "The type of Instrument. i.e.\n                                           `Cryptocurrency`, `Equity`, `Equity Option`, `Event Contract`, `Fixed Income Security`, `Future`, `Future Option` or `Liquidity Pool`",
+                "enum": [
+                  "Cryptocurrency",
+                  "Equity",
+                  "Equity Option",
+                  "Event Contract",
+                  "Fixed Income Security",
+                  "Future",
+                  "Future Option",
+                  "Liquidity Pool"
+                ]
+              },
+              "quantity": {
+                "type": "number",
+                "format": "double",
+                "description": "The size of the contract. Required for all orders but notional market."
+              },
+              "symbol": {
+                "type": "string",
+                "description": "The Stock Ticker Symbol `AAPL`, OCC Option Symbol `AAPL  191004P00275000`, \\\n                                    TW Future Symbol `/ESZ9`, or TW Future Option Symbol `./ESZ9 EW4U9 190927P2975`"
+              }
+            },
+            "required": [
+              "action",
+              "instrument-type",
+              "symbol"
+            ]
+          }
+        },
+        "rules": {
+          "type": "object",
+          "properties": {
+            "cancel-at": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Latest time an order should be canceled at"
+            },
+            "conditions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "action": {
+                    "type": "string",
+                    "description": "The action in which the trigger is enacted. i.e.\n                                    `cancel` and `route`",
+                    "enum": [
+                      "cancel",
+                      "route"
+                    ]
+                  },
+                  "instrument-type": {
+                    "type": "string",
+                    "description": "The instrument's type in relation to the condition. e.g. \\\n                                              `Equity` or `Future`",
+                    "enum": [
+                      "Bond",
+                      "Cryptocurrency",
+                      "Currency Pair",
+                      "Equity",
+                      "Equity Offering",
+                      "Equity Option",
+                      "Event Contract",
+                      "Fixed Income Security",
+                      "Future",
+                      "Future Option",
+                      "Index",
+                      "Liquidity Pool",
+                      "Unknown",
+                      "Warrant"
+                    ]
+                  },
+                  "symbol": {
+                    "type": "string",
+                    "description": "The symbol to apply the condition to. \\\n                                      e.g Stock Ticker Symbol `AAPL` or the TW Future Symbol `/ESZ9`"
+                  },
+                  "comparator": {
+                    "type": "string",
+                    "description": "How to compare against the threshold. \\\n                                        Currently Supports `gte` (Greater than or Equal To) or `lte` (Less than or Equal to)",
+                    "enum": [
+                      "gte",
+                      "lte"
+                    ]
+                  },
+                  "indicator": {
+                    "type": "string",
+                    "description": "The indicator for the trigger, currently only supports `last`",
+                    "enum": [
+                      "last",
+                      "nat"
+                    ]
+                  },
+                  "threshold": {
+                    "type": "number",
+                    "format": "double",
+                    "description": "The price at which the condition triggers."
+                  },
+                  "price-components": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "instrument-type": {
+                          "type": "string",
+                          "description": "The instrument's type in relation to the symbol.",
+                          "enum": [
+                            "Bond",
+                            "Cryptocurrency",
+                            "Currency Pair",
+                            "Equity",
+                            "Equity Offering",
+                            "Equity Option",
+                            "Event Contract",
+                            "Fixed Income Security",
+                            "Future",
+                            "Future Option",
+                            "Index",
+                            "Liquidity Pool",
+                            "Unknown",
+                            "Warrant"
+                          ]
+                        },
+                        "quantity": {
+                          "type": "number",
+                          "format": "double",
+                          "description": "The Ratio quantity in relation to the symbol"
+                        },
+                        "quantity-direction": {
+                          "type": "string",
+                          "description": "The quantity direction(ie Long or Short) in relation to the symbol",
+                          "enum": [
+                            "Long",
+                            "Short"
+                          ]
+                        },
+                        "symbol": {
+                          "type": "string",
+                          "description": "The symbol to apply the condition to. \\\n                                      e.g. Stock Ticker Symbol `AAPL` or the TW Future Symbol `/ESZ9`"
+                        }
+                      },
+                      "required": [
+                        "instrument-type",
+                        "quantity",
+                        "quantity-direction",
+                        "symbol"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "action",
+                  "comparator",
+                  "indicator",
+                  "threshold"
+                ]
+              }
+            },
+            "route-after": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Earliest time an order should route at"
+            }
+          }
+        },
+        "advanced-instructions": {
+          "type": "object",
+          "properties": {
+            "strict-position-effect-validation": {
+              "type": "boolean",
+              "description": "If the order should be rejected the open/close position effect is not valid",
+              "default": false
+            }
+          }
+        }
+      },
+      "required": [
+        "order-type",
+        "stop-trigger",
+        "time-in-force",
+        "price-effect",
+        "value-effect",
+        "legs"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "description": "The type of stragegy for the complex order i.e.\n                              `BLAST`, `OCO`, `OTO`, `OTOCO` or `PAIRS`",
+      "enum": [
+        "BLAST",
+        "OCO",
+        "OTO",
+        "OTOCO",
+        "PAIRS"
+      ]
+    },
+    "ratio-price-comparator": {
+      "type": "string",
+      "description": "How to compare against the ratio price. \\\n                                            Supports `gte` (Greater than or Equal To) or `lte` (Less than or Equal to)",
+      "enum": [
+        "gte",
+        "lte"
+      ]
+    },
+    "ratio-price-is-threshold-based-on-notional": {
+      "type": "boolean",
+      "description": "If comparison is in notional value instead of price."
+    },
+    "ratio-price-threshold": {
+      "type": "number",
+      "format": "double",
+      "description": "Ratio price for a PAIRS trade"
+    },
+    "source": {
+      "type": "string",
+      "description": "The source the order is coming from"
+    }
+  },
+  "required": [
+    "orders",
+    "type",
+    "ratio-price-comparator",
+    "ratio-price-threshold"
+  ],
+  "description": "Creates a new Complex Order from supplied params"
+}

@@ -1,0 +1,16 @@
+{
+  "operationId": "getMarketTimeEquitiesSessionsCurrent",
+  "method": "GET",
+  "path": "/market-time/equities/sessions/current",
+  "summary": "Get current equities session",
+  "tags": [
+    "market-time"
+  ],
+  "parameters": [
+    {
+      "name": "current-time",
+      "in": "query",
+      "required": false
+    }
+  ]
+}

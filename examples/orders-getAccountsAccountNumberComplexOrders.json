@@ -1,0 +1,26 @@
+{
+  "operationId": "getAccountsAccountNumberComplexOrders",
+  "method": "GET",
+  "path": "/accounts/{account_number}/complex-orders",
+  "summary": "Returns a paginated list of all Complex Orders",
+  "tags": [
+    "complex-orders"
+  ],
+  "parameters": [
+    {
+      "name": "account_number",
+      "in": "path",
+      "required": true
+    },
+    {
+      "name": "page-offset",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "per-page",
+      "in": "query",
+      "required": false
+    }
+  ]
+}

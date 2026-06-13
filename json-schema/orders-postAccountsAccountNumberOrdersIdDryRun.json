@@ -1,0 +1,148 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/orders/postAccountsAccountNumberOrdersIdDryRun",
+  "title": "postAccountsAccountNumberOrdersIdDryRun",
+  "type": "object",
+  "properties": {
+    "gtc-date": {
+      "type": "string",
+      "format": "date",
+      "description": "The date in which a GTD order will expire. Can only be provided if time-in-force is GTD."
+    },
+    "order-type": {
+      "type": "string",
+      "description": "The type of order in regards to the price. i.e.\n                                    `Limit`, `Market`, `Marketable Limit`, `Notional Market`, `Stop` or `Stop Limit`",
+      "enum": [
+        "Limit",
+        "Market",
+        "Marketable Limit",
+        "Notional Market",
+        "Stop",
+        "Stop Limit"
+      ]
+    },
+    "stop-trigger": {
+      "type": "number",
+      "format": "double",
+      "description": "The price trigger at which a stop or stop-limit order becomes valid."
+    },
+    "time-in-force": {
+      "type": "string",
+      "description": "The length in time before the order expires. i.e.\n                                       `Day`, `Ext`, `Ext Overnight`, `GTC`, `GTC Ext`, `GTC Ext Overnight`, `GTD` or `IOC`",
+      "enum": [
+        "Day",
+        "Ext",
+        "Ext Overnight",
+        "GTC",
+        "GTC Ext",
+        "GTC Ext Overnight",
+        "GTD",
+        "IOC"
+      ]
+    },
+    "price": {
+      "type": "number",
+      "format": "double",
+      "description": "The price of the Order. Required for limit and stop-limit orders."
+    },
+    "price-effect": {
+      "type": "string",
+      "description": "If pay or receive payment for placing the order. i.e. `Credit` or `Debit`",
+      "enum": [
+        "Credit",
+        "Debit"
+      ]
+    },
+    "value": {
+      "type": "number",
+      "format": "double",
+      "description": "The notional value of the Order, required for notional market orders."
+    },
+    "value-effect": {
+      "type": "string",
+      "description": "If pay or receive payment for placing the notional market order. i.e. `Credit` or `Debit`",
+      "enum": [
+        "Credit",
+        "Debit"
+      ]
+    },
+    "automated-source": {
+      "type": "boolean",
+      "description": "If the order was placed from an automated source",
+      "default": false
+    },
+    "external-identifier": {
+      "type": "string",
+      "description": "External identifier for the order"
+    },
+    "partition-key": {
+      "type": "string",
+      "description": "Account partition key"
+    },
+    "preflight-id": {
+      "type": "string",
+      "description": "Transient order identifier used for matching preflight errors to an individual order"
+    },
+    "source": {
+      "type": "string",
+      "description": "The source the order is coming from"
+    },
+    "legs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "description": "TODO",
+            "enum": [
+              "Allocate",
+              "Buy",
+              "Buy to Close",
+              "Buy to Open",
+              "Sell",
+              "Sell to Close",
+              "Sell to Open"
+            ]
+          },
+          "instrument-type": {
+            "type": "string",
+            "description": "The type of Instrument.",
+            "enum": [
+              "Cryptocurrency",
+              "Equity",
+              "Equity Option",
+              "Event Contract",
+              "Fixed Income Security",
+              "Future",
+              "Future Option",
+              "Liquidity Pool"
+            ]
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double",
+            "description": "TODO"
+          },
+          "symbol": {
+            "type": "string",
+            "description": "Symbol for stock, specific option symbol in the\n          OCC symbology or specific future symbol. e.g. \"AAPL\", \"AAPL  150515C00120000\", \"/ESM5\""
+          }
+        },
+        "required": [
+          "action",
+          "instrument-type",
+          "symbol"
+        ]
+      }
+    }
+  },
+  "required": [
+    "order-type",
+    "stop-trigger",
+    "time-in-force",
+    "price-effect",
+    "value-effect"
+  ],
+  "description": "Runs through preflights for cancel-replace and edit without routing"
+}

@@ -1,0 +1,41 @@
+{
+  "operationId": "getMarketDataByType",
+  "method": "GET",
+  "path": "/market-data/by-type",
+  "summary": "Get market data for many symbols of type. Combined limit across all types is 100",
+  "tags": [
+    "market-data-controller"
+  ],
+  "parameters": [
+    {
+      "name": "index",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "equity",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "equity-option",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "future",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "future-option",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "cryptocurrency",
+      "in": "query",
+      "required": false
+    }
+  ]
+}

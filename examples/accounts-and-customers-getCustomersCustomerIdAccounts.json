@@ -1,0 +1,16 @@
+{
+  "operationId": "getCustomersCustomerIdAccounts",
+  "method": "GET",
+  "path": "/customers/{customer_id}/accounts",
+  "summary": "Get a list of all the customer account resources attached to the current customer.",
+  "tags": [
+    "customers"
+  ],
+  "parameters": [
+    {
+      "name": "customer_id",
+      "in": "path",
+      "required": true
+    }
+  ]
+}

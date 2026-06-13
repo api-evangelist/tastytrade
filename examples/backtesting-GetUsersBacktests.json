@@ -1,0 +1,8 @@
+{
+  "operationId": "GetUsersBacktests",
+  "method": "GET",
+  "path": "/backtests",
+  "summary": "Get user's backtests",
+  "tags": [],
+  "parameters": []
+}

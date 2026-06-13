@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/risk-parameters/PositionLimit",
+  "title": "PositionLimit",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "account-number": {
+      "description": "",
+      "type": "string"
+    },
+    "equity-option-order-size": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "equity-order-size": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "future-option-order-size": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "future-order-size": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "underlying-opening-order-limit": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "equity-option-position-size": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "equity-position-size": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "future-option-position-size": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "future-position-size": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    }
+  },
+  "description": "PositionLimit model"
+}

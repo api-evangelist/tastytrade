@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/market-metrics/EarningsInfo",
+  "title": "EarningsInfo",
+  "type": "object",
+  "properties": {
+    "occurred-date": {
+      "description": "Date of earnings announcement",
+      "type": "string",
+      "format": "date"
+    },
+    "eps": {
+      "description": "Earnings per share amount",
+      "type": "number",
+      "format": "float"
+    }
+  }
+}

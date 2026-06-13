@@ -1,0 +1,1694 @@
+{
+  "@context": {
+    "@vocab": "https://developer.tastytrade.com/vocabulary#",
+    "tastytrade": "https://developer.tastytrade.com/vocabulary#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ETA": {
+      "@id": "tastytrade:ETA"
+    },
+    "account": {
+      "@id": "tastytrade:account"
+    },
+    "account-number": {
+      "@id": "schema:accountNumber"
+    },
+    "account-type-name": {
+      "@id": "tastytrade:accountTypeName"
+    },
+    "action": {
+      "@id": "tastytrade:action"
+    },
+    "active": {
+      "@id": "tastytrade:active"
+    },
+    "active-month": {
+      "@id": "tastytrade:activeMonth"
+    },
+    "active-months": {
+      "@id": "tastytrade:activeMonths"
+    },
+    "address": {
+      "@id": "tastytrade:address"
+    },
+    "advanced-instructions": {
+      "@id": "tastytrade:advancedInstructions"
+    },
+    "afterDaysInTrade": {
+      "@id": "tastytrade:afterDaysInTrade"
+    },
+    "agency-price": {
+      "@id": "tastytrade:agencyPrice"
+    },
+    "agreed-to-margining": {
+      "@id": "tastytrade:agreedToMargining"
+    },
+    "agreed-to-terms": {
+      "@id": "tastytrade:agreedToTerms"
+    },
+    "alert-external-id": {
+      "@id": "tastytrade:alertExternalId"
+    },
+    "amount": {
+      "@id": "tastytrade:amount"
+    },
+    "apex-starting-day-margin-equity": {
+      "@id": "tastytrade:apexStartingDayMarginEquity"
+    },
+    "are-deep-itm-carry-options-enabled": {
+      "@id": "tastytrade:areDeepItmCarryOptionsEnabled"
+    },
+    "are-far-otm-net-options-restricted": {
+      "@id": "tastytrade:areFarOtmNetOptionsRestricted"
+    },
+    "are-options-values-restricted-to-nlv": {
+      "@id": "tastytrade:areOptionsValuesRestrictedToNlv"
+    },
+    "are-single-tick-expiring-hedges-ignored": {
+      "@id": "tastytrade:areSingleTickExpiringHedgesIgnored"
+    },
+    "ask": {
+      "@id": "tastytrade:ask"
+    },
+    "askSize": {
+      "@id": "tastytrade:askSize"
+    },
+    "atDaysToExpiration": {
+      "@id": "tastytrade:atDaysToExpiration"
+    },
+    "authority-level": {
+      "@id": "tastytrade:authorityLevel"
+    },
+    "automated-source": {
+      "@id": "tastytrade:automatedSource"
+    },
+    "autotrade-account-type": {
+      "@id": "tastytrade:autotradeAccountType"
+    },
+    "available-trading-funds": {
+      "@id": "tastytrade:availableTradingFunds"
+    },
+    "average-daily-market-close-price": {
+      "@id": "tastytrade:averageDailyMarketClosePrice"
+    },
+    "average-open-price": {
+      "@id": "tastytrade:averageOpenPrice"
+    },
+    "average-yearly-market-close-price": {
+      "@id": "tastytrade:averageYearlyMarketClosePrice"
+    },
+    "back-month-first-calendar-symbol": {
+      "@id": "tastytrade:backMonthFirstCalendarSymbol"
+    },
+    "base-tick": {
+      "@id": "tastytrade:baseTick"
+    },
+    "beta": {
+      "@id": "tastytrade:beta"
+    },
+    "bid": {
+      "@id": "tastytrade:bid"
+    },
+    "bidSize": {
+      "@id": "tastytrade:bidSize"
+    },
+    "birth-country": {
+      "@id": "tastytrade:birthCountry"
+    },
+    "birth-date": {
+      "@id": "tastytrade:birthDate"
+    },
+    "bond-margin-requirement": {
+      "@id": "tastytrade:bondMarginRequirement"
+    },
+    "borrow-rate": {
+      "@id": "tastytrade:borrowRate"
+    },
+    "buying-power-adjustment": {
+      "@id": "tastytrade:buyingPowerAdjustment"
+    },
+    "buying-power-adjustment-effect": {
+      "@id": "tastytrade:buyingPowerAdjustmentEffect"
+    },
+    "buying-power-effect": {
+      "@id": "tastytrade:buyingPowerEffect"
+    },
+    "bypass-manual-review": {
+      "@id": "tastytrade:bypassManualReview"
+    },
+    "cancel-user-id": {
+      "@id": "tastytrade:cancelUserId"
+    },
+    "cancel-username": {
+      "@id": "tastytrade:cancelUsername"
+    },
+    "cancellable": {
+      "@id": "tastytrade:cancellable"
+    },
+    "cancelled-at": {
+      "@id": "tastytrade:cancelledAt"
+    },
+    "cancelled-size": {
+      "@id": "tastytrade:cancelledSize"
+    },
+    "cash-available-to-withdraw": {
+      "@id": "tastytrade:cashAvailableToWithdraw"
+    },
+    "cash-balance": {
+      "@id": "tastytrade:cashBalance"
+    },
+    "cash-settle-balance": {
+      "@id": "tastytrade:cashSettleBalance"
+    },
+    "cash-settled": {
+      "@id": "tastytrade:cashSettled"
+    },
+    "category": {
+      "@id": "tastytrade:category"
+    },
+    "citizenship-country": {
+      "@id": "tastytrade:citizenshipCountry"
+    },
+    "clearing-account-number": {
+      "@id": "tastytrade:clearingAccountNumber"
+    },
+    "clearing-aggregation-identifier": {
+      "@id": "tastytrade:clearingAggregationIdentifier"
+    },
+    "clearing-fees": {
+      "@id": "tastytrade:clearingFees"
+    },
+    "clearing-fees-effect": {
+      "@id": "tastytrade:clearingFeesEffect"
+    },
+    "clearing-identifier": {
+      "@id": "tastytrade:clearingIdentifier"
+    },
+    "close": {
+      "@id": "tastytrade:close"
+    },
+    "close-at": {
+      "@id": "tastytrade:closeAt"
+    },
+    "close-at-ext": {
+      "@id": "tastytrade:closeAtExt"
+    },
+    "close-price": {
+      "@id": "tastytrade:closePrice"
+    },
+    "closeDateTime": {
+      "@id": "tastytrade:closeDateTime"
+    },
+    "closePriceType": {
+      "@id": "tastytrade:closePriceType"
+    },
+    "closed-at": {
+      "@id": "tastytrade:closedAt"
+    },
+    "closed-loop-available-balance": {
+      "@id": "tastytrade:closedLoopAvailableBalance"
+    },
+    "closing-fee-calculation": {
+      "@id": "tastytrade:closingFeeCalculation"
+    },
+    "closing-only-date": {
+      "@id": "tastytrade:closingOnlyDate"
+    },
+    "cms-id": {
+      "@id": "tastytrade:cmsId"
+    },
+    "cmta-override": {
+      "@id": "tastytrade:cmtaOverride"
+    },
+    "code": {
+      "@id": "tastytrade:code"
+    },
+    "commission": {
+      "@id": "tastytrade:commission"
+    },
+    "commission-effect": {
+      "@id": "tastytrade:commissionEffect"
+    },
+    "completed-at": {
+      "@id": "tastytrade:completedAt"
+    },
+    "complex-order": {
+      "@id": "tastytrade:complexOrder"
+    },
+    "complex-order-id": {
+      "@id": "tastytrade:complexOrderId"
+    },
+    "complex-order-tag": {
+      "@id": "tastytrade:complexOrderTag"
+    },
+    "contingent-status": {
+      "@id": "tastytrade:contingentStatus"
+    },
+    "contract-limit": {
+      "@id": "tastytrade:contractLimit"
+    },
+    "contract-size": {
+      "@id": "tastytrade:contractSize"
+    },
+    "cost-basis-reconciliation-date": {
+      "@id": "tastytrade:costBasisReconciliationDate"
+    },
+    "cost-effect": {
+      "@id": "tastytrade:costEffect"
+    },
+    "country-of-incorporation": {
+      "@id": "tastytrade:countryOfIncorporation"
+    },
+    "country-of-taxation": {
+      "@id": "tastytrade:countryOfTaxation"
+    },
+    "created-at": {
+      "@id": "tastytrade:createdAt"
+    },
+    "cryptocurrency-margin-requirement": {
+      "@id": "tastytrade:cryptocurrencyMarginRequirement"
+    },
+    "currency": {
+      "@id": "tastytrade:currency"
+    },
+    "currency-conversion-fees": {
+      "@id": "tastytrade:currencyConversionFees"
+    },
+    "currency-conversion-fees-effect": {
+      "@id": "tastytrade:currencyConversionFeesEffect"
+    },
+    "currentPriceOffset": {
+      "@id": "tastytrade:currentPriceOffset"
+    },
+    "cusip": {
+      "@id": "tastytrade:cusip"
+    },
+    "customer-suitability": {
+      "@id": "tastytrade:customerSuitability"
+    },
+    "dateTime": {
+      "@id": "tastytrade:dateTime"
+    },
+    "day-equity-call-value": {
+      "@id": "tastytrade:dayEquityCallValue"
+    },
+    "day-trade-count": {
+      "@id": "tastytrade:dayTradeCount"
+    },
+    "day-trade-excess": {
+      "@id": "tastytrade:dayTradeExcess"
+    },
+    "day-trader-status": {
+      "@id": "tastytrade:dayTraderStatus"
+    },
+    "day-trading-buying-power": {
+      "@id": "tastytrade:dayTradingBuyingPower"
+    },
+    "day-trading-call-value": {
+      "@id": "tastytrade:dayTradingCallValue"
+    },
+    "dayClose": {
+      "@id": "tastytrade:dayClose"
+    },
+    "dayHigh": {
+      "@id": "tastytrade:dayHigh"
+    },
+    "dayHighPrice": {
+      "@id": "tastytrade:dayHighPrice"
+    },
+    "dayLow": {
+      "@id": "tastytrade:dayLow"
+    },
+    "dayLowPrice": {
+      "@id": "tastytrade:dayLowPrice"
+    },
+    "dayOpen": {
+      "@id": "tastytrade:dayOpen"
+    },
+    "days-to-expiration": {
+      "@id": "tastytrade:daysToExpiration"
+    },
+    "daysUntilExpiration": {
+      "@id": "tastytrade:daysUntilExpiration"
+    },
+    "deliverable-type": {
+      "@id": "tastytrade:deliverableType"
+    },
+    "deliverables": {
+      "@id": "tastytrade:deliverables"
+    },
+    "delta": {
+      "@id": "tastytrade:delta"
+    },
+    "derivative-buying-power": {
+      "@id": "tastytrade:derivativeBuyingPower"
+    },
+    "description": {
+      "@id": "schema:description"
+    },
+    "desk-customer-id": {
+      "@id": "tastytrade:deskCustomerId"
+    },
+    "destination-venue": {
+      "@id": "tastytrade:destinationVenue"
+    },
+    "direction": {
+      "@id": "tastytrade:direction"
+    },
+    "dismissed-at": {
+      "@id": "tastytrade:dismissedAt"
+    },
+    "display-factor": {
+      "@id": "tastytrade:displayFactor"
+    },
+    "dividendAmount": {
+      "@id": "tastytrade:dividendAmount"
+    },
+    "dividendFrequency": {
+      "@id": "tastytrade:dividendFrequency"
+    },
+    "dx-symbol": {
+      "@id": "tastytrade:dxSymbol"
+    },
+    "dxlink-url": {
+      "@id": "tastytrade:dxlinkUrl"
+    },
+    "editable": {
+      "@id": "tastytrade:editable"
+    },
+    "edited": {
+      "@id": "tastytrade:edited"
+    },
+    "effective-cryptocurrency-buying-power": {
+      "@id": "tastytrade:effectiveCryptocurrencyBuyingPower"
+    },
+    "email": {
+      "@id": "schema:email"
+    },
+    "endDate": {
+      "@id": "tastytrade:endDate"
+    },
+    "enhanced-fraud-safeguards-enabled-at": {
+      "@id": "tastytrade:enhancedFraudSafeguardsEnabledAt"
+    },
+    "entity": {
+      "@id": "tastytrade:entity"
+    },
+    "entryConditions": {
+      "@id": "tastytrade:entryConditions"
+    },
+    "eps": {
+      "@id": "tastytrade:eps"
+    },
+    "equities-margin-calculation-type": {
+      "@id": "tastytrade:equitiesMarginCalculationType"
+    },
+    "equity-buying-power": {
+      "@id": "tastytrade:equityBuyingPower"
+    },
+    "equity-offering-margin-requirement": {
+      "@id": "tastytrade:equityOfferingMarginRequirement"
+    },
+    "equity-option-order-size": {
+      "@id": "tastytrade:equityOptionOrderSize"
+    },
+    "equity-option-position-size": {
+      "@id": "tastytrade:equityOptionPositionSize"
+    },
+    "equity-order-size": {
+      "@id": "tastytrade:equityOrderSize"
+    },
+    "equity-position-size": {
+      "@id": "tastytrade:equityPositionSize"
+    },
+    "errors": {
+      "@id": "tastytrade:errors"
+    },
+    "event-product-external-id": {
+      "@id": "tastytrade:eventProductExternalId"
+    },
+    "exchange": {
+      "@id": "tastytrade:exchange"
+    },
+    "exchange-affiliation-identifier": {
+      "@id": "tastytrade:exchangeAffiliationIdentifier"
+    },
+    "exchange-data": {
+      "@id": "tastytrade:exchangeData"
+    },
+    "exec-id": {
+      "@id": "tastytrade:execId"
+    },
+    "executed-at": {
+      "@id": "tastytrade:executedAt"
+    },
+    "exercise-style": {
+      "@id": "tastytrade:exerciseStyle"
+    },
+    "exitConditions": {
+      "@id": "tastytrade:exitConditions"
+    },
+    "expiration-date": {
+      "@id": "tastytrade:expirationDate"
+    },
+    "expiration-type": {
+      "@id": "tastytrade:expirationType"
+    },
+    "expirations": {
+      "@id": "tastytrade:expirations"
+    },
+    "expired-at": {
+      "@id": "tastytrade:expiredAt"
+    },
+    "expires-at": {
+      "@id": "tastytrade:expiresAt"
+    },
+    "ext-account-id": {
+      "@id": "tastytrade:extAccountId"
+    },
+    "ext-crm-id": {
+      "@id": "tastytrade:extCrmId"
+    },
+    "ext-exchange-order-number": {
+      "@id": "tastytrade:extExchangeOrderNumber"
+    },
+    "ext-exec-id": {
+      "@id": "tastytrade:extExecId"
+    },
+    "ext-global-order-number": {
+      "@id": "tastytrade:extGlobalOrderNumber"
+    },
+    "ext-group-fill-id": {
+      "@id": "tastytrade:extGroupFillId"
+    },
+    "ext-group-id": {
+      "@id": "tastytrade:extGroupId"
+    },
+    "external-accounts": {
+      "@id": "tastytrade:externalAccounts"
+    },
+    "external-fdid": {
+      "@id": "tastytrade:externalFdid"
+    },
+    "external-id": {
+      "@id": "tastytrade:externalId"
+    },
+    "external-identifier": {
+      "@id": "tastytrade:externalIdentifier"
+    },
+    "face-value": {
+      "@id": "tastytrade:faceValue"
+    },
+    "family-member-names": {
+      "@id": "tastytrade:familyMemberNames"
+    },
+    "fee-calculation": {
+      "@id": "tastytrade:feeCalculation"
+    },
+    "fee-schedule-name": {
+      "@id": "tastytrade:feeScheduleName"
+    },
+    "field": {
+      "@id": "tastytrade:field"
+    },
+    "file-date": {
+      "@id": "tastytrade:fileDate"
+    },
+    "first-name": {
+      "@id": "tastytrade:firstName"
+    },
+    "first-notice": {
+      "@id": "tastytrade:firstNotice"
+    },
+    "first-notice-date": {
+      "@id": "tastytrade:firstNoticeDate"
+    },
+    "first-surname": {
+      "@id": "tastytrade:firstSurname"
+    },
+    "fixed-income-security-margin-requirement": {
+      "@id": "tastytrade:fixedIncomeSecurityMarginRequirement"
+    },
+    "fixing-price": {
+      "@id": "tastytrade:fixingPrice"
+    },
+    "foreign-tax-number": {
+      "@id": "tastytrade:foreignTaxNumber"
+    },
+    "frequency": {
+      "@id": "tastytrade:frequency"
+    },
+    "funding-date": {
+      "@id": "tastytrade:fundingDate"
+    },
+    "future-etf-equivalent": {
+      "@id": "tastytrade:futureEtfEquivalent"
+    },
+    "future-option-order-size": {
+      "@id": "tastytrade:futureOptionOrderSize"
+    },
+    "future-option-position-size": {
+      "@id": "tastytrade:futureOptionPositionSize"
+    },
+    "future-option-product": {
+      "@id": "tastytrade:futureOptionProduct"
+    },
+    "future-order-size": {
+      "@id": "tastytrade:futureOrderSize"
+    },
+    "future-position-size": {
+      "@id": "tastytrade:futurePositionSize"
+    },
+    "future-price-ratio": {
+      "@id": "tastytrade:futurePriceRatio"
+    },
+    "future-product": {
+      "@id": "tastytrade:futureProduct"
+    },
+    "futures": {
+      "@id": "tastytrade:futures"
+    },
+    "futures-account-purpose": {
+      "@id": "tastytrade:futuresAccountPurpose"
+    },
+    "futures-intraday-margin-requirement": {
+      "@id": "tastytrade:futuresIntradayMarginRequirement"
+    },
+    "futures-margin-rate-multiplier": {
+      "@id": "tastytrade:futuresMarginRateMultiplier"
+    },
+    "futures-margin-requirement": {
+      "@id": "tastytrade:futuresMarginRequirement"
+    },
+    "futures-overnight-margin-requirement": {
+      "@id": "tastytrade:futuresOvernightMarginRequirement"
+    },
+    "gender": {
+      "@id": "tastytrade:gender"
+    },
+    "global-request-id": {
+      "@id": "tastytrade:globalRequestId"
+    },
+    "group-name": {
+      "@id": "tastytrade:groupName"
+    },
+    "gtc-date": {
+      "@id": "tastytrade:gtcDate"
+    },
+    "haltEndTime": {
+      "@id": "tastytrade:haltEndTime"
+    },
+    "haltStartTime": {
+      "@id": "tastytrade:haltStartTime"
+    },
+    "halted-at": {
+      "@id": "tastytrade:haltedAt"
+    },
+    "has-delayed-quotes": {
+      "@id": "tastytrade:hasDelayedQuotes"
+    },
+    "has-industry-affiliation": {
+      "@id": "tastytrade:hasIndustryAffiliation"
+    },
+    "has-institutional-assets": {
+      "@id": "tastytrade:hasInstitutionalAssets"
+    },
+    "has-intraday-equities-margin": {
+      "@id": "tastytrade:hasIntradayEquitiesMargin"
+    },
+    "has-listed-affiliation": {
+      "@id": "tastytrade:hasListedAffiliation"
+    },
+    "has-pending-or-approved-application": {
+      "@id": "tastytrade:hasPendingOrApprovedApplication"
+    },
+    "has-political-affiliation": {
+      "@id": "tastytrade:hasPoliticalAffiliation"
+    },
+    "high": {
+      "@id": "tastytrade:high"
+    },
+    "highLimitPrice": {
+      "@id": "tastytrade:highLimitPrice"
+    },
+    "home-phone-number": {
+      "@id": "tastytrade:homePhoneNumber"
+    },
+    "home-phone-number-details": {
+      "@id": "tastytrade:homePhoneNumberDetails"
+    },
+    "id": {
+      "@id": "tastytrade:id"
+    },
+    "identifiable-type": {
+      "@id": "tastytrade:identifiableType"
+    },
+    "implied-volatility-index": {
+      "@id": "tastytrade:impliedVolatilityIndex"
+    },
+    "implied-volatility-index-5-day-change": {
+      "@id": "tastytrade:impliedVolatilityIndex5DayChange"
+    },
+    "implied-volatility-percentile": {
+      "@id": "tastytrade:impliedVolatilityPercentile"
+    },
+    "implied-volatility-rank": {
+      "@id": "tastytrade:impliedVolatilityRank"
+    },
+    "in-flight-at": {
+      "@id": "tastytrade:inFlightAt"
+    },
+    "industry-affiliation-firm": {
+      "@id": "tastytrade:industryAffiliationFirm"
+    },
+    "instrument": {
+      "@id": "tastytrade:instrument"
+    },
+    "instrument-collection": {
+      "@id": "tastytrade:instrumentCollection"
+    },
+    "instrument-sub-type": {
+      "@id": "tastytrade:instrumentSubType"
+    },
+    "instrument-type": {
+      "@id": "tastytrade:instrumentType"
+    },
+    "instrumentKey": {
+      "@id": "tastytrade:instrumentKey"
+    },
+    "instrumentType": {
+      "@id": "tastytrade:instrumentType"
+    },
+    "intraday-equities-cash-amount": {
+      "@id": "tastytrade:intradayEquitiesCashAmount"
+    },
+    "intraday-equities-cash-effect": {
+      "@id": "tastytrade:intradayEquitiesCashEffect"
+    },
+    "intraday-equities-cash-effective-date": {
+      "@id": "tastytrade:intradayEquitiesCashEffectiveDate"
+    },
+    "intraday-futures-cash-amount": {
+      "@id": "tastytrade:intradayFuturesCashAmount"
+    },
+    "intraday-futures-cash-effect": {
+      "@id": "tastytrade:intradayFuturesCashEffect"
+    },
+    "intraday-futures-cash-effective-date": {
+      "@id": "tastytrade:intradayFuturesCashEffectiveDate"
+    },
+    "investment-objective": {
+      "@id": "tastytrade:investmentObjective"
+    },
+    "investment-time-horizon": {
+      "@id": "tastytrade:investmentTimeHorizon"
+    },
+    "is-aggregated-at-clearing": {
+      "@id": "tastytrade:isAggregatedAtClearing"
+    },
+    "is-am-settled": {
+      "@id": "tastytrade:isAmSettled"
+    },
+    "is-ascend-event-contracts-enabled": {
+      "@id": "tastytrade:isAscendEventContractsEnabled"
+    },
+    "is-closed": {
+      "@id": "tastytrade:isClosed"
+    },
+    "is-closing-only": {
+      "@id": "tastytrade:isClosingOnly"
+    },
+    "is-confirmed": {
+      "@id": "tastytrade:isConfirmed"
+    },
+    "is-cryptocurrency-closing-only": {
+      "@id": "tastytrade:isCryptocurrencyClosingOnly"
+    },
+    "is-cryptocurrency-enabled": {
+      "@id": "tastytrade:isCryptocurrencyEnabled"
+    },
+    "is-deleted": {
+      "@id": "tastytrade:isDeleted"
+    },
+    "is-equity-offering-closing-only": {
+      "@id": "tastytrade:isEquityOfferingClosingOnly"
+    },
+    "is-equity-offering-enabled": {
+      "@id": "tastytrade:isEquityOfferingEnabled"
+    },
+    "is-estimated-fee": {
+      "@id": "tastytrade:isEstimatedFee"
+    },
+    "is-etf": {
+      "@id": "tastytrade:isEtf"
+    },
+    "is-exercisable-weekly": {
+      "@id": "tastytrade:isExercisableWeekly"
+    },
+    "is-firm-error": {
+      "@id": "tastytrade:isFirmError"
+    },
+    "is-firm-proprietary": {
+      "@id": "tastytrade:isFirmProprietary"
+    },
+    "is-foreign": {
+      "@id": "tastytrade:isForeign"
+    },
+    "is-fractional-quantity-eligible": {
+      "@id": "tastytrade:isFractionalQuantityEligible"
+    },
+    "is-frozen": {
+      "@id": "tastytrade:isFrozen"
+    },
+    "is-full-equity-margin-required": {
+      "@id": "tastytrade:isFullEquityMarginRequired"
+    },
+    "is-futures-approved": {
+      "@id": "tastytrade:isFuturesApproved"
+    },
+    "is-futures-closing-only": {
+      "@id": "tastytrade:isFuturesClosingOnly"
+    },
+    "is-futures-enabled": {
+      "@id": "tastytrade:isFuturesEnabled"
+    },
+    "is-futures-intra-day-enabled": {
+      "@id": "tastytrade:isFuturesIntraDayEnabled"
+    },
+    "is-illiquid": {
+      "@id": "tastytrade:isIlliquid"
+    },
+    "is-in-day-trade-equity-maintenance-call": {
+      "@id": "tastytrade:isInDayTradeEquityMaintenanceCall"
+    },
+    "is-in-margin-call": {
+      "@id": "tastytrade:isInMarginCall"
+    },
+    "is-index": {
+      "@id": "tastytrade:isIndex"
+    },
+    "is-investment-adviser": {
+      "@id": "tastytrade:isInvestmentAdviser"
+    },
+    "is-non-retail": {
+      "@id": "tastytrade:isNonRetail"
+    },
+    "is-options-closing-only": {
+      "@id": "tastytrade:isOptionsClosingOnly"
+    },
+    "is-pattern-day-trader": {
+      "@id": "tastytrade:isPatternDayTrader"
+    },
+    "is-portfolio-margin-enabled": {
+      "@id": "tastytrade:isPortfolioMarginEnabled"
+    },
+    "is-primary-deliverable": {
+      "@id": "tastytrade:isPrimaryDeliverable"
+    },
+    "is-professional": {
+      "@id": "tastytrade:isProfessional"
+    },
+    "is-risk-reducing-only": {
+      "@id": "tastytrade:isRiskReducingOnly"
+    },
+    "is-roll-the-day-forward-enabled": {
+      "@id": "tastytrade:isRollTheDayForwardEnabled"
+    },
+    "is-small-notional-futures-intra-day-enabled": {
+      "@id": "tastytrade:isSmallNotionalFuturesIntraDayEnabled"
+    },
+    "is-suppressed": {
+      "@id": "tastytrade:isSuppressed"
+    },
+    "is-tradeable": {
+      "@id": "tastytrade:isTradeable"
+    },
+    "is-vanilla": {
+      "@id": "tastytrade:isVanilla"
+    },
+    "issued-at": {
+      "@id": "tastytrade:issuedAt"
+    },
+    "itm-rule": {
+      "@id": "tastytrade:itmRule"
+    },
+    "last": {
+      "@id": "tastytrade:last"
+    },
+    "last-name": {
+      "@id": "tastytrade:lastName"
+    },
+    "last-trade-date": {
+      "@id": "tastytrade:lastTradeDate"
+    },
+    "last-trade-time": {
+      "@id": "tastytrade:lastTradeTime"
+    },
+    "lastExt": {
+      "@id": "tastytrade:lastExt"
+    },
+    "lastMkt": {
+      "@id": "tastytrade:lastMkt"
+    },
+    "lastTradeTime": {
+      "@id": "tastytrade:lastTradeTime"
+    },
+    "leg-count": {
+      "@id": "tastytrade:legCount"
+    },
+    "legs": {
+      "@id": "tastytrade:legs"
+    },
+    "lendability": {
+      "@id": "tastytrade:lendability"
+    },
+    "level": {
+      "@id": "tastytrade:level"
+    },
+    "liquidity": {
+      "@id": "tastytrade:liquidity"
+    },
+    "liquidity-needs": {
+      "@id": "tastytrade:liquidityNeeds"
+    },
+    "liquidity-rank": {
+      "@id": "tastytrade:liquidityRank"
+    },
+    "liquidity-rating": {
+      "@id": "tastytrade:liquidityRating"
+    },
+    "listed-affiliation-symbol": {
+      "@id": "tastytrade:listedAffiliationSymbol"
+    },
+    "listed-market": {
+      "@id": "tastytrade:listedMarket"
+    },
+    "listed-months": {
+      "@id": "tastytrade:listedMonths"
+    },
+    "live-at": {
+      "@id": "tastytrade:liveAt"
+    },
+    "long-bond-value": {
+      "@id": "tastytrade:longBondValue"
+    },
+    "long-cryptocurrency-value": {
+      "@id": "tastytrade:longCryptocurrencyValue"
+    },
+    "long-derivative-value": {
+      "@id": "tastytrade:longDerivativeValue"
+    },
+    "long-equity-initial": {
+      "@id": "tastytrade:longEquityInitial"
+    },
+    "long-equity-maintenance": {
+      "@id": "tastytrade:longEquityMaintenance"
+    },
+    "long-equity-value": {
+      "@id": "tastytrade:longEquityValue"
+    },
+    "long-fixed-income-security-value": {
+      "@id": "tastytrade:longFixedIncomeSecurityValue"
+    },
+    "long-futures-derivative-value": {
+      "@id": "tastytrade:longFuturesDerivativeValue"
+    },
+    "long-futures-value": {
+      "@id": "tastytrade:longFuturesValue"
+    },
+    "long-index-derivative-value": {
+      "@id": "tastytrade:longIndexDerivativeValue"
+    },
+    "long-margineable-value": {
+      "@id": "tastytrade:longMargineableValue"
+    },
+    "lots": {
+      "@id": "tastytrade:lots"
+    },
+    "low": {
+      "@id": "tastytrade:low"
+    },
+    "lowLimitPrice": {
+      "@id": "tastytrade:lowLimitPrice"
+    },
+    "mailing-address": {
+      "@id": "tastytrade:mailingAddress"
+    },
+    "main-fraction": {
+      "@id": "tastytrade:mainFraction"
+    },
+    "maintenance-call-value": {
+      "@id": "tastytrade:maintenanceCallValue"
+    },
+    "maintenance-excess": {
+      "@id": "tastytrade:maintenanceExcess"
+    },
+    "maintenance-requirement": {
+      "@id": "tastytrade:maintenanceRequirement"
+    },
+    "margin-equity": {
+      "@id": "tastytrade:marginEquity"
+    },
+    "margin-or-cash": {
+      "@id": "tastytrade:marginOrCash"
+    },
+    "margin-settle-balance": {
+      "@id": "tastytrade:marginSettleBalance"
+    },
+    "mark": {
+      "@id": "tastytrade:mark"
+    },
+    "mark-price": {
+      "@id": "tastytrade:markPrice"
+    },
+    "market-half-days": {
+      "@id": "tastytrade:marketHalfDays"
+    },
+    "market-holidays": {
+      "@id": "tastytrade:marketHolidays"
+    },
+    "market-sector": {
+      "@id": "tastytrade:marketSector"
+    },
+    "market-time-instrument-collection": {
+      "@id": "tastytrade:marketTimeInstrumentCollection"
+    },
+    "maturity-date": {
+      "@id": "tastytrade:maturityDate"
+    },
+    "maximumActiveTrials": {
+      "@id": "tastytrade:maximumActiveTrials"
+    },
+    "maximumActiveTrialsBehavior": {
+      "@id": "tastytrade:maximumActiveTrialsBehavior"
+    },
+    "maximumVIX": {
+      "@id": "tastytrade:maximumVIX"
+    },
+    "mid": {
+      "@id": "tastytrade:mid"
+    },
+    "middle-name": {
+      "@id": "tastytrade:middleName"
+    },
+    "minimum-increment-precision": {
+      "@id": "tastytrade:minimumIncrementPrecision"
+    },
+    "minimumVIX": {
+      "@id": "tastytrade:minimumVIX"
+    },
+    "mobile-phone-number": {
+      "@id": "tastytrade:mobilePhoneNumber"
+    },
+    "mobile-phone-number-details": {
+      "@id": "tastytrade:mobilePhoneNumberDetails"
+    },
+    "multiplier": {
+      "@id": "tastytrade:multiplier"
+    },
+    "naked-option-floor": {
+      "@id": "tastytrade:nakedOptionFloor"
+    },
+    "naked-option-minimum": {
+      "@id": "tastytrade:nakedOptionMinimum"
+    },
+    "naked-option-standard": {
+      "@id": "tastytrade:nakedOptionStandard"
+    },
+    "name": {
+      "@id": "schema:name"
+    },
+    "net-liquidating-value": {
+      "@id": "tastytrade:netLiquidatingValue"
+    },
+    "net-value": {
+      "@id": "tastytrade:netValue"
+    },
+    "net-value-effect": {
+      "@id": "tastytrade:netValueEffect"
+    },
+    "next-active-month": {
+      "@id": "tastytrade:nextActiveMonth"
+    },
+    "next-session": {
+      "@id": "tastytrade:nextSession"
+    },
+    "nickname": {
+      "@id": "tastytrade:nickname"
+    },
+    "notes": {
+      "@id": "tastytrade:notes"
+    },
+    "notices": {
+      "@id": "tastytrade:notices"
+    },
+    "notional-multiplier": {
+      "@id": "tastytrade:notionalMultiplier"
+    },
+    "notional-value": {
+      "@id": "tastytrade:notionalValue"
+    },
+    "occurred-date": {
+      "@id": "tastytrade:occurredDate"
+    },
+    "old-security-number": {
+      "@id": "tastytrade:oldSecurityNumber"
+    },
+    "open": {
+      "@id": "tastytrade:open"
+    },
+    "open-at": {
+      "@id": "tastytrade:openAt"
+    },
+    "openDateTime": {
+      "@id": "tastytrade:openDateTime"
+    },
+    "opened-at": {
+      "@id": "tastytrade:openedAt"
+    },
+    "operator": {
+      "@id": "tastytrade:operator"
+    },
+    "option-chain-type": {
+      "@id": "tastytrade:optionChainType"
+    },
+    "option-chains": {
+      "@id": "tastytrade:optionChains"
+    },
+    "option-expiration-implied-volatilities": {
+      "@id": "tastytrade:optionExpirationImpliedVolatilities"
+    },
+    "option-root-symbol": {
+      "@id": "tastytrade:optionRootSymbol"
+    },
+    "option-tick-sizes": {
+      "@id": "tastytrade:optionTickSizes"
+    },
+    "option-type": {
+      "@id": "tastytrade:optionType"
+    },
+    "options": {
+      "@id": "tastytrade:options"
+    },
+    "options-level": {
+      "@id": "tastytrade:optionsLevel"
+    },
+    "order": {
+      "@id": "tastytrade:order"
+    },
+    "order-id": {
+      "@id": "tastytrade:orderId"
+    },
+    "order-index": {
+      "@id": "tastytrade:orderIndex"
+    },
+    "order-rule": {
+      "@id": "tastytrade:orderRule"
+    },
+    "order-type": {
+      "@id": "tastytrade:orderType"
+    },
+    "orders": {
+      "@id": "tastytrade:orders"
+    },
+    "other-charge": {
+      "@id": "tastytrade:otherCharge"
+    },
+    "other-charge-description": {
+      "@id": "tastytrade:otherChargeDescription"
+    },
+    "other-charge-effect": {
+      "@id": "tastytrade:otherChargeEffect"
+    },
+    "overnight-trading-permitted": {
+      "@id": "tastytrade:overnightTradingPermitted"
+    },
+    "pairs-equations": {
+      "@id": "tastytrade:pairsEquations"
+    },
+    "par-size": {
+      "@id": "tastytrade:parSize"
+    },
+    "partition-key": {
+      "@id": "tastytrade:partitionKey"
+    },
+    "pdt-reset-on": {
+      "@id": "tastytrade:pdtResetOn"
+    },
+    "pending-cash": {
+      "@id": "tastytrade:pendingCash"
+    },
+    "pending-cash-effect": {
+      "@id": "tastytrade:pendingCashEffect"
+    },
+    "pending-margin-interest": {
+      "@id": "tastytrade:pendingMarginInterest"
+    },
+    "pendingCashClose": {
+      "@id": "tastytrade:pendingCashClose"
+    },
+    "pendingCashHigh": {
+      "@id": "tastytrade:pendingCashHigh"
+    },
+    "pendingCashLow": {
+      "@id": "tastytrade:pendingCashLow"
+    },
+    "pendingCashOpen": {
+      "@id": "tastytrade:pendingCashOpen"
+    },
+    "percentageOTM": {
+      "@id": "tastytrade:percentageOTM"
+    },
+    "permitted-account-types": {
+      "@id": "tastytrade:permittedAccountTypes"
+    },
+    "person": {
+      "@id": "tastytrade:person"
+    },
+    "political-organization": {
+      "@id": "tastytrade:politicalOrganization"
+    },
+    "prefix-name": {
+      "@id": "tastytrade:prefixName"
+    },
+    "preflight-id": {
+      "@id": "tastytrade:preflightId"
+    },
+    "premium": {
+      "@id": "tastytrade:premium"
+    },
+    "prevClose": {
+      "@id": "tastytrade:prevClose"
+    },
+    "prevCloseDate": {
+      "@id": "tastytrade:prevCloseDate"
+    },
+    "prevClosePriceType": {
+      "@id": "tastytrade:prevClosePriceType"
+    },
+    "prevDayClose": {
+      "@id": "tastytrade:prevDayClose"
+    },
+    "previous-date-cryptocurrency-fiat-effective-date": {
+      "@id": "tastytrade:previousDateCryptocurrencyFiatEffectiveDate"
+    },
+    "previous-day-cryptocurrency-fiat-amount": {
+      "@id": "tastytrade:previousDayCryptocurrencyFiatAmount"
+    },
+    "previous-day-cryptocurrency-fiat-effect": {
+      "@id": "tastytrade:previousDayCryptocurrencyFiatEffect"
+    },
+    "previous-session": {
+      "@id": "tastytrade:previousSession"
+    },
+    "price": {
+      "@id": "schema:price"
+    },
+    "price-effect": {
+      "@id": "tastytrade:priceEffect"
+    },
+    "price-format": {
+      "@id": "tastytrade:priceFormat"
+    },
+    "price-increments": {
+      "@id": "tastytrade:priceIncrements"
+    },
+    "principal-price": {
+      "@id": "tastytrade:principalPrice"
+    },
+    "product-code": {
+      "@id": "tastytrade:productCode"
+    },
+    "product-group": {
+      "@id": "tastytrade:productGroup"
+    },
+    "product-subtype": {
+      "@id": "tastytrade:productSubtype"
+    },
+    "product-type": {
+      "@id": "tastytrade:productType"
+    },
+    "profitLoss": {
+      "@id": "tastytrade:profitLoss"
+    },
+    "progress": {
+      "@id": "tastytrade:progress"
+    },
+    "proprietary-index-option-fees": {
+      "@id": "tastytrade:proprietaryIndexOptionFees"
+    },
+    "proprietary-index-option-fees-effect": {
+      "@id": "tastytrade:proprietaryIndexOptionFeesEffect"
+    },
+    "provider": {
+      "@id": "tastytrade:provider"
+    },
+    "quantity": {
+      "@id": "schema:Number"
+    },
+    "quantity-direction": {
+      "@id": "tastytrade:quantityDirection"
+    },
+    "ratio-price-comparator": {
+      "@id": "tastytrade:ratioPriceComparator"
+    },
+    "ratio-price-is-threshold-based-on-notional": {
+      "@id": "tastytrade:ratioPriceIsThresholdBasedOnNotional"
+    },
+    "ratio-price-threshold": {
+      "@id": "tastytrade:ratioPriceThreshold"
+    },
+    "realized-day-gain": {
+      "@id": "tastytrade:realizedDayGain"
+    },
+    "realized-day-gain-date": {
+      "@id": "tastytrade:realizedDayGainDate"
+    },
+    "realized-day-gain-effect": {
+      "@id": "tastytrade:realizedDayGainEffect"
+    },
+    "realized-today": {
+      "@id": "tastytrade:realizedToday"
+    },
+    "realized-today-date": {
+      "@id": "tastytrade:realizedTodayDate"
+    },
+    "realized-today-effect": {
+      "@id": "tastytrade:realizedTodayEffect"
+    },
+    "received-at": {
+      "@id": "tastytrade:receivedAt"
+    },
+    "reg-t-call-value": {
+      "@id": "tastytrade:regTCallValue"
+    },
+    "reg-t-margin-requirement": {
+      "@id": "tastytrade:regTMarginRequirement"
+    },
+    "regulatory-domain": {
+      "@id": "tastytrade:regulatoryDomain"
+    },
+    "regulatory-fees": {
+      "@id": "tastytrade:regulatoryFees"
+    },
+    "regulatory-fees-effect": {
+      "@id": "tastytrade:regulatoryFeesEffect"
+    },
+    "reject-reason": {
+      "@id": "tastytrade:rejectReason"
+    },
+    "related-orders": {
+      "@id": "tastytrade:relatedOrders"
+    },
+    "replaces-order-id": {
+      "@id": "tastytrade:replacesOrderId"
+    },
+    "replacing-order-id": {
+      "@id": "tastytrade:replacingOrderId"
+    },
+    "restricted-quantity": {
+      "@id": "tastytrade:restrictedQuantity"
+    },
+    "reverses-id": {
+      "@id": "tastytrade:reversesId"
+    },
+    "risk-free-rate": {
+      "@id": "tastytrade:riskFreeRate"
+    },
+    "risk-tolerance": {
+      "@id": "tastytrade:riskTolerance"
+    },
+    "roll-target-symbol": {
+      "@id": "tastytrade:rollTargetSymbol"
+    },
+    "root-symbol": {
+      "@id": "tastytrade:rootSymbol"
+    },
+    "rootSymbol": {
+      "@id": "tastytrade:rootSymbol"
+    },
+    "row-data": {
+      "@id": "tastytrade:rowData"
+    },
+    "row-index": {
+      "@id": "tastytrade:rowIndex"
+    },
+    "rules": {
+      "@id": "tastytrade:rules"
+    },
+    "second-surname": {
+      "@id": "tastytrade:secondSurname"
+    },
+    "security-group": {
+      "@id": "tastytrade:securityGroup"
+    },
+    "security-id": {
+      "@id": "tastytrade:securityId"
+    },
+    "session-date": {
+      "@id": "tastytrade:sessionDate"
+    },
+    "settlement-delay-days": {
+      "@id": "tastytrade:settlementDelayDays"
+    },
+    "settlement-type": {
+      "@id": "tastytrade:settlementType"
+    },
+    "shares-per-contract": {
+      "@id": "tastytrade:sharesPerContract"
+    },
+    "short-calls-enabled": {
+      "@id": "tastytrade:shortCallsEnabled"
+    },
+    "short-cryptocurrency-value": {
+      "@id": "tastytrade:shortCryptocurrencyValue"
+    },
+    "short-derivative-value": {
+      "@id": "tastytrade:shortDerivativeValue"
+    },
+    "short-description": {
+      "@id": "tastytrade:shortDescription"
+    },
+    "short-equity-initial": {
+      "@id": "tastytrade:shortEquityInitial"
+    },
+    "short-equity-maintenance": {
+      "@id": "tastytrade:shortEquityMaintenance"
+    },
+    "short-equity-value": {
+      "@id": "tastytrade:shortEquityValue"
+    },
+    "short-futures-derivative-value": {
+      "@id": "tastytrade:shortFuturesDerivativeValue"
+    },
+    "short-futures-value": {
+      "@id": "tastytrade:shortFuturesValue"
+    },
+    "short-index-derivative-value": {
+      "@id": "tastytrade:shortIndexDerivativeValue"
+    },
+    "short-margineable-value": {
+      "@id": "tastytrade:shortMargineableValue"
+    },
+    "side": {
+      "@id": "tastytrade:side"
+    },
+    "signature-of-agreement": {
+      "@id": "tastytrade:signatureOfAgreement"
+    },
+    "size": {
+      "@id": "tastytrade:size"
+    },
+    "sma-equity-option-buying-power": {
+      "@id": "tastytrade:smaEquityOptionBuyingPower"
+    },
+    "small-notional": {
+      "@id": "tastytrade:smallNotional"
+    },
+    "small-notional-futures-margin-rate-multiplier": {
+      "@id": "tastytrade:smallNotionalFuturesMarginRateMultiplier"
+    },
+    "snapshot-date": {
+      "@id": "tastytrade:snapshotDate"
+    },
+    "snapshots": {
+      "@id": "tastytrade:snapshots"
+    },
+    "source": {
+      "@id": "tastytrade:source"
+    },
+    "special-memorandum-account-apex-adjustment": {
+      "@id": "tastytrade:specialMemorandumAccountApexAdjustment"
+    },
+    "special-memorandum-account-value": {
+      "@id": "tastytrade:specialMemorandumAccountValue"
+    },
+    "specificDays": {
+      "@id": "tastytrade:specificDays"
+    },
+    "spread-tick-sizes": {
+      "@id": "tastytrade:spreadTickSizes"
+    },
+    "start-at": {
+      "@id": "tastytrade:startAt"
+    },
+    "startDate": {
+      "@id": "tastytrade:startDate"
+    },
+    "state": {
+      "@id": "tastytrade:state"
+    },
+    "statistics": {
+      "@id": "tastytrade:statistics"
+    },
+    "status": {
+      "@id": "tastytrade:status"
+    },
+    "stop-trigger": {
+      "@id": "tastytrade:stopTrigger"
+    },
+    "stopLossPercentage": {
+      "@id": "tastytrade:stopLossPercentage"
+    },
+    "stops-trading-at": {
+      "@id": "tastytrade:stopsTradingAt"
+    },
+    "streamer-exchange-code": {
+      "@id": "tastytrade:streamerExchangeCode"
+    },
+    "streamer-symbol": {
+      "@id": "tastytrade:streamerSymbol"
+    },
+    "streamer-symbols": {
+      "@id": "tastytrade:streamerSymbols"
+    },
+    "strike-factor": {
+      "@id": "tastytrade:strikeFactor"
+    },
+    "strike-price": {
+      "@id": "tastytrade:strikePrice"
+    },
+    "strikeRelativeLeg": {
+      "@id": "tastytrade:strikeRelativeLeg"
+    },
+    "strikeSelection": {
+      "@id": "tastytrade:strikeSelection"
+    },
+    "sub-fraction": {
+      "@id": "tastytrade:subFraction"
+    },
+    "sub-tick": {
+      "@id": "tastytrade:subTick"
+    },
+    "subject-to-tax-withholding": {
+      "@id": "tastytrade:subjectToTaxWithholding"
+    },
+    "submitting-user-id": {
+      "@id": "tastytrade:submittingUserId"
+    },
+    "suffix-name": {
+      "@id": "tastytrade:suffixName"
+    },
+    "suitable-options-level": {
+      "@id": "tastytrade:suitableOptionsLevel"
+    },
+    "summaryDate": {
+      "@id": "tastytrade:summaryDate"
+    },
+    "supported": {
+      "@id": "tastytrade:supported"
+    },
+    "symbol": {
+      "@id": "tastytrade:symbol"
+    },
+    "symbols": {
+      "@id": "tastytrade:symbols"
+    },
+    "takeProfitPercentage": {
+      "@id": "tastytrade:takeProfitPercentage"
+    },
+    "tax-number": {
+      "@id": "tastytrade:taxNumber"
+    },
+    "tax-number-type": {
+      "@id": "tastytrade:taxNumberType"
+    },
+    "terminal-at": {
+      "@id": "tastytrade:terminalAt"
+    },
+    "threshold": {
+      "@id": "tastytrade:threshold"
+    },
+    "threshold-numeric": {
+      "@id": "tastytrade:thresholdNumeric"
+    },
+    "tick-size": {
+      "@id": "tastytrade:tickSize"
+    },
+    "tick-sizes": {
+      "@id": "tastytrade:tickSizes"
+    },
+    "time": {
+      "@id": "tastytrade:time"
+    },
+    "time-in-force": {
+      "@id": "tastytrade:timeInForce"
+    },
+    "time-of-day": {
+      "@id": "tastytrade:timeOfDay"
+    },
+    "token": {
+      "@id": "tastytrade:token"
+    },
+    "total-pending-liquidity-pool-rebate": {
+      "@id": "tastytrade:totalPendingLiquidityPoolRebate"
+    },
+    "total-settle-balance": {
+      "@id": "tastytrade:totalSettleBalance"
+    },
+    "totalClose": {
+      "@id": "tastytrade:totalClose"
+    },
+    "totalHigh": {
+      "@id": "tastytrade:totalHigh"
+    },
+    "totalLow": {
+      "@id": "tastytrade:totalLow"
+    },
+    "totalOpen": {
+      "@id": "tastytrade:totalOpen"
+    },
+    "trading-hours": {
+      "@id": "tastytrade:tradingHours"
+    },
+    "tradingHalted": {
+      "@id": "tastytrade:tradingHalted"
+    },
+    "tradingHaltedReason": {
+      "@id": "tastytrade:tradingHaltedReason"
+    },
+    "transaction-date": {
+      "@id": "tastytrade:transactionDate"
+    },
+    "transaction-sub-type": {
+      "@id": "tastytrade:transactionSubType"
+    },
+    "transaction-type": {
+      "@id": "tastytrade:transactionType"
+    },
+    "trials": {
+      "@id": "tastytrade:trials"
+    },
+    "trigger-order": {
+      "@id": "tastytrade:triggerOrder"
+    },
+    "triggered-at": {
+      "@id": "tastytrade:triggeredAt"
+    },
+    "true-underlying-code": {
+      "@id": "tastytrade:trueUnderlyingCode"
+    },
+    "true-underlying-symbol": {
+      "@id": "tastytrade:trueUnderlyingSymbol"
+    },
+    "type": {
+      "@id": "tastytrade:type"
+    },
+    "underlying-count": {
+      "@id": "tastytrade:underlyingCount"
+    },
+    "underlying-description": {
+      "@id": "tastytrade:underlyingDescription"
+    },
+    "underlying-identifier": {
+      "@id": "tastytrade:underlyingIdentifier"
+    },
+    "underlying-instrument-type": {
+      "@id": "tastytrade:underlyingInstrumentType"
+    },
+    "underlying-opening-order-limit": {
+      "@id": "tastytrade:underlyingOpeningOrderLimit"
+    },
+    "underlying-product": {
+      "@id": "tastytrade:underlyingProduct"
+    },
+    "underlying-product-type": {
+      "@id": "tastytrade:underlyingProductType"
+    },
+    "underlying-symbol": {
+      "@id": "tastytrade:underlyingSymbol"
+    },
+    "underlyingInstrument": {
+      "@id": "tastytrade:underlyingInstrument"
+    },
+    "underlyingPrice": {
+      "@id": "tastytrade:underlyingPrice"
+    },
+    "unsettled-cryptocurrency-fiat-amount": {
+      "@id": "tastytrade:unsettledCryptocurrencyFiatAmount"
+    },
+    "unsettled-cryptocurrency-fiat-effect": {
+      "@id": "tastytrade:unsettledCryptocurrencyFiatEffect"
+    },
+    "update-type": {
+      "@id": "tastytrade:updateType"
+    },
+    "updated-at": {
+      "@id": "tastytrade:updatedAt"
+    },
+    "updatedAt": {
+      "@id": "tastytrade:updatedAt"
+    },
+    "usa-citizenship-type": {
+      "@id": "tastytrade:usaCitizenshipType"
+    },
+    "used-derivative-buying-power": {
+      "@id": "tastytrade:usedDerivativeBuyingPower"
+    },
+    "user-external-id": {
+      "@id": "tastytrade:userExternalId"
+    },
+    "user-id": {
+      "@id": "tastytrade:userId"
+    },
+    "username": {
+      "@id": "tastytrade:username"
+    },
+    "value": {
+      "@id": "tastytrade:value"
+    },
+    "value-effect": {
+      "@id": "tastytrade:valueEffect"
+    },
+    "visa-expiration-date": {
+      "@id": "tastytrade:visaExpirationDate"
+    },
+    "visa-type": {
+      "@id": "tastytrade:visaType"
+    },
+    "volume": {
+      "@id": "tastytrade:volume"
+    },
+    "warnings": {
+      "@id": "tastytrade:warnings"
+    },
+    "watchlist-entries": {
+      "@id": "tastytrade:watchlistEntries"
+    },
+    "websocket-url": {
+      "@id": "tastytrade:websocketUrl"
+    },
+    "work-phone-number": {
+      "@id": "tastytrade:workPhoneNumber"
+    },
+    "work-phone-number-details": {
+      "@id": "tastytrade:workPhoneNumberDetails"
+    },
+    "yearHighPrice": {
+      "@id": "tastytrade:yearHighPrice"
+    },
+    "yearLowPrice": {
+      "@id": "tastytrade:yearLowPrice"
+    }
+  }
+}

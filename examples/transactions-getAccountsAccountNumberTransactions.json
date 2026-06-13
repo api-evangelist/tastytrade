@@ -1,0 +1,101 @@
+{
+  "operationId": "getAccountsAccountNumberTransactions",
+  "method": "GET",
+  "path": "/accounts/{account_number}/transactions",
+  "summary": "Returns a paginated list of the account's transactions (as identified by the provided authentication token)\n            based on sort param. If no sort is passed in, it defaults to descending order.",
+  "tags": [
+    "transactions"
+  ],
+  "parameters": [
+    {
+      "name": "account_number",
+      "in": "path",
+      "required": true
+    },
+    {
+      "name": "page-offset",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "per-page",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "currency",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "sort",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "sub-type",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "type",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "types",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "action",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "end-date",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "futures-symbol",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "instrument-type",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "partition-key",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "start-date",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "symbol",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "underlying-symbol",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "end-at",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "start-at",
+      "in": "query",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "operationId": "getMarketTimeSessions",
+  "method": "GET",
+  "path": "/market-time/sessions",
+  "summary": "Retrieve a list of session timings for a date range",
+  "tags": [
+    "market-time"
+  ],
+  "parameters": [
+    {
+      "name": "from-date",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "instrument-collection",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "to-date",
+      "in": "query",
+      "required": true
+    }
+  ]
+}

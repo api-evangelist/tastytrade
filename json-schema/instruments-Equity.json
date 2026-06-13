@@ -1,0 +1,148 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/instruments/Equity",
+  "title": "Equity",
+  "type": "object",
+  "properties": {
+    "active": {
+      "description": "",
+      "type": "boolean"
+    },
+    "borrow-rate": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "bypass-manual-review": {
+      "description": "",
+      "type": "boolean"
+    },
+    "country-of-incorporation": {
+      "description": "",
+      "type": "string"
+    },
+    "country-of-taxation": {
+      "description": "",
+      "type": "string"
+    },
+    "description": {
+      "description": "",
+      "type": "string"
+    },
+    "halted-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "instrument-sub-type": {
+      "description": "",
+      "type": "string"
+    },
+    "instrument-type": {
+      "description": "",
+      "type": "string"
+    },
+    "is-closing-only": {
+      "description": "",
+      "type": "boolean"
+    },
+    "is-etf": {
+      "description": "",
+      "type": "boolean"
+    },
+    "is-fractional-quantity-eligible": {
+      "description": "",
+      "type": "boolean"
+    },
+    "is-illiquid": {
+      "description": "",
+      "type": "boolean"
+    },
+    "is-index": {
+      "description": "",
+      "type": "boolean"
+    },
+    "is-options-closing-only": {
+      "description": "",
+      "type": "boolean"
+    },
+    "lendability": {
+      "description": "",
+      "type": "string"
+    },
+    "listed-market": {
+      "description": "",
+      "type": "string"
+    },
+    "market-time-instrument-collection": {
+      "description": "",
+      "type": "string"
+    },
+    "overnight-trading-permitted": {
+      "description": "",
+      "type": "boolean"
+    },
+    "short-description": {
+      "description": "",
+      "type": "string"
+    },
+    "stops-trading-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "streamer-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "underlying-product-type": {
+      "description": "",
+      "type": "string"
+    },
+    "option-tick-sizes": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "symbol": {
+          "description": "",
+          "type": "string"
+        },
+        "threshold": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "value": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        }
+      }
+    },
+    "tick-sizes": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "symbol": {
+          "description": "",
+          "type": "string"
+        },
+        "threshold": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "value": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        }
+      }
+    }
+  },
+  "description": "Equity model"
+}

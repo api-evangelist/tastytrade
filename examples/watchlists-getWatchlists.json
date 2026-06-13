@@ -1,0 +1,10 @@
+{
+  "operationId": "getWatchlists",
+  "method": "GET",
+  "path": "/watchlists",
+  "summary": "Returns a list of all watchlists for the given account",
+  "tags": [
+    "user-watchlists"
+  ],
+  "parameters": []
+}

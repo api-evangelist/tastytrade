@@ -1,0 +1,16 @@
+{
+  "operationId": "getAccountsAccountNumberTradingStatus",
+  "method": "GET",
+  "path": "/accounts/{account_number}/trading-status",
+  "summary": "Returns current trading status for an account.",
+  "tags": [
+    "trading-status"
+  ],
+  "parameters": [
+    {
+      "name": "account_number",
+      "in": "path",
+      "required": true
+    }
+  ]
+}

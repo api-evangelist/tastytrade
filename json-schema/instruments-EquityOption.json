@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/instruments/EquityOption",
+  "title": "EquityOption",
+  "type": "object",
+  "properties": {
+    "active": {
+      "description": "",
+      "type": "boolean"
+    },
+    "days-to-expiration": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "exercise-style": {
+      "description": "",
+      "type": "string"
+    },
+    "expiration-date": {
+      "description": "",
+      "type": "string",
+      "format": "date"
+    },
+    "expiration-type": {
+      "description": "",
+      "type": "string"
+    },
+    "expires-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "halted-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "instrument-type": {
+      "description": "",
+      "type": "string"
+    },
+    "is-closing-only": {
+      "description": "",
+      "type": "boolean"
+    },
+    "listed-market": {
+      "description": "",
+      "type": "string"
+    },
+    "market-time-instrument-collection": {
+      "description": "",
+      "type": "string"
+    },
+    "old-security-number": {
+      "description": "",
+      "type": "string"
+    },
+    "option-chain-type": {
+      "description": "",
+      "type": "string"
+    },
+    "option-type": {
+      "description": "",
+      "type": "string"
+    },
+    "root-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "settlement-type": {
+      "description": "",
+      "type": "string"
+    },
+    "shares-per-contract": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "stops-trading-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "streamer-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "strike-price": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "underlying-symbol": {
+      "description": "",
+      "type": "string"
+    }
+  },
+  "description": "EquityOption model"
+}

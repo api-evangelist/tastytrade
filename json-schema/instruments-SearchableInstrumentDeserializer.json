@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/instruments/SearchableInstrumentDeserializer",
+  "title": "SearchableInstrumentDeserializer",
+  "type": "object",
+  "properties": {
+    "category": {
+      "description": "",
+      "type": "string"
+    },
+    "description": {
+      "description": "",
+      "type": "string"
+    },
+    "event-product-external-id": {
+      "description": "",
+      "type": "string"
+    },
+    "exchange": {
+      "description": "",
+      "type": "string"
+    },
+    "external-id": {
+      "description": "",
+      "type": "string"
+    },
+    "instrument-type": {
+      "description": "",
+      "type": "string"
+    },
+    "stops-trading-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "underlying-product": {
+      "description": "",
+      "type": "string"
+    },
+    "underlying-product-type": {
+      "description": "",
+      "type": "string"
+    }
+  },
+  "description": "SearchableInstrumentDeserializer model"
+}

@@ -1,0 +1,21 @@
+{
+  "operationId": "getAccountsAccountNumberTransactionsId",
+  "method": "GET",
+  "path": "/accounts/{account_number}/transactions/{id}",
+  "summary": "Retrieve a transaction by account number and ID",
+  "tags": [
+    "accounts"
+  ],
+  "parameters": [
+    {
+      "name": "account_number",
+      "in": "path",
+      "required": true
+    },
+    {
+      "name": "id",
+      "in": "path",
+      "required": true
+    }
+  ]
+}

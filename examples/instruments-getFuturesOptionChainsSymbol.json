@@ -1,0 +1,16 @@
+{
+  "operationId": "getFuturesOptionChainsSymbol",
+  "method": "GET",
+  "path": "/futures-option-chains/{symbol}",
+  "summary": "Returns a futures option chain given a futures product code, i.e. `ES`",
+  "tags": [
+    "futures-option-chains"
+  ],
+  "parameters": [
+    {
+      "name": "symbol",
+      "in": "path",
+      "required": true
+    }
+  ]
+}

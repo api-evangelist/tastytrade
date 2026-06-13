@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/net-liquidating-value-history/NetLiqOhlc",
+  "title": "NetLiqOhlc",
+  "type": "object",
+  "properties": {
+    "open": {
+      "type": "number",
+      "format": "double"
+    },
+    "high": {
+      "type": "number",
+      "format": "double"
+    },
+    "low": {
+      "type": "number",
+      "format": "double"
+    },
+    "close": {
+      "type": "number",
+      "format": "double"
+    },
+    "totalOpen": {
+      "type": "number",
+      "format": "double"
+    },
+    "totalHigh": {
+      "type": "number",
+      "format": "double"
+    },
+    "totalLow": {
+      "type": "number",
+      "format": "double"
+    },
+    "totalClose": {
+      "type": "number",
+      "format": "double"
+    },
+    "pendingCashOpen": {
+      "type": "number",
+      "format": "double"
+    },
+    "pendingCashHigh": {
+      "type": "number",
+      "format": "double"
+    },
+    "pendingCashLow": {
+      "type": "number",
+      "format": "double"
+    },
+    "pendingCashClose": {
+      "type": "number",
+      "format": "double"
+    },
+    "time": {
+      "type": "string"
+    }
+  }
+}

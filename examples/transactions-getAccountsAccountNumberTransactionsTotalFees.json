@@ -1,0 +1,21 @@
+{
+  "operationId": "getAccountsAccountNumberTransactionsTotalFees",
+  "method": "GET",
+  "path": "/accounts/{account_number}/transactions/total-fees",
+  "summary": "Return the total fees for an account for a given day",
+  "tags": [
+    "accounts"
+  ],
+  "parameters": [
+    {
+      "name": "account_number",
+      "in": "path",
+      "required": true
+    },
+    {
+      "name": "date",
+      "in": "query",
+      "required": false
+    }
+  ]
+}

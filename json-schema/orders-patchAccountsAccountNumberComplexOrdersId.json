@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/orders/patchAccountsAccountNumberComplexOrdersId",
+  "title": "patchAccountsAccountNumberComplexOrdersId",
+  "type": "object",
+  "properties": {
+    "ratio-price-comparator": {
+      "type": "string",
+      "description": "How to compare against the ratio price. \\\n                                                      Supports `gte` (Greater than or Equal To) or `lte` (Less than or Equal to)",
+      "enum": [
+        "gte",
+        "lte"
+      ]
+    },
+    "ratio-price-threshold": {
+      "type": "number",
+      "format": "double",
+      "description": "Ratio price for a PAIRS trade"
+    }
+  },
+  "description": "Edit threshold-price of a PAIRS trade."
+}

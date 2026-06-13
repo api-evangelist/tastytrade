@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/instruments/FutureOptionProduct",
+  "title": "FutureOptionProduct",
+  "type": "object",
+  "properties": {
+    "cash-settled": {
+      "description": "",
+      "type": "boolean"
+    },
+    "code": {
+      "description": "",
+      "type": "string"
+    },
+    "display-factor": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "exchange": {
+      "description": "",
+      "type": "string"
+    },
+    "expiration-type": {
+      "description": "",
+      "type": "string"
+    },
+    "is-am-settled": {
+      "description": "",
+      "type": "boolean"
+    },
+    "itm-rule": {
+      "description": "",
+      "type": "string"
+    },
+    "market-sector": {
+      "description": "",
+      "type": "string"
+    },
+    "product-subtype": {
+      "description": "",
+      "type": "string"
+    },
+    "product-type": {
+      "description": "",
+      "type": "string"
+    },
+    "root-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "settlement-delay-days": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "supported": {
+      "description": "",
+      "type": "boolean"
+    }
+  },
+  "description": "FutureOptionProduct model"
+}

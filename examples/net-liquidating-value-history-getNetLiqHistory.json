@@ -1,0 +1,36 @@
+{
+  "operationId": "getNetLiqHistory",
+  "method": "GET",
+  "path": "/accounts/{accountNumber}/net-liq/history",
+  "summary": "Get net-liq history for account",
+  "tags": [
+    "net-liq-controller"
+  ],
+  "parameters": [
+    {
+      "name": "accountNumber",
+      "in": "path",
+      "required": true
+    },
+    {
+      "name": "time-back",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "start-time",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "end-time",
+      "in": "query",
+      "required": false
+    },
+    {
+      "name": "interval",
+      "in": "query",
+      "required": false
+    }
+  ]
+}

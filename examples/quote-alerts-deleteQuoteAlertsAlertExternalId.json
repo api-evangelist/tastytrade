@@ -1,0 +1,16 @@
+{
+  "operationId": "deleteQuoteAlertsAlertExternalId",
+  "method": "DELETE",
+  "path": "/quote-alerts/{alert_external_id}",
+  "summary": "Cancel a quote alert for current user",
+  "tags": [
+    "quote-alerts"
+  ],
+  "parameters": [
+    {
+      "name": "alert_external_id",
+      "in": "path",
+      "required": true
+    }
+  ]
+}

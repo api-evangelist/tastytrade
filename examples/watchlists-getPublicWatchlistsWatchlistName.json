@@ -1,0 +1,16 @@
+{
+  "operationId": "getPublicWatchlistsWatchlistName",
+  "method": "GET",
+  "path": "/public-watchlists/{watchlist_name}",
+  "summary": "Returns a requested tastyworks watchlist",
+  "tags": [
+    "public-watchlists"
+  ],
+  "parameters": [
+    {
+      "name": "watchlist_name",
+      "in": "path",
+      "required": true
+    }
+  ]
+}

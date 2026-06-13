@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/risk-parameters/MarginRequirementsGlobalConfiguration",
+  "title": "MarginRequirementsGlobalConfiguration",
+  "type": "object",
+  "properties": {
+    "risk-free-rate": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    }
+  },
+  "description": "MarginRequirementsGlobalConfiguration model"
+}

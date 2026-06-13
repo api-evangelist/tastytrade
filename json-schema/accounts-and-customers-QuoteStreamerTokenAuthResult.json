@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/accounts-and-customers/QuoteStreamerTokenAuthResult",
+  "title": "QuoteStreamerTokenAuthResult",
+  "type": "object",
+  "properties": {
+    "dxlink-url": {
+      "description": "",
+      "type": "string"
+    },
+    "expires-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "issued-at": {
+      "description": "",
+      "type": "string",
+      "format": "date-time"
+    },
+    "level": {
+      "description": "",
+      "type": "string"
+    },
+    "token": {
+      "description": "",
+      "type": "string"
+    },
+    "websocket-url": {
+      "description": "",
+      "type": "string"
+    }
+  },
+  "description": "QuoteStreamerTokenAuthResult model"
+}

@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/risk-parameters/MarginRequirement",
+  "title": "MarginRequirement",
+  "type": "object",
+  "properties": {
+    "long-equity-initial": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "long-equity-maintenance": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "naked-option-floor": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "naked-option-minimum": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "naked-option-standard": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "short-equity-initial": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "short-equity-maintenance": {
+      "description": "",
+      "type": "number",
+      "format": "double"
+    },
+    "underlying-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "clearing-identifier": {
+      "description": "",
+      "type": "string"
+    },
+    "is-deleted": {
+      "description": "",
+      "type": "boolean"
+    }
+  },
+  "description": "MarginRequirement model"
+}

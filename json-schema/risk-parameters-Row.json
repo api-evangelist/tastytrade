@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/risk-parameters/Row",
+  "title": "Row",
+  "type": "object",
+  "properties": {
+    "file-date": {
+      "description": "",
+      "type": "string",
+      "format": "date"
+    },
+    "row-index": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "exchange": {
+      "description": "",
+      "type": "string"
+    },
+    "row-data": {
+      "description": "",
+      "type": "string"
+    }
+  },
+  "description": "Row model"
+}

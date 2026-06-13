@@ -1,0 +1,16 @@
+{
+  "operationId": "getFuturesOptionChainsSymbolNested",
+  "method": "GET",
+  "path": "/futures-option-chains/{symbol}/nested",
+  "summary": "Returns a futures option chain given a futures product code in a nested form to minimize redundant processing",
+  "tags": [
+    "futures-option-chains"
+  ],
+  "parameters": [
+    {
+      "name": "symbol",
+      "in": "path",
+      "required": true
+    }
+  ]
+}

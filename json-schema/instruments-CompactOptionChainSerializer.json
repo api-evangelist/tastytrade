@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/instruments/CompactOptionChainSerializer",
+  "title": "CompactOptionChainSerializer",
+  "type": "object",
+  "properties": {
+    "underlying-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "root-symbol": {
+      "description": "",
+      "type": "string"
+    },
+    "option-chain-type": {
+      "description": "",
+      "type": "string"
+    },
+    "settlement-type": {
+      "description": "",
+      "type": "string"
+    },
+    "shares-per-contract": {
+      "description": "",
+      "type": "integer",
+      "format": "int32"
+    },
+    "expiration-type": {
+      "description": "",
+      "type": "string"
+    },
+    "deliverables": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "amount": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "deliverable-type": {
+          "description": "",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "instrument-type": {
+          "description": "",
+          "type": "string"
+        },
+        "percent": {
+          "description": "",
+          "type": "string"
+        },
+        "root-symbol": {
+          "description": "",
+          "type": "string"
+        },
+        "symbol": {
+          "description": "",
+          "type": "string"
+        }
+      }
+    },
+    "symbols": {
+      "description": "",
+      "type": "string"
+    },
+    "streamer-symbols": {
+      "description": "",
+      "type": "string"
+    }
+  },
+  "description": "CompactOptionChainSerializer model"
+}

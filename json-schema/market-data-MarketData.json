@@ -1,0 +1,194 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://developer.tastytrade.com/schemas/market-data/MarketData",
+  "title": "MarketData",
+  "type": "object",
+  "properties": {
+    "symbol": {
+      "type": "string"
+    },
+    "instrumentType": {
+      "type": "string",
+      "enum": [
+        "Bond",
+        "Cryptocurrency",
+        "Equity",
+        "Equity Offering",
+        "Equity Option",
+        "Fixed Income Security",
+        "Future",
+        "Future Option",
+        "Index",
+        "Liquidity Pool",
+        "Mutual Fund",
+        "Unknown"
+      ]
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "bid": {
+      "type": "number",
+      "format": "double"
+    },
+    "bidSize": {
+      "type": "number",
+      "format": "double"
+    },
+    "ask": {
+      "type": "number",
+      "format": "double"
+    },
+    "askSize": {
+      "type": "number",
+      "format": "double"
+    },
+    "mid": {
+      "type": "number",
+      "format": "double"
+    },
+    "mark": {
+      "type": "number",
+      "format": "double"
+    },
+    "last": {
+      "type": "number",
+      "format": "double"
+    },
+    "lastExt": {
+      "type": "number",
+      "format": "double"
+    },
+    "lastMkt": {
+      "type": "number",
+      "format": "double"
+    },
+    "beta": {
+      "type": "number",
+      "format": "double"
+    },
+    "dividendAmount": {
+      "type": "number",
+      "format": "double"
+    },
+    "dividendFrequency": {
+      "type": "number",
+      "format": "double"
+    },
+    "open": {
+      "type": "number",
+      "format": "double"
+    },
+    "dayHighPrice": {
+      "type": "number",
+      "format": "double"
+    },
+    "dayLowPrice": {
+      "type": "number",
+      "format": "double"
+    },
+    "close": {
+      "type": "number",
+      "format": "double"
+    },
+    "closePriceType": {
+      "type": "string",
+      "enum": [
+        "UNKNOWN",
+        "REGULAR",
+        "INDICATIVE",
+        "PRELIMINARY",
+        "FINAL"
+      ]
+    },
+    "prevClose": {
+      "type": "number",
+      "format": "double"
+    },
+    "prevClosePriceType": {
+      "type": "string",
+      "enum": [
+        "UNKNOWN",
+        "REGULAR",
+        "INDICATIVE",
+        "PRELIMINARY",
+        "FINAL"
+      ]
+    },
+    "summaryDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "prevCloseDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "lowLimitPrice": {
+      "type": "number",
+      "format": "double"
+    },
+    "highLimitPrice": {
+      "type": "number",
+      "format": "double"
+    },
+    "tradingHaltedReason": {
+      "type": "string"
+    },
+    "haltStartTime": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "haltEndTime": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "yearLowPrice": {
+      "type": "number",
+      "format": "double"
+    },
+    "yearHighPrice": {
+      "type": "number",
+      "format": "double"
+    },
+    "volume": {
+      "type": "number",
+      "format": "double"
+    },
+    "tradingHalted": {
+      "type": "boolean"
+    },
+    "lastTradeTime": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "dayOpen": {
+      "type": "number",
+      "format": "double",
+      "deprecated": true
+    },
+    "dayHigh": {
+      "type": "number",
+      "format": "double",
+      "deprecated": true
+    },
+    "dayLow": {
+      "type": "number",
+      "format": "double",
+      "deprecated": true
+    },
+    "dayClose": {
+      "type": "number",
+      "format": "double",
+      "deprecated": true
+    },
+    "prevDayClose": {
+      "type": "number",
+      "format": "double",
+      "deprecated": true
+    },
+    "instrument": {
+      "$ref": "#/components/schemas/Instrument"
+    }
+  }
+}
