@@ -1,0 +1,53 @@
+name: tastytrade API Rate Limits
+description: >
+  tastytrade does not publish explicit per-minute or per-second rate limit
+  thresholds in its public documentation. However, the platform does enforce
+  abuse-prevention controls. The most clearly documented limit is an IP-level
+  block triggered by excessive failed authentication attempts. Access tokens
+  issued via session login expire after 15 minutes and must be refreshed.
+  OAuth 2.0 refresh tokens provide longer-lived access for partner
+  integrations. API versioning uses a date-based scheme (YYYYMMDD) specified
+  via the Accept-Version request header.
+limits:
+  - name: Failed Login / IP Blocking
+    description: >
+      tastytrade will block an IP address outright if too many failed login
+      attempts are received within a short period. Blocks typically last 8
+      hours. Contact api.support@tastytrade.com to request an early unblock.
+    scope: IP address
+    enforcement: Automatic block on excessive failed login attempts
+    block_duration: Approximately 8 hours
+    contact: api.support@tastytrade.com
+
+  - name: Session Token Lifetime
+    description: >
+      Access tokens obtained via POST /sessions expire after 15 minutes.
+      Every request must include a valid session token in the Authorization
+      header. Use the remember-token or OAuth 2.0 refresh tokens for
+      longer-lived sessions.
+    scope: Per session token
+    expiry: 15 minutes
+    recommendation: Use OAuth 2.0 refresh tokens for long-running integrations
+
+  - name: Sandbox Quote Delay
+    description: >
+      In the sandbox environment (api.cert.tastyworks.com), market data
+      quotes are always 15-minute delayed. Real-time quotes are only
+      available in the production environment.
+    scope: Sandbox environment
+    delay: 15 minutes
+
+  - name: Sandbox Reset Schedule
+    description: >
+      The sandbox environment resets every 24 hours. All trades, transactions,
+      positions, and balances are cleared. User accounts, customer records, and
+      account structures persist across resets.
+    scope: Sandbox environment
+    reset_interval: Every 24 hours
+
+notes: >
+  tastytrade has not published specific request-per-second or request-per-day
+  numeric rate limits in its public developer documentation as of June 2026.
+  Developers should implement standard back-off and retry logic. For
+  high-volume integrations, contact api.support@tastytrade.com to discuss
+  requirements with the partner team.

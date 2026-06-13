@@ -1,0 +1,48 @@
+name: tastytrade API Plans
+description: >
+  The tastytrade Open API is available to all tastytrade account holders at
+  no additional cost beyond maintaining a funded brokerage account. The API
+  is not offered on a tiered SaaS subscription basis; instead, access is
+  tied to having a tastytrade brokerage relationship. A free sandbox
+  environment is available to all registered API users for development and
+  testing. Partners and institutional integrators can apply for enhanced
+  onboarding support, shared support channels, and direct access to
+  tastytrade engineers via the partner program.
+plans:
+  - name: Open API (Standard)
+    description: >
+      Full REST and WebSocket API access provided to all tastytrade account
+      holders. Includes read and write access to account data, real-time
+      market data streaming via DXLink, account update streaming, order
+      submission and management, option chains, instruments, and watchlists.
+      No separate monthly fee; access is contingent on maintaining an active
+      tastytrade brokerage account.
+    url: https://tastytrade.com/api/
+    features:
+      - Full REST API access (accounts, orders, positions, balances, transactions)
+      - DXLink real-time market data WebSocket streaming
+      - Account streamer WebSocket for real-time order/position updates
+      - Sandbox environment for development and testing
+      - OAuth 2.0 support for partner and third-party integrations
+      - Access to equities, options, futures, and crypto trading
+      - Multi-leg option strategy order submission
+      - Watchlist create and sync
+      - Symbol search and option chain data
+      - Margin requirement queries
+      - Quote alerts
+    cost: Free (requires tastytrade brokerage account)
+
+  - name: Partner Program
+    description: >
+      For qualified partners building integrations on top of the tastytrade
+      API. Provides seamless onboarding, shared support channels, and direct
+      access to tastytrade tech and engineering teams. Contact
+      api.support@tastytrade.com to apply.
+    url: https://tastytrade.com/api/
+    contact: api.support@tastytrade.com
+    features:
+      - All standard Open API features
+      - Dedicated onboarding assistance
+      - Shared support channels with tastytrade engineering
+      - Priority technical support
+    cost: Contact for details

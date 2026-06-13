@@ -1,0 +1,58 @@
+name: tastytrade API FinOps
+description: >
+  tastytrade's Open API does not carry a separate API access fee. API usage
+  is included as a feature of a tastytrade brokerage account. The primary
+  cost model is transaction-based: commissions on trades executed through
+  the API follow tastytrade's standard brokerage fee schedule. There is no
+  additional per-call or monthly API subscription charge for individual or
+  partner usage. For institutional or high-volume partners, contact
+  api.support@tastytrade.com to discuss custom arrangements.
+costs:
+  - name: API Access Fee
+    description: No separate charge for API access. Included with a tastytrade brokerage account.
+    amount: 0
+    currency: USD
+    cadence: None
+
+  - name: Equity Options Commission
+    description: >
+      Standard tastytrade commission for equity options trades executed via the
+      API. Capped per leg. Closing trades on options may have reduced or zero
+      commission — check tastytrade's current published fee schedule.
+    amount: 1.00
+    currency: USD
+    unit: per contract (opening)
+    notes: tastytrade caps per-leg options commissions; closing trades may be free
+
+  - name: Futures Commission
+    description: >
+      Commission per futures contract executed via the API. Rates vary by
+      instrument type (micro, standard, crypto futures). Check tastytrade's
+      published fee schedule for current rates.
+    amount: 1.25
+    currency: USD
+    unit: per contract (varies by product)
+
+  - name: Equity / Stock Trades
+    description: >
+      Equities and ETFs traded via the API are typically commission-free on
+      tastytrade for standard lot sizes. Fractional stock orders are supported
+      via the API.
+    amount: 0
+    currency: USD
+    unit: per trade
+    notes: Commission-free for standard equity lots; check for OTC or other exceptions
+
+notes: >
+  Pricing as of June 2026. tastytrade's fee schedule is subject to change.
+  Always verify current rates at https://tastytrade.com/pricing/ before
+  building cost models. The API itself (data access, streaming, order
+  submission infrastructure) is provided at no additional charge beyond
+  brokerage commissions on executed trades.
+references:
+  - name: tastytrade Pricing Page
+    url: https://tastytrade.com/pricing/
+  - name: tastytrade API Landing Page
+    url: https://tastytrade.com/api/
+  - name: API Terms of Service
+    url: https://assets.tastyworks.com/production/documents/USA/open_api_terms_and_conditions.pdf

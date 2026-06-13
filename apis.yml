@@ -1,0 +1,154 @@
+name: tastytrade
+description: >
+  tastytrade is an options-focused brokerage offering a public Open API that
+  provides full read and write access to real-time account data, positions,
+  balances, transaction history, market data, option chains, and order
+  execution across equities, options, futures, and crypto. The API uses REST
+  over HTTPS with JSON payloads for synchronous operations and WebSocket
+  connections (DXLink for market data, dedicated account streamer for real-time
+  account updates). OAuth 2.0 and session-token authentication are both
+  supported, with a safe sandbox environment for development and testing.
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Finance
+  - Brokerage
+  - Trading
+  - Options
+  - Futures
+  - Equities
+  - Crypto
+  - Market Data
+  - WebSocket
+url: https://raw.githubusercontent.com/api-evangelist/tastytrade/refs/heads/main/apis.yml
+created: "2026-06-13"
+modified: "2026-06-13"
+specificationVersion: "0.19"
+apis:
+  - name: tastytrade REST API
+    description: >
+      The core REST API for tastytrade provides programmatic access to accounts,
+      customer information, balances, positions, transactions, orders, instruments,
+      option chains, market data, watchlists, margin requirements, quote alerts,
+      risk parameters, backtesting, and symbol search. All responses are JSON.
+      Session tokens expire after 15 minutes; OAuth 2.0 long-lived refresh tokens
+      are also available for partner integrations.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.tastytrade.com/
+    baseURL: https://api.tastyworks.com
+    tags:
+      - Brokerage
+      - Accounts
+      - Orders
+      - Positions
+      - Balances
+      - Instruments
+      - Market Data
+      - Options
+      - Futures
+    properties:
+      - type: Documentation
+        url: https://developer.tastytrade.com/
+      - type: OpenAPI
+        url: https://developer.tastytrade.com/open-api-spec/account-status/
+      - type: Authentication
+        url: https://developer.tastytrade.com/oauth/
+      - type: Sandbox
+        url: https://developer.tastytrade.com/sandbox/
+      - type: PostmanCollection
+        url: https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+      - type: GettingStarted
+        url: https://developer.tastytrade.com/basic-api-usage/
+      - type: Errors
+        url: https://developer.tastytrade.com/api-overview/
+      - type: Plans
+        url: plans/plans.yml
+      - type: RateLimits
+        url: rate-limits/rate-limits.yml
+    contact:
+      - FN: tastytrade API Support
+        email: api.support@tastytrade.com
+
+  - name: tastytrade DXLink Market Data Streaming API
+    description: >
+      Real-time market data streaming via DXLink, a WebSocket-based protocol
+      backed by dxFeed. Clients fetch a quote token from the tastytrade REST API
+      and use it to authenticate with the DXLink WebSocket endpoint. Supports
+      subscriptions to quotes, greeks (implied volatility, delta, gamma, theta,
+      vega), candles, and other market events for equities, options, futures,
+      and crypto instruments. Sandbox quotes are 15-minute delayed.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.tastytrade.com/streaming-market-data/
+    baseURL: wss://tasty-openapi-ws.dxfeed.com
+    tags:
+      - WebSocket
+      - Streaming
+      - Market Data
+      - Quotes
+      - Options Greeks
+      - Real-Time
+      - DXLink
+      - dxFeed
+    properties:
+      - type: Documentation
+        url: https://developer.tastytrade.com/streaming-market-data/
+      - type: GettingStarted
+        url: https://developer.tastytrade.com/streaming-market-data/
+
+  - name: tastytrade Account Streamer API
+    description: >
+      WebSocket-based account streaming that delivers real-time notifications
+      for order fills, position changes, account balance updates, and margin
+      requirement changes. Clients authenticate using a tastytrade session token
+      and subscribe to one or more accounts. The streamer supports automatic
+      reconnection and delivers structured JSON notification messages.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.tastytrade.com/streaming-account-data/
+    baseURL: wss://streamer.tastyworks.com
+    tags:
+      - WebSocket
+      - Streaming
+      - Account Updates
+      - Orders
+      - Positions
+      - Real-Time
+    properties:
+      - type: Documentation
+        url: https://developer.tastytrade.com/streaming-account-data/
+      - type: GettingStarted
+        url: https://developer.tastytrade.com/streaming-account-data/
+
+common:
+  - type: Portal
+    url: https://developer.tastytrade.com/
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: FAQ
+    url: https://developer.tastytrade.com/faq/
+  - type: ChangeLog
+    url: https://developer.tastytrade.com/release-notes/
+  - type: GitHubOrganization
+    url: https://github.com/tastytrade/
+  - type: JavaScriptSDK
+    url: https://github.com/tastytrade/tastytrade-api-js
+  - type: PostmanCollection
+    url: https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: TermsOfService
+    url: https://assets.tastyworks.com/production/documents/USA/open_api_terms_and_conditions.pdf
+  - type: ContactEmail
+    url: mailto:api.support@tastytrade.com
+  - type: Website
+    url: https://tastytrade.com/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+  - type: FinOps
+    url: finops/finops.yml
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
