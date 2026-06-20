@@ -8,7 +8,7 @@ description: >
   connections (DXLink for market data, dedicated account streamer for real-time
   account updates). OAuth 2.0 and session-token authentication are both
   supported, with a safe sandbox environment for development and testing.
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Finance
   - Brokerage
@@ -32,7 +32,7 @@ apis:
       risk parameters, backtesting, and symbol search. All responses are JSON.
       Session tokens expire after 15 minutes; OAuth 2.0 long-lived refresh tokens
       are also available for partner integrations.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.tastytrade.com/
     baseURL: https://api.tastyworks.com
     tags:
@@ -110,7 +110,7 @@ apis:
       subscriptions to quotes, greeks (implied volatility, delta, gamma, theta,
       vega), candles, and other market events for equities, options, futures,
       and crypto instruments. Sandbox quotes are 15-minute delayed.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.tastytrade.com/streaming-market-data/
     baseURL: wss://tasty-openapi-ws.dxfeed.com
     tags:
@@ -135,7 +135,7 @@ apis:
       requirement changes. Clients authenticate using a tastytrade session token
       and subscribe to one or more accounts. The streamer supports automatic
       reconnection and delivers structured JSON notification messages.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.tastytrade.com/streaming-account-data/
     baseURL: wss://streamer.tastyworks.com
     tags:
