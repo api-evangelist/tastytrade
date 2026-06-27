@@ -80,7 +80,7 @@ apis:
         url: openapi/transactions.json
       - type: OpenAPI
         url: openapi/watchlists.json
-      - type: JSONLd
+      - type: JSONLD
         url: json-ld/tastytrade-api.jsonld
       - type: Vocabulary
         url: vocabulary/tastytrade-vocabulary.json
@@ -92,7 +92,7 @@ apis:
         url: https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
       - type: GettingStarted
         url: https://developer.tastytrade.com/basic-api-usage/
-      - type: Errors
+      - type: ErrorCodes
         url: https://developer.tastytrade.com/api-overview/
       - type: Plans
         url: plans/plans.yml
