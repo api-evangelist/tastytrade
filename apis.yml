@@ -152,6 +152,8 @@ apis:
         url: https://developer.tastytrade.com/streaming-account-data/
 
 common:
+  - type: DomainSecurity
+    url: security/tastytrade-domain-security.yml
   - type: Portal
     url: https://developer.tastytrade.com/
   - type: Documentation
