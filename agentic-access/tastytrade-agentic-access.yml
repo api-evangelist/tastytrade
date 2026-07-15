@@ -1,0 +1,1125 @@
+generated: '2026-07-15'
+method: generated
+source: openapi/account-status.json, openapi/accounts-and-customers.json, openapi/backtesting.json,
+  openapi/balances-and-positions.json, openapi/instruments.json, openapi/margin-requirements.json,
+  openapi/market-data.json, openapi/market-metrics.json, openapi/market-sessions.json, openapi/net-liquidating-value-history.json,
+  openapi/orders.json, openapi/quote-alerts.json, openapi/risk-parameters.json, openapi/symbol-search.json,
+  openapi/transactions.json, openapi/watchlists.json
+description: Recommended x-agentic-access execution contracts, classified heuristically from
+  the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
+  audience per deployment. See research/curity/agentic-governance/.
+summary:
+  operations: 96
+  by_action_class:
+    connected: 76
+    acting: 20
+  by_consequence:
+    read: 76
+    write: 8
+    physical: 12
+  human_in_the_loop_required: 0
+operations:
+- path: /accounts/{account_number}/trading-status
+  method: get
+  operationId: getAccountsAccountNumberTradingStatus
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api-quote-tokens
+  method: get
+  operationId: getApiQuoteTokens
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /customers/{customer_id}
+  method: get
+  operationId: getCustomersCustomerId
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /customers/{customer_id}/accounts
+  method: get
+  operationId: getCustomersCustomerIdAccounts
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /customers/{customer_id}/accounts/{account_number}
+  method: get
+  operationId: getCustomersCustomerIdAccountsAccountNumber
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /backtests
+  method: get
+  operationId: GetUsersBacktests
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /backtests
+  method: post
+  operationId: PostBacktests
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /backtests/{id}
+  method: get
+  operationId: GetBacktests
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /backtests/{id}/logs
+  method: get
+  operationId: GetBacktestsLogs
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /backtests/{id}/cancel
+  method: post
+  operationId: CancelBacktests
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /available-dates
+  method: get
+  operationId: GetAvailableDates
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /simulate-trade
+  method: post
+  operationId: SimulateTrade
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /accounts/{account_number}/balance-snapshots
+  method: get
+  operationId: getAccountsAccountNumberBalanceSnapshots
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /accounts/{account_number}/balances
+  method: get
+  operationId: getAccountsAccountNumberBalances
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /accounts/{account_number}/balances/{currency}
+  method: get
+  operationId: getAccountsAccountNumberBalancesCurrency
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /accounts/{account_number}/positions
+  method: get
+  operationId: getAccountsAccountNumberPositions
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /futures-option-chains/{symbol}
+  method: get
+  operationId: getFuturesOptionChainsSymbol
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /futures-option-chains/{symbol}/nested
+  method: get
+  operationId: getFuturesOptionChainsSymbolNested
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /instruments/cryptocurrencies
+  method: get
+  operationId: getInstrumentsCryptocurrencies
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /instruments/cryptocurrencies/{symbol}
+  method: get
+  operationId: getInstrumentsCryptocurrenciesSymbol
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /instruments/equities
+  method: get
+  operationId: getInstrumentsEquities
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /instruments/equities/active
+  method: get
+  operationId: getInstrumentsEquitiesActive
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /instruments/equities/{symbol}
+  method: get
+  operationId: getInstrumentsEquitiesSymbol
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /instruments/equity-options/{symbol}
+  method: get
+  operationId: getInstrumentsEquityOptionsSymbol
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /instruments/future-option-products
+  method: get
+  operationId: getInstrumentsFutureOptionProducts
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /instruments/future-option-products/{exchange}/{root_symbol}
+  method: get
+  operationId: getInstrumentsFutureOptionProductsExchangeRootSymbol
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /instruments/future-option-products/{root_symbol}
+  method: get
+  operationId: getInstrumentsFutureOptionProductsRootSymbol
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /instruments/future-options/{symbol}
+  method: get
+  operationId: getInstrumentsFutureOptionsSymbol
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /instruments/future-products
+  method: get
+  operationId: getInstrumentsFutureProducts
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /instruments/future-products/{exchange}/{code}
+  method: get
+  operationId: getInstrumentsFutureProductsExchangeCode
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /instruments/futures
+  method: get
+  operationId: getInstrumentsFutures
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /instruments/futures/{symbol}
+  method: get
+  operationId: getInstrumentsFuturesSymbol
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /instruments/quantity-decimal-precisions
+  method: get
+  operationId: getInstrumentsQuantityDecimalPrecisions
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /instruments/search
+  method: get
+  operationId: getInstrumentsSearch
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /instruments/warrants
+  method: get
+  operationId: getInstrumentsWarrants
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /instruments/warrants/{symbol}
+  method: get
+  operationId: getInstrumentsWarrantsSymbol
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /option-chains/{symbol}
+  method: get
+  operationId: getOptionChainsSymbol
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /option-chains/{symbol}/compact
+  method: get
+  operationId: getOptionChainsSymbolCompact
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /option-chains/{symbol}/nested
+  method: get
+  operationId: getOptionChainsSymbolNested
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /margin/accounts/{account_number}/requirements
+  method: get
+  operationId: getMarginAccountsAccountNumberRequirements
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /margin/accounts/{account_number}/dry-run
+  method: post
+  operationId: createMarginAccountsAccountNumberDryRun
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /market-data/by-type
+  method: get
+  operationId: getMarketDataByType
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /market-metrics
+  method: get
+  operationId: getMarketMetricsIndex
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /market-metrics/historic-corporate-events/dividends/{symbol}
+  method: get
+  operationId: getMarketMetricsDividendsSymbol
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /market-metrics/historic-corporate-events/earnings-reports/{symbol}
+  method: get
+  operationId: getMarketMetricsEarningsSymbol
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /market-time/sessions
+  method: get
+  operationId: getMarketTimeSessions
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /market-time/sessions/current
+  method: get
+  operationId: getMarketTimeSessionsCurrent
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /market-time/equities/sessions/current
+  method: get
+  operationId: getMarketTimeEquitiesSessionsCurrent
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /market-time/equities/sessions/next
+  method: get
+  operationId: getMarketTimeEquitiesSessionsNext
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /market-time/equities/sessions/previous
+  method: get
+  operationId: getMarketTimeEquitiesSessionsPrevious
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /market-time/equities/holidays
+  method: get
+  operationId: getMarketTimeEquitiesHolidays
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /market-time/futures/sessions/current
+  method: get
+  operationId: getMarketTimeFuturesSessionsCurrent
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /market-time/futures/sessions/current/{instrument_collection}
+  method: get
+  operationId: getMarketTimeFuturesSessionsCurrentInstrumentCollection
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /market-time/futures/sessions/next/{instrument_collection}
+  method: get
+  operationId: getMarketTimeFuturesSessionsNextInstrumentCollection
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /market-time/futures/sessions/previous/{instrument_collection}
+  method: get
+  operationId: getMarketTimeFuturesSessionsPreviousInstrumentCollection
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /market-time/futures/holidays/{instrument_collection}
+  method: get
+  operationId: getMarketTimeFuturesHolidaysInstrumentCollection
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /accounts/{accountNumber}/net-liq/history
+  method: get
+  operationId: getNetLiqHistory
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /accounts/{account_number}/complex-orders
+  method: get
+  operationId: getAccountsAccountNumberComplexOrders
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /accounts/{account_number}/complex-orders
+  method: post
+  operationId: postAccountsAccountNumberComplexOrders
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /accounts/{account_number}/complex-orders/dry-run
+  method: post
+  operationId: postAccountsAccountNumberComplexOrdersDryRun
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /accounts/{account_number}/complex-orders/live
+  method: get
+  operationId: getAccountsAccountNumberComplexOrdersLive
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /accounts/{account_number}/complex-orders/{id}
+  method: get
+  operationId: getAccountsAccountNumberComplexOrdersId
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /accounts/{account_number}/complex-orders/{id}
+  method: patch
+  operationId: patchAccountsAccountNumberComplexOrdersId
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /accounts/{account_number}/complex-orders/{id}
+  method: delete
+  operationId: deleteAccountsAccountNumberComplexOrdersId
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /accounts/{account_number}/complex-orders/{id}/dry-run
+  method: post
+  operationId: postAccountsAccountNumberComplexOrdersIdDryRun
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /accounts/{account_number}/orders
+  method: get
+  operationId: getAccountsAccountNumberOrders
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /accounts/{account_number}/orders
+  method: post
+  operationId: postAccountsAccountNumberOrders
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /accounts/{account_number}/orders/dry-run
+  method: post
+  operationId: postAccountsAccountNumberOrdersDryRun
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /accounts/{account_number}/orders/live
+  method: get
+  operationId: getAccountsAccountNumberOrdersLive
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /accounts/{account_number}/orders/{id}
+  method: get
+  operationId: getAccountsAccountNumberOrdersId
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /accounts/{account_number}/orders/{id}
+  method: put
+  operationId: putAccountsAccountNumberOrdersId
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /accounts/{account_number}/orders/{id}
+  method: patch
+  operationId: patchAccountsAccountNumberOrdersId
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /accounts/{account_number}/orders/{id}
+  method: delete
+  operationId: deleteAccountsAccountNumberOrdersId
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /accounts/{account_number}/orders/{id}/dry-run
+  method: post
+  operationId: postAccountsAccountNumberOrdersIdDryRun
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /customers/{customer_id}/orders
+  method: get
+  operationId: getCustomersCustomerIdOrders
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /customers/{customer_id}/orders/live
+  method: get
+  operationId: getCustomersCustomerIdOrdersLive
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /quote-alerts
+  method: get
+  operationId: getQuoteAlerts
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /quote-alerts
+  method: post
+  operationId: postQuoteAlerts
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /quote-alerts/{alert_external_id}
+  method: delete
+  operationId: deleteQuoteAlertsAlertExternalId
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /accounts/{account_number}/position-limit
+  method: get
+  operationId: getAccountsAccountNumberPositionLimit
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /accounts/{account_number}/margin-requirements/{underlying_symbol}/effective
+  method: get
+  operationId: getAccountsAccountNumberMarginRequirementsUnderlyingSymbolEffective
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /margin-requirements-public-configuration
+  method: get
+  operationId: getMarginRequirementsPublicConfiguration
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /span/rows
+  method: get
+  operationId: getSpanRows
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /symbols/search/{symbol}
+  method: get
+  operationId: searchSymbols
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /accounts/{account_number}/transactions
+  method: get
+  operationId: getAccountsAccountNumberTransactions
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /accounts/{account_number}/transactions/total-fees
+  method: get
+  operationId: getAccountsAccountNumberTransactionsTotalFees
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /accounts/{account_number}/transactions/{id}
+  method: get
+  operationId: getAccountsAccountNumberTransactionsId
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /public-watchlists
+  method: get
+  operationId: getPublicWatchlists
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /public-watchlists/{watchlist_name}
+  method: get
+  operationId: getPublicWatchlistsWatchlistName
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /watchlists
+  method: post
+  operationId: postWatchlists
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /watchlists
+  method: get
+  operationId: getWatchlists
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /watchlists/{watchlist_name}
+  method: put
+  operationId: putWatchlistsWatchlistName
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /watchlists/{watchlist_name}
+  method: delete
+  operationId: deleteWatchlistsWatchlistName
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /watchlists/{watchlist_name}
+  method: get
+  operationId: getWatchlistsWatchlistName
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /pairs-watchlists
+  method: get
+  operationId: getPairsWatchlists
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /pairs-watchlists/{pairs_watchlist_name}
+  method: get
+  operationId: getPairsWatchlistsPairsWatchlistName
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
