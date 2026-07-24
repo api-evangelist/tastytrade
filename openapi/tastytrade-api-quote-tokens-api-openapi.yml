@@ -1,0 +1,50 @@
+swagger: '2.0'
+info:
+  title: Account Status accounts api-quote-tokens API
+  version: 7.1.0
+  description: Operations about accounts
+host: api.tastyworks.com
+produces:
+- application/json
+tags:
+- name: api-quote-tokens
+  description: Operations about api-quote-tokens
+paths:
+  /api-quote-tokens:
+    get:
+      description: "Returns the appropriate API quote streamer endpoint, level and identification token \\\n            for the current customer to receive market data."
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: "Returns the appropriate API quote streamer endpoint, level and identification token \\\n            for the current customer to receive market data."
+          schema:
+            $ref: '#/definitions/QuoteStreamerTokenAuthResult'
+      tags:
+      - api-quote-tokens
+      operationId: getApiQuoteTokens
+definitions:
+  QuoteStreamerTokenAuthResult:
+    type: object
+    properties:
+      dxlink-url:
+        description: ''
+        type: string
+      expires-at:
+        description: ''
+        type: string
+        format: date-time
+      issued-at:
+        description: ''
+        type: string
+        format: date-time
+      level:
+        description: ''
+        type: string
+      token:
+        description: ''
+        type: string
+      websocket-url:
+        description: ''
+        type: string
+    description: QuoteStreamerTokenAuthResult model

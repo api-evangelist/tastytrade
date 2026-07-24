@@ -1,0 +1,309 @@
+swagger: '2.0'
+info:
+  title: Account Status accounts balance-snapshots API
+  version: 7.1.0
+  description: Operations about accounts
+host: api.tastyworks.com
+produces:
+- application/json
+tags:
+- name: balance-snapshots
+  description: Operations about balance-snapshots
+paths:
+  /accounts/{account_number}/balance-snapshots:
+    get:
+      description: Returns most recent snapshot and current balance for an account
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: account_number
+        type: integer
+        format: int32
+        required: true
+      - in: query
+        name: page-offset
+        type: integer
+        format: int32
+        default: 0
+        required: false
+      - in: query
+        name: per-page
+        type: integer
+        format: int32
+        default: 250
+        minimum: 1
+        maximum: 2000
+        required: false
+      - in: query
+        name: currency
+        description: Currency
+        type: string
+        default: USD
+        required: false
+      - in: query
+        name: snapshot-date
+        description: The day of the balance snapshot to retrieve
+        type: string
+        format: date
+        required: false
+      - in: query
+        name: time-of-day
+        description: The abbreviation for the time of day.
+        type: string
+        enum:
+        - BOD
+        - EOD
+        - Intraday
+        required: true
+      - in: query
+        name: start-date
+        description: The first date in a range of dates to retrieve
+        type: string
+        format: date
+        required: false
+      - in: query
+        name: end-date
+        description: The last date in a range of dates to retrieve
+        type: string
+        format: date
+        required: false
+      responses:
+        '200':
+          description: Returns most recent snapshot and current balance for an account
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/AccountBalanceSnapshot'
+      tags:
+      - balance-snapshots
+      operationId: getAccountsAccountNumberBalanceSnapshots
+definitions:
+  AccountBalanceSnapshot:
+    type: object
+    properties:
+      account-number:
+        description: ''
+        type: string
+      available-trading-funds:
+        description: ''
+        type: number
+        format: double
+      bond-margin-requirement:
+        description: ''
+        type: number
+        format: double
+      cash-available-to-withdraw:
+        description: ''
+        type: number
+        format: double
+      cash-balance:
+        description: ''
+        type: number
+        format: double
+      cash-settle-balance:
+        description: ''
+        type: number
+        format: double
+      closed-loop-available-balance:
+        description: ''
+        type: number
+        format: double
+      cryptocurrency-margin-requirement:
+        description: ''
+        type: number
+        format: double
+      currency:
+        description: ''
+        type: string
+      day-equity-call-value:
+        description: ''
+        type: number
+        format: double
+      day-trade-excess:
+        description: ''
+        type: number
+        format: double
+      day-trading-buying-power:
+        description: ''
+        type: number
+        format: double
+      day-trading-call-value:
+        description: ''
+        type: number
+        format: double
+      derivative-buying-power:
+        description: ''
+        type: number
+        format: double
+      equity-buying-power:
+        description: ''
+        type: number
+        format: double
+      equity-offering-margin-requirement:
+        description: ''
+        type: number
+        format: double
+      fixed-income-security-margin-requirement:
+        description: ''
+        type: number
+        format: double
+      futures-margin-requirement:
+        description: ''
+        type: number
+        format: double
+      intraday-equities-cash-amount:
+        description: ''
+        type: number
+        format: double
+      intraday-equities-cash-effect:
+        description: ''
+        type: string
+      intraday-equities-cash-effective-date:
+        description: ''
+        type: string
+        format: date
+      intraday-futures-cash-amount:
+        description: ''
+        type: number
+        format: double
+      intraday-futures-cash-effect:
+        description: ''
+        type: string
+      intraday-futures-cash-effective-date:
+        description: ''
+        type: string
+        format: date
+      long-bond-value:
+        description: ''
+        type: number
+        format: double
+      long-cryptocurrency-value:
+        description: ''
+        type: number
+        format: double
+      long-derivative-value:
+        description: ''
+        type: number
+        format: double
+      long-equity-value:
+        description: ''
+        type: number
+        format: double
+      long-fixed-income-security-value:
+        description: ''
+        type: number
+        format: double
+      long-futures-derivative-value:
+        description: ''
+        type: number
+        format: double
+      long-futures-value:
+        description: ''
+        type: number
+        format: double
+      long-margineable-value:
+        description: ''
+        type: number
+        format: double
+      maintenance-call-value:
+        description: ''
+        type: number
+        format: double
+      maintenance-requirement:
+        description: ''
+        type: number
+        format: double
+      margin-equity:
+        description: ''
+        type: number
+        format: double
+      margin-settle-balance:
+        description: ''
+        type: number
+        format: double
+      net-liquidating-value:
+        description: ''
+        type: number
+        format: double
+      pending-cash:
+        description: ''
+        type: number
+        format: double
+      pending-cash-effect:
+        description: ''
+        type: string
+      previous-date-cryptocurrency-fiat-effective-date:
+        description: ''
+        type: string
+        format: date
+      previous-day-cryptocurrency-fiat-amount:
+        description: ''
+        type: number
+        format: double
+      previous-day-cryptocurrency-fiat-effect:
+        description: ''
+        type: string
+      reg-t-call-value:
+        description: ''
+        type: number
+        format: double
+      short-cryptocurrency-value:
+        description: ''
+        type: number
+        format: double
+      short-derivative-value:
+        description: ''
+        type: number
+        format: double
+      short-equity-value:
+        description: ''
+        type: number
+        format: double
+      short-futures-derivative-value:
+        description: ''
+        type: number
+        format: double
+      short-futures-value:
+        description: ''
+        type: number
+        format: double
+      short-margineable-value:
+        description: ''
+        type: number
+        format: double
+      sma-equity-option-buying-power:
+        description: ''
+        type: number
+        format: double
+      special-memorandum-account-apex-adjustment:
+        description: ''
+        type: number
+        format: double
+      special-memorandum-account-value:
+        description: ''
+        type: number
+        format: double
+      total-settle-balance:
+        description: ''
+        type: number
+        format: double
+      unsettled-cryptocurrency-fiat-amount:
+        description: ''
+        type: number
+        format: double
+      unsettled-cryptocurrency-fiat-effect:
+        description: ''
+        type: string
+      used-derivative-buying-power:
+        description: ''
+        type: number
+        format: double
+      snapshot-date:
+        description: ''
+        type: string
+        format: date
+      time-of-day:
+        description: ''
+        type: string
+    description: AccountBalanceSnapshot model

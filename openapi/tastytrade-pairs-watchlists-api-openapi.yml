@@ -1,0 +1,61 @@
+swagger: '2.0'
+info:
+  title: Account Status accounts pairs-watchlists API
+  version: 7.1.0
+  description: Operations about accounts
+host: api.tastyworks.com
+produces:
+- application/json
+tags:
+- name: pairs-watchlists
+  description: Allows an API client to fetch pairs watchlists.
+paths:
+  /pairs-watchlists:
+    get:
+      description: Returns a list of all tastyworks pairs watchlists
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Returns a list of all tastyworks pairs watchlists
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/PairsWatchlist'
+      tags:
+      - pairs-watchlists
+      operationId: getPairsWatchlists
+  /pairs-watchlists/{pairs_watchlist_name}:
+    get:
+      description: Returns a requested tastyworks pairs watchlist
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: pairs_watchlist_name
+        type: integer
+        format: int32
+        required: true
+      responses:
+        '200':
+          description: Returns a requested tastyworks pairs watchlist
+          schema:
+            $ref: '#/definitions/PairsWatchlist'
+      tags:
+      - pairs-watchlists
+      operationId: getPairsWatchlistsPairsWatchlistName
+definitions:
+  PairsWatchlist:
+    type: object
+    properties:
+      name:
+        description: ''
+        type: string
+      pairs-equations:
+        description: ''
+        type: object
+      order-index:
+        description: ''
+        type: integer
+        format: int32
+    description: PairsWatchlist model

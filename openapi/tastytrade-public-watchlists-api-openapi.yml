@@ -1,0 +1,73 @@
+swagger: '2.0'
+info:
+  title: Account Status accounts public-watchlists API
+  version: 7.1.0
+  description: Operations about accounts
+host: api.tastyworks.com
+produces:
+- application/json
+tags:
+- name: public-watchlists
+  description: Allows an API client to fetch tastyworks watchlists.
+paths:
+  /public-watchlists:
+    get:
+      description: Returns a list of all tastyworks watchlists
+      produces:
+      - application/json
+      parameters:
+      - in: query
+        name: counts-only
+        type: boolean
+        default: false
+        required: false
+      responses:
+        '200':
+          description: Returns a list of all tastyworks watchlists
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Watchlist'
+      tags:
+      - public-watchlists
+      operationId: getPublicWatchlists
+  /public-watchlists/{watchlist_name}:
+    get:
+      description: Returns a requested tastyworks watchlist
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: watchlist_name
+        type: integer
+        format: int32
+        required: true
+      responses:
+        '200':
+          description: Returns a requested tastyworks watchlist
+          schema:
+            $ref: '#/definitions/Watchlist'
+      tags:
+      - public-watchlists
+      operationId: getPublicWatchlistsWatchlistName
+definitions:
+  Watchlist:
+    type: object
+    properties:
+      name:
+        description: ''
+        type: string
+      watchlist-entries:
+        description: ''
+        type: object
+      cms-id:
+        description: ''
+        type: string
+      group-name:
+        description: ''
+        type: string
+      order-index:
+        description: ''
+        type: integer
+        format: int32
+    description: Watchlist model

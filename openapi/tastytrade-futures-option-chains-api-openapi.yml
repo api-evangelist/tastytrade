@@ -1,0 +1,348 @@
+swagger: '2.0'
+info:
+  title: Account Status accounts futures-option-chains API
+  version: 7.1.0
+  description: Operations about accounts
+host: api.tastyworks.com
+produces:
+- application/json
+tags:
+- name: futures-option-chains
+  description: Operations about futures-option-chains
+paths:
+  /futures-option-chains/{symbol}:
+    get:
+      description: Returns a futures option chain given a futures product code, i.e. `ES`
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: symbol
+        type: integer
+        format: int32
+        required: true
+      responses:
+        '200':
+          description: Returns a futures option chain given a futures product code, i.e. `ES`
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/FutureOption'
+      tags:
+      - futures-option-chains
+      operationId: getFuturesOptionChainsSymbol
+  /futures-option-chains/{symbol}/nested:
+    get:
+      description: Returns a futures option chain given a futures product code in a nested form to minimize redundant processing
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: symbol
+        type: integer
+        format: int32
+        required: true
+      responses:
+        '200':
+          description: Returns a futures option chain given a futures product code in a nested form to minimize redundant processing
+          schema:
+            $ref: '#/definitions/FuturesNestedOptionChainSerializer'
+      tags:
+      - futures-option-chains
+      operationId: getFuturesOptionChainsSymbolNested
+definitions:
+  FuturesNestedOptionChainSerializer:
+    type: object
+    properties:
+      futures:
+        description: ''
+        type: object
+        properties:
+          symbol:
+            description: ''
+            type: string
+          root-symbol:
+            description: ''
+            type: string
+          streamer-symbol:
+            description: ''
+            type: string
+          maturity-date:
+            description: ''
+            type: string
+            format: date
+          expiration-date:
+            description: ''
+            type: string
+            format: date
+          days-to-expiration:
+            description: ''
+            type: integer
+            format: int32
+          active-month:
+            description: ''
+            type: boolean
+          next-active-month:
+            description: ''
+            type: boolean
+          stops-trading-at:
+            description: ''
+            type: string
+            format: date-time
+          expires-at:
+            description: ''
+            type: string
+            format: date-time
+      option-chains:
+        description: ''
+        type: object
+        properties:
+          underlying-symbol:
+            description: ''
+            type: string
+          root-symbol:
+            description: ''
+            type: string
+          exercise-style:
+            description: ''
+            type: string
+          expirations:
+            description: ''
+            type: object
+            properties:
+              underlying-symbol:
+                description: ''
+                type: string
+              root-symbol:
+                description: ''
+                type: string
+              option-root-symbol:
+                description: ''
+                type: string
+              option-contract-symbol:
+                description: ''
+                type: string
+              asset:
+                description: ''
+                type: string
+              expiration-date:
+                description: ''
+                type: string
+                format: date
+              days-to-expiration:
+                description: ''
+                type: integer
+                format: int32
+              expiration-type:
+                description: ''
+                type: string
+              settlement-type:
+                description: ''
+                type: string
+              notional-value:
+                description: ''
+                type: number
+                format: double
+              display-factor:
+                description: ''
+                type: number
+                format: double
+              strike-factor:
+                description: ''
+                type: number
+                format: double
+              stops-trading-at:
+                description: ''
+                type: string
+                format: date-time
+              expires-at:
+                description: ''
+                type: string
+                format: date-time
+              tick-sizes:
+                description: ''
+                type: object
+                properties:
+                  symbol:
+                    description: ''
+                    type: string
+                  threshold:
+                    description: ''
+                    type: number
+                    format: double
+                  value:
+                    description: ''
+                    type: number
+                    format: double
+              strikes:
+                description: ''
+                type: object
+                properties:
+                  strike-price:
+                    description: ''
+                    type: number
+                    format: double
+                  call:
+                    description: ''
+                    type: string
+                  call-streamer-symbol:
+                    description: ''
+                    type: string
+                  put:
+                    description: ''
+                    type: string
+                  put-streamer-symbol:
+                    description: ''
+                    type: string
+    description: FuturesNestedOptionChainSerializer model
+  FutureOption:
+    type: object
+    properties:
+      active:
+        description: ''
+        type: boolean
+      days-to-expiration:
+        description: ''
+        type: integer
+        format: int32
+      display-factor:
+        description: ''
+        type: number
+        format: double
+      exchange:
+        description: ''
+        type: string
+      exercise-style:
+        description: ''
+        type: string
+      expiration-date:
+        description: ''
+        type: string
+        format: date
+      expires-at:
+        description: ''
+        type: string
+        format: date-time
+      future-price-ratio:
+        description: ''
+        type: number
+        format: double
+      is-closing-only:
+        description: ''
+        type: boolean
+      is-confirmed:
+        description: ''
+        type: boolean
+      is-exercisable-weekly:
+        description: ''
+        type: boolean
+      is-primary-deliverable:
+        description: ''
+        type: boolean
+      is-vanilla:
+        description: ''
+        type: boolean
+      last-trade-time:
+        description: ''
+        type: string
+      maturity-date:
+        description: ''
+        type: string
+        format: date
+      multiplier:
+        description: ''
+        type: number
+        format: double
+      notional-value:
+        description: ''
+        type: number
+        format: double
+      option-root-symbol:
+        description: ''
+        type: string
+      option-type:
+        description: ''
+        type: string
+      product-code:
+        description: ''
+        type: string
+      root-symbol:
+        description: ''
+        type: string
+      security-id:
+        description: ''
+        type: string
+      settlement-type:
+        description: ''
+        type: string
+      stops-trading-at:
+        description: ''
+        type: string
+        format: date-time
+      streamer-symbol:
+        description: ''
+        type: string
+      strike-factor:
+        description: ''
+        type: number
+        format: double
+      strike-price:
+        description: ''
+        type: number
+        format: double
+      symbol:
+        description: ''
+        type: string
+      underlying-count:
+        description: ''
+        type: number
+        format: double
+      underlying-symbol:
+        description: ''
+        type: string
+      future-option-product:
+        description: ''
+        type: object
+        properties:
+          cash-settled:
+            description: ''
+            type: boolean
+          code:
+            description: ''
+            type: string
+          display-factor:
+            description: ''
+            type: number
+            format: double
+          exchange:
+            description: ''
+            type: string
+          expiration-type:
+            description: ''
+            type: string
+          is-am-settled:
+            description: ''
+            type: boolean
+          itm-rule:
+            description: ''
+            type: string
+          market-sector:
+            description: ''
+            type: string
+          product-subtype:
+            description: ''
+            type: string
+          product-type:
+            description: ''
+            type: string
+          root-symbol:
+            description: ''
+            type: string
+          settlement-delay-days:
+            description: ''
+            type: integer
+            format: int32
+          supported:
+            description: ''
+            type: boolean
+    description: FutureOption model

@@ -1,0 +1,217 @@
+swagger: '2.0'
+info:
+  title: Account Status accounts positions API
+  version: 7.1.0
+  description: Operations about accounts
+host: api.tastyworks.com
+produces:
+- application/json
+tags:
+- name: positions
+  description: Operations about positions
+paths:
+  /accounts/{account_number}/positions:
+    get:
+      description: "Returns a list of the account's positions.\n            Can be filtered by symbol, underlying_symbol"
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: account_number
+        type: integer
+        format: int32
+        required: true
+      - in: query
+        name: include-closed-positions
+        description: If closed positions should be included in the query
+        type: boolean
+        default: false
+        required: false
+      - in: query
+        name: include-marks
+        description: 'Include current quote mark (note: can decrease performance)'
+        type: boolean
+        default: false
+        required: false
+      - in: query
+        name: instrument-type
+        description: The type of Instrument
+        type: string
+        enum:
+        - Bond
+        - Cryptocurrency
+        - Currency Pair
+        - Equity
+        - Equity Offering
+        - Equity Option
+        - Event Contract
+        - Fixed Income Security
+        - Future
+        - Future Option
+        - Index
+        - Liquidity Pool
+        - Unknown
+        - Warrant
+        required: false
+      - in: query
+        name: net-positions
+        description: Returns net positions grouped by instrument type and symbol
+        type: boolean
+        default: false
+        required: false
+      - in: formData
+        name: partition-keys
+        description: 'Account partition keys (example: partition-keys[]={value1}&partition-keys[]={value2})'
+        type: array
+        items:
+          type: string
+        required: false
+      - in: query
+        name: symbol
+        description: "A single symbol. Stock Ticker Symbol `AAPL`, \\\n                                 OCC Option Symbol `AAPL  191004P00275000`, \\\n                                 TW Future Symbol `/ESZ9`, or \\\n                                 TW Future Option Symbol `./ESZ9 EW4U9 190927P2975`"
+        type: string
+        required: false
+      - in: query
+        name: underlying-product-code
+        description: The underlying Future's Product code. i.e `ES`
+        type: string
+        required: false
+      - in: query
+        name: underlying-symbol
+        description: 'An array of Underlying symbol(s) for positions (example: underlying-symbol[]={value1}&underlying-symbol[]={value2})'
+        type: array
+        items:
+          type: string
+        required: false
+      responses:
+        '200':
+          description: "Returns a list of the account's positions.\n            Can be filtered by symbol, underlying_symbol"
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/CurrentPosition'
+      tags:
+      - positions
+      operationId: getAccountsAccountNumberPositions
+definitions:
+  CurrentPosition:
+    type: object
+    properties:
+      account-number:
+        description: ''
+        type: string
+      instrument-type:
+        description: ''
+        type: string
+      streamer-symbol:
+        description: ''
+        type: string
+      symbol:
+        description: ''
+        type: string
+      underlying-symbol:
+        description: ''
+        type: string
+      quantity:
+        description: ''
+        type: object
+      average-daily-market-close-price:
+        description: ''
+        type: number
+        format: double
+      average-open-price:
+        description: ''
+        type: number
+        format: double
+      average-yearly-market-close-price:
+        description: ''
+        type: number
+        format: double
+      close-price:
+        description: ''
+        type: number
+        format: double
+      cost-effect:
+        description: ''
+        type: string
+      is-frozen:
+        description: ''
+        type: boolean
+      is-suppressed:
+        description: ''
+        type: boolean
+      mark:
+        description: ''
+        type: number
+        format: double
+      mark-price:
+        description: ''
+        type: number
+        format: double
+      multiplier:
+        description: ''
+        type: number
+        format: double
+      quantity-direction:
+        description: ''
+        type: string
+      restricted-quantity:
+        description: ''
+        type: object
+      expires-at:
+        description: ''
+        type: string
+        format: date-time
+      deliverable-type:
+        description: ''
+        type: string
+      fixing-price:
+        description: ''
+        type: number
+        format: double
+      realized-day-gain:
+        description: ''
+        type: number
+        format: double
+      realized-day-gain-date:
+        description: ''
+        type: string
+        format: date
+      realized-day-gain-effect:
+        description: ''
+        type: string
+      realized-today:
+        description: ''
+        type: number
+        format: double
+      realized-today-date:
+        description: ''
+        type: string
+        format: date
+      realized-today-effect:
+        description: ''
+        type: string
+      face-value:
+        description: ''
+        type: number
+        format: double
+      par-size:
+        description: ''
+        type: number
+        format: double
+      created-at:
+        description: ''
+        type: string
+        format: date-time
+      updated-at:
+        description: ''
+        type: string
+        format: date-time
+      order-id:
+        description: ''
+        type: integer
+        format: int32
+      update-type:
+        description: ''
+        type: string
+    description: CurrentPosition model

@@ -1,0 +1,709 @@
+swagger: '2.0'
+info:
+  title: Account Status accounts API
+  version: 7.1.0
+  description: Operations about accounts
+host: api.tastyworks.com
+produces:
+- application/json
+tags:
+- name: accounts
+  description: Operations about accounts
+paths:
+  /accounts/{account_number}/balances:
+    get:
+      description: Returns the current balances for an account
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: account_number
+        type: integer
+        format: int32
+        required: true
+      responses:
+        '200':
+          description: Returns the current balances for an account
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/AccountBalance'
+      tags:
+      - accounts
+      operationId: getAccountsAccountNumberBalances
+  /accounts/{account_number}/balances/{currency}:
+    get:
+      description: Returns the current balance values for an account and currency
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: account_number
+        type: integer
+        format: int32
+        required: true
+      - in: path
+        name: currency
+        type: string
+        required: true
+      responses:
+        '200':
+          description: Returns the current balance values for an account and currency
+          schema:
+            $ref: '#/definitions/AccountBalance'
+      tags:
+      - accounts
+      operationId: getAccountsAccountNumberBalancesCurrency
+  /accounts/{account_number}/position-limit:
+    get:
+      description: Get the position limit
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: account_number
+        type: string
+        required: true
+      responses:
+        '200':
+          description: Get the position limit
+          schema:
+            $ref: '#/definitions/PositionLimit'
+      tags:
+      - accounts
+      operationId: getAccountsAccountNumberPositionLimit
+  /accounts/{account_number}/margin-requirements/{underlying_symbol}/effective:
+    get:
+      description: Get effective margin requirements for account
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: account_number
+        type: string
+        required: true
+      - in: path
+        name: underlying_symbol
+        type: string
+        required: true
+      responses:
+        '200':
+          description: Get effective margin requirements for account
+          schema:
+            $ref: '#/definitions/MarginRequirement'
+      tags:
+      - accounts
+      operationId: getAccountsAccountNumberMarginRequirementsUnderlyingSymbolEffective
+  /accounts/{account_number}/transactions/total-fees:
+    get:
+      description: Return the total fees for an account for a given day
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: account_number
+        type: string
+        required: true
+      - in: query
+        name: date
+        description: The date to get fees for, defaults to today
+        type: string
+        format: date
+        default: {}
+        required: false
+      responses:
+        '200':
+          description: Return the total fees for an account for a given day
+      tags:
+      - accounts
+      operationId: getAccountsAccountNumberTransactionsTotalFees
+  /accounts/{account_number}/transactions/{id}:
+    get:
+      description: Retrieve a transaction by account number and ID
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: account_number
+        type: string
+        required: true
+      - in: path
+        name: id
+        type: integer
+        format: int32
+        required: true
+      responses:
+        '200':
+          description: Retrieve a transaction by account number and ID
+          schema:
+            $ref: '#/definitions/Transaction'
+      tags:
+      - accounts
+      operationId: getAccountsAccountNumberTransactionsId
+definitions:
+  AccountBalance:
+    type: object
+    properties:
+      account-number:
+        description: ''
+        type: string
+      available-trading-funds:
+        description: ''
+        type: number
+        format: double
+      bond-margin-requirement:
+        description: ''
+        type: number
+        format: double
+      cash-available-to-withdraw:
+        description: ''
+        type: number
+        format: double
+      cash-balance:
+        description: ''
+        type: number
+        format: double
+      cash-settle-balance:
+        description: ''
+        type: number
+        format: double
+      closed-loop-available-balance:
+        description: ''
+        type: number
+        format: double
+      cryptocurrency-margin-requirement:
+        description: ''
+        type: number
+        format: double
+      currency:
+        description: ''
+        type: string
+      day-equity-call-value:
+        description: ''
+        type: number
+        format: double
+      day-trade-excess:
+        description: ''
+        type: number
+        format: double
+      day-trading-buying-power:
+        description: ''
+        type: number
+        format: double
+      day-trading-call-value:
+        description: ''
+        type: number
+        format: double
+      derivative-buying-power:
+        description: ''
+        type: number
+        format: double
+      equity-buying-power:
+        description: ''
+        type: number
+        format: double
+      equity-offering-margin-requirement:
+        description: ''
+        type: number
+        format: double
+      fixed-income-security-margin-requirement:
+        description: ''
+        type: number
+        format: double
+      futures-margin-requirement:
+        description: ''
+        type: number
+        format: double
+      intraday-equities-cash-amount:
+        description: ''
+        type: number
+        format: double
+      intraday-equities-cash-effect:
+        description: ''
+        type: string
+      intraday-equities-cash-effective-date:
+        description: ''
+        type: string
+        format: date
+      intraday-futures-cash-amount:
+        description: ''
+        type: number
+        format: double
+      intraday-futures-cash-effect:
+        description: ''
+        type: string
+      intraday-futures-cash-effective-date:
+        description: ''
+        type: string
+        format: date
+      long-bond-value:
+        description: ''
+        type: number
+        format: double
+      long-cryptocurrency-value:
+        description: ''
+        type: number
+        format: double
+      long-derivative-value:
+        description: ''
+        type: number
+        format: double
+      long-equity-value:
+        description: ''
+        type: number
+        format: double
+      long-fixed-income-security-value:
+        description: ''
+        type: number
+        format: double
+      long-futures-derivative-value:
+        description: ''
+        type: number
+        format: double
+      long-futures-value:
+        description: ''
+        type: number
+        format: double
+      long-margineable-value:
+        description: ''
+        type: number
+        format: double
+      maintenance-call-value:
+        description: ''
+        type: number
+        format: double
+      maintenance-requirement:
+        description: ''
+        type: number
+        format: double
+      margin-equity:
+        description: ''
+        type: number
+        format: double
+      margin-settle-balance:
+        description: ''
+        type: number
+        format: double
+      net-liquidating-value:
+        description: ''
+        type: number
+        format: double
+      pending-cash:
+        description: ''
+        type: number
+        format: double
+      pending-cash-effect:
+        description: ''
+        type: string
+      previous-date-cryptocurrency-fiat-effective-date:
+        description: ''
+        type: string
+        format: date
+      previous-day-cryptocurrency-fiat-amount:
+        description: ''
+        type: number
+        format: double
+      previous-day-cryptocurrency-fiat-effect:
+        description: ''
+        type: string
+      reg-t-call-value:
+        description: ''
+        type: number
+        format: double
+      short-cryptocurrency-value:
+        description: ''
+        type: number
+        format: double
+      short-derivative-value:
+        description: ''
+        type: number
+        format: double
+      short-equity-value:
+        description: ''
+        type: number
+        format: double
+      short-futures-derivative-value:
+        description: ''
+        type: number
+        format: double
+      short-futures-value:
+        description: ''
+        type: number
+        format: double
+      short-margineable-value:
+        description: ''
+        type: number
+        format: double
+      sma-equity-option-buying-power:
+        description: ''
+        type: number
+        format: double
+      special-memorandum-account-apex-adjustment:
+        description: ''
+        type: number
+        format: double
+      special-memorandum-account-value:
+        description: ''
+        type: number
+        format: double
+      total-settle-balance:
+        description: ''
+        type: number
+        format: double
+      unsettled-cryptocurrency-fiat-amount:
+        description: ''
+        type: number
+        format: double
+      unsettled-cryptocurrency-fiat-effect:
+        description: ''
+        type: string
+      used-derivative-buying-power:
+        description: ''
+        type: number
+        format: double
+      snapshot-date:
+        description: ''
+        type: string
+        format: date
+      time-of-day:
+        description: ''
+        type: string
+      reg-t-margin-requirement:
+        description: ''
+        type: number
+        format: double
+      futures-overnight-margin-requirement:
+        description: ''
+        type: number
+        format: double
+      futures-intraday-margin-requirement:
+        description: ''
+        type: number
+        format: double
+      maintenance-excess:
+        description: ''
+        type: number
+        format: double
+      pending-margin-interest:
+        description: ''
+        type: number
+        format: double
+      apex-starting-day-margin-equity:
+        description: ''
+        type: number
+        format: double
+      buying-power-adjustment:
+        description: ''
+        type: number
+        format: double
+      buying-power-adjustment-effect:
+        description: ''
+        type: string
+      effective-cryptocurrency-buying-power:
+        description: ''
+        type: number
+        format: double
+      total-pending-liquidity-pool-rebate:
+        description: ''
+        type: number
+        format: double
+      long-index-derivative-value:
+        description: ''
+        type: number
+        format: double
+      short-index-derivative-value:
+        description: ''
+        type: number
+        format: double
+      updated-at:
+        description: ''
+        type: string
+        format: date-time
+    description: AccountBalance model
+  Transaction:
+    type: object
+    properties:
+      id:
+        description: ''
+        type: integer
+        format: int32
+      account-number:
+        description: ''
+        type: string
+      action:
+        description: ''
+        type: string
+      agency-price:
+        description: ''
+        type: number
+        format: double
+      clearing-fees:
+        description: ''
+        type: number
+        format: double
+      clearing-fees-effect:
+        description: ''
+        type: string
+      commission:
+        description: ''
+        type: number
+        format: double
+      commission-effect:
+        description: ''
+        type: string
+      lots:
+        description: ''
+        type: object
+        properties:
+          id:
+            description: ''
+            type: string
+          executed-at:
+            description: ''
+            type: string
+            format: date-time
+          price:
+            description: ''
+            type: number
+            format: double
+          quantity:
+            description: ''
+            type: number
+            format: double
+          quantity-direction:
+            description: ''
+            type: string
+          transaction-date:
+            description: ''
+            type: string
+            format: date
+          transaction-id:
+            description: ''
+            type: integer
+            format: int32
+      cost-basis-reconciliation-date:
+        description: ''
+        type: string
+        format: date
+      created-at:
+        description: ''
+        type: string
+        format: date-time
+      currency:
+        description: ''
+        type: string
+      currency-conversion-fees:
+        description: ''
+        type: number
+        format: double
+      currency-conversion-fees-effect:
+        description: ''
+        type: string
+      description:
+        description: ''
+        type: string
+      destination-venue:
+        description: ''
+        type: string
+      exchange:
+        description: ''
+        type: string
+      exchange-affiliation-identifier:
+        description: ''
+        type: string
+      exec-id:
+        description: ''
+        type: string
+      executed-at:
+        description: ''
+        type: string
+        format: date-time
+      ext-exchange-order-number:
+        description: ''
+        type: string
+      ext-exec-id:
+        description: ''
+        type: string
+      ext-global-order-number:
+        description: ''
+        type: integer
+        format: int32
+      ext-group-fill-id:
+        description: ''
+        type: string
+      ext-group-id:
+        description: ''
+        type: string
+      instrument-type:
+        description: ''
+        type: string
+      is-estimated-fee:
+        description: ''
+        type: boolean
+      leg-count:
+        description: ''
+        type: integer
+        format: int32
+      net-value:
+        description: ''
+        type: number
+        format: double
+      net-value-effect:
+        description: ''
+        type: string
+      order-id:
+        description: ''
+        type: integer
+        format: int32
+      other-charge:
+        description: ''
+        type: number
+        format: double
+      other-charge-description:
+        description: ''
+        type: string
+      other-charge-effect:
+        description: ''
+        type: string
+      price:
+        description: ''
+        type: number
+        format: double
+      principal-price:
+        description: ''
+        type: number
+        format: double
+      proprietary-index-option-fees:
+        description: ''
+        type: number
+        format: double
+      proprietary-index-option-fees-effect:
+        description: ''
+        type: string
+      quantity:
+        description: ''
+        type: number
+        format: double
+      regulatory-fees:
+        description: ''
+        type: number
+        format: double
+      regulatory-fees-effect:
+        description: ''
+        type: string
+      reverses-id:
+        description: ''
+        type: integer
+        format: int32
+      symbol:
+        description: ''
+        type: string
+      transaction-date:
+        description: ''
+        type: string
+        format: date
+      transaction-sub-type:
+        description: ''
+        type: string
+      transaction-type:
+        description: ''
+        type: string
+      underlying-symbol:
+        description: ''
+        type: string
+      value:
+        description: ''
+        type: number
+        format: double
+      value-effect:
+        description: ''
+        type: string
+    description: Transaction model
+  MarginRequirement:
+    type: object
+    properties:
+      long-equity-initial:
+        description: ''
+        type: number
+        format: double
+      long-equity-maintenance:
+        description: ''
+        type: number
+        format: double
+      naked-option-floor:
+        description: ''
+        type: number
+        format: double
+      naked-option-minimum:
+        description: ''
+        type: number
+        format: double
+      naked-option-standard:
+        description: ''
+        type: number
+        format: double
+      short-equity-initial:
+        description: ''
+        type: number
+        format: double
+      short-equity-maintenance:
+        description: ''
+        type: number
+        format: double
+      underlying-symbol:
+        description: ''
+        type: string
+      clearing-identifier:
+        description: ''
+        type: string
+      is-deleted:
+        description: ''
+        type: boolean
+    description: MarginRequirement model
+  PositionLimit:
+    type: object
+    properties:
+      id:
+        description: ''
+        type: integer
+        format: int32
+      account-number:
+        description: ''
+        type: string
+      equity-option-order-size:
+        description: ''
+        type: integer
+        format: int32
+      equity-order-size:
+        description: ''
+        type: integer
+        format: int32
+      future-option-order-size:
+        description: ''
+        type: integer
+        format: int32
+      future-order-size:
+        description: ''
+        type: integer
+        format: int32
+      underlying-opening-order-limit:
+        description: ''
+        type: integer
+        format: int32
+      equity-option-position-size:
+        description: ''
+        type: integer
+        format: int32
+      equity-position-size:
+        description: ''
+        type: integer
+        format: int32
+      future-option-position-size:
+        description: ''
+        type: integer
+        format: int32
+      future-position-size:
+        description: ''
+        type: integer
+        format: int32
+    description: PositionLimit model

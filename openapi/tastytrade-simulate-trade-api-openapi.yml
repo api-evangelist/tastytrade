@@ -1,0 +1,111 @@
+swagger: '2.0'
+info:
+  title: Account Status accounts Simulate Trade API
+  version: 7.1.0
+  description: Operations about accounts
+host: api.tastyworks.com
+produces:
+- application/json
+tags:
+- name: Simulate Trade
+paths:
+  /simulate-trade:
+    post:
+      summary: Simulate a trade
+      description: Returns historical prices for a trade
+      operationId: SimulateTrade
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                underlying:
+                  type: string
+                  description: Underlying symbol of the trade
+                startTime:
+                  type: string
+                  format: date-time
+                  description: Optionally, start time of the trade in ISO 8601 format.
+                endTime:
+                  type: string
+                  format: date-time
+                  description: Optionally, end time of the trade in ISO 8601 format.
+                legs:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      symbol:
+                        type: string
+                        description: The leg symbol uses the tastytrade / OCC symbology convention - https://developer.tastytrade.com/api-overview/#tastytrade-symbology
+                      direction:
+                        type: string
+                        enum:
+                        - long
+                        - short
+                      quantity:
+                        type: integer
+            examples:
+              coveredCall:
+                summary: Covered call
+                value:
+                  underlying: SPY
+                  legs:
+                  - symbol: SPY   190227C00275000
+                    direction: short
+                    quantity: 1
+                  - symbol: SPY
+                    direction: long
+                    quantity: 100
+              putRatioSpread:
+                summary: Put ratio spread
+                value:
+                  underlying: SPY
+                  legs:
+                  - symbol: SPY   190227P00265000
+                    direction: long
+                    quantity: 3
+                  - symbol: SPY   190227P00275000
+                    direction: short
+                    quantity: 1
+              longCallButterfly:
+                summary: Long call butterfly
+                value:
+                  underlying: SPY
+                  legs:
+                  - symbol: SPY   190227C00270000
+                    direction: long
+                    quantity: 2
+                  - symbol: SPY   190227C00275000
+                    direction: short
+                    quantity: 1
+                  - symbol: SPY   190227C00265000
+                    direction: short
+                    quantity: 1
+      responses:
+        '200':
+          description: Trade simulation successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    dateTime:
+                      type: string
+                      format: date-time
+                    price:
+                      type: string
+                    effect:
+                      type: string
+                      enum:
+                      - debit
+                      - credit
+                    underlyingPrice:
+                      type: string
+                    delta:
+                      type: string
+      tags:
+      - Simulate Trade

@@ -1,0 +1,308 @@
+swagger: '2.0'
+info:
+  title: Account Status accounts option-chains API
+  version: 7.1.0
+  description: Operations about accounts
+host: api.tastyworks.com
+produces:
+- application/json
+tags:
+- name: option-chains
+  description: Operations about option-chains
+paths:
+  /option-chains/{symbol}:
+    get:
+      description: Returns an option chain given an underlying symbol, i.e. `AAPL`
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: symbol
+        type: integer
+        format: int32
+        required: true
+      responses:
+        '200':
+          description: Returns an option chain given an underlying symbol, i.e. `AAPL`
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EquityOption'
+      tags:
+      - option-chains
+      operationId: getOptionChainsSymbol
+  /option-chains/{symbol}/compact:
+    get:
+      description: Returns an option chain given an underlying symbol, i.e. `AAPL` in a compact form to minimize content size
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: symbol
+        type: integer
+        format: int32
+        required: true
+      responses:
+        '200':
+          description: Returns an option chain given an underlying symbol, i.e. `AAPL` in a compact form to minimize content size
+          schema:
+            $ref: '#/definitions/CompactOptionChainSerializer'
+      tags:
+      - option-chains
+      operationId: getOptionChainsSymbolCompact
+  /option-chains/{symbol}/nested:
+    get:
+      description: "Returns an option chain given an underlying symbol, \\\n          i.e. `AAPL` in a nested form to minimize redundant processing"
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: symbol
+        type: integer
+        format: int32
+        required: true
+      responses:
+        '200':
+          description: "Returns an option chain given an underlying symbol, \\\n          i.e. `AAPL` in a nested form to minimize redundant processing"
+          schema:
+            $ref: '#/definitions/NestedOptionChainSerializer'
+      tags:
+      - option-chains
+      operationId: getOptionChainsSymbolNested
+definitions:
+  CompactOptionChainSerializer:
+    type: object
+    properties:
+      underlying-symbol:
+        description: ''
+        type: string
+      root-symbol:
+        description: ''
+        type: string
+      option-chain-type:
+        description: ''
+        type: string
+      settlement-type:
+        description: ''
+        type: string
+      shares-per-contract:
+        description: ''
+        type: integer
+        format: int32
+      expiration-type:
+        description: ''
+        type: string
+      deliverables:
+        description: ''
+        type: object
+        properties:
+          id:
+            description: ''
+            type: integer
+            format: int32
+          amount:
+            description: ''
+            type: number
+            format: double
+          deliverable-type:
+            description: ''
+            type: string
+          description:
+            description: ''
+            type: string
+          instrument-type:
+            description: ''
+            type: string
+          percent:
+            description: ''
+            type: string
+          root-symbol:
+            description: ''
+            type: string
+          symbol:
+            description: ''
+            type: string
+      symbols:
+        description: ''
+        type: string
+      streamer-symbols:
+        description: ''
+        type: string
+    description: CompactOptionChainSerializer model
+  EquityOption:
+    type: object
+    properties:
+      active:
+        description: ''
+        type: boolean
+      days-to-expiration:
+        description: ''
+        type: integer
+        format: int32
+      exercise-style:
+        description: ''
+        type: string
+      expiration-date:
+        description: ''
+        type: string
+        format: date
+      expiration-type:
+        description: ''
+        type: string
+      expires-at:
+        description: ''
+        type: string
+        format: date-time
+      halted-at:
+        description: ''
+        type: string
+        format: date-time
+      instrument-type:
+        description: ''
+        type: string
+      is-closing-only:
+        description: ''
+        type: boolean
+      listed-market:
+        description: ''
+        type: string
+      market-time-instrument-collection:
+        description: ''
+        type: string
+      old-security-number:
+        description: ''
+        type: string
+      option-chain-type:
+        description: ''
+        type: string
+      option-type:
+        description: ''
+        type: string
+      root-symbol:
+        description: ''
+        type: string
+      settlement-type:
+        description: ''
+        type: string
+      shares-per-contract:
+        description: ''
+        type: integer
+        format: int32
+      stops-trading-at:
+        description: ''
+        type: string
+        format: date-time
+      streamer-symbol:
+        description: ''
+        type: string
+      strike-price:
+        description: ''
+        type: number
+        format: double
+      symbol:
+        description: ''
+        type: string
+      underlying-symbol:
+        description: ''
+        type: string
+    description: EquityOption model
+  NestedOptionChainSerializer:
+    type: object
+    properties:
+      underlying-symbol:
+        description: ''
+        type: string
+      root-symbol:
+        description: ''
+        type: string
+      option-chain-type:
+        description: ''
+        type: string
+      shares-per-contract:
+        description: ''
+        type: integer
+        format: int32
+      tick-sizes:
+        description: ''
+        type: object
+        properties:
+          symbol:
+            description: ''
+            type: string
+          threshold:
+            description: ''
+            type: number
+            format: double
+          value:
+            description: ''
+            type: number
+            format: double
+      deliverables:
+        description: ''
+        type: object
+        properties:
+          id:
+            description: ''
+            type: integer
+            format: int32
+          amount:
+            description: ''
+            type: number
+            format: double
+          deliverable-type:
+            description: ''
+            type: string
+          description:
+            description: ''
+            type: string
+          instrument-type:
+            description: ''
+            type: string
+          percent:
+            description: ''
+            type: string
+          root-symbol:
+            description: ''
+            type: string
+          symbol:
+            description: ''
+            type: string
+      expirations:
+        description: ''
+        type: object
+        properties:
+          expiration-type:
+            description: ''
+            type: string
+          expiration-date:
+            description: ''
+            type: string
+            format: date
+          days-to-expiration:
+            description: ''
+            type: integer
+            format: int32
+          settlement-type:
+            description: ''
+            type: string
+          strikes:
+            description: ''
+            type: object
+            properties:
+              strike-price:
+                description: ''
+                type: number
+                format: double
+              call:
+                description: ''
+                type: string
+              call-streamer-symbol:
+                description: ''
+                type: string
+              put:
+                description: ''
+                type: string
+              put-streamer-symbol:
+                description: ''
+                type: string
+    description: NestedOptionChainSerializer model

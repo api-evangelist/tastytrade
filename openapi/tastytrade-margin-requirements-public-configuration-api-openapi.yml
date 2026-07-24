@@ -1,0 +1,34 @@
+swagger: '2.0'
+info:
+  title: Account Status accounts margin-requirements-public-configuration API
+  version: 7.1.0
+  description: Operations about accounts
+host: api.tastyworks.com
+produces:
+- application/json
+tags:
+- name: margin-requirements-public-configuration
+  description: Operations about margin-requirements-public-configurations
+paths:
+  /margin-requirements-public-configuration:
+    get:
+      description: Publicly accessible, read only margin configuration
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Publicly accessible, read only margin configuration
+          schema:
+            $ref: '#/definitions/MarginRequirementsGlobalConfiguration'
+      tags:
+      - margin-requirements-public-configuration
+      operationId: getMarginRequirementsPublicConfiguration
+definitions:
+  MarginRequirementsGlobalConfiguration:
+    type: object
+    properties:
+      risk-free-rate:
+        description: ''
+        type: number
+        format: double
+    description: MarginRequirementsGlobalConfiguration model

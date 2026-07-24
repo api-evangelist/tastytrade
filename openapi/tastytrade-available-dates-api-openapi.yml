@@ -1,0 +1,47 @@
+swagger: '2.0'
+info:
+  title: Account Status accounts Available Dates API
+  version: 7.1.0
+  description: Operations about accounts
+host: api.tastyworks.com
+produces:
+- application/json
+tags:
+- name: Available Dates
+paths:
+  /available-dates:
+    get:
+      summary: Available historical date ranges
+      description: Available historical date ranges for every individual symbol
+      operationId: GetAvailableDates
+      responses:
+        '200':
+          description: List of available symbols and dates
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AvailableSymbolDates'
+        '400':
+          $ref: '#/components/responses/400'
+        '500':
+          $ref: '#/components/responses/500'
+      tags:
+      - Available Dates
+components:
+  responses:
+    '400':
+      description: Request included malformed input
+    '500':
+      description: Failed to process request
+  schemas:
+    AvailableSymbolDates:
+      type: object
+      properties:
+        symbol:
+          type: string
+        startDate:
+          type: string
+        endDate:
+          type: string
