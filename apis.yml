@@ -8,7 +8,19 @@ description: >
   connections (DXLink for market data, dedicated account streamer for real-time
   account updates). OAuth 2.0 and session-token authentication are both
   supported, with a safe sandbox environment for development and testing.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium · Requires approval
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tastytrade.png
 tags:
   - Finance
   - Brokerage
@@ -24,133 +36,892 @@ created: "2026-06-13"
 modified: "2026-06-13"
 specificationVersion: "0.19"
 apis:
-  - name: tastytrade REST API
-    description: >
-      The core REST API for tastytrade provides programmatic access to accounts,
-      customer information, balances, positions, transactions, orders, instruments,
-      option chains, market data, watchlists, margin requirements, quote alerts,
-      risk parameters, backtesting, and symbol search. All responses are JSON.
-      Session tokens expire after 15 minutes; OAuth 2.0 long-lived refresh tokens
-      are also available for partner integrations.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.tastytrade.com/
-    baseURL: https://api.tastyworks.com
-    tags:
-      - Brokerage
-      - Accounts
-      - Orders
-      - Positions
-      - Balances
-      - Instruments
-      - Market Data
-      - Options
-      - Futures
-    properties:
-      - type: Documentation
-        url: https://developer.tastytrade.com/
-      - type: OpenAPI
-        url: openapi/account-status.json
-      - type: OpenAPI
-        url: openapi/accounts-and-customers.json
-      - type: OpenAPI
-        url: openapi/backtesting.json
-      - type: OpenAPI
-        url: openapi/balances-and-positions.json
-      - type: OpenAPI
-        url: openapi/instruments.json
-      - type: OpenAPI
-        url: openapi/margin-requirements.json
-      - type: OpenAPI
-        url: openapi/market-data.json
-      - type: OpenAPI
-        url: openapi/market-metrics.json
-      - type: OpenAPI
-        url: openapi/market-sessions.json
-      - type: OpenAPI
-        url: openapi/net-liquidating-value-history.json
-      - type: OpenAPI
-        url: openapi/orders.json
-      - type: OpenAPI
-        url: openapi/quote-alerts.json
-      - type: OpenAPI
-        url: openapi/risk-parameters.json
-      - type: OpenAPI
-        url: openapi/symbol-search.json
-      - type: OpenAPI
-        url: openapi/transactions.json
-      - type: OpenAPI
-        url: openapi/watchlists.json
-      - type: JSONLD
-        url: json-ld/tastytrade-api.jsonld
-      - type: Vocabulary
-        url: vocabulary/tastytrade-vocabulary.json
-      - type: Authentication
-        url: https://developer.tastytrade.com/oauth/
-      - type: Sandbox
-        url: https://developer.tastytrade.com/sandbox/
-      - type: PostmanCollection
-        url: https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
-      - type: GettingStarted
-        url: https://developer.tastytrade.com/basic-api-usage/
-      - type: ErrorCodes
-        url: https://developer.tastytrade.com/api-overview/
-      - type: Plans
-        url: plans/plans.yml
-      - type: RateLimits
-        url: rate-limits/rate-limits.yml
-    contact:
-      - FN: tastytrade API Support
-        email: api.support@tastytrade.com
-
-  - name: tastytrade DXLink Market Data Streaming API
-    description: >
-      Real-time market data streaming via DXLink, a WebSocket-based protocol
-      backed by dxFeed. Clients fetch a quote token from the tastytrade REST API
-      and use it to authenticate with the DXLink WebSocket endpoint. Supports
-      subscriptions to quotes, greeks (implied volatility, delta, gamma, theta,
-      vega), candles, and other market events for equities, options, futures,
-      and crypto instruments. Sandbox quotes are 15-minute delayed.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.tastytrade.com/streaming-market-data/
-    baseURL: wss://tasty-openapi-ws.dxfeed.com
-    tags:
-      - WebSocket
-      - Streaming
-      - Market Data
-      - Quotes
-      - Options Greeks
-      - Real-Time
-      - DXLink
-      - dxFeed
-    properties:
-      - type: Documentation
-        url: https://developer.tastytrade.com/streaming-market-data/
-      - type: GettingStarted
-        url: https://developer.tastytrade.com/streaming-market-data/
-
-  - name: tastytrade Account Streamer API
-    description: >
-      WebSocket-based account streaming that delivers real-time notifications
-      for order fills, position changes, account balance updates, and margin
-      requirement changes. Clients authenticate using a tastytrade session token
-      and subscribe to one or more accounts. The streamer supports automatic
-      reconnection and delivers structured JSON notification messages.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.tastytrade.com/streaming-account-data/
-    baseURL: wss://streamer.tastyworks.com
-    tags:
-      - WebSocket
-      - Streaming
-      - Account Updates
-      - Orders
-      - Positions
-      - Real-Time
-    properties:
-      - type: Documentation
-        url: https://developer.tastytrade.com/streaming-account-data/
-      - type: GettingStarted
-        url: https://developer.tastytrade.com/streaming-account-data/
-
+- name: tastytrade DXLink Market Data Streaming API
+  description: >
+    Real-time market data streaming via DXLink, a WebSocket-based protocol backed by dxFeed. Clients fetch
+    a quote token from the tastytrade REST API and use it to authenticate with the DXLink WebSocket endpoint.
+    Supports subscriptions to quotes, greeks (implied volatility, delta, gamma, theta, vega), candles,
+    and other market events for equities, options, futures, and crypto instruments. Sandbox quotes are
+    15-minute delayed.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developer.tastytrade.com/streaming-market-data/
+  baseURL: wss://tasty-openapi-ws.dxfeed.com
+  tags:
+  - WebSocket
+  - Streaming
+  - Market Data
+  - Quotes
+  - Options Greeks
+  - Real-Time
+  - DXLink
+  - dxFeed
+  properties:
+  - type: Documentation
+    url: https://developer.tastytrade.com/streaming-market-data/
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/streaming-market-data/
+- name: tastytrade Account Streamer API
+  description: >
+    WebSocket-based account streaming that delivers real-time notifications for order fills, position
+    changes, account balance updates, and margin requirement changes. Clients authenticate using a tastytrade
+    session token and subscribe to one or more accounts. The streamer supports automatic reconnection
+    and delivers structured JSON notification messages.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developer.tastytrade.com/streaming-account-data/
+  baseURL: wss://streamer.tastyworks.com
+  tags:
+  - WebSocket
+  - Streaming
+  - Account Updates
+  - Orders
+  - Positions
+  - Real-Time
+  properties:
+  - type: Documentation
+    url: https://developer.tastytrade.com/streaming-account-data/
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/streaming-account-data/
+- aid: tastytrade:tastytrade-accounts-api
+  name: tastytrade accounts API
+  description: Operations about accounts
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - accounts
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-accounts-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-api-quote-tokens-api
+  name: tastytrade api-quote-tokens API
+  description: Operations about api-quote-tokens
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - api-quote-tokens
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-api-quote-tokens-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-available-dates-api
+  name: tastytrade Available Dates API
+  description: The Available Dates API from tastytrade — 1 operation(s) for available dates.
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - Available Dates
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-available-dates-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-backtests-api
+  name: tastytrade Backtests API
+  description: The Backtests API from tastytrade — 4 operation(s) for backtests.
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - Backtests
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-backtests-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-balance-snapshots-api
+  name: tastytrade balance-snapshots API
+  description: Operations about balance-snapshots
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - balance-snapshots
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-balance-snapshots-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-complex-orders-api
+  name: tastytrade complex-orders API
+  description: >-
+    Allows an API client to retreive information about complex orders on a per account basis.
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - complex-orders
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-complex-orders-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-customers-api
+  name: tastytrade customers API
+  description: Operations about customers
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - customers
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-customers-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-futures-option-chains-api
+  name: tastytrade futures-option-chains API
+  description: Operations about futures-option-chains
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - futures-option-chains
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-futures-option-chains-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-instruments-api
+  name: tastytrade instruments API
+  description: Operations about instruments
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - instruments
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-instruments-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-margin-requirements-api
+  name: tastytrade margin-requirements API
+  description: allows a client to fetch margin-requirements for positions and orders
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - margin-requirements
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-margin-requirements-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-margin-requirements-public-configuration-api
+  name: tastytrade margin-requirements-public-configuration API
+  description: Operations about margin-requirements-public-configurations
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - margin-requirements-public-configuration
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-margin-requirements-public-configuration-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-market-data-controller-api
+  name: tastytrade market-data-controller API
+  description: >-
+    The market-data-controller API from tastytrade — 1 operation(s) for market-data-controller.
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - market-data-controller
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-market-data-controller-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-market-metrics-api
+  name: tastytrade Market Metrics API
+  description: The Market Metrics API from tastytrade — 3 operation(s) for market metrics.
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - Market Metrics
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-market-metrics-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-market-time-api
+  name: tastytrade market-time API
+  description: Operations about market-times
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - market-time
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-market-time-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-net-liq-controller-api
+  name: tastytrade net-liq-controller API
+  description: The net-liq-controller API from tastytrade — 1 operation(s) for net-liq-controller.
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - net-liq-controller
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-net-liq-controller-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-option-chains-api
+  name: tastytrade option-chains API
+  description: Operations about option-chains
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - option-chains
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-option-chains-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-orders-api
+  name: tastytrade orders API
+  description: Allows an API client to view, filter, create, cancel and replace orders.
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - orders
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-orders-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-pairs-watchlists-api
+  name: tastytrade pairs-watchlists API
+  description: Allows an API client to fetch pairs watchlists.
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - pairs-watchlists
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-pairs-watchlists-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-positions-api
+  name: tastytrade positions API
+  description: Operations about positions
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - positions
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-positions-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-public-watchlists-api
+  name: tastytrade public-watchlists API
+  description: Allows an API client to fetch tastyworks watchlists.
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - public-watchlists
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-public-watchlists-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-quote-alerts-api
+  name: tastytrade quote-alerts API
+  description: Operations about quote-alerts
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - quote-alerts
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-quote-alerts-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-simulate-trade-api
+  name: tastytrade Simulate Trade API
+  description: The Simulate Trade API from tastytrade — 1 operation(s) for simulate trade.
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - Simulate Trade
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-simulate-trade-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-span-api
+  name: tastytrade span API
+  description: Operations about spans
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - span
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-span-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-symbols-api
+  name: tastytrade Symbols API
+  description: The Symbols API from tastytrade — 1 operation(s) for symbols.
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - Symbols
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-symbols-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-trading-status-api
+  name: tastytrade trading-status API
+  description: >-
+    Allows an API client to request information about the basic trade status of an account. \
+                              This includes information about the strategies an account can trade.
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - trading-status
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-trading-status-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-transactions-api
+  name: tastytrade transactions API
+  description: Operations about transactions
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - transactions
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-transactions-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
+- aid: tastytrade:tastytrade-user-watchlists-api
+  name: tastytrade user-watchlists API
+  description: Allows an API client to fetch a user's watchlists.
+  humanURL: https://developer.tastytrade.com/
+  baseURL: https://api.tastyworks.com
+  tags:
+  - user-watchlists
+  properties:
+  - type: OpenAPI
+    url: openapi/tastytrade-user-watchlists-api-openapi.yml
+  - type: Documentation
+    url: https://developer.tastytrade.com/
+  - type: JSONLD
+    url: json-ld/tastytrade-api.jsonld
+  - type: Vocabulary
+    url: vocabulary/tastytrade-vocabulary.json
+  - type: Authentication
+    url: https://developer.tastytrade.com/oauth/
+  - type: Sandbox
+    url: https://developer.tastytrade.com/sandbox/
+  - type: PostmanCollection
+    url: >-
+      https://www.postman.com/tastytradeapi/tastytrade-api/documentation/p5jnvzh/tastytrade-api
+  - type: GettingStarted
+    url: https://developer.tastytrade.com/basic-api-usage/
+  - type: ErrorCodes
+    url: https://developer.tastytrade.com/api-overview/
+  - type: Plans
+    url: plans/plans.yml
+  - type: RateLimits
+    url: rate-limits/rate-limits.yml
 common:
   - type: AgenticAccess
     url: agentic-access/tastytrade-agentic-access.yml
