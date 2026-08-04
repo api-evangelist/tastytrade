@@ -1,0 +1,321 @@
+{
+  "info": {
+    "title": "Risk Parameters",
+    "version": "3.60.0"
+  },
+  "swagger": "2.0",
+  "produces": [
+    "application/json"
+  ],
+  "host": "api.tastyworks.com",
+  "tags": [
+    {
+      "name": "accounts",
+      "description": "Operations about accounts"
+    },
+    {
+      "name": "margin-requirements-public-configuration",
+      "description": "Operations about margin-requirements-public-configurations"
+    },
+    {
+      "name": "span",
+      "description": "Operations about spans"
+    }
+  ],
+  "paths": {
+    "/accounts/{account_number}/position-limit": {
+      "get": {
+        "description": "Get the position limit",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "account_number",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get the position limit",
+            "schema": {
+              "$ref": "#/definitions/PositionLimit"
+            }
+          }
+        },
+        "tags": [
+          "accounts"
+        ],
+        "operationId": "getAccountsAccountNumberPositionLimit"
+      }
+    },
+    "/accounts/{account_number}/margin-requirements/{underlying_symbol}/effective": {
+      "get": {
+        "description": "Get effective margin requirements for account",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "account_number",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "underlying_symbol",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get effective margin requirements for account",
+            "schema": {
+              "$ref": "#/definitions/MarginRequirement"
+            }
+          }
+        },
+        "tags": [
+          "accounts"
+        ],
+        "operationId": "getAccountsAccountNumberMarginRequirementsUnderlyingSymbolEffective"
+      }
+    },
+    "/margin-requirements-public-configuration": {
+      "get": {
+        "description": "Publicly accessible, read only margin configuration",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Publicly accessible, read only margin configuration",
+            "schema": {
+              "$ref": "#/definitions/MarginRequirementsGlobalConfiguration"
+            }
+          }
+        },
+        "tags": [
+          "margin-requirements-public-configuration"
+        ],
+        "operationId": "getMarginRequirementsPublicConfiguration"
+      }
+    },
+    "/span/rows": {
+      "get": {
+        "description": "Get span rows for a specific date and exchange",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "date",
+            "description": "The date of the SPAN file",
+            "type": "string",
+            "format": "date",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "exchange",
+            "description": "Exchange source of the SPAN file",
+            "type": "string",
+            "enum": [
+              "CME",
+              "CFE"
+            ],
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "page-offset",
+            "type": "integer",
+            "format": "int32",
+            "default": 0,
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "per-page",
+            "type": "integer",
+            "format": "int32",
+            "default": 1000,
+            "minimum": 1,
+            "maximum": 50000,
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get span rows for a specific date and exchange",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Row"
+              }
+            }
+          }
+        },
+        "tags": [
+          "span"
+        ],
+        "operationId": "getSpanRows"
+      }
+    }
+  },
+  "definitions": {
+    "PositionLimit": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "account-number": {
+          "description": "",
+          "type": "string"
+        },
+        "equity-option-order-size": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "equity-order-size": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "future-option-order-size": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "future-order-size": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "underlying-opening-order-limit": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "equity-option-position-size": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "equity-position-size": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "future-option-position-size": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "future-position-size": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "description": "PositionLimit model"
+    },
+    "MarginRequirement": {
+      "type": "object",
+      "properties": {
+        "long-equity-initial": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "long-equity-maintenance": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "naked-option-floor": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "naked-option-minimum": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "naked-option-standard": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "short-equity-initial": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "short-equity-maintenance": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        },
+        "underlying-symbol": {
+          "description": "",
+          "type": "string"
+        },
+        "clearing-identifier": {
+          "description": "",
+          "type": "string"
+        },
+        "is-deleted": {
+          "description": "",
+          "type": "boolean"
+        }
+      },
+      "description": "MarginRequirement model"
+    },
+    "MarginRequirementsGlobalConfiguration": {
+      "type": "object",
+      "properties": {
+        "risk-free-rate": {
+          "description": "",
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "description": "MarginRequirementsGlobalConfiguration model"
+    },
+    "Row": {
+      "type": "object",
+      "properties": {
+        "file-date": {
+          "description": "",
+          "type": "string",
+          "format": "date"
+        },
+        "row-index": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "exchange": {
+          "description": "",
+          "type": "string"
+        },
+        "row-data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "description": "Row model"
+    }
+  }
+}
