@@ -34,7 +34,7 @@ tags:
 url: https://raw.githubusercontent.com/api-evangelist/tastytrade/refs/heads/main/apis.yml
 created: "2026-06-13"
 modified: "2026-06-13"
-specificationVersion: "0.19"
+specificationVersion: '0.23'
 apis:
 - name: tastytrade DXLink Market Data Streaming API
   description: >
