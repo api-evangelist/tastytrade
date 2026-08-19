@@ -1,0 +1,58 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts quote-alerts API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "quote-alerts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getQuoteAlerts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/quote-alerts"
+          },
+          "docs": "Get quote alerts for current user"
+        },
+        {
+          "info": {
+            "name": "postQuoteAlerts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/quote-alerts"
+          },
+          "docs": "Create quote alert for symbol"
+        },
+        {
+          "info": {
+            "name": "deleteQuoteAlertsAlertExternalId",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/quote-alerts/:alert_external_id",
+            "params": [
+              {
+                "name": "alert_external_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Cancel a quote alert for current user"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

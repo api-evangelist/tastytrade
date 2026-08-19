@@ -1,0 +1,1034 @@
+{
+  "item": [
+    {
+      "id": "f2a5a0a3-fccf-4f4c-8572-2302d7aede19",
+      "name": "market-time",
+      "description": {
+        "content": "Operations about market-times",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9ba0eb24-9271-48e5-ac1f-4f935838fa87",
+          "name": "get Market Time Sessions",
+          "request": {
+            "name": "get Market Time Sessions",
+            "description": {
+              "content": "Retrieve a list of session timings for a date range",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "market-time",
+                "sessions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "from-date",
+                  "value": "2026-04-15",
+                  "description": "The date to start from"
+                },
+                {
+                  "disabled": false,
+                  "key": "instrument-collection",
+                  "value": "Equity",
+                  "description": "The instrument collection to get sessions for"
+                },
+                {
+                  "disabled": false,
+                  "key": "to-date",
+                  "value": "<date>",
+                  "description": "(Required) The date to end at, the difference between from and to date must not exceed 9 months"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c4629a5b-1296-4608-829d-f06d6d388a5e",
+              "name": "Retrieve a list of session timings for a date range",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "market-time",
+                    "sessions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "from-date",
+                      "value": "2026-04-15"
+                    },
+                    {
+                      "key": "instrument-collection",
+                      "value": "Equity"
+                    },
+                    {
+                      "key": "to-date",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"close-at\": \"2003-01-20T01:12:38.855Z\",\n    \"close-at-ext\": \"1979-07-03T10:59:55.134Z\",\n    \"instrument-collection\": \"string\",\n    \"open-at\": \"1958-06-21T11:27:16.465Z\",\n    \"start-at\": \"1950-06-20T11:50:49.176Z\"\n  },\n  {\n    \"close-at\": \"1956-06-23T14:48:08.889Z\",\n    \"close-at-ext\": \"1992-12-18T07:28:11.212Z\",\n    \"instrument-collection\": \"string\",\n    \"open-at\": \"2005-08-15T06:08:13.938Z\",\n    \"start-at\": \"1959-04-16T14:58:13.395Z\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a36b2132-24f1-4f63-b909-a1342810b6f9",
+          "name": "get Market Time Sessions Current",
+          "request": {
+            "name": "get Market Time Sessions Current",
+            "description": {
+              "content": "Retrieve the current session timings for an instrument collection",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "market-time",
+                "sessions",
+                "current"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "instrument-collections",
+                  "value": "<string>,<string>",
+                  "description": "(Required) List of instrument collections . i.e. `CFE`, `CME` or `Equity` (example: instrument-collections[]={value1}&instrument-collections[]={value2})"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "50750fc5-281b-4189-b196-ab1b4e9d16a8",
+              "name": "Retrieve the current session timings for an instrument collection",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "market-time",
+                    "sessions",
+                    "current"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "instrument-collections",
+                      "value": "<string>,<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"close-at\": \"2006-10-31T04:11:41.619Z\",\n  \"close-at-ext\": \"2000-09-15T01:50:00.232Z\",\n  \"instrument-collection\": \"string\",\n  \"open-at\": \"1999-04-29T15:42:05.227Z\",\n  \"start-at\": \"1994-05-18T21:05:50.384Z\",\n  \"next-session\": {\n    \"close-at\": \"2020-06-12T23:39:55.647Z\",\n    \"close-at-ext\": \"1976-08-26T21:08:04.755Z\",\n    \"instrument-collection\": \"string\",\n    \"open-at\": \"1999-10-13T01:17:58.283Z\",\n    \"session-date\": \"1983-10-29\",\n    \"start-at\": \"1976-07-17T08:13:20.068Z\"\n  },\n  \"previous-session\": {\n    \"close-at\": \"1978-11-01T03:53:58.109Z\",\n    \"close-at-ext\": \"1964-09-07T10:31:22.908Z\",\n    \"instrument-collection\": \"string\",\n    \"open-at\": \"2000-08-02T21:58:12.447Z\",\n    \"session-date\": \"1979-02-18\",\n    \"start-at\": \"1951-12-13T12:37:53.359Z\"\n  },\n  \"state\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "66662899-b98c-48e4-9fe8-243f8a4ea001",
+          "name": "get Market Time Equities Sessions Current",
+          "request": {
+            "name": "get Market Time Equities Sessions Current",
+            "description": {
+              "content": "Get current equities session",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "market-time",
+                "equities",
+                "sessions",
+                "current"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "current-time",
+                  "value": "<dateTime>",
+                  "description": "The time the current session is based on"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0d774193-c542-4e03-921e-5f34adf51a38",
+              "name": "Get current equities session",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "market-time",
+                    "equities",
+                    "sessions",
+                    "current"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "current-time",
+                      "value": "<dateTime>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"close-at\": \"1977-12-25T06:25:35.630Z\",\n  \"close-at-ext\": \"1992-05-30T23:32:39.242Z\",\n  \"instrument-collection\": \"string\",\n  \"open-at\": \"1950-11-05T04:49:22.572Z\",\n  \"start-at\": \"1951-02-14T01:51:38.630Z\",\n  \"next-session\": {\n    \"close-at\": \"1950-09-05T03:31:47.978Z\",\n    \"close-at-ext\": \"2010-07-09T15:55:21.242Z\",\n    \"instrument-collection\": \"string\",\n    \"open-at\": \"1950-08-16T15:23:12.121Z\",\n    \"session-date\": \"1961-06-15\",\n    \"start-at\": \"2017-03-11T19:09:34.782Z\"\n  },\n  \"previous-session\": {\n    \"close-at\": \"1946-09-18T21:17:53.389Z\",\n    \"close-at-ext\": \"1965-03-20T04:48:24.221Z\",\n    \"instrument-collection\": \"string\",\n    \"open-at\": \"1989-12-18T06:26:24.064Z\",\n    \"session-date\": \"2007-08-03\",\n    \"start-at\": \"1978-12-22T13:33:27.237Z\"\n  },\n  \"state\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7e196b77-9009-416e-bccf-ddb51b613204",
+          "name": "get Market Time Equities Sessions Next",
+          "request": {
+            "name": "get Market Time Equities Sessions Next",
+            "description": {
+              "content": "Get next equities session or session after date",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "market-time",
+                "equities",
+                "sessions",
+                "next"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "2026-04-15",
+                  "description": "Find session on or after this date"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9b694a0c-752c-41a7-b9cd-cdcfda23c0c6",
+              "name": "Get next equities session or session after date",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "market-time",
+                    "equities",
+                    "sessions",
+                    "next"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "2026-04-15"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"close-at\": \"2016-05-21T10:50:17.091Z\",\n  \"close-at-ext\": \"1989-09-22T12:05:57.457Z\",\n  \"instrument-collection\": \"string\",\n  \"open-at\": \"2013-06-15T12:55:43.131Z\",\n  \"session-date\": \"1991-07-13\",\n  \"start-at\": \"1961-08-29T01:09:37.265Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "09fa53b6-765c-4d81-990d-430f09088df3",
+          "name": "get Market Time Equities Sessions Previous",
+          "request": {
+            "name": "get Market Time Equities Sessions Previous",
+            "description": {
+              "content": "Get previous session or session before date",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "market-time",
+                "equities",
+                "sessions",
+                "previous"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "2026-04-15",
+                  "description": "Find session before this date"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bf1f4279-59ed-4050-8cfe-b1719ac521d6",
+              "name": "Get previous session or session before date",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "market-time",
+                    "equities",
+                    "sessions",
+                    "previous"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "2026-04-15"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"close-at\": \"2014-01-09T05:06:05.764Z\",\n  \"close-at-ext\": \"1962-12-06T07:09:36.896Z\",\n  \"instrument-collection\": \"string\",\n  \"open-at\": \"2001-05-07T15:01:34.748Z\",\n  \"session-date\": \"1991-01-18\",\n  \"start-at\": \"1991-07-13T00:51:11.527Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "715c417a-33a3-4080-9fdd-d5e412b21a2b",
+          "name": "get Market Time Equities Holidays",
+          "request": {
+            "name": "get Market Time Equities Holidays",
+            "description": {
+              "content": "Get equity holidays",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "market-time",
+                "equities",
+                "holidays"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0e33549e-f8c6-4a9b-9a97-d165d8386ac0",
+              "name": "Get equity holidays",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "market-time",
+                    "equities",
+                    "holidays"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"market-half-days\": {},\n    \"market-holidays\": {}\n  },\n  {\n    \"market-half-days\": {},\n    \"market-holidays\": {}\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ed83be12-10d5-41c9-abaa-8a2b924ab1c8",
+          "name": "get Market Time Futures Sessions Current",
+          "request": {
+            "name": "get Market Time Futures Sessions Current",
+            "description": {
+              "content": "Get current futures sessions",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "market-time",
+                "futures",
+                "sessions",
+                "current"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b9e52231-1f5d-4cb7-8e26-f5c8dc684a47",
+              "name": "Get current futures sessions",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "market-time",
+                    "futures",
+                    "sessions",
+                    "current"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"close-at\": \"1981-04-24T02:31:23.911Z\",\n    \"close-at-ext\": \"1963-01-28T00:44:35.356Z\",\n    \"instrument-collection\": \"string\",\n    \"open-at\": \"2021-02-05T12:38:19.583Z\",\n    \"start-at\": \"1989-08-29T18:08:37.980Z\",\n    \"next-session\": {\n      \"close-at\": \"2016-06-22T04:08:38.663Z\",\n      \"close-at-ext\": \"1979-05-05T07:23:34.862Z\",\n      \"instrument-collection\": \"string\",\n      \"open-at\": \"2025-08-18T21:03:49.713Z\",\n      \"session-date\": \"1989-03-29\",\n      \"start-at\": \"2006-06-28T20:14:00.848Z\"\n    },\n    \"previous-session\": {\n      \"close-at\": \"2020-08-03T02:06:56.366Z\",\n      \"close-at-ext\": \"2001-04-09T08:54:48.179Z\",\n      \"instrument-collection\": \"string\",\n      \"open-at\": \"1980-06-08T07:38:34.093Z\",\n      \"session-date\": \"1996-06-06\",\n      \"start-at\": \"1991-07-15T03:05:43.323Z\"\n    },\n    \"state\": \"string\"\n  },\n  {\n    \"close-at\": \"1968-06-27T06:15:43.331Z\",\n    \"close-at-ext\": \"2023-04-10T17:36:37.837Z\",\n    \"instrument-collection\": \"string\",\n    \"open-at\": \"1997-09-11T23:11:22.685Z\",\n    \"start-at\": \"1947-12-04T10:28:19.003Z\",\n    \"next-session\": {\n      \"close-at\": \"1957-06-09T07:30:58.244Z\",\n      \"close-at-ext\": \"2018-07-07T19:05:11.804Z\",\n      \"instrument-collection\": \"string\",\n      \"open-at\": \"2024-11-12T12:36:33.021Z\",\n      \"session-date\": \"1988-10-03\",\n      \"start-at\": \"2021-10-31T18:43:12.303Z\"\n    },\n    \"previous-session\": {\n      \"close-at\": \"2000-06-10T23:25:37.707Z\",\n      \"close-at-ext\": \"1971-09-13T12:16:59.550Z\",\n      \"instrument-collection\": \"string\",\n      \"open-at\": \"1977-10-25T10:35:07.643Z\",\n      \"session-date\": \"1988-05-13\",\n      \"start-at\": \"2010-05-12T14:28:00.946Z\"\n    },\n    \"state\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3823767f-6897-4666-b2c4-4883a3de646d",
+          "name": "get Market Time Futures Sessions Current Instrument Collection",
+          "request": {
+            "name": "get Market Time Futures Sessions Current Instrument Collection",
+            "description": {
+              "content": "Get current futures session for exchange",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "market-time",
+                "futures",
+                "sessions",
+                "current",
+                ":instrument_collection"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "instrument_collection",
+                  "description": "(Required) Futures exchange, one of: CFE, CME"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fa18086f-6152-4425-9dce-6c197ead773b",
+              "name": "Get current futures session for exchange",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "market-time",
+                    "futures",
+                    "sessions",
+                    "current",
+                    ":instrument_collection"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "instrument_collection",
+                      "description": "(Required) Futures exchange, one of: CFE, CME"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"close-at\": \"1977-12-25T06:25:35.630Z\",\n  \"close-at-ext\": \"1992-05-30T23:32:39.242Z\",\n  \"instrument-collection\": \"string\",\n  \"open-at\": \"1950-11-05T04:49:22.572Z\",\n  \"start-at\": \"1951-02-14T01:51:38.630Z\",\n  \"next-session\": {\n    \"close-at\": \"1950-09-05T03:31:47.978Z\",\n    \"close-at-ext\": \"2010-07-09T15:55:21.242Z\",\n    \"instrument-collection\": \"string\",\n    \"open-at\": \"1950-08-16T15:23:12.121Z\",\n    \"session-date\": \"1961-06-15\",\n    \"start-at\": \"2017-03-11T19:09:34.782Z\"\n  },\n  \"previous-session\": {\n    \"close-at\": \"1946-09-18T21:17:53.389Z\",\n    \"close-at-ext\": \"1965-03-20T04:48:24.221Z\",\n    \"instrument-collection\": \"string\",\n    \"open-at\": \"1989-12-18T06:26:24.064Z\",\n    \"session-date\": \"2007-08-03\",\n    \"start-at\": \"1978-12-22T13:33:27.237Z\"\n  },\n  \"state\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c25f6b37-ccf8-4f53-a930-9963d8dacc77",
+          "name": "get Market Time Futures Sessions Next Instrument Collection",
+          "request": {
+            "name": "get Market Time Futures Sessions Next Instrument Collection",
+            "description": {
+              "content": "Get next futures session for exchange",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "market-time",
+                "futures",
+                "sessions",
+                "next",
+                ":instrument_collection"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "2026-04-15",
+                  "description": "Find session on or after this date"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "instrument_collection",
+                  "description": "(Required) Futures exchange, one of: CFE, CME"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d2b2be29-c3c6-4241-806b-bf9f01eda714",
+              "name": "Get next futures session for exchange",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "market-time",
+                    "futures",
+                    "sessions",
+                    "next",
+                    ":instrument_collection"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "2026-04-15"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "instrument_collection",
+                      "description": "(Required) Futures exchange, one of: CFE, CME"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"close-at\": \"2016-05-21T10:50:17.091Z\",\n  \"close-at-ext\": \"1989-09-22T12:05:57.457Z\",\n  \"instrument-collection\": \"string\",\n  \"open-at\": \"2013-06-15T12:55:43.131Z\",\n  \"session-date\": \"1991-07-13\",\n  \"start-at\": \"1961-08-29T01:09:37.265Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8097335c-44b7-4c0d-8d2f-a08a02d6dc73",
+          "name": "get Market Time Futures Sessions Previous Instrument Collection",
+          "request": {
+            "name": "get Market Time Futures Sessions Previous Instrument Collection",
+            "description": {
+              "content": "Get previous futures sessions for exchange",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "market-time",
+                "futures",
+                "sessions",
+                "previous",
+                ":instrument_collection"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "2026-04-15",
+                  "description": "Find session before this date"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "instrument_collection",
+                  "description": "(Required) Futures exchange, one of: CFE, CME"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d18e6826-a66a-4c95-afca-021395a0a689",
+              "name": "Get previous futures sessions for exchange",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "market-time",
+                    "futures",
+                    "sessions",
+                    "previous",
+                    ":instrument_collection"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "2026-04-15"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "instrument_collection",
+                      "description": "(Required) Futures exchange, one of: CFE, CME"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"close-at\": \"2014-01-09T05:06:05.764Z\",\n  \"close-at-ext\": \"1962-12-06T07:09:36.896Z\",\n  \"instrument-collection\": \"string\",\n  \"open-at\": \"2001-05-07T15:01:34.748Z\",\n  \"session-date\": \"1991-01-18\",\n  \"start-at\": \"1991-07-13T00:51:11.527Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e03f7494-72b1-45d7-866e-0ece7aa8d9e9",
+          "name": "get Market Time Futures Holidays Instrument Collection",
+          "request": {
+            "name": "get Market Time Futures Holidays Instrument Collection",
+            "description": {
+              "content": "Get future holidays for exchange",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "market-time",
+                "futures",
+                "holidays",
+                ":instrument_collection"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "instrument_collection",
+                  "description": "(Required) Futures exchange, one of: CFE, CME"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "554ae632-9583-4622-8976-bb88b8e5911c",
+              "name": "Get future holidays for exchange",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "market-time",
+                    "futures",
+                    "holidays",
+                    ":instrument_collection"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "instrument_collection",
+                      "description": "(Required) Futures exchange, one of: CFE, CME"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"market-half-days\": {},\n    \"market-holidays\": {}\n  },\n  {\n    \"market-half-days\": {},\n    \"market-holidays\": {}\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "60dd08a2-b46c-4e58-9273-8bb5667e99cd",
+    "name": "Account Status accounts market-time API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "item": [
+    {
+      "id": "15fcf271-e655-4d1e-8155-689e8f4e8308",
+      "name": "public-watchlists",
+      "description": {
+        "content": "Allows an API client to fetch tastyworks watchlists.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6b51d42e-ddff-4c56-aa30-14d37c5c3aa5",
+          "name": "get Public Watchlists",
+          "request": {
+            "name": "get Public Watchlists",
+            "description": {
+              "content": "Returns a list of all tastyworks watchlists",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "public-watchlists"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "counts-only",
+                  "value": "false"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3a990ee8-9b5a-491a-8c29-26bb7d382556",
+              "name": "Returns a list of all tastyworks watchlists",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "public-watchlists"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "counts-only",
+                      "value": "false"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"string\",\n    \"watchlist-entries\": {},\n    \"cms-id\": \"string\",\n    \"group-name\": \"string\",\n    \"order-index\": 7211\n  },\n  {\n    \"name\": \"string\",\n    \"watchlist-entries\": {},\n    \"cms-id\": \"string\",\n    \"group-name\": \"string\",\n    \"order-index\": 6434\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8cc7d537-4d30-4101-9570-f3d4d622cd10",
+          "name": "get Public Watchlists Watchlist Name",
+          "request": {
+            "name": "get Public Watchlists Watchlist Name",
+            "description": {
+              "content": "Returns a requested tastyworks watchlist",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "public-watchlists",
+                ":watchlist_name"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "watchlist_name",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "be81f62f-c67e-429e-ae21-dbc73cfb938c",
+              "name": "Returns a requested tastyworks watchlist",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "public-watchlists",
+                    ":watchlist_name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "watchlist_name",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"watchlist-entries\": {},\n  \"cms-id\": \"string\",\n  \"group-name\": \"string\",\n  \"order-index\": 768\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "3cb918a9-0847-4932-8792-8c35d0f6496a",
+    "name": "Account Status accounts public-watchlists API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

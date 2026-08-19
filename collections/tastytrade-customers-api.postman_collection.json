@@ -1,0 +1,328 @@
+{
+  "item": [
+    {
+      "id": "9db6285b-09a5-4764-902e-1e7520f803c0",
+      "name": "customers",
+      "description": {
+        "content": "Operations about customers",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c2282690-8af6-4f61-a22b-cf2c44d3f6fb",
+          "name": "get Customers Customer Id",
+          "request": {
+            "name": "get Customers Customer Id",
+            "description": {
+              "content": "Get a full customer resource.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "customers",
+                ":customer_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "allow-missing",
+                  "value": "false",
+                  "description": "Does not raise a 404 if customer is missing"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "customer_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "32d99dcc-ee15-4eac-985a-b1c49ccc5389",
+              "name": "Get a full customer resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "customers",
+                    ":customer_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "allow-missing",
+                      "value": "false"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "customer_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"first-name\": \"string\",\n  \"first-surname\": \"string\",\n  \"last-name\": \"string\",\n  \"middle-name\": \"string\",\n  \"prefix-name\": \"string\",\n  \"second-surname\": \"string\",\n  \"suffix-name\": \"string\",\n  \"address\": {\n    \"city\": \"string\",\n    \"country\": \"string\",\n    \"is-domestic\": \"string\",\n    \"is-foreign\": \"string\",\n    \"postal-code\": \"string\",\n    \"state-region\": \"string\",\n    \"street-one\": \"string\",\n    \"street-three\": \"string\",\n    \"street-two\": \"string\"\n  },\n  \"customer-suitability\": {\n    \"id\": \"string\",\n    \"annual-net-income\": 2282,\n    \"covered-options-trading-experience\": \"string\",\n    \"customer-id\": 3549,\n    \"employer-name\": \"string\",\n    \"employment-status\": \"string\",\n    \"futures-trading-experience\": \"string\",\n    \"job-title\": \"string\",\n    \"liquid-net-worth\": 4531,\n    \"marital-status\": \"string\",\n    \"net-worth\": 23,\n    \"number-of-dependents\": 5216,\n    \"occupation\": \"string\",\n    \"stock-trading-experience\": \"string\",\n    \"tax-bracket\": \"string\",\n    \"uncovered-options-trading-experience\": \"string\"\n  },\n  \"mailing-address\": {\n    \"city\": \"string\",\n    \"country\": \"string\",\n    \"is-domestic\": \"string\",\n    \"is-foreign\": \"string\",\n    \"postal-code\": \"string\",\n    \"state-region\": \"string\",\n    \"street-one\": \"string\",\n    \"street-three\": \"string\",\n    \"street-two\": \"string\"\n  },\n  \"is-foreign\": \"string\",\n  \"regulatory-domain\": \"string\",\n  \"usa-citizenship-type\": \"string\",\n  \"home-phone-number\": \"string\",\n  \"home-phone-number-details\": \"string\",\n  \"mobile-phone-number\": \"string\",\n  \"mobile-phone-number-details\": \"string\",\n  \"work-phone-number\": \"string\",\n  \"work-phone-number-details\": \"string\",\n  \"birth-date\": \"string\",\n  \"email\": \"string\",\n  \"external-id\": \"string\",\n  \"foreign-tax-number\": \"string\",\n  \"tax-number\": \"string\",\n  \"tax-number-type\": \"string\",\n  \"birth-country\": \"string\",\n  \"citizenship-country\": \"string\",\n  \"visa-expiration-date\": \"string\",\n  \"visa-type\": \"string\",\n  \"agreed-to-margining\": false,\n  \"subject-to-tax-withholding\": false,\n  \"agreed-to-terms\": true,\n  \"signature-of-agreement\": false,\n  \"desk-customer-id\": \"string\",\n  \"ext-crm-id\": \"string\",\n  \"family-member-names\": \"string\",\n  \"gender\": \"string\",\n  \"has-industry-affiliation\": true,\n  \"has-institutional-assets\": \"string\",\n  \"has-listed-affiliation\": true,\n  \"has-political-affiliation\": false,\n  \"industry-affiliation-firm\": \"string\",\n  \"is-investment-adviser\": \"string\",\n  \"listed-affiliation-symbol\": \"string\",\n  \"political-organization\": \"string\",\n  \"user-id\": \"string\",\n  \"has-delayed-quotes\": true,\n  \"has-pending-or-approved-application\": \"string\",\n  \"is-professional\": true,\n  \"permitted-account-types\": \"string\",\n  \"created-at\": \"1984-09-04T01:50:16.729Z\",\n  \"entity\": {\n    \"id\": \"string\",\n    \"address\": {\n      \"city\": \"string\",\n      \"country\": \"string\",\n      \"is-domestic\": \"string\",\n      \"is-foreign\": \"string\",\n      \"postal-code\": \"string\",\n      \"state-region\": \"string\",\n      \"street-one\": \"string\",\n      \"street-three\": \"string\",\n      \"street-two\": \"string\"\n    },\n    \"business-nature\": \"string\",\n    \"date-of-trust-creation\": \"string\",\n    \"email\": \"string\",\n    \"entity-officers\": [\n      {\n        \"id\": \"string\",\n        \"external-id\": \"string\",\n        \"first-name\": \"string\",\n        \"last-name\": \"string\",\n        \"middle-name\": \"string\",\n        \"prefix-name\": \"string\",\n        \"suffix-name\": \"string\",\n        \"address\": {\n          \"city\": \"string\",\n          \"country\": \"string\",\n          \"is-domestic\": \"string\",\n          \"is-foreign\": \"string\",\n          \"postal-code\": \"string\",\n          \"state-region\": \"string\",\n          \"street-one\": \"string\",\n          \"street-three\": \"string\",\n          \"street-two\": \"string\"\n        },\n        \"birth-country\": \"string\",\n        \"birth-date\": \"2019-05-29\",\n        \"citizenship-country\": \"string\",\n        \"email\": \"string\",\n        \"employer-name\": \"string\",\n        \"employment-status\": \"string\",\n        \"home-phone-number\": \"string\",\n        \"is-foreign\": \"string\",\n        \"job-title\": \"string\",\n        \"marital-status\": \"string\",\n        \"mobile-phone-number\": \"string\",\n        \"number-of-dependents\": \"string\",\n        \"occupation\": \"string\",\n        \"owner-of-record\": false,\n        \"relationship-to-entity\": \"string\",\n        \"tax-number\": \"string\",\n        \"tax-number-type\": \"string\",\n        \"usa-citizenship-type\": \"string\",\n        \"visa-expiration-date\": \"1972-07-25\",\n        \"visa-type\": \"string\",\n        \"work-phone-number\": \"string\"\n      },\n      {\n        \"id\": \"string\",\n        \"external-id\": \"string\",\n        \"first-name\": \"string\",\n        \"last-name\": \"string\",\n        \"middle-name\": \"string\",\n        \"prefix-name\": \"string\",\n        \"suffix-name\": \"string\",\n        \"address\": {\n          \"city\": \"string\",\n          \"country\": \"string\",\n          \"is-domestic\": \"string\",\n          \"is-foreign\": \"string\",\n          \"postal-code\": \"string\",\n          \"state-region\": \"string\",\n          \"street-one\": \"string\",\n          \"street-three\": \"string\",\n          \"street-two\": \"string\"\n        },\n        \"birth-country\": \"string\",\n        \"birth-date\": \"2019-09-04\",\n        \"citizenship-country\": \"string\",\n        \"email\": \"string\",\n        \"employer-name\": \"string\",\n        \"employment-status\": \"string\",\n        \"home-phone-number\": \"string\",\n        \"is-foreign\": \"string\",\n        \"job-title\": \"string\",\n        \"marital-status\": \"string\",\n        \"mobile-phone-number\": \"string\",\n        \"number-of-dependents\": \"string\",\n        \"occupation\": \"string\",\n        \"owner-of-record\": false,\n        \"relationship-to-entity\": \"string\",\n        \"tax-number\": \"string\",\n        \"tax-number-type\": \"string\",\n        \"usa-citizenship-type\": \"string\",\n        \"visa-expiration-date\": \"1968-09-27\",\n        \"visa-type\": \"string\",\n        \"work-phone-number\": \"string\"\n      }\n    ],\n    \"entity-suitability\": {\n      \"id\": \"string\",\n      \"annual-net-income\": 6053,\n      \"covered-options-trading-experience\": \"string\",\n      \"entity-id\": 6496,\n      \"futures-trading-experience\": \"string\",\n      \"liquid-net-worth\": 269,\n      \"net-worth\": 202,\n      \"stock-trading-experience\": \"string\",\n      \"tax-bracket\": \"string\",\n      \"uncovered-options-trading-experience\": \"string\"\n    },\n    \"entity-type\": \"string\",\n    \"foreign-institution\": \"string\",\n    \"grantor-birth-date\": \"string\",\n    \"grantor-email\": \"string\",\n    \"grantor-first-name\": \"string\",\n    \"grantor-last-name\": \"string\",\n    \"grantor-middle-name\": \"string\",\n    \"grantor-tax-number\": \"string\",\n    \"has-foreign-bank-affiliation\": \"string\",\n    \"has-foreign-institution-affiliation\": \"string\",\n    \"is-domestic\": \"string\",\n    \"legal-name\": \"string\",\n    \"mailing-address\": {\n      \"city\": \"string\",\n      \"country\": \"string\",\n      \"is-domestic\": \"string\",\n      \"is-foreign\": \"string\",\n      \"postal-code\": \"string\",\n      \"state-region\": \"string\",\n      \"street-one\": \"string\",\n      \"street-three\": \"string\",\n      \"street-two\": \"string\"\n    },\n    \"phone-number\": \"string\",\n    \"secretary-name\": \"string\",\n    \"tax-election\": \"string\",\n    \"tax-number\": \"string\"\n  },\n  \"identifiable-type\": \"string\",\n  \"person\": {\n    \"external-id\": \"string\",\n    \"first-name\": \"string\",\n    \"last-name\": \"string\",\n    \"middle-name\": \"string\",\n    \"prefix-name\": \"string\",\n    \"suffix-name\": \"string\",\n    \"birth-country\": \"string\",\n    \"birth-date\": \"1991-08-22\",\n    \"citizenship-country\": \"string\",\n    \"usa-citizenship-type\": \"string\",\n    \"visa-expiration-date\": \"2015-06-28\",\n    \"visa-type\": \"string\",\n    \"employer-name\": \"string\",\n    \"employment-status\": \"string\",\n    \"job-title\": \"string\",\n    \"marital-status\": \"string\",\n    \"number-of-dependents\": \"string\",\n    \"occupation\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c787c24d-1021-48ed-a839-b60d1cbe638e",
+          "name": "get Customers Customer Id Accounts",
+          "request": {
+            "name": "get Customers Customer Id Accounts",
+            "description": {
+              "content": "Get a list of all the customer account resources attached to the current customer.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "customers",
+                ":customer_id",
+                "accounts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "customer_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "014ed073-8b2f-42cf-81f6-6da13cc7c71f",
+              "name": "Get a list of all the customer account resources attached to the current customer.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "customers",
+                    ":customer_id",
+                    "accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "customer_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"account\": {\n      \"account-number\": \"string\",\n      \"account-type-name\": \"string\",\n      \"closed-at\": \"2017-07-25T20:33:35.041Z\",\n      \"created-at\": \"1957-04-27T12:01:18.514Z\",\n      \"day-trader-status\": \"string\",\n      \"ext-account-id\": \"string\",\n      \"ext-crm-id\": \"string\",\n      \"external-accounts\": \"string\",\n      \"external-fdid\": \"string\",\n      \"external-id\": \"string\",\n      \"funding-date\": \"1960-11-06\",\n      \"futures-account-purpose\": \"string\",\n      \"investment-objective\": \"string\",\n      \"investment-time-horizon\": \"string\",\n      \"is-closed\": false,\n      \"is-firm-error\": false,\n      \"is-firm-proprietary\": false,\n      \"is-foreign\": \"string\",\n      \"is-futures-approved\": true,\n      \"liquidity-needs\": \"string\",\n      \"margin-or-cash\": \"string\",\n      \"nickname\": \"string\",\n      \"opened-at\": \"1966-10-21T14:43:44.953Z\",\n      \"regulatory-domain\": \"string\",\n      \"risk-tolerance\": \"string\",\n      \"submitting-user-id\": \"string\",\n      \"suitable-options-level\": \"string\"\n    },\n    \"authority-level\": \"string\"\n  },\n  {\n    \"account\": {\n      \"account-number\": \"string\",\n      \"account-type-name\": \"string\",\n      \"closed-at\": \"1975-03-09T12:43:31.489Z\",\n      \"created-at\": \"1996-10-31T14:53:19.137Z\",\n      \"day-trader-status\": \"string\",\n      \"ext-account-id\": \"string\",\n      \"ext-crm-id\": \"string\",\n      \"external-accounts\": \"string\",\n      \"external-fdid\": \"string\",\n      \"external-id\": \"string\",\n      \"funding-date\": \"1986-08-24\",\n      \"futures-account-purpose\": \"string\",\n      \"investment-objective\": \"string\",\n      \"investment-time-horizon\": \"string\",\n      \"is-closed\": true,\n      \"is-firm-error\": false,\n      \"is-firm-proprietary\": false,\n      \"is-foreign\": \"string\",\n      \"is-futures-approved\": false,\n      \"liquidity-needs\": \"string\",\n      \"margin-or-cash\": \"string\",\n      \"nickname\": \"string\",\n      \"opened-at\": \"1995-05-27T00:42:25.724Z\",\n      \"regulatory-domain\": \"string\",\n      \"risk-tolerance\": \"string\",\n      \"submitting-user-id\": \"string\",\n      \"suitable-options-level\": \"string\"\n    },\n    \"authority-level\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b14052fc-5be9-4ac9-8efb-e4c63766f243",
+          "name": "get Customers Customer Id Accounts Account Number",
+          "request": {
+            "name": "get Customers Customer Id Accounts Account Number",
+            "description": {
+              "content": "Get a full customer account resource.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "customers",
+                ":customer_id",
+                "accounts",
+                ":account_number"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "customer_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "account_number",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f79cbe9f-bbd8-4a3c-8932-b417a2f16a9c",
+              "name": "Get a full customer account resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "customers",
+                    ":customer_id",
+                    "accounts",
+                    ":account_number"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "customer_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "account_number",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"account-number\": \"string\",\n  \"account-type-name\": \"string\",\n  \"closed-at\": \"1963-12-01T10:14:32.327Z\",\n  \"created-at\": \"1975-11-29T11:40:09.652Z\",\n  \"day-trader-status\": \"string\",\n  \"ext-account-id\": \"string\",\n  \"ext-crm-id\": \"string\",\n  \"external-accounts\": \"string\",\n  \"external-fdid\": \"string\",\n  \"external-id\": \"string\",\n  \"funding-date\": \"1963-12-02\",\n  \"futures-account-purpose\": \"string\",\n  \"investment-objective\": \"string\",\n  \"investment-time-horizon\": \"string\",\n  \"is-closed\": true,\n  \"is-firm-error\": true,\n  \"is-firm-proprietary\": false,\n  \"is-foreign\": \"string\",\n  \"is-futures-approved\": true,\n  \"liquidity-needs\": \"string\",\n  \"margin-or-cash\": \"string\",\n  \"nickname\": \"string\",\n  \"opened-at\": \"1970-12-08T20:07:49.489Z\",\n  \"regulatory-domain\": \"string\",\n  \"risk-tolerance\": \"string\",\n  \"submitting-user-id\": \"string\",\n  \"suitable-options-level\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "85f7c04b-f354-4311-97a7-fc766b8a3dab",
+    "name": "Account Status accounts customers API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

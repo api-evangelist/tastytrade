@@ -1,0 +1,144 @@
+{
+  "item": [
+    {
+      "id": "dcbea80e-5ee0-4dc5-b6e0-117f3a563863",
+      "name": "span",
+      "description": {
+        "content": "Operations about spans",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9515147d-131c-48e4-8ee3-6d80b361cb90",
+          "name": "get Span Rows",
+          "request": {
+            "name": "get Span Rows",
+            "description": {
+              "content": "Get span rows for a specific date and exchange",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "span",
+                "rows"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "date",
+                  "value": "<date>",
+                  "description": "(Required) The date of the SPAN file"
+                },
+                {
+                  "disabled": false,
+                  "key": "exchange",
+                  "value": "<string>",
+                  "description": "(Required) Exchange source of the SPAN file"
+                },
+                {
+                  "disabled": false,
+                  "key": "page-offset",
+                  "value": "0"
+                },
+                {
+                  "disabled": false,
+                  "key": "per-page",
+                  "value": "1000"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d019a2be-3b4e-447f-a1f0-8f7115c5609f",
+              "name": "Get span rows for a specific date and exchange",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "span",
+                    "rows"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "exchange",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page-offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "per-page",
+                      "value": "1000"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"file-date\": \"1981-09-06\",\n    \"row-index\": 2208,\n    \"exchange\": \"string\",\n    \"row-data\": \"string\"\n  },\n  {\n    \"file-date\": \"1993-06-01\",\n    \"row-index\": 2798,\n    \"exchange\": \"string\",\n    \"row-data\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "71a1205f-70dc-4e8d-b3f9-359eeb2985a8",
+    "name": "Account Status accounts span API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

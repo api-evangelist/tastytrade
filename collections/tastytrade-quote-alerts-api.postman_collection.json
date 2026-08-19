@@ -1,0 +1,269 @@
+{
+  "item": [
+    {
+      "id": "d40fbf82-5df0-492a-a475-4d5d67da3f0d",
+      "name": "quote-alerts",
+      "description": {
+        "content": "Operations about quote-alerts",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3309288c-4092-49b4-b4cc-4ae38bfade93",
+          "name": "get Quote Alerts",
+          "request": {
+            "name": "get Quote Alerts",
+            "description": {
+              "content": "Get quote alerts for current user",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "quote-alerts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3af5b227-d087-4226-9ec7-831f82c72eb8",
+              "name": "Get quote alerts for current user",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "quote-alerts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"alert-external-id\": \"string\",\n  \"completed-at\": \"1986-06-02T15:27:46.514Z\",\n  \"created-at\": \"2002-02-18T18:58:46.735Z\",\n  \"dismissed-at\": \"2009-10-27T01:18:08.782Z\",\n  \"dx-symbol\": \"string\",\n  \"expired-at\": \"1972-02-01T12:06:32.443Z\",\n  \"expires-at\": \"string\",\n  \"field\": \"string\",\n  \"instrument-type\": \"string\",\n  \"operator\": \"string\",\n  \"provider\": \"string\",\n  \"symbol\": \"string\",\n  \"threshold\": \"string\",\n  \"threshold-numeric\": 4791.5842461482025,\n  \"triggered-at\": \"1950-12-15T05:12:59.247Z\",\n  \"user-external-id\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6c528cf1-ea28-494a-842c-9aa7e21a6628",
+          "name": "post Quote Alerts",
+          "request": {
+            "name": "post Quote Alerts",
+            "description": {
+              "content": "Create quote alert for symbol",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "quote-alerts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"field\": \"<string>\",\n  \"operator\": \"<string>\",\n  \"symbol\": \"<string>\",\n  \"threshold\": \"<string>\",\n  \"dx-symbol\": \"<string>\",\n  \"expires-at\": \"<string>\",\n  \"instrument-type\": \"<string>\",\n  \"threshold-numeric\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "58c2eefe-7f96-45f8-a279-416b34d5080e",
+              "name": "Create quote alert for symbol",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "quote-alerts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"field\": \"<string>\",\n  \"operator\": \"<string>\",\n  \"symbol\": \"<string>\",\n  \"threshold\": \"<string>\",\n  \"dx-symbol\": \"<string>\",\n  \"expires-at\": \"<string>\",\n  \"instrument-type\": \"<string>\",\n  \"threshold-numeric\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"alert-external-id\": \"string\",\n  \"completed-at\": \"1986-06-02T15:27:46.514Z\",\n  \"created-at\": \"2002-02-18T18:58:46.735Z\",\n  \"dismissed-at\": \"2009-10-27T01:18:08.782Z\",\n  \"dx-symbol\": \"string\",\n  \"expired-at\": \"1972-02-01T12:06:32.443Z\",\n  \"expires-at\": \"string\",\n  \"field\": \"string\",\n  \"instrument-type\": \"string\",\n  \"operator\": \"string\",\n  \"provider\": \"string\",\n  \"symbol\": \"string\",\n  \"threshold\": \"string\",\n  \"threshold-numeric\": 4791.5842461482025,\n  \"triggered-at\": \"1950-12-15T05:12:59.247Z\",\n  \"user-external-id\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4409f421-98a3-41ce-aa24-7f0712224df9",
+          "name": "delete Quote Alerts Alert External Id",
+          "request": {
+            "name": "delete Quote Alerts Alert External Id",
+            "description": {
+              "content": "Cancel a quote alert for current user",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "quote-alerts",
+                ":alert_external_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "alert_external_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9f2f0ed8-37ef-40c5-98d7-d5fb1669ea36",
+              "name": "Cancel a quote alert for current user",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "quote-alerts",
+                    ":alert_external_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "alert_external_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "26dbbfd9-5f29-49a9-a342-fa3df866b76f",
+    "name": "Account Status accounts quote-alerts API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

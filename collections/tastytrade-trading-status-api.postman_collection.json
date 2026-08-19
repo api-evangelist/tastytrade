@@ -1,0 +1,122 @@
+{
+  "item": [
+    {
+      "id": "c864210d-9519-4f7c-abfa-d824e11c8804",
+      "name": "trading-status",
+      "description": {
+        "content": "Allows an API client to request information about the basic trade status of an account. \\\n                          This includes information about the strategies an account can trade.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "dfbd1715-7013-40ef-8d02-9cbfe90cfbf3",
+          "name": "get Accounts Account Number Trading Status",
+          "request": {
+            "name": "get Accounts Account Number Trading Status",
+            "description": {
+              "content": "Returns current trading status for an account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "accounts",
+                ":account_number",
+                "trading-status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "account_number",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "440f2659-a1f7-4247-9157-5fba8cf1251d",
+              "name": "Returns current trading status for an account.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "accounts",
+                    ":account_number",
+                    "trading-status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "account_number",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 1354,\n  \"account-number\": \"string\",\n  \"are-deep-itm-carry-options-enabled\": false,\n  \"are-far-otm-net-options-restricted\": false,\n  \"are-options-values-restricted-to-nlv\": true,\n  \"are-single-tick-expiring-hedges-ignored\": true,\n  \"autotrade-account-type\": \"string\",\n  \"clearing-account-number\": \"string\",\n  \"clearing-aggregation-identifier\": \"string\",\n  \"cmta-override\": 761,\n  \"day-trade-count\": 8963,\n  \"enhanced-fraud-safeguards-enabled-at\": \"1948-11-09T01:48:04.394Z\",\n  \"equities-margin-calculation-type\": \"string\",\n  \"ext-crm-id\": \"string\",\n  \"fee-schedule-name\": \"string\",\n  \"futures-margin-rate-multiplier\": 4769.552043146883,\n  \"has-intraday-equities-margin\": false,\n  \"is-aggregated-at-clearing\": false,\n  \"is-ascend-event-contracts-enabled\": true,\n  \"is-closed\": false,\n  \"is-closing-only\": true,\n  \"is-cryptocurrency-closing-only\": false,\n  \"is-cryptocurrency-enabled\": false,\n  \"is-equity-offering-closing-only\": true,\n  \"is-equity-offering-enabled\": false,\n  \"is-frozen\": true,\n  \"is-full-equity-margin-required\": false,\n  \"is-futures-closing-only\": true,\n  \"is-futures-enabled\": true,\n  \"is-futures-intra-day-enabled\": false,\n  \"is-in-day-trade-equity-maintenance-call\": true,\n  \"is-in-margin-call\": true,\n  \"is-non-retail\": true,\n  \"is-pattern-day-trader\": true,\n  \"is-portfolio-margin-enabled\": true,\n  \"is-risk-reducing-only\": true,\n  \"is-roll-the-day-forward-enabled\": false,\n  \"is-small-notional-futures-intra-day-enabled\": true,\n  \"options-level\": \"string\",\n  \"pdt-reset-on\": \"1982-11-18\",\n  \"short-calls-enabled\": true,\n  \"small-notional-futures-margin-rate-multiplier\": 4597.891201882684,\n  \"updated-at\": \"2000-12-12T11:59:42.419Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a4dd1f22-f4e3-4e3d-94d5-dcddceedb459",
+    "name": "Account Status accounts trading-status API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

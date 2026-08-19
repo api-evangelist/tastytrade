@@ -1,0 +1,72 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts option-chains API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "option-chains",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getOptionChainsSymbol",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/option-chains/:symbol",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns an option chain given an underlying symbol, i.e. `AAPL`"
+        },
+        {
+          "info": {
+            "name": "getOptionChainsSymbolCompact",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/option-chains/:symbol/compact",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns an option chain given an underlying symbol, i.e. `AAPL` in a compact form to minimize content size"
+        },
+        {
+          "info": {
+            "name": "getOptionChainsSymbolNested",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/option-chains/:symbol/nested",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns an option chain given an underlying symbol, \\\n          i.e. `AAPL` in a nested form to minimize redundant processing"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

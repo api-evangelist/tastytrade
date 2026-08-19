@@ -1,0 +1,53 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts span API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "span",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getSpanRows",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/span/rows",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "The date of the SPAN file"
+              },
+              {
+                "name": "exchange",
+                "value": "",
+                "type": "query",
+                "description": "Exchange source of the SPAN file"
+              },
+              {
+                "name": "page-offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per-page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get span rows for a specific date and exchange"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,122 @@
+{
+  "item": [
+    {
+      "id": "4dedc7ee-26aa-4733-b1bf-245ddeac6345",
+      "name": "Symbols",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8f2ddd81-f5c2-4a1b-84d9-6c0c8fa75b33",
+          "name": "search Symbols",
+          "request": {
+            "name": "search Symbols",
+            "description": {
+              "content": "Returns an array of symbol data.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "symbols",
+                "search",
+                ":symbol"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "symbol",
+                  "description": "(Required) Symbol or fragment of a symbol to search, i.e. `AAP` will return AAP and AAPL data"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "96ecf69d-f7a7-4e7a-a542-c29a4a6fd416",
+              "name": "Returns an array of symbol data.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "symbols",
+                    "search",
+                    ":symbol"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "symbol",
+                      "description": "(Required) Symbol or fragment of a symbol to search, i.e. `AAP` will return AAP and AAPL data"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"symbol\": \"string\",\n  \"description\": \"string\",\n  \"listed-market\": \"string\",\n  \"price-increments\": \"string\",\n  \"trading-hours\": \"string\",\n  \"options\": true,\n  \"instrument-type\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b00145c4-f586-4ec6-b6b0-57adc0c1a925",
+    "name": "Account Status accounts Symbols API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

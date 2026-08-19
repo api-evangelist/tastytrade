@@ -1,0 +1,476 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts instruments API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "instruments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getInstrumentsCryptocurrencies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/instruments/cryptocurrencies",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query",
+                "description": "Symbol(s) (example: symbol[]={value1}&symbol[]={value2})"
+              }
+            ]
+          },
+          "docs": "Retrieve a set of cryptocurrencies given an array of one or more symbols."
+        },
+        {
+          "info": {
+            "name": "getInstrumentsCryptocurrenciesSymbol",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/instruments/cryptocurrencies/:symbol",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "path",
+                "description": "Symbol"
+              }
+            ]
+          },
+          "docs": "Retrieve a cryptocurrency given a symbol."
+        },
+        {
+          "info": {
+            "name": "getInstrumentsEquities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/instruments/equities",
+            "params": [
+              {
+                "name": "page-offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per-page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "is-etf",
+                "value": "",
+                "type": "query",
+                "description": "Flag indicating if equity is an etf instrument"
+              },
+              {
+                "name": "is-index",
+                "value": "",
+                "type": "query",
+                "description": "Flag indicating if equity is an index instrument"
+              },
+              {
+                "name": "lendability",
+                "value": "",
+                "type": "query",
+                "description": "Lendability"
+              },
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query",
+                "description": "The symbol of the equity(s), i.e `AAPL` (example: symbol[]={value1}&symbol[]={value2})"
+              }
+            ]
+          },
+          "docs": "Returns a set of equity definitions given an array of one or more symbols"
+        },
+        {
+          "info": {
+            "name": "getInstrumentsEquitiesActive",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/instruments/equities/active",
+            "params": [
+              {
+                "name": "page-offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per-page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "lendability",
+                "value": "",
+                "type": "query",
+                "description": "Lendability. i.e. `Easy To Borrow`, `Locate Required` or `Preborrow`"
+              }
+            ]
+          },
+          "docs": "Returns all active equities in a paginated fashion"
+        },
+        {
+          "info": {
+            "name": "getInstrumentsEquitiesSymbol",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/instruments/equities/:symbol",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "path",
+                "description": "The symbol of the equity, i.e. `AAPL`"
+              }
+            ]
+          },
+          "docs": "Returns a single equity definition for the provided symbol"
+        },
+        {
+          "info": {
+            "name": "getInstrumentsEquityOptionsSymbol",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/instruments/equity-options/:symbol",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "path",
+                "description": "The symbol of the equity option using OCC Symbology, i.e. `FB    180629C00200000`"
+              },
+              {
+                "name": "active",
+                "value": "",
+                "type": "query",
+                "description": "Whether an option is available for trading with the broker.\n                   Terminology is somewhat misleading as this is generally used to filter non-standard / flex options out."
+              }
+            ]
+          },
+          "docs": "Get equity option by symbol"
+        },
+        {
+          "info": {
+            "name": "getInstrumentsFutureOptionProducts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/instruments/future-option-products",
+            "params": [
+              {
+                "name": "page-offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per-page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns metadata for all supported future option products"
+        },
+        {
+          "info": {
+            "name": "getInstrumentsFutureOptionProductsExchangeRootSymbol",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/instruments/future-option-products/:exchange/:root_symbol",
+            "params": [
+              {
+                "name": "exchange",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "root_symbol",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a future option product by exchange and root symbol"
+        },
+        {
+          "info": {
+            "name": "getInstrumentsFutureOptionProductsRootSymbol",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/instruments/future-option-products/:root_symbol",
+            "params": [
+              {
+                "name": "root_symbol",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a future option product by root symbol"
+        },
+        {
+          "info": {
+            "name": "getInstrumentsFutureOptionsSymbol",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/instruments/future-options/:symbol",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "path",
+                "description": "The symbol of the future option"
+              }
+            ]
+          },
+          "docs": "Returns a future option given a symbol. Uses TW symbology: `./ESZ9 EW4U9 190927P2975`"
+        },
+        {
+          "info": {
+            "name": "getInstrumentsFutureProducts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/instruments/future-products",
+            "params": [
+              {
+                "name": "page-offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per-page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns metadata for all supported futures products"
+        },
+        {
+          "info": {
+            "name": "getInstrumentsFutureProductsExchangeCode",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/instruments/future-products/:exchange/:code",
+            "params": [
+              {
+                "name": "exchange",
+                "value": "",
+                "type": "path",
+                "description": "The exchange code"
+              },
+              {
+                "name": "code",
+                "value": "",
+                "type": "path",
+                "description": "The product code, i.e. `ES`"
+              }
+            ]
+          },
+          "docs": "Get future product from exchange and product code"
+        },
+        {
+          "info": {
+            "name": "getInstrumentsFutures",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/instruments/futures",
+            "params": [
+              {
+                "name": "page-offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per-page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "exchange",
+                "value": "",
+                "type": "query",
+                "description": "Name of the exchange for the product. Only used to avoid security id collisions if that is also given."
+              },
+              {
+                "name": "only-active-futures",
+                "value": "",
+                "type": "query",
+                "description": "If true (defaults to true), only active futures are returned."
+              },
+              {
+                "name": "product-code",
+                "value": "",
+                "type": "query",
+                "description": "The product code of the future(s), i.e. `product-code[]=ES&product-code[]=6A`. \\\n                Ignored if `symbol` parameter is given. (example: product-code[]={value1}&product-code[]={value2})"
+              },
+              {
+                "name": "security-id",
+                "value": "",
+                "type": "query",
+                "description": "Exchange-specific ID used for order routing (example: security-id[]={value1}&security-id[]={value2})"
+              },
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query",
+                "description": "The symbol of the future(s), i.e. `symbol[]=ESZ9`. Leading forward slash is not required. (example: symbol[]={value1}&symbol[]={value2})"
+              }
+            ]
+          },
+          "docs": "Returns a set of outright futures given an array of one or more symbols."
+        },
+        {
+          "info": {
+            "name": "getInstrumentsFuturesSymbol",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/instruments/futures/:symbol",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "path",
+                "description": "The symbol of the future, i.e. `ESZ9`. Leading forward slash is not required."
+              }
+            ]
+          },
+          "docs": "Returns an outright future given a symbol."
+        },
+        {
+          "info": {
+            "name": "getInstrumentsQuantityDecimalPrecisions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/instruments/quantity-decimal-precisions"
+          },
+          "docs": "Retrieve all quantity decimal precisions."
+        },
+        {
+          "info": {
+            "name": "getInstrumentsSearch",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/instruments/search",
+            "params": [
+              {
+                "name": "category",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated categories to filter (case-insensitive)"
+              },
+              {
+                "name": "exchange",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated exchanges to filter (case-insensitive)"
+              },
+              {
+                "name": "from-date",
+                "value": "",
+                "type": "query",
+                "description": "Lower bound on stops_trading_at; surfaces expired events that stopped trading on/after this date"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of results"
+              },
+              {
+                "name": "query",
+                "value": "",
+                "type": "query",
+                "description": "Search query"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated instrument types to filter"
+              }
+            ]
+          },
+          "docs": "Search instruments by symbol, description, or tags"
+        },
+        {
+          "info": {
+            "name": "getInstrumentsWarrants",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/instruments/warrants",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query",
+                "description": "The symbol of the warrant(s), i.e `NKLAW` (example: symbol[]={value1}&symbol[]={value2})"
+              }
+            ]
+          },
+          "docs": "Returns a set of warrant definitions that can be filtered by parameters"
+        },
+        {
+          "info": {
+            "name": "getInstrumentsWarrantsSymbol",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/instruments/warrants/:symbol",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns a single warrant definition for the provided symbol"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

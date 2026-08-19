@@ -1,0 +1,300 @@
+{
+  "item": [
+    {
+      "id": "8d9a16f8-6edc-4630-8895-bd9f4ec10674",
+      "name": "option-chains",
+      "description": {
+        "content": "Operations about option-chains",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6d174bd2-9a6d-4a7b-bdba-45dc051bafc4",
+          "name": "get Option Chains Symbol",
+          "request": {
+            "name": "get Option Chains Symbol",
+            "description": {
+              "content": "Returns an option chain given an underlying symbol, i.e. `AAPL`",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "option-chains",
+                ":symbol"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "symbol",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a41a6cc1-3b9e-4b0d-aa5f-b969657bdcce",
+              "name": "Returns an option chain given an underlying symbol, i.e. `AAPL`",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "option-chains",
+                    ":symbol"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "symbol",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"active\": false,\n    \"days-to-expiration\": 9403,\n    \"exercise-style\": \"string\",\n    \"expiration-date\": \"2013-05-10\",\n    \"expiration-type\": \"string\",\n    \"expires-at\": \"2001-01-24T06:54:35.977Z\",\n    \"halted-at\": \"1980-04-03T08:33:56.314Z\",\n    \"instrument-type\": \"string\",\n    \"is-closing-only\": false,\n    \"listed-market\": \"string\",\n    \"market-time-instrument-collection\": \"string\",\n    \"old-security-number\": \"string\",\n    \"option-chain-type\": \"string\",\n    \"option-type\": \"string\",\n    \"root-symbol\": \"string\",\n    \"settlement-type\": \"string\",\n    \"shares-per-contract\": 9898,\n    \"stops-trading-at\": \"1998-02-23T23:57:41.061Z\",\n    \"streamer-symbol\": \"string\",\n    \"strike-price\": 6846.662191043327,\n    \"symbol\": \"string\",\n    \"underlying-symbol\": \"string\"\n  },\n  {\n    \"active\": false,\n    \"days-to-expiration\": 2225,\n    \"exercise-style\": \"string\",\n    \"expiration-date\": \"1956-11-06\",\n    \"expiration-type\": \"string\",\n    \"expires-at\": \"1952-09-13T22:28:38.588Z\",\n    \"halted-at\": \"2006-01-19T09:12:41.371Z\",\n    \"instrument-type\": \"string\",\n    \"is-closing-only\": true,\n    \"listed-market\": \"string\",\n    \"market-time-instrument-collection\": \"string\",\n    \"old-security-number\": \"string\",\n    \"option-chain-type\": \"string\",\n    \"option-type\": \"string\",\n    \"root-symbol\": \"string\",\n    \"settlement-type\": \"string\",\n    \"shares-per-contract\": 648,\n    \"stops-trading-at\": \"1949-06-05T16:32:45.010Z\",\n    \"streamer-symbol\": \"string\",\n    \"strike-price\": 4454.896107560317,\n    \"symbol\": \"string\",\n    \"underlying-symbol\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0ef7285c-5915-4042-bee7-d23b383ff6b1",
+          "name": "get Option Chains Symbol Compact",
+          "request": {
+            "name": "get Option Chains Symbol Compact",
+            "description": {
+              "content": "Returns an option chain given an underlying symbol, i.e. `AAPL` in a compact form to minimize content size",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "option-chains",
+                ":symbol",
+                "compact"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "symbol",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "695dabb5-fb8c-4cf3-be77-9fd5a93c7be2",
+              "name": "Returns an option chain given an underlying symbol, i.e. `AAPL` in a compact form to minimize content size",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "option-chains",
+                    ":symbol",
+                    "compact"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "symbol",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"underlying-symbol\": \"string\",\n  \"root-symbol\": \"string\",\n  \"option-chain-type\": \"string\",\n  \"settlement-type\": \"string\",\n  \"shares-per-contract\": 6987,\n  \"expiration-type\": \"string\",\n  \"deliverables\": {\n    \"id\": 1923,\n    \"amount\": 2965.665109912978,\n    \"deliverable-type\": \"string\",\n    \"description\": \"string\",\n    \"instrument-type\": \"string\",\n    \"percent\": \"string\",\n    \"root-symbol\": \"string\",\n    \"symbol\": \"string\"\n  },\n  \"symbols\": \"string\",\n  \"streamer-symbols\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b4522c2f-af45-403a-85db-1c79d66763f9",
+          "name": "get Option Chains Symbol Nested",
+          "request": {
+            "name": "get Option Chains Symbol Nested",
+            "description": {
+              "content": "Returns an option chain given an underlying symbol, \\\n          i.e. `AAPL` in a nested form to minimize redundant processing",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "option-chains",
+                ":symbol",
+                "nested"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "symbol",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5296ffb6-6624-4583-9e8d-ef2df426f586",
+              "name": "Returns an option chain given an underlying symbol, \\\n          i.e. `AAPL` in a nested form to minimize redundant processing",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "option-chains",
+                    ":symbol",
+                    "nested"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "symbol",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"underlying-symbol\": \"string\",\n  \"root-symbol\": \"string\",\n  \"option-chain-type\": \"string\",\n  \"shares-per-contract\": 6150,\n  \"tick-sizes\": {\n    \"symbol\": \"string\",\n    \"threshold\": 8438.136756837466,\n    \"value\": 9105.488636465447\n  },\n  \"deliverables\": {\n    \"id\": 7486,\n    \"amount\": 3932.318988604031,\n    \"deliverable-type\": \"string\",\n    \"description\": \"string\",\n    \"instrument-type\": \"string\",\n    \"percent\": \"string\",\n    \"root-symbol\": \"string\",\n    \"symbol\": \"string\"\n  },\n  \"expirations\": {\n    \"expiration-type\": \"string\",\n    \"expiration-date\": \"1968-12-19\",\n    \"days-to-expiration\": 1428,\n    \"settlement-type\": \"string\",\n    \"strikes\": {\n      \"strike-price\": 2058.6384338764296,\n      \"call\": \"string\",\n      \"call-streamer-symbol\": \"string\",\n      \"put\": \"string\",\n      \"put-streamer-symbol\": \"string\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "59d860b0-f3a3-46ec-b95e-3fdd635b6890",
+    "name": "Account Status accounts option-chains API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

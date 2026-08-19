@@ -1,0 +1,59 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts net-liq-controller API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "net-liq-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get net-liq history for account",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/accounts/:accountNumber/net-liq/history",
+            "params": [
+              {
+                "name": "accountNumber",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "time-back",
+                "value": "",
+                "type": "query",
+                "description": "A request of data relative to the current time"
+              },
+              {
+                "name": "start-time",
+                "value": "",
+                "type": "query",
+                "description": "The start-time of a windowed request in format '2011-12-03T10:15:30+01:00[Europe/Paris]'"
+              },
+              {
+                "name": "end-time",
+                "value": "",
+                "type": "query",
+                "description": "The end-time of a windowed request in format '2011-12-03T10:15:30+01:00[Europe/Paris]'"
+              },
+              {
+                "name": "interval",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get net-liq history for account"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

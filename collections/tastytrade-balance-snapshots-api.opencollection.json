@@ -1,0 +1,76 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts balance-snapshots API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "balance-snapshots",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getAccountsAccountNumberBalanceSnapshots",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/accounts/:account_number/balance-snapshots",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page-offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per-page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "currency",
+                "value": "",
+                "type": "query",
+                "description": "Currency"
+              },
+              {
+                "name": "snapshot-date",
+                "value": "",
+                "type": "query",
+                "description": "The day of the balance snapshot to retrieve"
+              },
+              {
+                "name": "time-of-day",
+                "value": "",
+                "type": "query",
+                "description": "The abbreviation for the time of day."
+              },
+              {
+                "name": "start-date",
+                "value": "",
+                "type": "query",
+                "description": "The first date in a range of dates to retrieve"
+              },
+              {
+                "name": "end-date",
+                "value": "",
+                "type": "query",
+                "description": "The last date in a range of dates to retrieve"
+              }
+            ]
+          },
+          "docs": "Returns most recent snapshot and current balance for an account"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

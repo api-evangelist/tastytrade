@@ -1,0 +1,47 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts pairs-watchlists API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "pairs-watchlists",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getPairsWatchlists",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/pairs-watchlists"
+          },
+          "docs": "Returns a list of all tastyworks pairs watchlists"
+        },
+        {
+          "info": {
+            "name": "getPairsWatchlistsPairsWatchlistName",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/pairs-watchlists/:pairs_watchlist_name",
+            "params": [
+              {
+                "name": "pairs_watchlist_name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns a requested tastyworks pairs watchlist"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,78 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts positions API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "positions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getAccountsAccountNumberPositions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/accounts/:account_number/positions",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "include-closed-positions",
+                "value": "",
+                "type": "query",
+                "description": "If closed positions should be included in the query"
+              },
+              {
+                "name": "include-marks",
+                "value": "",
+                "type": "query",
+                "description": "Include current quote mark (note: can decrease performance)"
+              },
+              {
+                "name": "instrument-type",
+                "value": "",
+                "type": "query",
+                "description": "The type of Instrument"
+              },
+              {
+                "name": "net-positions",
+                "value": "",
+                "type": "query",
+                "description": "Returns net positions grouped by instrument type and symbol"
+              },
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query",
+                "description": "A single symbol. Stock Ticker Symbol `AAPL`, \\\n                                 OCC Option Symbol `AAPL  191004P00275000`, \\\n                                 TW Future Symbol `/ESZ9`, or \\\n                                 TW Future Option Symbol `./ESZ9 EW4U9 190927P2975`"
+              },
+              {
+                "name": "underlying-product-code",
+                "value": "",
+                "type": "query",
+                "description": "The underlying Future's Product code. i.e `ES`"
+              },
+              {
+                "name": "underlying-symbol",
+                "value": "",
+                "type": "query",
+                "description": "An array of Underlying symbol(s) for positions (example: underlying-symbol[]={value1}&underlying-symbol[]={value2})"
+              }
+            ]
+          },
+          "docs": "Returns a list of the account's positions.\n            Can be filtered by symbol, underlying_symbol"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

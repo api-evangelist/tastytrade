@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts margin-requirements API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "margin-requirements",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getMarginAccountsAccountNumberRequirements",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/margin/accounts/:account_number/requirements",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetch current margin/captial requirements report for an account"
+        },
+        {
+          "info": {
+            "name": "createMarginAccountsAccountNumberDryRun",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/margin/accounts/:account_number/dry-run",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Estimate margin requirements for an order given an account"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,235 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts market-time API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "market-time",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getMarketTimeSessions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/market-time/sessions",
+            "params": [
+              {
+                "name": "from-date",
+                "value": "",
+                "type": "query",
+                "description": "The date to start from"
+              },
+              {
+                "name": "instrument-collection",
+                "value": "",
+                "type": "query",
+                "description": "The instrument collection to get sessions for"
+              },
+              {
+                "name": "to-date",
+                "value": "",
+                "type": "query",
+                "description": "The date to end at, the difference between from and to date must not exceed 9 months"
+              }
+            ]
+          },
+          "docs": "Retrieve a list of session timings for a date range"
+        },
+        {
+          "info": {
+            "name": "getMarketTimeSessionsCurrent",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/market-time/sessions/current",
+            "params": [
+              {
+                "name": "instrument-collections",
+                "value": "",
+                "type": "query",
+                "description": "List of instrument collections . i.e. `CFE`, `CME` or `Equity` (example: instrument-collections[]={value1}&instrument-collections[]={value2})"
+              }
+            ]
+          },
+          "docs": "Retrieve the current session timings for an instrument collection"
+        },
+        {
+          "info": {
+            "name": "getMarketTimeEquitiesSessionsCurrent",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/market-time/equities/sessions/current",
+            "params": [
+              {
+                "name": "current-time",
+                "value": "",
+                "type": "query",
+                "description": "The time the current session is based on"
+              }
+            ]
+          },
+          "docs": "Get current equities session"
+        },
+        {
+          "info": {
+            "name": "getMarketTimeEquitiesSessionsNext",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/market-time/equities/sessions/next",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Find session on or after this date"
+              }
+            ]
+          },
+          "docs": "Get next equities session or session after date"
+        },
+        {
+          "info": {
+            "name": "getMarketTimeEquitiesSessionsPrevious",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/market-time/equities/sessions/previous",
+            "params": [
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Find session before this date"
+              }
+            ]
+          },
+          "docs": "Get previous session or session before date"
+        },
+        {
+          "info": {
+            "name": "getMarketTimeEquitiesHolidays",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/market-time/equities/holidays"
+          },
+          "docs": "Get equity holidays"
+        },
+        {
+          "info": {
+            "name": "getMarketTimeFuturesSessionsCurrent",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/market-time/futures/sessions/current"
+          },
+          "docs": "Get current futures sessions"
+        },
+        {
+          "info": {
+            "name": "getMarketTimeFuturesSessionsCurrentInstrumentCollection",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/market-time/futures/sessions/current/:instrument_collection",
+            "params": [
+              {
+                "name": "instrument_collection",
+                "value": "",
+                "type": "path",
+                "description": "Futures exchange, one of: CFE, CME"
+              }
+            ]
+          },
+          "docs": "Get current futures session for exchange"
+        },
+        {
+          "info": {
+            "name": "getMarketTimeFuturesSessionsNextInstrumentCollection",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/market-time/futures/sessions/next/:instrument_collection",
+            "params": [
+              {
+                "name": "instrument_collection",
+                "value": "",
+                "type": "path",
+                "description": "Futures exchange, one of: CFE, CME"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Find session on or after this date"
+              }
+            ]
+          },
+          "docs": "Get next futures session for exchange"
+        },
+        {
+          "info": {
+            "name": "getMarketTimeFuturesSessionsPreviousInstrumentCollection",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/market-time/futures/sessions/previous/:instrument_collection",
+            "params": [
+              {
+                "name": "instrument_collection",
+                "value": "",
+                "type": "path",
+                "description": "Futures exchange, one of: CFE, CME"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "Find session before this date"
+              }
+            ]
+          },
+          "docs": "Get previous futures sessions for exchange"
+        },
+        {
+          "info": {
+            "name": "getMarketTimeFuturesHolidaysInstrumentCollection",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/market-time/futures/holidays/:instrument_collection",
+            "params": [
+              {
+                "name": "instrument_collection",
+                "value": "",
+                "type": "path",
+                "description": "Futures exchange, one of: CFE, CME"
+              }
+            ]
+          },
+          "docs": "Get future holidays for exchange"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

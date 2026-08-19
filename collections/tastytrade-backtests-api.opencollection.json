@@ -1,0 +1,98 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts Backtests API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Backtests",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get user's backtests",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/backtests"
+          },
+          "docs": "Get the IDs of all the current user's backtests"
+        },
+        {
+          "info": {
+            "name": "Create backtest",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/backtests",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create new backtest"
+        },
+        {
+          "info": {
+            "name": "Get backtest",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/backtests/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get backtest by ID"
+        },
+        {
+          "info": {
+            "name": "Get backtest Logs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/backtests/:id/logs",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Read logs of specified backtest"
+        },
+        {
+          "info": {
+            "name": "Cancel backtest",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/backtests/:id/cancel",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Cancel running backtest"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,478 @@
+{
+  "item": [
+    {
+      "id": "e34496d0-b9fd-444e-baf0-e1a3c46809e4",
+      "name": "user-watchlists",
+      "description": {
+        "content": "Allows an API client to fetch a user's watchlists.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "65a1ea3e-545a-4198-a6f3-dffa77644eee",
+          "name": "post Watchlists",
+          "request": {
+            "name": "post Watchlists",
+            "description": {
+              "content": "Create an account watchlist",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "watchlists"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"watchlist-entries\": [\n    {\n      \"symbol\": \"<string>\",\n      \"instrument-type\": \"<string>\"\n    },\n    {\n      \"symbol\": \"<string>\",\n      \"instrument-type\": \"<string>\"\n    }\n  ],\n  \"group-name\": \"<string>\",\n  \"order-index\": 9999\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "bf6092fd-6e38-4037-b6ac-76809487b37b",
+              "name": "Create an account watchlist",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "watchlists"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"watchlist-entries\": [\n    {\n      \"symbol\": \"<string>\",\n      \"instrument-type\": \"<string>\"\n    },\n    {\n      \"symbol\": \"<string>\",\n      \"instrument-type\": \"<string>\"\n    }\n  ],\n  \"group-name\": \"<string>\",\n  \"order-index\": 9999\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"watchlist-entries\": {},\n  \"cms-id\": \"string\",\n  \"group-name\": \"string\",\n  \"order-index\": 743\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "29afcb17-2b47-4255-978f-2360ceca42de",
+          "name": "get Watchlists",
+          "request": {
+            "name": "get Watchlists",
+            "description": {
+              "content": "Returns a list of all watchlists for the given account",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "watchlists"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "34aeb3fd-8948-41b6-b2fd-666478d77e79",
+              "name": "Returns a list of all watchlists for the given account",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "watchlists"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"string\",\n    \"watchlist-entries\": {},\n    \"cms-id\": \"string\",\n    \"group-name\": \"string\",\n    \"order-index\": 6722\n  },\n  {\n    \"name\": \"string\",\n    \"watchlist-entries\": {},\n    \"cms-id\": \"string\",\n    \"group-name\": \"string\",\n    \"order-index\": 8821\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b24f688a-be7a-436c-90a8-97643499f627",
+          "name": "put Watchlists Watchlist Name",
+          "request": {
+            "name": "put Watchlists Watchlist Name",
+            "description": {
+              "content": "Replace all properties of an account watchlist",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "watchlists",
+                ":watchlist_name"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "watchlist_name",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"watchlist-entries\": [\n    {\n      \"symbol\": \"<string>\",\n      \"instrument-type\": \"<string>\"\n    },\n    {\n      \"symbol\": \"<string>\",\n      \"instrument-type\": \"<string>\"\n    }\n  ],\n  \"group-name\": \"<string>\",\n  \"order-index\": 9999\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "fa1a0494-52fc-495b-bc88-38619c7a2faa",
+              "name": "Replace all properties of an account watchlist",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "watchlists",
+                    ":watchlist_name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "watchlist_name",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"watchlist-entries\": [\n    {\n      \"symbol\": \"<string>\",\n      \"instrument-type\": \"<string>\"\n    },\n    {\n      \"symbol\": \"<string>\",\n      \"instrument-type\": \"<string>\"\n    }\n  ],\n  \"group-name\": \"<string>\",\n  \"order-index\": 9999\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"watchlist-entries\": {},\n  \"cms-id\": \"string\",\n  \"group-name\": \"string\",\n  \"order-index\": 743\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6f174ceb-3d21-463b-851f-636565f01774",
+          "name": "delete Watchlists Watchlist Name",
+          "request": {
+            "name": "delete Watchlists Watchlist Name",
+            "description": {
+              "content": "Delete a watchlist for the given account",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "watchlists",
+                ":watchlist_name"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "watchlist_name",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2d79accc-64cf-45c8-a0e9-f6581217d286",
+              "name": "Delete a watchlist for the given account",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "watchlists",
+                    ":watchlist_name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "watchlist_name",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"watchlist-entries\": {},\n  \"cms-id\": \"string\",\n  \"group-name\": \"string\",\n  \"order-index\": 743\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7c16647e-3066-4f56-b58d-5ad45deb6364",
+          "name": "get Watchlists Watchlist Name",
+          "request": {
+            "name": "get Watchlists Watchlist Name",
+            "description": {
+              "content": "Returns a requested account watchlist",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "watchlists",
+                ":watchlist_name"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "watchlist_name",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4aa78093-173d-4b36-95be-8dce7b99dd45",
+              "name": "Returns a requested account watchlist",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "watchlists",
+                    ":watchlist_name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "watchlist_name",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"watchlist-entries\": {},\n  \"cms-id\": \"string\",\n  \"group-name\": \"string\",\n  \"order-index\": 743\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "748a6409-4980-4f1e-9f34-7cd3fbf6c76d",
+    "name": "Account Status accounts user-watchlists API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

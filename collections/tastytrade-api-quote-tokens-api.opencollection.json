@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts api-quote-tokens API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "api-quote-tokens",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getApiQuoteTokens",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api-quote-tokens"
+          },
+          "docs": "Returns the appropriate API quote streamer endpoint, level and identification token \\\n            for the current customer to receive market data."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

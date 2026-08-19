@@ -1,0 +1,192 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts complex-orders API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "complex-orders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getAccountsAccountNumberComplexOrders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/accounts/:account_number/complex-orders",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page-offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per-page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns a paginated list of all Complex Orders"
+        },
+        {
+          "info": {
+            "name": "postAccountsAccountNumberComplexOrders",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/accounts/:account_number/complex-orders",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Creates a new Complex Order from supplied params"
+        },
+        {
+          "info": {
+            "name": "postAccountsAccountNumberComplexOrdersDryRun",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/accounts/:account_number/complex-orders/dry-run",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Performs a dry-run for a new ComplexOrder from supplied params. Allows validation of potential orders."
+        },
+        {
+          "info": {
+            "name": "getAccountsAccountNumberComplexOrdersLive",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/accounts/:account_number/complex-orders/live",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns all Complex Orders where a compenent order was placed today"
+        },
+        {
+          "info": {
+            "name": "getAccountsAccountNumberComplexOrdersId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/accounts/:account_number/complex-orders/:id",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns a full representation of a Complex Order"
+        },
+        {
+          "info": {
+            "name": "patchAccountsAccountNumberComplexOrdersId",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "{{baseUrl}}/accounts/:account_number/complex-orders/:id",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Edit threshold-price of a PAIRS trade."
+        },
+        {
+          "info": {
+            "name": "deleteAccountsAccountNumberComplexOrdersId",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/accounts/:account_number/complex-orders/:id",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Request cancellation for all non terminal components of a Complex Order"
+        },
+        {
+          "info": {
+            "name": "postAccountsAccountNumberComplexOrdersIdDryRun",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/accounts/:account_number/complex-orders/:id/dry-run",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Performs a dry-run for editing a ComplexOrder from supplied params."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

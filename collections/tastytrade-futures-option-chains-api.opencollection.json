@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts futures-option-chains API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "futures-option-chains",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getFuturesOptionChainsSymbol",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/futures-option-chains/:symbol",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns a futures option chain given a futures product code, i.e. `ES`"
+        },
+        {
+          "info": {
+            "name": "getFuturesOptionChainsSymbolNested",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/futures-option-chains/:symbol/nested",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns a futures option chain given a futures product code in a nested form to minimize redundant processing"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

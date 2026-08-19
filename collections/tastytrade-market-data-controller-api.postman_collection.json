@@ -1,0 +1,101 @@
+{
+  "item": [
+    {
+      "id": "1e1f332f-c66a-4e92-adfb-7517af1b6a80",
+      "name": "market-data-controller",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5930273d-a545-40fc-92dc-7ed0b2ddfd25",
+          "name": "Get market data for many symbols of type. Combined limit across all types is 100",
+          "request": {
+            "name": "Get market data for many symbols of type. Combined limit across all types is 100",
+            "description": {},
+            "url": {
+              "path": [
+                "market-data",
+                "by-type"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "36272421-0215-4f49-8c22-839809b9de16",
+              "name": "successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "market-data",
+                    "by-type"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "65bdf532-c03a-476e-800a-8d4a11db1039",
+    "name": "Account Status accounts market-data-controller API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

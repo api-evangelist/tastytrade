@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts trading-status API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "trading-status",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getAccountsAccountNumberTradingStatus",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/accounts/:account_number/trading-status",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns current trading status for an account."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,83 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts customers API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "customers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getCustomersCustomerId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/customers/:customer_id",
+            "params": [
+              {
+                "name": "customer_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "allow-missing",
+                "value": "",
+                "type": "query",
+                "description": "Does not raise a 404 if customer is missing"
+              }
+            ]
+          },
+          "docs": "Get a full customer resource."
+        },
+        {
+          "info": {
+            "name": "getCustomersCustomerIdAccounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/customers/:customer_id/accounts",
+            "params": [
+              {
+                "name": "customer_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a list of all the customer account resources attached to the current customer."
+        },
+        {
+          "info": {
+            "name": "getCustomersCustomerIdAccountsAccountNumber",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/customers/:customer_id/accounts/:account_number",
+            "params": [
+              {
+                "name": "customer_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a full customer account resource."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

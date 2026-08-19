@@ -1,0 +1,1822 @@
+{
+  "item": [
+    {
+      "id": "72ac0f64-812e-4e63-a006-ff371394708d",
+      "name": "instruments",
+      "description": {
+        "content": "Operations about instruments",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "17506316-a96c-404c-ae47-25b7872e8c4b",
+          "name": "get Instruments Cryptocurrencies",
+          "request": {
+            "name": "get Instruments Cryptocurrencies",
+            "description": {
+              "content": "Retrieve a set of cryptocurrencies given an array of one or more symbols.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "instruments",
+                "cryptocurrencies"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>,<string>",
+                  "description": "Symbol(s) (example: symbol[]={value1}&symbol[]={value2})"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "652cc050-5a55-463d-a1d2-fe340071f83a",
+              "name": "Retrieve a set of cryptocurrencies given an array of one or more symbols.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "instruments",
+                    "cryptocurrencies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "symbol",
+                      "value": "<string>,<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 6715,\n    \"active\": true,\n    \"description\": \"string\",\n    \"instrument-type\": \"string\",\n    \"is-closing-only\": true,\n    \"short-description\": \"string\",\n    \"streamer-symbol\": \"string\",\n    \"symbol\": \"string\",\n    \"tick-size\": 4745.117028963617\n  },\n  {\n    \"id\": 7713,\n    \"active\": false,\n    \"description\": \"string\",\n    \"instrument-type\": \"string\",\n    \"is-closing-only\": false,\n    \"short-description\": \"string\",\n    \"streamer-symbol\": \"string\",\n    \"symbol\": \"string\",\n    \"tick-size\": 8731.971936436516\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "27d5f661-1cc3-45c5-944d-84c807d04407",
+          "name": "get Instruments Cryptocurrencies Symbol",
+          "request": {
+            "name": "get Instruments Cryptocurrencies Symbol",
+            "description": {
+              "content": "Retrieve a cryptocurrency given a symbol.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "instruments",
+                "cryptocurrencies",
+                ":symbol"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "symbol",
+                  "description": "(Required) Symbol"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "34f98a88-7b9d-4d66-9b86-5a15971244b4",
+              "name": "Retrieve a cryptocurrency given a symbol.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "instruments",
+                    "cryptocurrencies",
+                    ":symbol"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "symbol",
+                      "description": "(Required) Symbol"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 8073,\n  \"active\": true,\n  \"description\": \"string\",\n  \"instrument-type\": \"string\",\n  \"is-closing-only\": false,\n  \"short-description\": \"string\",\n  \"streamer-symbol\": \"string\",\n  \"symbol\": \"string\",\n  \"tick-size\": 5039.177142020946\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dd02f348-dc94-471d-b529-0fef720c047e",
+          "name": "get Instruments Equities",
+          "request": {
+            "name": "get Instruments Equities",
+            "description": {
+              "content": "Returns a set of equity definitions given an array of one or more symbols",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "instruments",
+                "equities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page-offset",
+                  "value": "0"
+                },
+                {
+                  "disabled": false,
+                  "key": "per-page",
+                  "value": "1000"
+                },
+                {
+                  "disabled": false,
+                  "key": "is-etf",
+                  "value": "<boolean>",
+                  "description": "Flag indicating if equity is an etf instrument"
+                },
+                {
+                  "disabled": false,
+                  "key": "is-index",
+                  "value": "<boolean>",
+                  "description": "Flag indicating if equity is an index instrument"
+                },
+                {
+                  "disabled": false,
+                  "key": "lendability",
+                  "value": "<string>",
+                  "description": "Lendability"
+                },
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>,<string>",
+                  "description": "The symbol of the equity(s), i.e `AAPL` (example: symbol[]={value1}&symbol[]={value2})"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "60a96cfc-17c8-455a-9803-96d06e5b997c",
+              "name": "Returns a set of equity definitions given an array of one or more symbols",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "instruments",
+                    "equities"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page-offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "per-page",
+                      "value": "1000"
+                    },
+                    {
+                      "key": "is-etf",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "is-index",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "lendability",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "symbol",
+                      "value": "<string>,<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"active\": true,\n    \"borrow-rate\": 7728.0730109431215,\n    \"bypass-manual-review\": false,\n    \"country-of-incorporation\": \"string\",\n    \"country-of-taxation\": \"string\",\n    \"description\": \"string\",\n    \"halted-at\": \"1952-01-29T23:52:19.150Z\",\n    \"instrument-sub-type\": \"string\",\n    \"instrument-type\": \"string\",\n    \"is-closing-only\": true,\n    \"is-etf\": true,\n    \"is-fractional-quantity-eligible\": false,\n    \"is-illiquid\": false,\n    \"is-index\": false,\n    \"is-options-closing-only\": true,\n    \"lendability\": \"string\",\n    \"listed-market\": \"string\",\n    \"market-time-instrument-collection\": \"string\",\n    \"overnight-trading-permitted\": false,\n    \"short-description\": \"string\",\n    \"stops-trading-at\": \"2025-04-27T20:49:15.711Z\",\n    \"streamer-symbol\": \"string\",\n    \"symbol\": \"string\",\n    \"underlying-product-type\": \"string\",\n    \"option-tick-sizes\": {\n      \"symbol\": \"string\",\n      \"threshold\": 1467.5346516330656,\n      \"value\": 7499.377329959094\n    },\n    \"tick-sizes\": {\n      \"symbol\": \"string\",\n      \"threshold\": 1728.6554291718548,\n      \"value\": 3358.303783294241\n    }\n  },\n  {\n    \"active\": true,\n    \"borrow-rate\": 7077.040270043716,\n    \"bypass-manual-review\": true,\n    \"country-of-incorporation\": \"string\",\n    \"country-of-taxation\": \"string\",\n    \"description\": \"string\",\n    \"halted-at\": \"1986-12-26T20:09:21.750Z\",\n    \"instrument-sub-type\": \"string\",\n    \"instrument-type\": \"string\",\n    \"is-closing-only\": true,\n    \"is-etf\": false,\n    \"is-fractional-quantity-eligible\": false,\n    \"is-illiquid\": false,\n    \"is-index\": true,\n    \"is-options-closing-only\": true,\n    \"lendability\": \"string\",\n    \"listed-market\": \"string\",\n    \"market-time-instrument-collection\": \"string\",\n    \"overnight-trading-permitted\": false,\n    \"short-description\": \"string\",\n    \"stops-trading-at\": \"1984-12-23T21:28:08.093Z\",\n    \"streamer-symbol\": \"string\",\n    \"symbol\": \"string\",\n    \"underlying-product-type\": \"string\",\n    \"option-tick-sizes\": {\n      \"symbol\": \"string\",\n      \"threshold\": 8405.518866513463,\n      \"value\": 2578.0876273939657\n    },\n    \"tick-sizes\": {\n      \"symbol\": \"string\",\n      \"threshold\": 9287.345872799471,\n      \"value\": 1968.1430444570735\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b01248b4-6cf5-4531-aa8d-4ffb82e6dfbf",
+          "name": "get Instruments Equities Active",
+          "request": {
+            "name": "get Instruments Equities Active",
+            "description": {
+              "content": "Returns all active equities in a paginated fashion",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "instruments",
+                "equities",
+                "active"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page-offset",
+                  "value": "0"
+                },
+                {
+                  "disabled": false,
+                  "key": "per-page",
+                  "value": "1000"
+                },
+                {
+                  "disabled": false,
+                  "key": "lendability",
+                  "value": "<string>",
+                  "description": "Lendability. i.e. `Easy To Borrow`, `Locate Required` or `Preborrow`"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "37649748-b4c4-4fef-8210-812698cba951",
+              "name": "Returns all active equities in a paginated fashion",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "instruments",
+                    "equities",
+                    "active"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page-offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "per-page",
+                      "value": "1000"
+                    },
+                    {
+                      "key": "lendability",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"active\": true,\n    \"borrow-rate\": 7728.0730109431215,\n    \"bypass-manual-review\": false,\n    \"country-of-incorporation\": \"string\",\n    \"country-of-taxation\": \"string\",\n    \"description\": \"string\",\n    \"halted-at\": \"1952-01-29T23:52:19.150Z\",\n    \"instrument-sub-type\": \"string\",\n    \"instrument-type\": \"string\",\n    \"is-closing-only\": true,\n    \"is-etf\": true,\n    \"is-fractional-quantity-eligible\": false,\n    \"is-illiquid\": false,\n    \"is-index\": false,\n    \"is-options-closing-only\": true,\n    \"lendability\": \"string\",\n    \"listed-market\": \"string\",\n    \"market-time-instrument-collection\": \"string\",\n    \"overnight-trading-permitted\": false,\n    \"short-description\": \"string\",\n    \"stops-trading-at\": \"2025-04-27T20:49:15.711Z\",\n    \"streamer-symbol\": \"string\",\n    \"symbol\": \"string\",\n    \"underlying-product-type\": \"string\",\n    \"option-tick-sizes\": {\n      \"symbol\": \"string\",\n      \"threshold\": 1467.5346516330656,\n      \"value\": 7499.377329959094\n    },\n    \"tick-sizes\": {\n      \"symbol\": \"string\",\n      \"threshold\": 1728.6554291718548,\n      \"value\": 3358.303783294241\n    }\n  },\n  {\n    \"active\": true,\n    \"borrow-rate\": 7077.040270043716,\n    \"bypass-manual-review\": true,\n    \"country-of-incorporation\": \"string\",\n    \"country-of-taxation\": \"string\",\n    \"description\": \"string\",\n    \"halted-at\": \"1986-12-26T20:09:21.750Z\",\n    \"instrument-sub-type\": \"string\",\n    \"instrument-type\": \"string\",\n    \"is-closing-only\": true,\n    \"is-etf\": false,\n    \"is-fractional-quantity-eligible\": false,\n    \"is-illiquid\": false,\n    \"is-index\": true,\n    \"is-options-closing-only\": true,\n    \"lendability\": \"string\",\n    \"listed-market\": \"string\",\n    \"market-time-instrument-collection\": \"string\",\n    \"overnight-trading-permitted\": false,\n    \"short-description\": \"string\",\n    \"stops-trading-at\": \"1984-12-23T21:28:08.093Z\",\n    \"streamer-symbol\": \"string\",\n    \"symbol\": \"string\",\n    \"underlying-product-type\": \"string\",\n    \"option-tick-sizes\": {\n      \"symbol\": \"string\",\n      \"threshold\": 8405.518866513463,\n      \"value\": 2578.0876273939657\n    },\n    \"tick-sizes\": {\n      \"symbol\": \"string\",\n      \"threshold\": 9287.345872799471,\n      \"value\": 1968.1430444570735\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5f789ccb-e917-45be-bbf4-6fe16af2344c",
+          "name": "get Instruments Equities Symbol",
+          "request": {
+            "name": "get Instruments Equities Symbol",
+            "description": {
+              "content": "Returns a single equity definition for the provided symbol",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "instruments",
+                "equities",
+                ":symbol"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "symbol",
+                  "description": "(Required) The symbol of the equity, i.e. `AAPL`"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bf5b1f54-4d06-43b8-bfda-e6e4a55481a2",
+              "name": "Returns a single equity definition for the provided symbol",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "instruments",
+                    "equities",
+                    ":symbol"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "symbol",
+                      "description": "(Required) The symbol of the equity, i.e. `AAPL`"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"active\": true,\n  \"borrow-rate\": 3256.4653639614007,\n  \"bypass-manual-review\": true,\n  \"country-of-incorporation\": \"string\",\n  \"country-of-taxation\": \"string\",\n  \"description\": \"string\",\n  \"halted-at\": \"1953-02-26T10:18:00.503Z\",\n  \"instrument-sub-type\": \"string\",\n  \"instrument-type\": \"string\",\n  \"is-closing-only\": false,\n  \"is-etf\": false,\n  \"is-fractional-quantity-eligible\": false,\n  \"is-illiquid\": true,\n  \"is-index\": true,\n  \"is-options-closing-only\": false,\n  \"lendability\": \"string\",\n  \"listed-market\": \"string\",\n  \"market-time-instrument-collection\": \"string\",\n  \"overnight-trading-permitted\": true,\n  \"short-description\": \"string\",\n  \"stops-trading-at\": \"1970-07-15T14:29:05.196Z\",\n  \"streamer-symbol\": \"string\",\n  \"symbol\": \"string\",\n  \"underlying-product-type\": \"string\",\n  \"option-tick-sizes\": {\n    \"symbol\": \"string\",\n    \"threshold\": 4100.655975449858,\n    \"value\": 1373.212548235645\n  },\n  \"tick-sizes\": {\n    \"symbol\": \"string\",\n    \"threshold\": 9176.15835635507,\n    \"value\": 530.4833365889061\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "493fe6bb-c711-4dfb-ae25-63e3ee5067a6",
+          "name": "get Instruments Equity Options Symbol",
+          "request": {
+            "name": "get Instruments Equity Options Symbol",
+            "description": {
+              "content": "Get equity option by symbol",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "instruments",
+                "equity-options",
+                ":symbol"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "active",
+                  "value": "<boolean>",
+                  "description": "Whether an option is available for trading with the broker.\n                   Terminology is somewhat misleading as this is generally used to filter non-standard / flex options out."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "symbol",
+                  "description": "(Required) The symbol of the equity option using OCC Symbology, i.e. `FB    180629C00200000`"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3640f538-0411-4bee-bb71-cc3a937f38e4",
+              "name": "Get equity option by symbol",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "instruments",
+                    "equity-options",
+                    ":symbol"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "active",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "symbol",
+                      "description": "(Required) The symbol of the equity option using OCC Symbology, i.e. `FB    180629C00200000`"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"active\": false,\n  \"days-to-expiration\": 7764,\n  \"exercise-style\": \"string\",\n  \"expiration-date\": \"2012-05-12\",\n  \"expiration-type\": \"string\",\n  \"expires-at\": \"1952-09-07T20:51:21.079Z\",\n  \"halted-at\": \"1991-05-04T18:43:17.039Z\",\n  \"instrument-type\": \"string\",\n  \"is-closing-only\": false,\n  \"listed-market\": \"string\",\n  \"market-time-instrument-collection\": \"string\",\n  \"old-security-number\": \"string\",\n  \"option-chain-type\": \"string\",\n  \"option-type\": \"string\",\n  \"root-symbol\": \"string\",\n  \"settlement-type\": \"string\",\n  \"shares-per-contract\": 7346,\n  \"stops-trading-at\": \"2005-10-07T15:17:00.528Z\",\n  \"streamer-symbol\": \"string\",\n  \"strike-price\": 2091.3054755226976,\n  \"symbol\": \"string\",\n  \"underlying-symbol\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d5961b60-8be7-4c66-9504-8f25bffc16b1",
+          "name": "get Instruments Future Option Products",
+          "request": {
+            "name": "get Instruments Future Option Products",
+            "description": {
+              "content": "Returns metadata for all supported future option products",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "instruments",
+                "future-option-products"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page-offset",
+                  "value": "0"
+                },
+                {
+                  "disabled": false,
+                  "key": "per-page",
+                  "value": "1000"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "41e9c3d4-6447-408f-a53d-f08560dd285a",
+              "name": "Returns metadata for all supported future option products",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "instruments",
+                    "future-option-products"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page-offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "per-page",
+                      "value": "1000"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"cash-settled\": true,\n    \"code\": \"string\",\n    \"display-factor\": 5582.94574311346,\n    \"exchange\": \"string\",\n    \"expiration-type\": \"string\",\n    \"is-am-settled\": true,\n    \"itm-rule\": \"string\",\n    \"market-sector\": \"string\",\n    \"product-subtype\": \"string\",\n    \"product-type\": \"string\",\n    \"root-symbol\": \"string\",\n    \"settlement-delay-days\": 1573,\n    \"supported\": false\n  },\n  {\n    \"cash-settled\": false,\n    \"code\": \"string\",\n    \"display-factor\": 3732.6943978090753,\n    \"exchange\": \"string\",\n    \"expiration-type\": \"string\",\n    \"is-am-settled\": false,\n    \"itm-rule\": \"string\",\n    \"market-sector\": \"string\",\n    \"product-subtype\": \"string\",\n    \"product-type\": \"string\",\n    \"root-symbol\": \"string\",\n    \"settlement-delay-days\": 1711,\n    \"supported\": true\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "867ebb23-3850-42a4-bd36-ba4c76ba358e",
+          "name": "get Instruments Future Option Products Exchange Root Symbol",
+          "request": {
+            "name": "get Instruments Future Option Products Exchange Root Symbol",
+            "description": {
+              "content": "Get a future option product by exchange and root symbol",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "instruments",
+                "future-option-products",
+                ":exchange",
+                ":root_symbol"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "exchange",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "root_symbol",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2a248b2f-0b22-4e36-bb22-f30a69fe6ea9",
+              "name": "Get a future option product by exchange and root symbol",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "instruments",
+                    "future-option-products",
+                    ":exchange",
+                    ":root_symbol"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "exchange",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "root_symbol",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"cash-settled\": false,\n  \"code\": \"string\",\n  \"display-factor\": 5404.86069773192,\n  \"exchange\": \"string\",\n  \"expiration-type\": \"string\",\n  \"is-am-settled\": false,\n  \"itm-rule\": \"string\",\n  \"market-sector\": \"string\",\n  \"product-subtype\": \"string\",\n  \"product-type\": \"string\",\n  \"root-symbol\": \"string\",\n  \"settlement-delay-days\": 4452,\n  \"supported\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9ab01c01-db6e-4798-be91-ca68a19c64f7",
+          "name": "get Instruments Future Option Products Root Symbol",
+          "request": {
+            "name": "get Instruments Future Option Products Root Symbol",
+            "description": {
+              "content": "Get a future option product by root symbol",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "instruments",
+                "future-option-products",
+                ":root_symbol"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "root_symbol",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c47b9dfd-acbc-4364-a80e-8505b33c58ec",
+              "name": "Get a future option product by root symbol",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "instruments",
+                    "future-option-products",
+                    ":root_symbol"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "root_symbol",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"cash-settled\": false,\n  \"code\": \"string\",\n  \"display-factor\": 5404.86069773192,\n  \"exchange\": \"string\",\n  \"expiration-type\": \"string\",\n  \"is-am-settled\": false,\n  \"itm-rule\": \"string\",\n  \"market-sector\": \"string\",\n  \"product-subtype\": \"string\",\n  \"product-type\": \"string\",\n  \"root-symbol\": \"string\",\n  \"settlement-delay-days\": 4452,\n  \"supported\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2b0b5b17-5080-484f-bac5-3f61437c7888",
+          "name": "get Instruments Future Options Symbol",
+          "request": {
+            "name": "get Instruments Future Options Symbol",
+            "description": {
+              "content": "Returns a future option given a symbol. Uses TW symbology: `./ESZ9 EW4U9 190927P2975`",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "instruments",
+                "future-options",
+                ":symbol"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "symbol",
+                  "description": "(Required) The symbol of the future option"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "118b8850-355d-40a7-a2ad-6535f125a259",
+              "name": "Returns a future option given a symbol. Uses TW symbology: `./ESZ9 EW4U9 190927P2975`",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "instruments",
+                    "future-options",
+                    ":symbol"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "symbol",
+                      "description": "(Required) The symbol of the future option"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"active\": true,\n  \"days-to-expiration\": 7777,\n  \"display-factor\": 7682.371079981924,\n  \"exchange\": \"string\",\n  \"exercise-style\": \"string\",\n  \"expiration-date\": \"1986-03-27\",\n  \"expires-at\": \"1996-04-20T04:07:03.950Z\",\n  \"future-price-ratio\": 7343.102722535404,\n  \"is-closing-only\": false,\n  \"is-confirmed\": false,\n  \"is-exercisable-weekly\": true,\n  \"is-primary-deliverable\": true,\n  \"is-vanilla\": false,\n  \"last-trade-time\": \"string\",\n  \"maturity-date\": \"1968-02-04\",\n  \"multiplier\": 3546.821482926089,\n  \"notional-value\": 2273.5155608313707,\n  \"option-root-symbol\": \"string\",\n  \"option-type\": \"string\",\n  \"product-code\": \"string\",\n  \"root-symbol\": \"string\",\n  \"security-id\": \"string\",\n  \"settlement-type\": \"string\",\n  \"stops-trading-at\": \"1990-10-12T14:28:45.374Z\",\n  \"streamer-symbol\": \"string\",\n  \"strike-factor\": 4869.41828336103,\n  \"strike-price\": 2858.919639504138,\n  \"symbol\": \"string\",\n  \"underlying-count\": 3836.308857758034,\n  \"underlying-symbol\": \"string\",\n  \"future-option-product\": {\n    \"cash-settled\": false,\n    \"code\": \"string\",\n    \"display-factor\": 3454.7904209840485,\n    \"exchange\": \"string\",\n    \"expiration-type\": \"string\",\n    \"is-am-settled\": true,\n    \"itm-rule\": \"string\",\n    \"market-sector\": \"string\",\n    \"product-subtype\": \"string\",\n    \"product-type\": \"string\",\n    \"root-symbol\": \"string\",\n    \"settlement-delay-days\": 2898,\n    \"supported\": true\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "497c4b31-e3f1-450d-809b-6e4819e41c83",
+          "name": "get Instruments Future Products",
+          "request": {
+            "name": "get Instruments Future Products",
+            "description": {
+              "content": "Returns metadata for all supported futures products",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "instruments",
+                "future-products"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page-offset",
+                  "value": "0"
+                },
+                {
+                  "disabled": false,
+                  "key": "per-page",
+                  "value": "1000"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ecb6cf7b-956d-41f3-94a9-919c270621a9",
+              "name": "Returns metadata for all supported futures products",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "instruments",
+                    "future-products"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page-offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "per-page",
+                      "value": "1000"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"active-months\": \"string\",\n    \"back-month-first-calendar-symbol\": true,\n    \"base-tick\": 1507,\n    \"cash-settled\": true,\n    \"code\": \"string\",\n    \"contract-limit\": 6567,\n    \"description\": \"string\",\n    \"display-factor\": 9274.741268915333,\n    \"exchange\": \"string\",\n    \"first-notice\": false,\n    \"listed-months\": \"string\",\n    \"market-sector\": \"string\",\n    \"notional-multiplier\": 6841.669127563735,\n    \"price-format\": \"string\",\n    \"product-subtype\": \"string\",\n    \"product-type\": \"string\",\n    \"security-group\": \"string\",\n    \"small-notional\": true,\n    \"streamer-exchange-code\": \"string\",\n    \"sub-tick\": 2571,\n    \"supported\": true,\n    \"root-symbol\": \"string\",\n    \"tick-size\": 2642.86745869996,\n    \"true-underlying-code\": \"string\",\n    \"underlying-description\": \"string\",\n    \"underlying-identifier\": \"string\"\n  },\n  {\n    \"active-months\": \"string\",\n    \"back-month-first-calendar-symbol\": false,\n    \"base-tick\": 3921,\n    \"cash-settled\": false,\n    \"code\": \"string\",\n    \"contract-limit\": 6576,\n    \"description\": \"string\",\n    \"display-factor\": 7562.5979528578355,\n    \"exchange\": \"string\",\n    \"first-notice\": false,\n    \"listed-months\": \"string\",\n    \"market-sector\": \"string\",\n    \"notional-multiplier\": 5096.842825052252,\n    \"price-format\": \"string\",\n    \"product-subtype\": \"string\",\n    \"product-type\": \"string\",\n    \"security-group\": \"string\",\n    \"small-notional\": false,\n    \"streamer-exchange-code\": \"string\",\n    \"sub-tick\": 255,\n    \"supported\": false,\n    \"root-symbol\": \"string\",\n    \"tick-size\": 1237.0765552688533,\n    \"true-underlying-code\": \"string\",\n    \"underlying-description\": \"string\",\n    \"underlying-identifier\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "94e2ffbb-ce1c-4f3d-b71f-d89fb08da809",
+          "name": "get Instruments Future Products Exchange Code",
+          "request": {
+            "name": "get Instruments Future Products Exchange Code",
+            "description": {
+              "content": "Get future product from exchange and product code",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "instruments",
+                "future-products",
+                ":exchange",
+                ":code"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "exchange",
+                  "description": "(Required) The exchange code"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "code",
+                  "description": "(Required) The product code, i.e. `ES`"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "77c74173-554e-4ac4-a7ec-32fce6b2ed37",
+              "name": "Get future product from exchange and product code",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "instruments",
+                    "future-products",
+                    ":exchange",
+                    ":code"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "exchange",
+                      "description": "(Required) The exchange code"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "code",
+                      "description": "(Required) The product code, i.e. `ES`"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"active-months\": \"string\",\n  \"back-month-first-calendar-symbol\": true,\n  \"base-tick\": 7496,\n  \"cash-settled\": false,\n  \"code\": \"string\",\n  \"contract-limit\": 4264,\n  \"description\": \"string\",\n  \"display-factor\": 7841.339551328169,\n  \"exchange\": \"string\",\n  \"first-notice\": false,\n  \"listed-months\": \"string\",\n  \"market-sector\": \"string\",\n  \"notional-multiplier\": 8808.941216461326,\n  \"price-format\": \"string\",\n  \"product-subtype\": \"string\",\n  \"product-type\": \"string\",\n  \"security-group\": \"string\",\n  \"small-notional\": false,\n  \"streamer-exchange-code\": \"string\",\n  \"sub-tick\": 4340,\n  \"supported\": false,\n  \"root-symbol\": \"string\",\n  \"tick-size\": 9686.25115329697,\n  \"true-underlying-code\": \"string\",\n  \"underlying-description\": \"string\",\n  \"underlying-identifier\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "efc37002-a648-46ea-b33e-a250e7039896",
+          "name": "get Instruments Futures",
+          "request": {
+            "name": "get Instruments Futures",
+            "description": {
+              "content": "Returns a set of outright futures given an array of one or more symbols.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "instruments",
+                "futures"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page-offset",
+                  "value": "0"
+                },
+                {
+                  "disabled": false,
+                  "key": "per-page",
+                  "value": "1000"
+                },
+                {
+                  "disabled": false,
+                  "key": "exchange",
+                  "value": "<string>",
+                  "description": "Name of the exchange for the product. Only used to avoid security id collisions if that is also given."
+                },
+                {
+                  "disabled": false,
+                  "key": "only-active-futures",
+                  "value": "<boolean>",
+                  "description": "If true (defaults to true), only active futures are returned."
+                },
+                {
+                  "disabled": false,
+                  "key": "product-code",
+                  "value": "<string>,<string>",
+                  "description": "The product code of the future(s), i.e. `product-code[]=ES&product-code[]=6A`. \\\n                Ignored if `symbol` parameter is given. (example: product-code[]={value1}&product-code[]={value2})"
+                },
+                {
+                  "disabled": false,
+                  "key": "security-id",
+                  "value": "<string>,<string>",
+                  "description": "Exchange-specific ID used for order routing (example: security-id[]={value1}&security-id[]={value2})"
+                },
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>,<string>",
+                  "description": "The symbol of the future(s), i.e. `symbol[]=ESZ9`. Leading forward slash is not required. (example: symbol[]={value1}&symbol[]={value2})"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0994ff40-adf5-4bc4-b1cc-e5fb84bb72fa",
+              "name": "Returns a set of outright futures given an array of one or more symbols.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "instruments",
+                    "futures"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page-offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "per-page",
+                      "value": "1000"
+                    },
+                    {
+                      "key": "exchange",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "only-active-futures",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "product-code",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "security-id",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "symbol",
+                      "value": "<string>,<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"active\": true,\n    \"active-month\": false,\n    \"back-month-first-calendar-symbol\": false,\n    \"closing-only-date\": \"1977-01-08\",\n    \"contract-size\": 8143.356196912724,\n    \"display-factor\": 9145.722313532026,\n    \"exchange\": \"string\",\n    \"exchange-data\": {},\n    \"expiration-date\": \"1948-02-21\",\n    \"expires-at\": \"1967-03-31T19:23:23.257Z\",\n    \"first-notice-date\": \"2008-03-01\",\n    \"product-group\": \"string\",\n    \"is-closing-only\": true,\n    \"last-trade-date\": \"1947-11-04\",\n    \"main-fraction\": 1399.3652185612593,\n    \"next-active-month\": true,\n    \"notional-multiplier\": 7297.253862940816,\n    \"product-code\": \"string\",\n    \"roll-target-symbol\": \"string\",\n    \"security-id\": \"string\",\n    \"stops-trading-at\": \"1995-03-17T12:35:33.661Z\",\n    \"streamer-exchange-code\": \"string\",\n    \"streamer-symbol\": \"string\",\n    \"sub-fraction\": 6368.522723858841,\n    \"symbol\": \"string\",\n    \"tick-size\": 1692.9398206391454,\n    \"is-tradeable\": true,\n    \"true-underlying-symbol\": \"string\",\n    \"future-etf-equivalent\": {\n      \"share-quantity\": 9650,\n      \"symbol\": \"string\"\n    },\n    \"future-product\": {\n      \"active-months\": \"string\",\n      \"back-month-first-calendar-symbol\": false,\n      \"base-tick\": 7335,\n      \"cash-settled\": false,\n      \"code\": \"string\",\n      \"contract-limit\": 1582,\n      \"description\": \"string\",\n      \"display-factor\": 2760.579565471205,\n      \"exchange\": \"string\",\n      \"first-notice\": true,\n      \"listed-months\": \"string\",\n      \"market-sector\": \"string\",\n      \"notional-multiplier\": 7589.5999737694865,\n      \"price-format\": \"string\",\n      \"product-subtype\": \"string\",\n      \"product-type\": \"string\",\n      \"security-group\": \"string\",\n      \"small-notional\": false,\n      \"streamer-exchange-code\": \"string\",\n      \"sub-tick\": 455,\n      \"supported\": true,\n      \"root-symbol\": \"string\",\n      \"tick-size\": 6447.754394371904,\n      \"true-underlying-code\": \"string\",\n      \"underlying-description\": \"string\",\n      \"underlying-identifier\": \"string\"\n    },\n    \"option-tick-sizes\": {\n      \"symbol\": \"string\",\n      \"threshold\": 1257.2364413601179,\n      \"value\": 6477.35431967284\n    },\n    \"spread-tick-sizes\": {\n      \"symbol\": \"string\",\n      \"threshold\": 4587.434747985837,\n      \"value\": 7004.921461815829\n    },\n    \"tick-sizes\": {\n      \"symbol\": \"string\",\n      \"threshold\": 2032.7645401057814,\n      \"value\": 3779.7110581140105\n    }\n  },\n  {\n    \"active\": true,\n    \"active-month\": false,\n    \"back-month-first-calendar-symbol\": true,\n    \"closing-only-date\": \"2003-08-13\",\n    \"contract-size\": 8981.597325674922,\n    \"display-factor\": 3471.81922755903,\n    \"exchange\": \"string\",\n    \"exchange-data\": {},\n    \"expiration-date\": \"1970-02-20\",\n    \"expires-at\": \"2007-01-30T14:01:41.067Z\",\n    \"first-notice-date\": \"1973-08-13\",\n    \"product-group\": \"string\",\n    \"is-closing-only\": false,\n    \"last-trade-date\": \"2011-10-19\",\n    \"main-fraction\": 7748.620462818172,\n    \"next-active-month\": true,\n    \"notional-multiplier\": 24.392820808707416,\n    \"product-code\": \"string\",\n    \"roll-target-symbol\": \"string\",\n    \"security-id\": \"string\",\n    \"stops-trading-at\": \"1978-04-19T00:18:52.979Z\",\n    \"streamer-exchange-code\": \"string\",\n    \"streamer-symbol\": \"string\",\n    \"sub-fraction\": 613.5443365388238,\n    \"symbol\": \"string\",\n    \"tick-size\": 8185.049298162128,\n    \"is-tradeable\": true,\n    \"true-underlying-symbol\": \"string\",\n    \"future-etf-equivalent\": {\n      \"share-quantity\": 6576,\n      \"symbol\": \"string\"\n    },\n    \"future-product\": {\n      \"active-months\": \"string\",\n      \"back-month-first-calendar-symbol\": false,\n      \"base-tick\": 9850,\n      \"cash-settled\": true,\n      \"code\": \"string\",\n      \"contract-limit\": 6677,\n      \"description\": \"string\",\n      \"display-factor\": 5872.608178889583,\n      \"exchange\": \"string\",\n      \"first-notice\": true,\n      \"listed-months\": \"string\",\n      \"market-sector\": \"string\",\n      \"notional-multiplier\": 3146.8904129495377,\n      \"price-format\": \"string\",\n      \"product-subtype\": \"string\",\n      \"product-type\": \"string\",\n      \"security-group\": \"string\",\n      \"small-notional\": false,\n      \"streamer-exchange-code\": \"string\",\n      \"sub-tick\": 205,\n      \"supported\": false,\n      \"root-symbol\": \"string\",\n      \"tick-size\": 3305.8598719520273,\n      \"true-underlying-code\": \"string\",\n      \"underlying-description\": \"string\",\n      \"underlying-identifier\": \"string\"\n    },\n    \"option-tick-sizes\": {\n      \"symbol\": \"string\",\n      \"threshold\": 3017.8237439490276,\n      \"value\": 3176.2892543065104\n    },\n    \"spread-tick-sizes\": {\n      \"symbol\": \"string\",\n      \"threshold\": 3363.2094529850565,\n      \"value\": 8308.251158099269\n    },\n    \"tick-sizes\": {\n      \"symbol\": \"string\",\n      \"threshold\": 7912.32045393671,\n      \"value\": 5765.936905138314\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dd8a533a-2127-4f2c-8932-f312a92a6336",
+          "name": "get Instruments Futures Symbol",
+          "request": {
+            "name": "get Instruments Futures Symbol",
+            "description": {
+              "content": "Returns an outright future given a symbol.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "instruments",
+                "futures",
+                ":symbol"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "symbol",
+                  "description": "(Required) The symbol of the future, i.e. `ESZ9`. Leading forward slash is not required."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c6cd00b8-4557-4d4b-afc1-df6bbbfc5304",
+              "name": "Returns an outright future given a symbol.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "instruments",
+                    "futures",
+                    ":symbol"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "symbol",
+                      "description": "(Required) The symbol of the future, i.e. `ESZ9`. Leading forward slash is not required."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"active\": false,\n  \"active-month\": true,\n  \"back-month-first-calendar-symbol\": true,\n  \"closing-only-date\": \"1956-10-01\",\n  \"contract-size\": 8933.874730610758,\n  \"display-factor\": 6792.2252154884345,\n  \"exchange\": \"string\",\n  \"exchange-data\": {},\n  \"expiration-date\": \"1989-11-18\",\n  \"expires-at\": \"2010-09-08T11:32:04.394Z\",\n  \"first-notice-date\": \"2000-07-01\",\n  \"product-group\": \"string\",\n  \"is-closing-only\": false,\n  \"last-trade-date\": \"1976-08-22\",\n  \"main-fraction\": 9309.338691089622,\n  \"next-active-month\": true,\n  \"notional-multiplier\": 4396.526276439956,\n  \"product-code\": \"string\",\n  \"roll-target-symbol\": \"string\",\n  \"security-id\": \"string\",\n  \"stops-trading-at\": \"2004-08-24T04:47:22.893Z\",\n  \"streamer-exchange-code\": \"string\",\n  \"streamer-symbol\": \"string\",\n  \"sub-fraction\": 1001.9259407513026,\n  \"symbol\": \"string\",\n  \"tick-size\": 8281.453390550947,\n  \"is-tradeable\": false,\n  \"true-underlying-symbol\": \"string\",\n  \"future-etf-equivalent\": {\n    \"share-quantity\": 2946,\n    \"symbol\": \"string\"\n  },\n  \"future-product\": {\n    \"active-months\": \"string\",\n    \"back-month-first-calendar-symbol\": false,\n    \"base-tick\": 1796,\n    \"cash-settled\": true,\n    \"code\": \"string\",\n    \"contract-limit\": 2419,\n    \"description\": \"string\",\n    \"display-factor\": 1464.0842964005374,\n    \"exchange\": \"string\",\n    \"first-notice\": true,\n    \"listed-months\": \"string\",\n    \"market-sector\": \"string\",\n    \"notional-multiplier\": 715.4758040493015,\n    \"price-format\": \"string\",\n    \"product-subtype\": \"string\",\n    \"product-type\": \"string\",\n    \"security-group\": \"string\",\n    \"small-notional\": false,\n    \"streamer-exchange-code\": \"string\",\n    \"sub-tick\": 276,\n    \"supported\": false,\n    \"root-symbol\": \"string\",\n    \"tick-size\": 9696.143734093812,\n    \"true-underlying-code\": \"string\",\n    \"underlying-description\": \"string\",\n    \"underlying-identifier\": \"string\"\n  },\n  \"option-tick-sizes\": {\n    \"symbol\": \"string\",\n    \"threshold\": 1901.6023883939647,\n    \"value\": 7741.446961945144\n  },\n  \"spread-tick-sizes\": {\n    \"symbol\": \"string\",\n    \"threshold\": 3332.3980223535664,\n    \"value\": 6321.574164251257\n  },\n  \"tick-sizes\": {\n    \"symbol\": \"string\",\n    \"threshold\": 8595.4225391323,\n    \"value\": 4092.1463789672985\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bd9a230d-3a57-48ab-8131-3f46e808abd3",
+          "name": "get Instruments Quantity Decimal Precisions",
+          "request": {
+            "name": "get Instruments Quantity Decimal Precisions",
+            "description": {
+              "content": "Retrieve all quantity decimal precisions.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "instruments",
+                "quantity-decimal-precisions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9c246ecb-2b98-40f3-a88c-bfcec50e6892",
+              "name": "Retrieve all quantity decimal precisions.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "instruments",
+                    "quantity-decimal-precisions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"instrument-type\": \"string\",\n    \"minimum-increment-precision\": 4059,\n    \"symbol\": \"string\",\n    \"value\": 3638\n  },\n  {\n    \"instrument-type\": \"string\",\n    \"minimum-increment-precision\": 8958,\n    \"symbol\": \"string\",\n    \"value\": 4589\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c478a820-86c8-4290-aeb2-b8d05116c979",
+          "name": "get Instruments Search",
+          "request": {
+            "name": "get Instruments Search",
+            "description": {
+              "content": "Search instruments by symbol, description, or tags",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "instruments",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "category",
+                  "value": "<string>",
+                  "description": "Comma-separated categories to filter (case-insensitive)"
+                },
+                {
+                  "disabled": false,
+                  "key": "exchange",
+                  "value": "<string>",
+                  "description": "Comma-separated exchanges to filter (case-insensitive)"
+                },
+                {
+                  "disabled": false,
+                  "key": "from-date",
+                  "value": "<date>",
+                  "description": "Lower bound on stops_trading_at; surfaces expired events that stopped trading on/after this date"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "25",
+                  "description": "Maximum number of results"
+                },
+                {
+                  "disabled": false,
+                  "key": "query",
+                  "value": "<string>",
+                  "description": "Search query"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>",
+                  "description": "Comma-separated instrument types to filter"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3e01fdc1-9b51-4dd0-8845-e7c3fc9bb050",
+              "name": "Search instruments by symbol, description, or tags",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "instruments",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "exchange",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from-date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "25"
+                    },
+                    {
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"category\": \"string\",\n    \"description\": \"string\",\n    \"event-product-external-id\": \"string\",\n    \"exchange\": \"string\",\n    \"external-id\": \"string\",\n    \"instrument-type\": \"string\",\n    \"stops-trading-at\": \"2008-04-16T00:12:00.206Z\",\n    \"symbol\": \"string\",\n    \"underlying-product\": \"string\",\n    \"underlying-product-type\": \"string\"\n  },\n  {\n    \"category\": \"string\",\n    \"description\": \"string\",\n    \"event-product-external-id\": \"string\",\n    \"exchange\": \"string\",\n    \"external-id\": \"string\",\n    \"instrument-type\": \"string\",\n    \"stops-trading-at\": \"1962-06-25T21:23:43.545Z\",\n    \"symbol\": \"string\",\n    \"underlying-product\": \"string\",\n    \"underlying-product-type\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b11c84d4-47e6-42b7-a713-65b5133402d5",
+          "name": "get Instruments Warrants",
+          "request": {
+            "name": "get Instruments Warrants",
+            "description": {
+              "content": "Returns a set of warrant definitions that can be filtered by parameters",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "instruments",
+                "warrants"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>,<string>",
+                  "description": "The symbol of the warrant(s), i.e `NKLAW` (example: symbol[]={value1}&symbol[]={value2})"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5bd9335d-53f3-43c5-a183-9070c02f3727",
+              "name": "Returns a set of warrant definitions that can be filtered by parameters",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "instruments",
+                    "warrants"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "symbol",
+                      "value": "<string>,<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"active\": true,\n    \"cusip\": \"string\",\n    \"description\": \"string\",\n    \"instrument-type\": \"string\",\n    \"is-closing-only\": true,\n    \"listed-market\": \"string\",\n    \"symbol\": \"string\"\n  },\n  {\n    \"active\": false,\n    \"cusip\": \"string\",\n    \"description\": \"string\",\n    \"instrument-type\": \"string\",\n    \"is-closing-only\": true,\n    \"listed-market\": \"string\",\n    \"symbol\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "82f66c0f-0587-4a6d-8867-8d392cf638c2",
+          "name": "get Instruments Warrants Symbol",
+          "request": {
+            "name": "get Instruments Warrants Symbol",
+            "description": {
+              "content": "Returns a single warrant definition for the provided symbol",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "instruments",
+                "warrants",
+                ":symbol"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "symbol",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b2683c90-3d08-4e66-8f0d-8583c8ede6a0",
+              "name": "Returns a single warrant definition for the provided symbol",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "instruments",
+                    "warrants",
+                    ":symbol"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "symbol",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"active\": false,\n  \"cusip\": \"string\",\n  \"description\": \"string\",\n  \"instrument-type\": \"string\",\n  \"is-closing-only\": true,\n  \"listed-market\": \"string\",\n  \"symbol\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a47021d9-7bed-458c-a834-0e44fcc1b380",
+    "name": "Account Status accounts instruments API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts Symbols API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Symbols",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "searchSymbols",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/symbols/search/:symbol",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "path",
+                "description": "Symbol or fragment of a symbol to search, i.e. `AAP` will return AAP and AAPL data"
+              }
+            ]
+          },
+          "docs": "Returns an array of symbol data."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

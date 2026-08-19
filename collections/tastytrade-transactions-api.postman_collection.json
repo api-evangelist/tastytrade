@@ -1,0 +1,282 @@
+{
+  "item": [
+    {
+      "id": "1690512e-1ef6-4446-83c5-fad5c3b7e7e3",
+      "name": "transactions",
+      "description": {
+        "content": "Operations about transactions",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9e2116a4-9566-4b08-b25f-e624a3ab9193",
+          "name": "get Accounts Account Number Transactions",
+          "request": {
+            "name": "get Accounts Account Number Transactions",
+            "description": {
+              "content": "Returns a paginated list of the account's transactions (as identified by the provided authentication token)\n            based on sort param. If no sort is passed in, it defaults to descending order.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "accounts",
+                ":account_number",
+                "transactions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page-offset",
+                  "value": "0"
+                },
+                {
+                  "disabled": false,
+                  "key": "per-page",
+                  "value": "250"
+                },
+                {
+                  "disabled": false,
+                  "key": "currency",
+                  "value": "<string>",
+                  "description": "Currency"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "Desc",
+                  "description": "The order to sort results in. Defaults to Desc, Accepts `Desc` or `Asc`."
+                },
+                {
+                  "disabled": false,
+                  "key": "sub-type",
+                  "value": "<string>,<string>",
+                  "description": "Filter based on transaction_sub_type (example: sub-type[]={value1}&sub-type[]={value2})"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>",
+                  "description": "Filter based on transaction_type"
+                },
+                {
+                  "disabled": false,
+                  "key": "types",
+                  "value": "<string>,<string>",
+                  "description": "Allows filtering on multiple transaction_types (example: types[]={value1}&types[]={value2})"
+                },
+                {
+                  "disabled": false,
+                  "key": "action",
+                  "value": "<string>",
+                  "description": "The action of the transaction. i.e. `Allocate`, `Buy`, `Buy to Close`, `Buy to Open`, `Sell`, `Sell to Close` or `Sell to Open`"
+                },
+                {
+                  "disabled": false,
+                  "key": "futures-symbol",
+                  "value": "<string>",
+                  "description": "The full TW Future Symbol `/ESZ9` or \\\n                                          `/NGZ19` if two year digit are appropriate"
+                },
+                {
+                  "disabled": false,
+                  "key": "instrument-type",
+                  "value": "<string>",
+                  "description": "The type of Instrument. i.e. `Bond`, `Cryptocurrency`, `Currency Pair`, `Equity`, `Equity Offering`, `Equity Option`, `Event Contract`, `Fixed Income Security`, `Future`, `Future Option`, `Index`, `Liquidity Pool`, `Unknown` or `Warrant`"
+                },
+                {
+                  "disabled": false,
+                  "key": "partition-key",
+                  "value": "<string>",
+                  "description": "Account partition key"
+                },
+                {
+                  "disabled": false,
+                  "key": "start-date",
+                  "value": "<date>",
+                  "description": "The start date of transactions to query."
+                },
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>",
+                  "description": "The Stock Ticker Symbol `AAPL`, OCC Option Symbol `AAPL  191004P00275000`, \\\n                                                 TW Future Symbol `/ESZ9`, or TW Future Option Symbol `./ESZ9 EW4U9 190927P2975`"
+                },
+                {
+                  "disabled": false,
+                  "key": "underlying-symbol",
+                  "value": "<string>",
+                  "description": "The Underlying Symbol. The Ticker Symbol `FB` or \\\n                                                              TW Future Symbol with out date component `/M6E` or\n                                                              the full TW Future Symbol `/ESU9`"
+                },
+                {
+                  "disabled": false,
+                  "key": "end-at",
+                  "value": "<dateTime>",
+                  "description": "DateTime end range for filtering transactions in full date-time"
+                },
+                {
+                  "disabled": false,
+                  "key": "start-at",
+                  "value": "<dateTime>",
+                  "description": "DateTime start range for filtering transactions in full date-time"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "account_number",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e6d353ee-e67e-4a15-bbe4-08233902e884",
+              "name": "Returns a paginated list of the account's transactions (as identified by the provided authentication token)\n            based on sort param. If no sort is passed in, it defaults to descending order.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "accounts",
+                    ":account_number",
+                    "transactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page-offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "per-page",
+                      "value": "250"
+                    },
+                    {
+                      "key": "currency",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "Desc"
+                    },
+                    {
+                      "key": "sub-type",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "types",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "action",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "futures-symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "instrument-type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "partition-key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start-date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "underlying-symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end-at",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "start-at",
+                      "value": "<dateTime>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "account_number",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 2185,\n    \"account-number\": \"string\",\n    \"action\": \"string\",\n    \"agency-price\": 2506.558641319797,\n    \"clearing-fees\": 6180.517190023264,\n    \"clearing-fees-effect\": \"string\",\n    \"commission\": 6402.820289249047,\n    \"commission-effect\": \"string\",\n    \"lots\": {\n      \"id\": \"string\",\n      \"executed-at\": \"2012-05-27T06:03:47.388Z\",\n      \"price\": 8910.95132134465,\n      \"quantity\": 508.1132862632054,\n      \"quantity-direction\": \"string\",\n      \"transaction-date\": \"1984-09-07\",\n      \"transaction-id\": 9965\n    },\n    \"cost-basis-reconciliation-date\": \"1976-01-07\",\n    \"created-at\": \"2026-07-11T01:30:35.730Z\",\n    \"currency\": \"string\",\n    \"currency-conversion-fees\": 4849.376685492833,\n    \"currency-conversion-fees-effect\": \"string\",\n    \"description\": \"string\",\n    \"destination-venue\": \"string\",\n    \"exchange\": \"string\",\n    \"exchange-affiliation-identifier\": \"string\",\n    \"exec-id\": \"string\",\n    \"executed-at\": \"1966-04-16T23:55:34.472Z\",\n    \"ext-exchange-order-number\": \"string\",\n    \"ext-exec-id\": \"string\",\n    \"ext-global-order-number\": 5571,\n    \"ext-group-fill-id\": \"string\",\n    \"ext-group-id\": \"string\",\n    \"instrument-type\": \"string\",\n    \"is-estimated-fee\": false,\n    \"leg-count\": 3977,\n    \"net-value\": 4917.709269199047,\n    \"net-value-effect\": \"string\",\n    \"order-id\": 9504,\n    \"other-charge\": 6630.294939619058,\n    \"other-charge-description\": \"string\",\n    \"other-charge-effect\": \"string\",\n    \"price\": 5099.109646654264,\n    \"principal-price\": 4121.355025077389,\n    \"proprietary-index-option-fees\": 5161.322883027299,\n    \"proprietary-index-option-fees-effect\": \"string\",\n    \"quantity\": 2569.359560012638,\n    \"regulatory-fees\": 6083.252794469465,\n    \"regulatory-fees-effect\": \"string\",\n    \"reverses-id\": 5759,\n    \"symbol\": \"string\",\n    \"transaction-date\": \"1960-06-10\",\n    \"transaction-sub-type\": \"string\",\n    \"transaction-type\": \"string\",\n    \"underlying-symbol\": \"string\",\n    \"value\": 625.5416085785637,\n    \"value-effect\": \"string\"\n  },\n  {\n    \"id\": 7246,\n    \"account-number\": \"string\",\n    \"action\": \"string\",\n    \"agency-price\": 1675.0026153101505,\n    \"clearing-fees\": 5925.673869138598,\n    \"clearing-fees-effect\": \"string\",\n    \"commission\": 9063.302133970577,\n    \"commission-effect\": \"string\",\n    \"lots\": {\n      \"id\": \"string\",\n      \"executed-at\": \"1946-09-06T11:12:12.699Z\",\n      \"price\": 3523.7507322016413,\n      \"quantity\": 4033.1024695547603,\n      \"quantity-direction\": \"string\",\n      \"transaction-date\": \"1961-07-16\",\n      \"transaction-id\": 7416\n    },\n    \"cost-basis-reconciliation-date\": \"1979-06-22\",\n    \"created-at\": \"2025-02-06T23:14:18.737Z\",\n    \"currency\": \"string\",\n    \"currency-conversion-fees\": 9052.970791936872,\n    \"currency-conversion-fees-effect\": \"string\",\n    \"description\": \"string\",\n    \"destination-venue\": \"string\",\n    \"exchange\": \"string\",\n    \"exchange-affiliation-identifier\": \"string\",\n    \"exec-id\": \"string\",\n    \"executed-at\": \"2023-04-23T02:55:03.500Z\",\n    \"ext-exchange-order-number\": \"string\",\n    \"ext-exec-id\": \"string\",\n    \"ext-global-order-number\": 2063,\n    \"ext-group-fill-id\": \"string\",\n    \"ext-group-id\": \"string\",\n    \"instrument-type\": \"string\",\n    \"is-estimated-fee\": false,\n    \"leg-count\": 6587,\n    \"net-value\": 6825.5216161304115,\n    \"net-value-effect\": \"string\",\n    \"order-id\": 4049,\n    \"other-charge\": 4621.204590930485,\n    \"other-charge-description\": \"string\",\n    \"other-charge-effect\": \"string\",\n    \"price\": 1183.1195340159195,\n    \"principal-price\": 4068.000058868283,\n    \"proprietary-index-option-fees\": 6430.7730863761135,\n    \"proprietary-index-option-fees-effect\": \"string\",\n    \"quantity\": 3496.896250019599,\n    \"regulatory-fees\": 3713.624928034598,\n    \"regulatory-fees-effect\": \"string\",\n    \"reverses-id\": 1277,\n    \"symbol\": \"string\",\n    \"transaction-date\": \"2020-07-26\",\n    \"transaction-sub-type\": \"string\",\n    \"transaction-type\": \"string\",\n    \"underlying-symbol\": \"string\",\n    \"value\": 9149.440273452168,\n    \"value-effect\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "9b91f4ae-6530-4213-a157-ec8272c6a539",
+    "name": "Account Status accounts transactions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

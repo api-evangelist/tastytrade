@@ -1,0 +1,102 @@
+{
+  "item": [
+    {
+      "id": "b30a9d82-413f-415e-bc1f-f613bf1bc09a",
+      "name": "margin-requirements-public-configuration",
+      "description": {
+        "content": "Operations about margin-requirements-public-configurations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3fa3b99c-5d03-4f50-b9e9-cbda18965ba5",
+          "name": "get Margin Requirements Public Configuration",
+          "request": {
+            "name": "get Margin Requirements Public Configuration",
+            "description": {
+              "content": "Publicly accessible, read only margin configuration",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "margin-requirements-public-configuration"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e233efd6-05ea-44e2-9716-c2b14224dc0e",
+              "name": "Publicly accessible, read only margin configuration",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "margin-requirements-public-configuration"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"risk-free-rate\": 4838.272686855222\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "ee10ac6c-cf61-449c-a556-bd7f9863fb15",
+    "name": "Account Status accounts margin-requirements-public-configuration API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,320 @@
+{
+  "item": [
+    {
+      "id": "682e5dec-0ab6-4c56-a5bd-79bd49ad6a6d",
+      "name": "Market Metrics",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "dd416b37-db42-4953-8302-5c55038c2e0a",
+          "name": "get Market Metrics Index",
+          "request": {
+            "name": "get Market Metrics Index",
+            "description": {
+              "content": "Returns an array of volatility data for given symbols.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "market-metrics"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "symbols",
+                  "value": "<string>",
+                  "description": "(Required) Comma separated list of symbols i.e. ?symbols=AAPL,FB,BRK%2FB"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a1cef502-4029-4afd-b988-4c9b207abdae",
+              "name": "Returns an array of volatility data for given symbols.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "market-metrics"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "symbols",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"symbol\": \"string\",\n    \"implied-volatility-index\": 88.53836401034098,\n    \"implied-volatility-index-5-day-change\": 5691.490091463022,\n    \"implied-volatility-rank\": 6938.087847093806,\n    \"implied-volatility-percentile\": 5086.193893021167,\n    \"liquidity\": 8939.556099485122,\n    \"liquidity-rank\": 3756.7257672014707,\n    \"liquidity-rating\": 7596.528052668178,\n    \"option-expiration-implied-volatilities\": [\n      {\n        \"expiration-date\": \"2010-03-08T23:17:06.666Z\",\n        \"settlement-type\": \"string\",\n        \"option-chain-type\": \"string\",\n        \"implied-volatility\": 3590.1352019378874\n      },\n      {\n        \"expiration-date\": \"1961-01-31T07:22:12.235Z\",\n        \"settlement-type\": \"string\",\n        \"option-chain-type\": \"string\",\n        \"implied-volatility\": 1087.7648507631843\n      }\n    ]\n  },\n  {\n    \"symbol\": \"string\",\n    \"implied-volatility-index\": 2338.275793387302,\n    \"implied-volatility-index-5-day-change\": 2579.2071264018514,\n    \"implied-volatility-rank\": 3899.969330747093,\n    \"implied-volatility-percentile\": 5065.637539997047,\n    \"liquidity\": 3882.346418025755,\n    \"liquidity-rank\": 4827.815411796222,\n    \"liquidity-rating\": 5361.202168214086,\n    \"option-expiration-implied-volatilities\": [\n      {\n        \"expiration-date\": \"1956-02-26T21:02:54.473Z\",\n        \"settlement-type\": \"string\",\n        \"option-chain-type\": \"string\",\n        \"implied-volatility\": 5485.127179607141\n      },\n      {\n        \"expiration-date\": \"1948-08-06T22:52:32.550Z\",\n        \"settlement-type\": \"string\",\n        \"option-chain-type\": \"string\",\n        \"implied-volatility\": 3320.727642506005\n      }\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "72d11de5-366f-4522-ae14-adfcb302c804",
+          "name": "get Market Metrics Dividends Symbol",
+          "request": {
+            "name": "get Market Metrics Dividends Symbol",
+            "description": {
+              "content": "Get historical dividend data",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "market-metrics",
+                "historic-corporate-events",
+                "dividends",
+                ":symbol"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "symbol",
+                  "description": "(Required) Symbol to get dividends data for"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bfe4e06d-92e2-40dd-8187-a9db8d95d03f",
+              "name": "Array of historical dividend data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "market-metrics",
+                    "historic-corporate-events",
+                    "dividends",
+                    ":symbol"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "symbol",
+                      "description": "(Required) Symbol to get dividends data for"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"occurred-date\": \"1977-02-18\",\n    \"amount\": 1814.7727042595873\n  },\n  {\n    \"occurred-date\": \"1984-02-07\",\n    \"amount\": 1934.551160053779\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f8c2a9bc-6b48-443e-b8a2-1b0ef500a7b8",
+          "name": "get Market Metrics Earnings Symbol",
+          "request": {
+            "name": "get Market Metrics Earnings Symbol",
+            "description": {
+              "content": "Get historical earnings data",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "market-metrics",
+                "historic-corporate-events",
+                "earnings-reports",
+                ":symbol"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "start-date",
+                  "value": "<date>",
+                  "description": "(Required) Limits earnings data from start-date until now"
+                },
+                {
+                  "disabled": false,
+                  "key": "end-date",
+                  "value": "<date>",
+                  "description": "Limits earnings data from start-date until end-date"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "symbol",
+                  "description": "(Required) Symbol to get earnings data for"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b9d19146-2aa8-443a-a380-8c7afab6d45e",
+              "name": "Array of historical earnings data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "market-metrics",
+                    "historic-corporate-events",
+                    "earnings-reports",
+                    ":symbol"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start-date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end-date",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "symbol",
+                      "description": "(Required) Symbol to get earnings data for"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"occurred-date\": \"1964-12-27\",\n    \"eps\": 2745.5900046883285\n  },\n  {\n    \"occurred-date\": \"2023-09-28\",\n    \"eps\": 6820.917028567245\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "0ed829c8-63c4-4f7b-8ef6-814d420edd1e",
+    "name": "Account Status accounts Market Metrics API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

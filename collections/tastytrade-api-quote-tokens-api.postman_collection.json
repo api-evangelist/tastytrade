@@ -1,0 +1,102 @@
+{
+  "item": [
+    {
+      "id": "228f05b5-45df-46ad-bdc1-543d8a8e8436",
+      "name": "api-quote-tokens",
+      "description": {
+        "content": "Operations about api-quote-tokens",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c6be6c36-bf77-416d-bc36-63fcd0cef630",
+          "name": "get Api Quote Tokens",
+          "request": {
+            "name": "get Api Quote Tokens",
+            "description": {
+              "content": "Returns the appropriate API quote streamer endpoint, level and identification token \\\n            for the current customer to receive market data.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api-quote-tokens"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "eae7aed2-8b92-4cf8-b668-5626bca1cf9d",
+              "name": "Returns the appropriate API quote streamer endpoint, level and identification token \\\n            for the current customer to receive market data.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api-quote-tokens"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"dxlink-url\": \"string\",\n  \"expires-at\": \"1988-10-20T22:06:57.368Z\",\n  \"issued-at\": \"1981-09-09T11:02:59.046Z\",\n  \"level\": \"string\",\n  \"token\": \"string\",\n  \"websocket-url\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "3b9b4028-d61c-413b-9602-ea662cac81cd",
+    "name": "Account Status accounts api-quote-tokens API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

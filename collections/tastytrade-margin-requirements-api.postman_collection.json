@@ -1,0 +1,215 @@
+{
+  "item": [
+    {
+      "id": "dd3b5f38-0c33-4236-80d0-7b0b6be06dc4",
+      "name": "margin-requirements",
+      "description": {
+        "content": "allows a client to fetch margin-requirements for positions and orders",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "65509e70-218a-4eae-ab4b-2a17d9445530",
+          "name": "get Margin Accounts Account Number Requirements",
+          "request": {
+            "name": "get Margin Accounts Account Number Requirements",
+            "description": {
+              "content": "Fetch current margin/captial requirements report for an account",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "margin",
+                "accounts",
+                ":account_number",
+                "requirements"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "account_number",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1fe063d9-0b73-455b-8b20-d47e56d03e83",
+              "name": "Retrieve account margin/capital requirements report",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "margin",
+                    "accounts",
+                    ":account_number",
+                    "requirements"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "account_number",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fcaa692e-7144-4f07-9f80-865d802eeeee",
+          "name": "create Margin Accounts Account Number Dry Run",
+          "request": {
+            "name": "create Margin Accounts Account Number Dry Run",
+            "description": {
+              "content": "Estimate margin requirements for an order given an account",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "margin",
+                "accounts",
+                ":account_number",
+                "dry-run"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "account_number",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"order-type\": \"<string>\",\n  \"time-in-force\": \"<string>\",\n  \"account-number\": \"<string>\",\n  \"underlying-symbol\": \"<string>\",\n  \"gtc-date\": \"<date>\",\n  \"price\": \"<numeric>\",\n  \"price-effect\": \"<string>\",\n  \"stop-trigger\": \"<numeric>\",\n  \"replaces-order-id\": \"<numeric>\",\n  \"legs\": [\n    {\n      \"symbol\": \"<string>\",\n      \"instrument-type\": \"<string>\",\n      \"action\": \"<string>\",\n      \"quantity\": \"<numeric>\",\n      \"remaining-quantity\": \"<numeric>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "44d72f06-e524-41c6-b829-f06f20dd4057",
+              "name": "Retrieve account margin/capital requirements report",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "margin",
+                    "accounts",
+                    ":account_number",
+                    "dry-run"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "account_number",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"order-type\": \"<string>\",\n  \"time-in-force\": \"<string>\",\n  \"account-number\": \"<string>\",\n  \"underlying-symbol\": \"<string>\",\n  \"gtc-date\": \"<date>\",\n  \"price\": \"<numeric>\",\n  \"price-effect\": \"<string>\",\n  \"stop-trigger\": \"<numeric>\",\n  \"replaces-order-id\": \"<numeric>\",\n  \"legs\": [\n    {\n      \"symbol\": \"<string>\",\n      \"instrument-type\": \"<string>\",\n      \"action\": \"<string>\",\n      \"quantity\": \"<numeric>\",\n      \"remaining-quantity\": \"<numeric>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "799cab56-8ea9-4a48-83b1-b24ea8eacfb4",
+    "name": "Account Status accounts margin-requirements API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts public-watchlists API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "public-watchlists",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getPublicWatchlists",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/public-watchlists",
+            "params": [
+              {
+                "name": "counts-only",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns a list of all tastyworks watchlists"
+        },
+        {
+          "info": {
+            "name": "getPublicWatchlistsWatchlistName",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/public-watchlists/:watchlist_name",
+            "params": [
+              {
+                "name": "watchlist_name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns a requested tastyworks watchlist"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

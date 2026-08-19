@@ -1,0 +1,237 @@
+{
+  "item": [
+    {
+      "id": "e481bf66-b5de-4ed7-b4b3-31b1cd345919",
+      "name": "positions",
+      "description": {
+        "content": "Operations about positions",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "439d8ff7-de98-41ce-9f39-e57ee2ba7015",
+          "name": "get Accounts Account Number Positions",
+          "request": {
+            "name": "get Accounts Account Number Positions",
+            "description": {
+              "content": "Returns a list of the account's positions.\n            Can be filtered by symbol, underlying_symbol",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "accounts",
+                ":account_number",
+                "positions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "include-closed-positions",
+                  "value": "false",
+                  "description": "If closed positions should be included in the query"
+                },
+                {
+                  "disabled": false,
+                  "key": "include-marks",
+                  "value": "false",
+                  "description": "Include current quote mark (note: can decrease performance)"
+                },
+                {
+                  "disabled": false,
+                  "key": "instrument-type",
+                  "value": "<string>",
+                  "description": "The type of Instrument"
+                },
+                {
+                  "disabled": false,
+                  "key": "net-positions",
+                  "value": "false",
+                  "description": "Returns net positions grouped by instrument type and symbol"
+                },
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>",
+                  "description": "A single symbol. Stock Ticker Symbol `AAPL`, \\\n                                 OCC Option Symbol `AAPL  191004P00275000`, \\\n                                 TW Future Symbol `/ESZ9`, or \\\n                                 TW Future Option Symbol `./ESZ9 EW4U9 190927P2975`"
+                },
+                {
+                  "disabled": false,
+                  "key": "underlying-product-code",
+                  "value": "<string>",
+                  "description": "The underlying Future's Product code. i.e `ES`"
+                },
+                {
+                  "disabled": false,
+                  "key": "underlying-symbol",
+                  "value": "<string>,<string>",
+                  "description": "An array of Underlying symbol(s) for positions (example: underlying-symbol[]={value1}&underlying-symbol[]={value2})"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "account_number",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "partition-keys",
+                  "value": "<string>",
+                  "description": "Account partition keys (example: partition-keys[]={value1}&partition-keys[]={value2})"
+                },
+                {
+                  "disabled": false,
+                  "key": "partition-keys",
+                  "value": "<string>",
+                  "description": "Account partition keys (example: partition-keys[]={value1}&partition-keys[]={value2})"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "21ff75a4-4b53-478f-ab64-b8acffe49f25",
+              "name": "Returns a list of the account's positions.\n            Can be filtered by symbol, underlying_symbol",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "accounts",
+                    ":account_number",
+                    "positions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include-closed-positions",
+                      "value": "false"
+                    },
+                    {
+                      "key": "include-marks",
+                      "value": "false"
+                    },
+                    {
+                      "key": "instrument-type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "net-positions",
+                      "value": "false"
+                    },
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "underlying-product-code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "underlying-symbol",
+                      "value": "<string>,<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "account_number",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Account partition keys (example: partition-keys[]={value1}&partition-keys[]={value2})",
+                        "type": "text/plain"
+                      },
+                      "key": "partition-keys",
+                      "value": "<string>"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Account partition keys (example: partition-keys[]={value1}&partition-keys[]={value2})",
+                        "type": "text/plain"
+                      },
+                      "key": "partition-keys",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"account-number\": \"string\",\n    \"instrument-type\": \"string\",\n    \"streamer-symbol\": \"string\",\n    \"symbol\": \"string\",\n    \"underlying-symbol\": \"string\",\n    \"quantity\": {},\n    \"average-daily-market-close-price\": 6885.188198772603,\n    \"average-open-price\": 6842.451887571967,\n    \"average-yearly-market-close-price\": 9244.088559637801,\n    \"close-price\": 6690.948568856815,\n    \"cost-effect\": \"string\",\n    \"is-frozen\": true,\n    \"is-suppressed\": true,\n    \"mark\": 3246.1293678832258,\n    \"mark-price\": 4377.37714479429,\n    \"multiplier\": 7599.496934775562,\n    \"quantity-direction\": \"string\",\n    \"restricted-quantity\": {},\n    \"expires-at\": \"2022-04-28T15:43:41.287Z\",\n    \"deliverable-type\": \"string\",\n    \"fixing-price\": 2562.8118982659507,\n    \"realized-day-gain\": 8998.755118266838,\n    \"realized-day-gain-date\": \"1995-05-24\",\n    \"realized-day-gain-effect\": \"string\",\n    \"realized-today\": 2411.9612222726673,\n    \"realized-today-date\": \"1967-01-01\",\n    \"realized-today-effect\": \"string\",\n    \"face-value\": 6012.29255860528,\n    \"par-size\": 2364.7659488602803,\n    \"created-at\": \"1996-03-29T15:08:31.560Z\",\n    \"updated-at\": \"1960-10-28T11:27:59.505Z\",\n    \"order-id\": 1987,\n    \"update-type\": \"string\"\n  },\n  {\n    \"account-number\": \"string\",\n    \"instrument-type\": \"string\",\n    \"streamer-symbol\": \"string\",\n    \"symbol\": \"string\",\n    \"underlying-symbol\": \"string\",\n    \"quantity\": {},\n    \"average-daily-market-close-price\": 5705.841980133515,\n    \"average-open-price\": 5043.549839240043,\n    \"average-yearly-market-close-price\": 6271.638278299567,\n    \"close-price\": 5854.66431846185,\n    \"cost-effect\": \"string\",\n    \"is-frozen\": true,\n    \"is-suppressed\": false,\n    \"mark\": 4897.629700373001,\n    \"mark-price\": 5890.424131141655,\n    \"multiplier\": 5452.966088194577,\n    \"quantity-direction\": \"string\",\n    \"restricted-quantity\": {},\n    \"expires-at\": \"1969-10-15T17:50:00.012Z\",\n    \"deliverable-type\": \"string\",\n    \"fixing-price\": 3725.923488837686,\n    \"realized-day-gain\": 8773.908266802044,\n    \"realized-day-gain-date\": \"1960-04-11\",\n    \"realized-day-gain-effect\": \"string\",\n    \"realized-today\": 5473.019292286324,\n    \"realized-today-date\": \"2000-11-21\",\n    \"realized-today-effect\": \"string\",\n    \"face-value\": 1965.0149146256358,\n    \"par-size\": 6807.486073485665,\n    \"created-at\": \"1980-05-20T22:32:53.248Z\",\n    \"updated-at\": \"2013-04-13T19:35:42.479Z\",\n    \"order-id\": 646,\n    \"update-type\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "456a649f-f55e-41d4-8d52-7f3f89fa57c1",
+    "name": "Account Status accounts positions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "item": [
+    {
+      "id": "8ad8ce2b-5808-4ed1-aa67-247ed735e178",
+      "name": "Simulate Trade",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a8d496f7-f297-435f-be33-7804485ed197",
+          "name": "Simulate a trade",
+          "request": {
+            "name": "Simulate a trade",
+            "description": {
+              "content": "Returns historical prices for a trade",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "simulate-trade"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"underlying\": \"<string>\",\n  \"startTime\": \"<dateTime>\",\n  \"endTime\": \"<dateTime>\",\n  \"legs\": [\n    {\n      \"symbol\": \"<string>\",\n      \"direction\": \"<string>\",\n      \"quantity\": \"<integer>\"\n    },\n    {\n      \"symbol\": \"<string>\",\n      \"direction\": \"<string>\",\n      \"quantity\": \"<integer>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "2087111f-fa42-4916-9737-e073d33d7ac8",
+              "name": "Trade simulation successful",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "simulate-trade"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"underlying\": \"SPY\",\n  \"legs\": [\n    {\n      \"symbol\": \"SPY   190227C00275000\",\n      \"direction\": \"short\",\n      \"quantity\": 1\n    },\n    {\n      \"symbol\": \"SPY\",\n      \"direction\": \"long\",\n      \"quantity\": 100\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"dateTime\": \"1965-12-13T04:52:36.249Z\",\n    \"price\": \"string\",\n    \"effect\": \"debit\",\n    \"underlyingPrice\": \"string\",\n    \"delta\": \"string\"\n  },\n  {\n    \"dateTime\": \"2005-07-27T10:30:25.722Z\",\n    \"price\": \"string\",\n    \"effect\": \"credit\",\n    \"underlyingPrice\": \"string\",\n    \"delta\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e9224520-aa5f-4700-9de3-cf14ceb1ee5f",
+    "name": "Account Status accounts Simulate Trade API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

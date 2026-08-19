@@ -1,0 +1,61 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts market-data-controller API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "market-data-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get market data for many symbols of type. Combined limit across all types is 100",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/market-data/by-type",
+            "params": [
+              {
+                "name": "index",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "equity",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "equity-option",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "future",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "future-option",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "cryptocurrency",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get market data for many symbols of type. Combined limit across all types is 100"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

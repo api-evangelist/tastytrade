@@ -1,0 +1,87 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts Market Metrics API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Market Metrics",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getMarketMetricsIndex",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/market-metrics",
+            "params": [
+              {
+                "name": "symbols",
+                "value": "",
+                "type": "query",
+                "description": "Comma separated list of symbols i.e. ?symbols=AAPL,FB,BRK%2FB"
+              }
+            ]
+          },
+          "docs": "Returns an array of volatility data for given symbols."
+        },
+        {
+          "info": {
+            "name": "getMarketMetricsDividendsSymbol",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/market-metrics/historic-corporate-events/dividends/:symbol",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "path",
+                "description": "Symbol to get dividends data for"
+              }
+            ]
+          },
+          "docs": "Get historical dividend data"
+        },
+        {
+          "info": {
+            "name": "getMarketMetricsEarningsSymbol",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/market-metrics/historic-corporate-events/earnings-reports/:symbol",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "path",
+                "description": "Symbol to get earnings data for"
+              },
+              {
+                "name": "start-date",
+                "value": "",
+                "type": "query",
+                "description": "Limits earnings data from start-date until now"
+              },
+              {
+                "name": "end-date",
+                "value": "",
+                "type": "query",
+                "description": "Limits earnings data from start-date until end-date"
+              }
+            ]
+          },
+          "docs": "Get historical earnings data"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,190 @@
+{
+  "item": [
+    {
+      "id": "0fdfcc0c-4041-4029-a304-cc42cc3bb780",
+      "name": "pairs-watchlists",
+      "description": {
+        "content": "Allows an API client to fetch pairs watchlists.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "abe95c2c-df4e-41d8-aff9-884093ea6f92",
+          "name": "get Pairs Watchlists",
+          "request": {
+            "name": "get Pairs Watchlists",
+            "description": {
+              "content": "Returns a list of all tastyworks pairs watchlists",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "pairs-watchlists"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "238f7a33-1be8-4b5c-8659-6f31f3d6357f",
+              "name": "Returns a list of all tastyworks pairs watchlists",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pairs-watchlists"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"string\",\n    \"pairs-equations\": {},\n    \"order-index\": 177\n  },\n  {\n    \"name\": \"string\",\n    \"pairs-equations\": {},\n    \"order-index\": 4586\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0d3d734d-0022-4154-b7dd-e877df423968",
+          "name": "get Pairs Watchlists Pairs Watchlist Name",
+          "request": {
+            "name": "get Pairs Watchlists Pairs Watchlist Name",
+            "description": {
+              "content": "Returns a requested tastyworks pairs watchlist",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "pairs-watchlists",
+                ":pairs_watchlist_name"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "pairs_watchlist_name",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c52b9434-513c-4fb4-aeab-a3af9be0cd86",
+              "name": "Returns a requested tastyworks pairs watchlist",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pairs-watchlists",
+                    ":pairs_watchlist_name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "pairs_watchlist_name",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"pairs-equations\": {},\n  \"order-index\": 2236\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "c2a4b96d-1c07-4eb2-88c2-fe142a5d52da",
+    "name": "Account Status accounts pairs-watchlists API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

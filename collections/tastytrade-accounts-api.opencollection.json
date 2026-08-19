@@ -1,0 +1,147 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "accounts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getAccountsAccountNumberBalances",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/accounts/:account_number/balances",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns the current balances for an account"
+        },
+        {
+          "info": {
+            "name": "getAccountsAccountNumberBalancesCurrency",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/accounts/:account_number/balances/:currency",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "currency",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns the current balance values for an account and currency"
+        },
+        {
+          "info": {
+            "name": "getAccountsAccountNumberPositionLimit",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/accounts/:account_number/position-limit",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the position limit"
+        },
+        {
+          "info": {
+            "name": "getAccountsAccountNumberMarginRequirementsUnderlyingSymbolEffective",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/accounts/:account_number/margin-requirements/:underlying_symbol/effective",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "underlying_symbol",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get effective margin requirements for account"
+        },
+        {
+          "info": {
+            "name": "getAccountsAccountNumberTransactionsTotalFees",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/accounts/:account_number/transactions/total-fees",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "date",
+                "value": "",
+                "type": "query",
+                "description": "The date to get fees for, defaults to today"
+              }
+            ]
+          },
+          "docs": "Return the total fees for an account for a given day"
+        },
+        {
+          "info": {
+            "name": "getAccountsAccountNumberTransactionsId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/accounts/:account_number/transactions/:id",
+            "params": [
+              {
+                "name": "account_number",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a transaction by account number and ID"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

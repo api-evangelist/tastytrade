@@ -1,0 +1,192 @@
+{
+  "item": [
+    {
+      "id": "9d8f0723-61b3-49eb-abbe-0aea6cb2503f",
+      "name": "balance-snapshots",
+      "description": {
+        "content": "Operations about balance-snapshots",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4be36dae-6dd9-4886-ae66-03814c56af8b",
+          "name": "get Accounts Account Number Balance Snapshots",
+          "request": {
+            "name": "get Accounts Account Number Balance Snapshots",
+            "description": {
+              "content": "Returns most recent snapshot and current balance for an account",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "accounts",
+                ":account_number",
+                "balance-snapshots"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page-offset",
+                  "value": "0"
+                },
+                {
+                  "disabled": false,
+                  "key": "per-page",
+                  "value": "250"
+                },
+                {
+                  "disabled": false,
+                  "key": "currency",
+                  "value": "USD",
+                  "description": "Currency"
+                },
+                {
+                  "disabled": false,
+                  "key": "snapshot-date",
+                  "value": "<date>",
+                  "description": "The day of the balance snapshot to retrieve"
+                },
+                {
+                  "disabled": false,
+                  "key": "time-of-day",
+                  "value": "<string>",
+                  "description": "(Required) The abbreviation for the time of day."
+                },
+                {
+                  "disabled": false,
+                  "key": "start-date",
+                  "value": "<date>",
+                  "description": "The first date in a range of dates to retrieve"
+                },
+                {
+                  "disabled": false,
+                  "key": "end-date",
+                  "value": "<date>",
+                  "description": "The last date in a range of dates to retrieve"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "account_number",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c2b995f0-03f1-41ce-ab9d-e9dd7e3a4da0",
+              "name": "Returns most recent snapshot and current balance for an account",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "accounts",
+                    ":account_number",
+                    "balance-snapshots"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page-offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "per-page",
+                      "value": "250"
+                    },
+                    {
+                      "key": "currency",
+                      "value": "USD"
+                    },
+                    {
+                      "key": "snapshot-date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "time-of-day",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start-date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end-date",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "account_number",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"account-number\": \"string\",\n    \"available-trading-funds\": 4897.669083090566,\n    \"bond-margin-requirement\": 6221.257940206418,\n    \"cash-available-to-withdraw\": 2445.3982917021367,\n    \"cash-balance\": 2584.5935936907836,\n    \"cash-settle-balance\": 3321.041026102891,\n    \"closed-loop-available-balance\": 9983.781768372253,\n    \"cryptocurrency-margin-requirement\": 9588.460951207984,\n    \"currency\": \"string\",\n    \"day-equity-call-value\": 291.6246707530601,\n    \"day-trade-excess\": 8513.437565864011,\n    \"day-trading-buying-power\": 7431.832993329446,\n    \"day-trading-call-value\": 322.3767939231281,\n    \"derivative-buying-power\": 9843.086300854831,\n    \"equity-buying-power\": 7914.814855923498,\n    \"equity-offering-margin-requirement\": 575.4418156568375,\n    \"fixed-income-security-margin-requirement\": 6924.1041187607425,\n    \"futures-margin-requirement\": 3665.4434319983766,\n    \"intraday-equities-cash-amount\": 918.579178190988,\n    \"intraday-equities-cash-effect\": \"string\",\n    \"intraday-equities-cash-effective-date\": \"1979-10-17\",\n    \"intraday-futures-cash-amount\": 3134.5026635571203,\n    \"intraday-futures-cash-effect\": \"string\",\n    \"intraday-futures-cash-effective-date\": \"1969-05-03\",\n    \"long-bond-value\": 8127.723527752413,\n    \"long-cryptocurrency-value\": 9399.980202953171,\n    \"long-derivative-value\": 68.29407607063742,\n    \"long-equity-value\": 9350.437333117727,\n    \"long-fixed-income-security-value\": 1131.5817399372197,\n    \"long-futures-derivative-value\": 8337.83580040595,\n    \"long-futures-value\": 7526.956215137082,\n    \"long-margineable-value\": 709.5180597567119,\n    \"maintenance-call-value\": 5394.724722157192,\n    \"maintenance-requirement\": 126.80469454657396,\n    \"margin-equity\": 1228.800708776263,\n    \"margin-settle-balance\": 257.5850254468115,\n    \"net-liquidating-value\": 8736.501768269152,\n    \"pending-cash\": 3191.8632920112054,\n    \"pending-cash-effect\": \"string\",\n    \"previous-date-cryptocurrency-fiat-effective-date\": \"1963-06-14\",\n    \"previous-day-cryptocurrency-fiat-amount\": 5031.145834605311,\n    \"previous-day-cryptocurrency-fiat-effect\": \"string\",\n    \"reg-t-call-value\": 7871.915719462275,\n    \"short-cryptocurrency-value\": 2413.7736218274954,\n    \"short-derivative-value\": 9262.489010086396,\n    \"short-equity-value\": 7625.344988338879,\n    \"short-futures-derivative-value\": 3012.9519516543755,\n    \"short-futures-value\": 7065.514378664915,\n    \"short-margineable-value\": 8033.879290133469,\n    \"sma-equity-option-buying-power\": 1868.2657128803826,\n    \"special-memorandum-account-apex-adjustment\": 4659.470680807821,\n    \"special-memorandum-account-value\": 4812.740657895701,\n    \"total-settle-balance\": 6791.500009241482,\n    \"unsettled-cryptocurrency-fiat-amount\": 6145.284927896217,\n    \"unsettled-cryptocurrency-fiat-effect\": \"string\",\n    \"used-derivative-buying-power\": 2062.572827670637,\n    \"snapshot-date\": \"1990-05-30\",\n    \"time-of-day\": \"string\"\n  },\n  {\n    \"account-number\": \"string\",\n    \"available-trading-funds\": 9169.580035187819,\n    \"bond-margin-requirement\": 4637.030227792862,\n    \"cash-available-to-withdraw\": 4759.608935840674,\n    \"cash-balance\": 6601.9942836001355,\n    \"cash-settle-balance\": 3873.749609167728,\n    \"closed-loop-available-balance\": 2955.3503555351913,\n    \"cryptocurrency-margin-requirement\": 6377.981543269952,\n    \"currency\": \"string\",\n    \"day-equity-call-value\": 2967.3208040844347,\n    \"day-trade-excess\": 1936.7617957023342,\n    \"day-trading-buying-power\": 8896.824912664571,\n    \"day-trading-call-value\": 9141.869020382457,\n    \"derivative-buying-power\": 2020.2284683362516,\n    \"equity-buying-power\": 2832.1134124186174,\n    \"equity-offering-margin-requirement\": 8458.064606442182,\n    \"fixed-income-security-margin-requirement\": 9329.65643443894,\n    \"futures-margin-requirement\": 5327.530971414458,\n    \"intraday-equities-cash-amount\": 4526.47765629242,\n    \"intraday-equities-cash-effect\": \"string\",\n    \"intraday-equities-cash-effective-date\": \"2017-02-12\",\n    \"intraday-futures-cash-amount\": 7114.837006728018,\n    \"intraday-futures-cash-effect\": \"string\",\n    \"intraday-futures-cash-effective-date\": \"2009-01-08\",\n    \"long-bond-value\": 700.1393818928381,\n    \"long-cryptocurrency-value\": 6773.925535350875,\n    \"long-derivative-value\": 7691.178535947388,\n    \"long-equity-value\": 8120.838031383967,\n    \"long-fixed-income-security-value\": 150.24958596161153,\n    \"long-futures-derivative-value\": 4631.274820239243,\n    \"long-futures-value\": 707.1723661850226,\n    \"long-margineable-value\": 9165.064010427566,\n    \"maintenance-call-value\": 2144.884868374247,\n    \"maintenance-requirement\": 3779.2392655674066,\n    \"margin-equity\": 5161.736450406431,\n    \"margin-settle-balance\": 6031.682883593118,\n    \"net-liquidating-value\": 6980.151415790584,\n    \"pending-cash\": 8459.16161354649,\n    \"pending-cash-effect\": \"string\",\n    \"previous-date-cryptocurrency-fiat-effective-date\": \"1973-05-06\",\n    \"previous-day-cryptocurrency-fiat-amount\": 7256.984413570124,\n    \"previous-day-cryptocurrency-fiat-effect\": \"string\",\n    \"reg-t-call-value\": 3228.165653684947,\n    \"short-cryptocurrency-value\": 3074.9660501523144,\n    \"short-derivative-value\": 9886.481091282243,\n    \"short-equity-value\": 8018.704684600751,\n    \"short-futures-derivative-value\": 3531.5156989000975,\n    \"short-futures-value\": 4265.734905604468,\n    \"short-margineable-value\": 8046.377038235941,\n    \"sma-equity-option-buying-power\": 6506.462018273629,\n    \"special-memorandum-account-apex-adjustment\": 571.3172504020202,\n    \"special-memorandum-account-value\": 1327.86968121142,\n    \"total-settle-balance\": 6955.753419023016,\n    \"unsettled-cryptocurrency-fiat-amount\": 6698.136956697648,\n    \"unsettled-cryptocurrency-fiat-effect\": \"string\",\n    \"used-derivative-buying-power\": 2694.4509289937923,\n    \"snapshot-date\": \"1949-03-27\",\n    \"time-of-day\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "//api.tastyworks.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "3833bc50-4101-4ae3-a5a8-bdb68717fcfb",
+    "name": "Account Status accounts balance-snapshots API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Operations about accounts",
+      "type": "text/plain"
+    }
+  }
+}

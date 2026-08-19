@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts Simulate Trade API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Simulate Trade",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Simulate a trade",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/simulate-trade",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Returns historical prices for a trade"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,94 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Account Status accounts user-watchlists API",
+    "version": "7.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "user-watchlists",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getWatchlists",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/watchlists"
+          },
+          "docs": "Returns a list of all watchlists for the given account"
+        },
+        {
+          "info": {
+            "name": "postWatchlists",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/watchlists"
+          },
+          "docs": "Create an account watchlist"
+        },
+        {
+          "info": {
+            "name": "getWatchlistsWatchlistName",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/watchlists/:watchlist_name",
+            "params": [
+              {
+                "name": "watchlist_name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns a requested account watchlist"
+        },
+        {
+          "info": {
+            "name": "putWatchlistsWatchlistName",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/watchlists/:watchlist_name",
+            "params": [
+              {
+                "name": "watchlist_name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Replace all properties of an account watchlist"
+        },
+        {
+          "info": {
+            "name": "deleteWatchlistsWatchlistName",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/watchlists/:watchlist_name",
+            "params": [
+              {
+                "name": "watchlist_name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a watchlist for the given account"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
