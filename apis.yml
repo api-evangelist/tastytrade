@@ -73,6 +73,13 @@ apis:
   - WebSocket
   - Streaming
   - Account Updates
+  - Order
+  - Positions
+  - Real-Time
+  tags_raw:
+  - WebSocket
+  - Streaming
+  - Account Updates
   - Orders
   - Positions
   - Real-Time
@@ -87,6 +94,8 @@ apis:
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
   tags:
+  - Account
+  tags_raw:
   - accounts
   properties:
   - type: OpenAPI
@@ -274,6 +283,8 @@ apis:
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
   tags:
+  - Customers
+  tags_raw:
   - customers
   properties:
   - type: OpenAPI
@@ -336,6 +347,8 @@ apis:
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
   tags:
+  - Instruments
+  tags_raw:
   - instruments
   properties:
   - type: OpenAPI
@@ -554,6 +567,8 @@ apis:
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
   tags:
+  - Option Chains
+  tags_raw:
   - option-chains
   properties:
   - type: OpenAPI
@@ -585,6 +600,8 @@ apis:
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
   tags:
+  - Order
+  tags_raw:
   - orders
   properties:
   - type: OpenAPI
@@ -647,6 +664,8 @@ apis:
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
   tags:
+  - Positions
+  tags_raw:
   - positions
   properties:
   - type: OpenAPI
@@ -866,6 +885,8 @@ apis:
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
   tags:
+  - Transaction
+  tags_raw:
   - transactions
   properties:
   - type: OpenAPI
