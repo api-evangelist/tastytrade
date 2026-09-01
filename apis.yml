@@ -359,7 +359,7 @@ apis:
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
   tags:
-  - instruments
+  - Instruments
   tags_raw:
   - instruments
   properties:
@@ -579,7 +579,7 @@ apis:
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
   tags:
-  - option-chains
+  - Option Chains
   tags_raw:
   - option-chains
   properties:
@@ -676,7 +676,7 @@ apis:
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
   tags:
-  - positions
+  - Positions
   tags_raw:
   - positions
   properties:
