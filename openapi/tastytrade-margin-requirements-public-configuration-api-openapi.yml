@@ -1,11 +1,10 @@
-swagger: '2.0'
+openapi: 3.2.0
 info:
-  title: Account Status accounts margin-requirements-public-configuration API
-  version: 7.1.0
-  description: Operations about accounts
-host: api.tastyworks.com
-produces:
-- application/json
+  title: Risk Parameters Margin Requirements Public Configuration API
+  version: 3.60.0
+  description: Operations about margin-requirements-public-configurations
+servers:
+- url: https://api.tastyworks.com
 tags:
 - name: margin-requirements-public-configuration
   description: Operations about margin-requirements-public-configurations
@@ -13,22 +12,25 @@ paths:
   /margin-requirements-public-configuration:
     get:
       description: Publicly accessible, read only margin configuration
-      produces:
-      - application/json
       responses:
         '200':
           description: Publicly accessible, read only margin configuration
-          schema:
-            $ref: '#/definitions/MarginRequirementsGlobalConfiguration'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MarginRequirementsGlobalConfiguration'
       tags:
       - margin-requirements-public-configuration
       operationId: getMarginRequirementsPublicConfiguration
-definitions:
-  MarginRequirementsGlobalConfiguration:
-    type: object
-    properties:
-      risk-free-rate:
-        description: ''
-        type: number
-        format: double
-    description: MarginRequirementsGlobalConfiguration model
+      summary: Get margin requirements public configuration
+      x-summary-source: derived
+components:
+  schemas:
+    MarginRequirementsGlobalConfiguration:
+      type: object
+      properties:
+        risk-free-rate:
+          description: ''
+          type: number
+          format: double
+      description: MarginRequirementsGlobalConfiguration model

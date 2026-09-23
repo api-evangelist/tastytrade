@@ -1,11 +1,10 @@
-swagger: '2.0'
+openapi: 3.2.0
 info:
-  title: Account Status accounts user-watchlists API
-  version: 7.1.0
-  description: Operations about accounts
-host: api.tastyworks.com
-produces:
-- application/json
+  title: User Watchlists API
+  version: 2.2.0
+  description: Allows an API client to fetch a user's watchlists.
+servers:
+- url: https://api.tastyworks.com
 tags:
 - name: user-watchlists
   description: Allows an API client to fetch a user's watchlists.
@@ -13,179 +12,190 @@ paths:
   /watchlists:
     post:
       description: Create an account watchlist
-      produces:
-      - application/json
-      consumes:
-      - application/json
-      parameters:
-      - name: postWatchlists
-        in: body
-        required: true
-        schema:
-          $ref: '#/definitions/postWatchlists'
       responses:
         '201':
           description: Create an account watchlist
-          schema:
-            $ref: '#/definitions/Watchlist'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Watchlist'
       tags:
       - user-watchlists
       operationId: postWatchlists
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/postWatchlists'
+        required: true
+      summary: Post watchlists
+      x-summary-source: derived
     get:
       description: Returns a list of all watchlists for the given account
-      produces:
-      - application/json
       responses:
         '200':
           description: Returns a list of all watchlists for the given account
-          schema:
-            type: array
-            items:
-              $ref: '#/definitions/Watchlist'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Watchlist'
       tags:
       - user-watchlists
       operationId: getWatchlists
+      summary: Get watchlists
+      x-summary-source: derived
   /watchlists/{watchlist_name}:
     put:
       description: Replace all properties of an account watchlist
-      produces:
-      - application/json
-      consumes:
-      - application/json
       parameters:
       - in: path
         name: watchlist_name
-        type: string
-        required: true
-      - name: putWatchlistsWatchlistName
-        in: body
         required: true
         schema:
-          $ref: '#/definitions/putWatchlistsWatchlistName'
+          type: string
       responses:
         '200':
           description: Replace all properties of an account watchlist
-          schema:
-            $ref: '#/definitions/Watchlist'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Watchlist'
       tags:
       - user-watchlists
       operationId: putWatchlistsWatchlistName
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/putWatchlistsWatchlistName'
+        required: true
+      summary: Put watchlists watchlist name
+      x-summary-source: derived
     delete:
       description: Delete a watchlist for the given account
-      produces:
-      - application/json
       parameters:
       - in: path
         name: watchlist_name
-        type: string
         required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Delete a watchlist for the given account
-          schema:
-            $ref: '#/definitions/Watchlist'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Watchlist'
       tags:
       - user-watchlists
       operationId: deleteWatchlistsWatchlistName
+      summary: Delete watchlists watchlist name
+      x-summary-source: derived
     get:
       description: Returns a requested account watchlist
-      produces:
-      - application/json
       parameters:
       - in: path
         name: watchlist_name
-        type: string
         required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Returns a requested account watchlist
-          schema:
-            $ref: '#/definitions/Watchlist'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Watchlist'
       tags:
       - user-watchlists
       operationId: getWatchlistsWatchlistName
-definitions:
-  putWatchlistsWatchlistName:
-    type: object
-    properties:
-      name:
-        type: string
-        description: The watchlist name
-      group-name:
-        type: string
-        description: The group to which this watchlist belongs to
-      order-index:
-        type: integer
-        format: int32
-        description: The order index of the watchlist
-        default: 9999
-      watchlist-entries:
-        type: array
-        description: The instruments being watched
-        items:
+      summary: Get watchlists watchlist name
+      x-summary-source: derived
+components:
+  schemas:
+    Watchlist:
+      type: object
+      properties:
+        name:
+          description: ''
+          type: string
+        watchlist-entries:
+          description: ''
           type: object
-          properties:
-            symbol:
-              type: string
-              description: The instrument symbol
-            instrument-type:
-              type: string
-              description: The instrument type
-          required:
-          - symbol
-    required:
-    - name
-    - watchlist-entries
-    description: Replace all properties of an account watchlist
-  postWatchlists:
-    type: object
-    properties:
-      name:
-        type: string
-        description: The watchlist name
-      group-name:
-        type: string
-        description: The group to which this watchlist belongs to
-      order-index:
-        type: integer
-        format: int32
-        description: The order index of the watchlist
-        default: 9999
-      watchlist-entries:
-        type: array
-        description: The instruments being watched
-        items:
-          type: object
-          properties:
-            symbol:
-              type: string
-              description: The instrument symbol
-            instrument-type:
-              type: string
-              description: The instrument type
-          required:
-          - symbol
-    required:
-    - name
-    - watchlist-entries
-    description: Create an account watchlist
-  Watchlist:
-    type: object
-    properties:
-      name:
-        description: ''
-        type: string
-      watchlist-entries:
-        description: ''
-        type: object
-      cms-id:
-        description: ''
-        type: string
-      group-name:
-        description: ''
-        type: string
-      order-index:
-        description: ''
-        type: integer
-        format: int32
-    description: Watchlist model
+        cms-id:
+          description: ''
+          type: string
+        group-name:
+          description: ''
+          type: string
+        order-index:
+          description: ''
+          type: integer
+          format: int32
+      description: Watchlist model
+    postWatchlists:
+      type: object
+      properties:
+        name:
+          type: string
+          description: The watchlist name
+        group-name:
+          type: string
+          description: The group to which this watchlist belongs to
+        order-index:
+          type: integer
+          format: int32
+          description: The order index of the watchlist
+          default: 9999
+        watchlist-entries:
+          type: array
+          description: The instruments being watched
+          items:
+            type: object
+            properties:
+              symbol:
+                type: string
+                description: The instrument symbol
+              instrument-type:
+                type: string
+                description: The instrument type
+            required:
+            - symbol
+      required:
+      - name
+      - watchlist-entries
+      description: Create an account watchlist
+    putWatchlistsWatchlistName:
+      type: object
+      properties:
+        name:
+          type: string
+          description: The watchlist name
+        group-name:
+          type: string
+          description: The group to which this watchlist belongs to
+        order-index:
+          type: integer
+          format: int32
+          description: The order index of the watchlist
+          default: 9999
+        watchlist-entries:
+          type: array
+          description: The instruments being watched
+          items:
+            type: object
+            properties:
+              symbol:
+                type: string
+                description: The instrument symbol
+              instrument-type:
+                type: string
+                description: The instrument type
+            required:
+            - symbol
+      required:
+      - name
+      - watchlist-entries
+      description: Replace all properties of an account watchlist
