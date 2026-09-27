@@ -95,17 +95,6 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    DividendInfo:
-      type: object
-      properties:
-        occurred-date:
-          description: Date of dividend
-          type: string
-          format: date
-        amount:
-          description: Per share amount
-          type: number
-          format: float
     EarningsInfo:
       type: object
       properties:
@@ -172,3 +161,14 @@ components:
                 type: number
                 format: double
       description: Includes underlying volatility and liquidity data as well as option volatility data.
+    DividendInfo:
+      type: object
+      properties:
+        occurred-date:
+          description: Date of dividend
+          type: string
+          format: date
+        amount:
+          description: Per share amount
+          type: number
+          format: float

@@ -43,6 +43,7 @@ tags:
   - Crypto
   - Market Data
   - WebSocket
+  - Investing
 tags_raw:
   - Finance
   - Brokerage
@@ -53,6 +54,7 @@ tags_raw:
   - Crypto
   - Market Data
   - WebSocket
+  - Investing
 url: https://raw.githubusercontent.com/api-evangelist/tastytrade/refs/heads/main/apis.yml
 created: "2026-06-13"
 modified: "2026-06-13"
@@ -111,7 +113,7 @@ apis:
   - type: GettingStarted
     url: https://developer.tastytrade.com/streaming-account-data/
 - aid: tastytrade:tastytrade-accounts-api
-  name: tastytrade accounts API
+  name: tastytrade Accounts API
   description: Operations about accounts
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
@@ -144,7 +146,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-api-quote-tokens-api
-  name: tastytrade api-quote-tokens API
+  name: tastytrade API Quote Tokens API
   description: Operations about api-quote-tokens
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
@@ -237,7 +239,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-balance-snapshots-api
-  name: tastytrade balance-snapshots API
+  name: tastytrade Balance Snapshots API
   description: Operations about balance-snapshots
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
@@ -268,7 +270,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-complex-orders-api
-  name: tastytrade complex-orders API
+  name: tastytrade Complex Orders API
   description: >-
     Allows an API client to retreive information about complex orders on a per account basis.
   humanURL: https://developer.tastytrade.com/
@@ -300,7 +302,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-customers-api
-  name: tastytrade customers API
+  name: tastytrade Customers API
   description: Operations about customers
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
@@ -333,7 +335,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-futures-option-chains-api
-  name: tastytrade futures-option-chains API
+  name: tastytrade Futures Option Chains API
   description: Operations about futures-option-chains
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
@@ -364,7 +366,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-instruments-api
-  name: tastytrade instruments API
+  name: tastytrade Instruments API
   description: Operations about instruments
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
@@ -397,7 +399,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-margin-requirements-api
-  name: tastytrade margin-requirements API
+  name: tastytrade Margin Requirements API
   description: allows a client to fetch margin-requirements for positions and orders
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
@@ -428,7 +430,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-margin-requirements-public-configuration-api
-  name: tastytrade margin-requirements-public-configuration API
+  name: tastytrade Margin Requirements Public Configuration API
   description: Operations about margin-requirements-public-configurations
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
@@ -459,7 +461,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-market-data-controller-api
-  name: tastytrade market-data-controller API
+  name: tastytrade Market Data Controller API
   description: >-
     The market-data-controller API from tastytrade — 1 operation(s) for market-data-controller.
   humanURL: https://developer.tastytrade.com/
@@ -522,7 +524,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-market-time-api
-  name: tastytrade market-time API
+  name: tastytrade Market Time API
   description: Operations about market-times
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
@@ -553,7 +555,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-net-liq-controller-api
-  name: tastytrade net-liq-controller API
+  name: tastytrade Net Liq Controller API
   description: The net-liq-controller API from tastytrade — 1 operation(s) for net-liq-controller.
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
@@ -584,7 +586,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-option-chains-api
-  name: tastytrade option-chains API
+  name: tastytrade Option Chains API
   description: Operations about option-chains
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
@@ -617,7 +619,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-orders-api
-  name: tastytrade orders API
+  name: tastytrade Orders API
   description: Allows an API client to view, filter, create, cancel and replace orders.
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
@@ -650,7 +652,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-pairs-watchlists-api
-  name: tastytrade pairs-watchlists API
+  name: tastytrade Pairs Watchlists API
   description: Allows an API client to fetch pairs watchlists.
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
@@ -681,7 +683,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-positions-api
-  name: tastytrade positions API
+  name: tastytrade Positions API
   description: Operations about positions
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
@@ -714,7 +716,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-public-watchlists-api
-  name: tastytrade public-watchlists API
+  name: tastytrade Public Watchlists API
   description: Allows an API client to fetch tastyworks watchlists.
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
@@ -745,7 +747,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-quote-alerts-api
-  name: tastytrade quote-alerts API
+  name: tastytrade Quote Alerts API
   description: Operations about quote-alerts
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
@@ -807,7 +809,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-span-api
-  name: tastytrade span API
+  name: tastytrade Span API
   description: Operations about spans
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
@@ -869,7 +871,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-trading-status-api
-  name: tastytrade trading-status API
+  name: tastytrade Trading Status API
   description: >-
     Allows an API client to request information about the basic trade status of an account. \
                               This includes information about the strategies an account can trade.
@@ -902,7 +904,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-transactions-api
-  name: tastytrade transactions API
+  name: tastytrade Transactions API
   description: Operations about transactions
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com
@@ -935,7 +937,7 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 - aid: tastytrade:tastytrade-user-watchlists-api
-  name: tastytrade user-watchlists API
+  name: tastytrade User Watchlists API
   description: Allows an API client to fetch a user's watchlists.
   humanURL: https://developer.tastytrade.com/
   baseURL: https://api.tastyworks.com

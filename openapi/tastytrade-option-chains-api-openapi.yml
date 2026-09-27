@@ -81,65 +81,6 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    CompactOptionChainSerializer:
-      type: object
-      properties:
-        underlying-symbol:
-          description: ''
-          type: string
-        root-symbol:
-          description: ''
-          type: string
-        option-chain-type:
-          description: ''
-          type: string
-        settlement-type:
-          description: ''
-          type: string
-        shares-per-contract:
-          description: ''
-          type: integer
-          format: int32
-        expiration-type:
-          description: ''
-          type: string
-        deliverables:
-          description: ''
-          type: object
-          properties:
-            id:
-              description: ''
-              type: integer
-              format: int32
-            amount:
-              description: ''
-              type: number
-              format: double
-            deliverable-type:
-              description: ''
-              type: string
-            description:
-              description: ''
-              type: string
-            instrument-type:
-              description: ''
-              type: string
-            percent:
-              description: ''
-              type: string
-            root-symbol:
-              description: ''
-              type: string
-            symbol:
-              description: ''
-              type: string
-        symbols:
-          description: ''
-          type: string
-        streamer-symbols:
-          description: ''
-          type: string
-      description: CompactOptionChainSerializer model
     NestedOptionChainSerializer:
       type: object
       properties:
@@ -317,3 +258,62 @@ components:
           description: ''
           type: string
       description: EquityOption model
+    CompactOptionChainSerializer:
+      type: object
+      properties:
+        underlying-symbol:
+          description: ''
+          type: string
+        root-symbol:
+          description: ''
+          type: string
+        option-chain-type:
+          description: ''
+          type: string
+        settlement-type:
+          description: ''
+          type: string
+        shares-per-contract:
+          description: ''
+          type: integer
+          format: int32
+        expiration-type:
+          description: ''
+          type: string
+        deliverables:
+          description: ''
+          type: object
+          properties:
+            id:
+              description: ''
+              type: integer
+              format: int32
+            amount:
+              description: ''
+              type: number
+              format: double
+            deliverable-type:
+              description: ''
+              type: string
+            description:
+              description: ''
+              type: string
+            instrument-type:
+              description: ''
+              type: string
+            percent:
+              description: ''
+              type: string
+            root-symbol:
+              description: ''
+              type: string
+            symbol:
+              description: ''
+              type: string
+        symbols:
+          description: ''
+          type: string
+        streamer-symbols:
+          description: ''
+          type: string
+      description: CompactOptionChainSerializer model

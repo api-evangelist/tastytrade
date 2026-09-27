@@ -115,26 +115,6 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    Watchlist:
-      type: object
-      properties:
-        name:
-          description: ''
-          type: string
-        watchlist-entries:
-          description: ''
-          type: object
-        cms-id:
-          description: ''
-          type: string
-        group-name:
-          description: ''
-          type: string
-        order-index:
-          description: ''
-          type: integer
-          format: int32
-      description: Watchlist model
     postWatchlists:
       type: object
       properties:
@@ -199,3 +179,23 @@ components:
       - name
       - watchlist-entries
       description: Replace all properties of an account watchlist
+    Watchlist:
+      type: object
+      properties:
+        name:
+          description: ''
+          type: string
+        watchlist-entries:
+          description: ''
+          type: object
+        cms-id:
+          description: ''
+          type: string
+        group-name:
+          description: ''
+          type: string
+        order-index:
+          description: ''
+          type: integer
+          format: int32
+      description: Watchlist model
