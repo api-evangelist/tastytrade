@@ -95,17 +95,6 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    EarningsInfo:
-      type: object
-      properties:
-        occurred-date:
-          description: Date of earnings announcement
-          type: string
-          format: date
-        eps:
-          description: Earnings per share amount
-          type: number
-          format: float
     MarketMetricInfo:
       type: object
       properties:
@@ -170,5 +159,16 @@ components:
           format: date
         amount:
           description: Per share amount
+          type: number
+          format: float
+    EarningsInfo:
+      type: object
+      properties:
+        occurred-date:
+          description: Date of earnings announcement
+          type: string
+          format: date
+        eps:
+          description: Earnings per share amount
           type: number
           format: float

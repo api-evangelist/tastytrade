@@ -306,146 +306,6 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    NextSession:
-      type: object
-      properties:
-        close-at:
-          description: ''
-          type: string
-          format: date-time
-        close-at-ext:
-          description: ''
-          type: string
-          format: date-time
-        instrument-collection:
-          description: ''
-          type: string
-        open-at:
-          description: ''
-          type: string
-          format: date-time
-        session-date:
-          description: ''
-          type: string
-          format: date
-        start-at:
-          description: ''
-          type: string
-          format: date-time
-      description: NextSession model
-    CurrentSession:
-      type: object
-      properties:
-        close-at:
-          description: ''
-          type: string
-          format: date-time
-        close-at-ext:
-          description: ''
-          type: string
-          format: date-time
-        instrument-collection:
-          description: ''
-          type: string
-        open-at:
-          description: ''
-          type: string
-          format: date-time
-        start-at:
-          description: ''
-          type: string
-          format: date-time
-        next-session:
-          description: ''
-          type: object
-          properties:
-            close-at:
-              description: ''
-              type: string
-              format: date-time
-            close-at-ext:
-              description: ''
-              type: string
-              format: date-time
-            instrument-collection:
-              description: ''
-              type: string
-            open-at:
-              description: ''
-              type: string
-              format: date-time
-            session-date:
-              description: ''
-              type: string
-              format: date
-            start-at:
-              description: ''
-              type: string
-              format: date-time
-        previous-session:
-          description: ''
-          type: object
-          properties:
-            close-at:
-              description: ''
-              type: string
-              format: date-time
-            close-at-ext:
-              description: ''
-              type: string
-              format: date-time
-            instrument-collection:
-              description: ''
-              type: string
-            open-at:
-              description: ''
-              type: string
-              format: date-time
-            session-date:
-              description: ''
-              type: string
-              format: date
-            start-at:
-              description: ''
-              type: string
-              format: date-time
-        state:
-          description: ''
-          type: string
-      description: CurrentSession model
-    MarketCalendarDeserializer:
-      type: object
-      properties:
-        market-half-days:
-          description: ''
-          type: object
-        market-holidays:
-          description: ''
-          type: object
-      description: MarketCalendarDeserializer model
-    SimpleSessionDeserializer:
-      type: object
-      properties:
-        close-at:
-          description: ''
-          type: string
-          format: date-time
-        close-at-ext:
-          description: ''
-          type: string
-          format: date-time
-        instrument-collection:
-          description: ''
-          type: string
-        open-at:
-          description: ''
-          type: string
-          format: date-time
-        start-at:
-          description: ''
-          type: string
-          format: date-time
-      description: SimpleSessionDeserializer model
     CurrentSessionDeserializer:
       type: object
       properties:
@@ -526,6 +386,119 @@ components:
           description: ''
           type: string
       description: CurrentSessionDeserializer model
+    CurrentSession:
+      type: object
+      properties:
+        close-at:
+          description: ''
+          type: string
+          format: date-time
+        close-at-ext:
+          description: ''
+          type: string
+          format: date-time
+        instrument-collection:
+          description: ''
+          type: string
+        open-at:
+          description: ''
+          type: string
+          format: date-time
+        start-at:
+          description: ''
+          type: string
+          format: date-time
+        next-session:
+          description: ''
+          type: object
+          properties:
+            close-at:
+              description: ''
+              type: string
+              format: date-time
+            close-at-ext:
+              description: ''
+              type: string
+              format: date-time
+            instrument-collection:
+              description: ''
+              type: string
+            open-at:
+              description: ''
+              type: string
+              format: date-time
+            session-date:
+              description: ''
+              type: string
+              format: date
+            start-at:
+              description: ''
+              type: string
+              format: date-time
+        previous-session:
+          description: ''
+          type: object
+          properties:
+            close-at:
+              description: ''
+              type: string
+              format: date-time
+            close-at-ext:
+              description: ''
+              type: string
+              format: date-time
+            instrument-collection:
+              description: ''
+              type: string
+            open-at:
+              description: ''
+              type: string
+              format: date-time
+            session-date:
+              description: ''
+              type: string
+              format: date
+            start-at:
+              description: ''
+              type: string
+              format: date-time
+        state:
+          description: ''
+          type: string
+      description: CurrentSession model
+    SimpleSessionDeserializer:
+      type: object
+      properties:
+        close-at:
+          description: ''
+          type: string
+          format: date-time
+        close-at-ext:
+          description: ''
+          type: string
+          format: date-time
+        instrument-collection:
+          description: ''
+          type: string
+        open-at:
+          description: ''
+          type: string
+          format: date-time
+        start-at:
+          description: ''
+          type: string
+          format: date-time
+      description: SimpleSessionDeserializer model
+    MarketCalendarDeserializer:
+      type: object
+      properties:
+        market-half-days:
+          description: ''
+          type: object
+        market-holidays:
+          description: ''
+          type: object
+      description: MarketCalendarDeserializer model
     PreviousSession:
       type: object
       properties:
@@ -553,3 +526,30 @@ components:
           type: string
           format: date-time
       description: PreviousSession model
+    NextSession:
+      type: object
+      properties:
+        close-at:
+          description: ''
+          type: string
+          format: date-time
+        close-at-ext:
+          description: ''
+          type: string
+          format: date-time
+        instrument-collection:
+          description: ''
+          type: string
+        open-at:
+          description: ''
+          type: string
+          format: date-time
+        session-date:
+          description: ''
+          type: string
+          format: date
+        start-at:
+          description: ''
+          type: string
+          format: date-time
+      description: NextSession model

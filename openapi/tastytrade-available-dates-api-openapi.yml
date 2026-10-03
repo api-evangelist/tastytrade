@@ -30,6 +30,11 @@ paths:
       tags:
       - Available Dates
 components:
+  responses:
+    '500':
+      description: Failed to process request
+    '400':
+      description: Request included malformed input
   schemas:
     AvailableSymbolDates:
       type: object
@@ -40,8 +45,3 @@ components:
           type: string
         endDate:
           type: string
-  responses:
-    '500':
-      description: Failed to process request
-    '400':
-      description: Request included malformed input

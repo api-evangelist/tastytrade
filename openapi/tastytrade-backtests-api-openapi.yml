@@ -122,84 +122,14 @@ paths:
       tags:
       - Backtests
 components:
+  responses:
+    '400':
+      description: Request included malformed input
+    '404':
+      description: Backtest not found
+    '500':
+      description: Failed to process request
   schemas:
-    EntryConditions:
-      type: object
-      properties:
-        frequency:
-          type:
-          - string
-          - 'null'
-          enum:
-          - every day
-          - on specific days of the week
-          - on exact days to expiration match
-        specificDays:
-          type:
-          - array
-          - 'null'
-          items:
-            type: integer
-        maximumActiveTrials:
-          type:
-          - integer
-          - 'null'
-        maximumActiveTrialsBehavior:
-          type:
-          - string
-          - 'null'
-          enum:
-          - don't enter
-          - close oldest
-        minimumVIX:
-          type:
-          - integer
-          - 'null'
-        maximumVIX:
-          type:
-          - integer
-          - 'null'
-    ExitConditions:
-      type: object
-      properties:
-        takeProfitPercentage:
-          type:
-          - integer
-          - 'null'
-        stopLossPercentage:
-          type:
-          - integer
-          - 'null'
-        afterDaysInTrade:
-          type:
-          - integer
-          - 'null'
-        atDaysToExpiration:
-          type:
-          - integer
-          - 'null'
-        minimumVIX:
-          type:
-          - integer
-          - 'null'
-    Snapshot:
-      type: object
-      properties:
-        dateTime:
-          type: string
-        profitLoss:
-          type: number
-        underlyingPrice:
-          type: number
-    Trial:
-      type: object
-      properties:
-        openDateTime:
-          type: string
-        closeDateTime:
-          type: string
-        profitLoss:
-          type: number
     BacktestPost:
       type: object
       properties:
@@ -342,10 +272,80 @@ components:
         daysUntilExpiration:
           type: integer
           description: Days until expiration for this leg
-  responses:
-    '404':
-      description: Backtest not found
-    '400':
-      description: Request included malformed input
-    '500':
-      description: Failed to process request
+    Trial:
+      type: object
+      properties:
+        openDateTime:
+          type: string
+        closeDateTime:
+          type: string
+        profitLoss:
+          type: number
+    EntryConditions:
+      type: object
+      properties:
+        frequency:
+          type:
+          - string
+          - 'null'
+          enum:
+          - every day
+          - on specific days of the week
+          - on exact days to expiration match
+        specificDays:
+          type:
+          - array
+          - 'null'
+          items:
+            type: integer
+        maximumActiveTrials:
+          type:
+          - integer
+          - 'null'
+        maximumActiveTrialsBehavior:
+          type:
+          - string
+          - 'null'
+          enum:
+          - don't enter
+          - close oldest
+        minimumVIX:
+          type:
+          - integer
+          - 'null'
+        maximumVIX:
+          type:
+          - integer
+          - 'null'
+    ExitConditions:
+      type: object
+      properties:
+        takeProfitPercentage:
+          type:
+          - integer
+          - 'null'
+        stopLossPercentage:
+          type:
+          - integer
+          - 'null'
+        afterDaysInTrade:
+          type:
+          - integer
+          - 'null'
+        atDaysToExpiration:
+          type:
+          - integer
+          - 'null'
+        minimumVIX:
+          type:
+          - integer
+          - 'null'
+    Snapshot:
+      type: object
+      properties:
+        dateTime:
+          type: string
+        profitLoss:
+          type: number
+        underlyingPrice:
+          type: number

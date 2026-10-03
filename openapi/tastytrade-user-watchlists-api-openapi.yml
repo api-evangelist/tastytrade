@@ -115,38 +115,26 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    postWatchlists:
+    Watchlist:
       type: object
       properties:
         name:
+          description: ''
           type: string
-          description: The watchlist name
+        watchlist-entries:
+          description: ''
+          type: object
+        cms-id:
+          description: ''
+          type: string
         group-name:
+          description: ''
           type: string
-          description: The group to which this watchlist belongs to
         order-index:
+          description: ''
           type: integer
           format: int32
-          description: The order index of the watchlist
-          default: 9999
-        watchlist-entries:
-          type: array
-          description: The instruments being watched
-          items:
-            type: object
-            properties:
-              symbol:
-                type: string
-                description: The instrument symbol
-              instrument-type:
-                type: string
-                description: The instrument type
-            required:
-            - symbol
-      required:
-      - name
-      - watchlist-entries
-      description: Create an account watchlist
+      description: Watchlist model
     putWatchlistsWatchlistName:
       type: object
       properties:
@@ -179,23 +167,35 @@ components:
       - name
       - watchlist-entries
       description: Replace all properties of an account watchlist
-    Watchlist:
+    postWatchlists:
       type: object
       properties:
         name:
-          description: ''
           type: string
-        watchlist-entries:
-          description: ''
-          type: object
-        cms-id:
-          description: ''
-          type: string
+          description: The watchlist name
         group-name:
-          description: ''
           type: string
+          description: The group to which this watchlist belongs to
         order-index:
-          description: ''
           type: integer
           format: int32
-      description: Watchlist model
+          description: The order index of the watchlist
+          default: 9999
+        watchlist-entries:
+          type: array
+          description: The instruments being watched
+          items:
+            type: object
+            properties:
+              symbol:
+                type: string
+                description: The instrument symbol
+              instrument-type:
+                type: string
+                description: The instrument type
+            required:
+            - symbol
+      required:
+      - name
+      - watchlist-entries
+      description: Create an account watchlist
