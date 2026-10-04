@@ -92,6 +92,44 @@ components:
           - Liquidity Pool
           - Mutual Fund
           - Unknown
+    Instrument:
+      type: object
+      properties:
+        symbol:
+          type: string
+        instrumentType:
+          type: string
+          enum:
+          - Bond
+          - Cryptocurrency
+          - Equity
+          - Equity Offering
+          - Equity Option
+          - Fixed Income Security
+          - Future
+          - Future Option
+          - Index
+          - Liquidity Pool
+          - Mutual Fund
+          - Unknown
+        instrumentKey:
+          $ref: '#/components/schemas/InstrumentKey'
+        underlyingInstrument:
+          $ref: '#/components/schemas/Instrument'
+        rootSymbol:
+          type: string
+        exchange:
+          type: string
+          enum:
+          - EQUITY
+          - SMALLS
+          - CME
+          - CFE
+          - CBOED
+          - BOND
+          - CRYPTOCURRENCY
+          - EQUITY_OFFERING
+          - UNKNOWN
     MarketData:
       type: object
       properties:
@@ -238,41 +276,3 @@ components:
           deprecated: true
         instrument:
           $ref: '#/components/schemas/Instrument'
-    Instrument:
-      type: object
-      properties:
-        symbol:
-          type: string
-        instrumentType:
-          type: string
-          enum:
-          - Bond
-          - Cryptocurrency
-          - Equity
-          - Equity Offering
-          - Equity Option
-          - Fixed Income Security
-          - Future
-          - Future Option
-          - Index
-          - Liquidity Pool
-          - Mutual Fund
-          - Unknown
-        instrumentKey:
-          $ref: '#/components/schemas/InstrumentKey'
-        underlyingInstrument:
-          $ref: '#/components/schemas/Instrument'
-        rootSymbol:
-          type: string
-        exchange:
-          type: string
-          enum:
-          - EQUITY
-          - SMALLS
-          - CME
-          - CFE
-          - CBOED
-          - BOND
-          - CRYPTOCURRENCY
-          - EQUITY_OFFERING
-          - UNKNOWN

@@ -122,91 +122,16 @@ paths:
       tags:
       - Backtests
 components:
-  responses:
-    '400':
-      description: Request included malformed input
-    '404':
-      description: Backtest not found
-    '500':
-      description: Failed to process request
   schemas:
-    BacktestPost:
+    Trial:
       type: object
       properties:
-        symbol:
+        openDateTime:
           type: string
-        startDate:
+        closeDateTime:
           type: string
-          format: date
-        endDate:
-          type: string
-          format: date
-        legs:
-          type: array
-          items:
-            type: object
-            allOf:
-            - $ref: '#/components/schemas/Leg'
-        entryConditions:
-          allOf:
-          - $ref: '#/components/schemas/EntryConditions'
-        exitConditions:
-          allOf:
-          - $ref: '#/components/schemas/ExitConditions'
-    BacktestGet:
-      type: object
-      properties:
-        id:
-          type: string
-        symbol:
-          type: string
-        startDate:
-          type: string
-          format: date
-        endDate:
-          type: string
-          format: date
-        legs:
-          type: array
-          items:
-            type: object
-            allOf:
-            - $ref: '#/components/schemas/Leg'
-        entryConditions:
-          allOf:
-          - $ref: '#/components/schemas/EntryConditions'
-        exitConditions:
-          allOf:
-          - $ref: '#/components/schemas/ExitConditions'
-        ETA:
+        profitLoss:
           type: number
-        progress:
-          type: number
-        status:
-          type: string
-          enum:
-          - pending
-          - running
-          - completed
-        statistics:
-          type: array
-          items:
-            type: object
-        trials:
-          type: array
-          items:
-            allOf:
-            - $ref: '#/components/schemas/Trial'
-        snapshots:
-          type: array
-          items:
-            allOf:
-            - $ref: '#/components/schemas/Snapshot'
-        notices:
-          description: Conditional annotations appearing if specific conditions are met (e.g. overlapping due to stock split)
-          type: array
-          items:
-            type: string
     Leg:
       type: object
       required:
@@ -272,15 +197,115 @@ components:
         daysUntilExpiration:
           type: integer
           description: Days until expiration for this leg
-    Trial:
+    Snapshot:
       type: object
       properties:
-        openDateTime:
-          type: string
-        closeDateTime:
+        dateTime:
           type: string
         profitLoss:
           type: number
+        underlyingPrice:
+          type: number
+    ExitConditions:
+      type: object
+      properties:
+        takeProfitPercentage:
+          type:
+          - integer
+          - 'null'
+        stopLossPercentage:
+          type:
+          - integer
+          - 'null'
+        afterDaysInTrade:
+          type:
+          - integer
+          - 'null'
+        atDaysToExpiration:
+          type:
+          - integer
+          - 'null'
+        minimumVIX:
+          type:
+          - integer
+          - 'null'
+    BacktestGet:
+      type: object
+      properties:
+        id:
+          type: string
+        symbol:
+          type: string
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        legs:
+          type: array
+          items:
+            type: object
+            allOf:
+            - $ref: '#/components/schemas/Leg'
+        entryConditions:
+          allOf:
+          - $ref: '#/components/schemas/EntryConditions'
+        exitConditions:
+          allOf:
+          - $ref: '#/components/schemas/ExitConditions'
+        ETA:
+          type: number
+        progress:
+          type: number
+        status:
+          type: string
+          enum:
+          - pending
+          - running
+          - completed
+        statistics:
+          type: array
+          items:
+            type: object
+        trials:
+          type: array
+          items:
+            allOf:
+            - $ref: '#/components/schemas/Trial'
+        snapshots:
+          type: array
+          items:
+            allOf:
+            - $ref: '#/components/schemas/Snapshot'
+        notices:
+          description: Conditional annotations appearing if specific conditions are met (e.g. overlapping due to stock split)
+          type: array
+          items:
+            type: string
+    BacktestPost:
+      type: object
+      properties:
+        symbol:
+          type: string
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        legs:
+          type: array
+          items:
+            type: object
+            allOf:
+            - $ref: '#/components/schemas/Leg'
+        entryConditions:
+          allOf:
+          - $ref: '#/components/schemas/EntryConditions'
+        exitConditions:
+          allOf:
+          - $ref: '#/components/schemas/ExitConditions'
     EntryConditions:
       type: object
       properties:
@@ -317,35 +342,10 @@ components:
           type:
           - integer
           - 'null'
-    ExitConditions:
-      type: object
-      properties:
-        takeProfitPercentage:
-          type:
-          - integer
-          - 'null'
-        stopLossPercentage:
-          type:
-          - integer
-          - 'null'
-        afterDaysInTrade:
-          type:
-          - integer
-          - 'null'
-        atDaysToExpiration:
-          type:
-          - integer
-          - 'null'
-        minimumVIX:
-          type:
-          - integer
-          - 'null'
-    Snapshot:
-      type: object
-      properties:
-        dateTime:
-          type: string
-        profitLoss:
-          type: number
-        underlyingPrice:
-          type: number
+  responses:
+    '400':
+      description: Request included malformed input
+    '404':
+      description: Backtest not found
+    '500':
+      description: Failed to process request

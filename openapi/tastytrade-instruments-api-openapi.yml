@@ -603,31 +603,6 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    Warrant:
-      type: object
-      properties:
-        active:
-          description: ''
-          type: boolean
-        cusip:
-          description: ''
-          type: string
-        description:
-          description: ''
-          type: string
-        instrument-type:
-          description: ''
-          type: string
-        is-closing-only:
-          description: ''
-          type: boolean
-        listed-market:
-          description: ''
-          type: string
-        symbol:
-          description: ''
-          type: string
-      description: Warrant model
     EquityOption:
       type: object
       properties:
@@ -705,6 +680,193 @@ components:
           description: ''
           type: string
       description: EquityOption model
+    FutureOptionProduct:
+      type: object
+      properties:
+        cash-settled:
+          description: ''
+          type: boolean
+        code:
+          description: ''
+          type: string
+        display-factor:
+          description: ''
+          type: number
+          format: double
+        exchange:
+          description: ''
+          type: string
+        expiration-type:
+          description: ''
+          type: string
+        is-am-settled:
+          description: ''
+          type: boolean
+        itm-rule:
+          description: ''
+          type: string
+        market-sector:
+          description: ''
+          type: string
+        product-subtype:
+          description: ''
+          type: string
+        product-type:
+          description: ''
+          type: string
+        root-symbol:
+          description: ''
+          type: string
+        settlement-delay-days:
+          description: ''
+          type: integer
+          format: int32
+        supported:
+          description: ''
+          type: boolean
+      description: FutureOptionProduct model
+    Equity:
+      type: object
+      properties:
+        active:
+          description: ''
+          type: boolean
+        borrow-rate:
+          description: ''
+          type: number
+          format: double
+        bypass-manual-review:
+          description: ''
+          type: boolean
+        country-of-incorporation:
+          description: ''
+          type: string
+        country-of-taxation:
+          description: ''
+          type: string
+        description:
+          description: ''
+          type: string
+        halted-at:
+          description: ''
+          type: string
+          format: date-time
+        instrument-sub-type:
+          description: ''
+          type: string
+        instrument-type:
+          description: ''
+          type: string
+        is-closing-only:
+          description: ''
+          type: boolean
+        is-etf:
+          description: ''
+          type: boolean
+        is-fractional-quantity-eligible:
+          description: ''
+          type: boolean
+        is-illiquid:
+          description: ''
+          type: boolean
+        is-index:
+          description: ''
+          type: boolean
+        is-options-closing-only:
+          description: ''
+          type: boolean
+        lendability:
+          description: ''
+          type: string
+        listed-market:
+          description: ''
+          type: string
+        market-time-instrument-collection:
+          description: ''
+          type: string
+        overnight-trading-permitted:
+          description: ''
+          type: boolean
+        short-description:
+          description: ''
+          type: string
+        stops-trading-at:
+          description: ''
+          type: string
+          format: date-time
+        streamer-symbol:
+          description: ''
+          type: string
+        symbol:
+          description: ''
+          type: string
+        underlying-product-type:
+          description: ''
+          type: string
+        option-tick-sizes:
+          description: ''
+          type: object
+          properties:
+            symbol:
+              description: ''
+              type: string
+            threshold:
+              description: ''
+              type: number
+              format: double
+            value:
+              description: ''
+              type: number
+              format: double
+        tick-sizes:
+          description: ''
+          type: object
+          properties:
+            symbol:
+              description: ''
+              type: string
+            threshold:
+              description: ''
+              type: number
+              format: double
+            value:
+              description: ''
+              type: number
+              format: double
+      description: Equity model
+    Cryptocurrency:
+      type: object
+      properties:
+        id:
+          description: ''
+          type: integer
+          format: int32
+        active:
+          description: ''
+          type: boolean
+        description:
+          description: ''
+          type: string
+        instrument-type:
+          description: ''
+          type: string
+        is-closing-only:
+          description: ''
+          type: boolean
+        short-description:
+          description: ''
+          type: string
+        streamer-symbol:
+          description: ''
+          type: string
+        symbol:
+          description: ''
+          type: string
+        tick-size:
+          description: ''
+          type: number
+          format: double
+      description: Cryptocurrency model
     QuantityDecimalPrecision:
       type: object
       properties:
@@ -723,6 +885,41 @@ components:
           type: integer
           format: int32
       description: QuantityDecimalPrecision model
+    SearchableInstrumentDeserializer:
+      type: object
+      properties:
+        category:
+          description: ''
+          type: string
+        description:
+          description: ''
+          type: string
+        event-product-external-id:
+          description: ''
+          type: string
+        exchange:
+          description: ''
+          type: string
+        external-id:
+          description: ''
+          type: string
+        instrument-type:
+          description: ''
+          type: string
+        stops-trading-at:
+          description: ''
+          type: string
+          format: date-time
+        symbol:
+          description: ''
+          type: string
+        underlying-product:
+          description: ''
+          type: string
+        underlying-product-type:
+          description: ''
+          type: string
+      description: SearchableInstrumentDeserializer model
     Future:
       type: object
       properties:
@@ -967,207 +1164,6 @@ components:
               type: number
               format: double
       description: Future model
-    FutureOptionProduct:
-      type: object
-      properties:
-        cash-settled:
-          description: ''
-          type: boolean
-        code:
-          description: ''
-          type: string
-        display-factor:
-          description: ''
-          type: number
-          format: double
-        exchange:
-          description: ''
-          type: string
-        expiration-type:
-          description: ''
-          type: string
-        is-am-settled:
-          description: ''
-          type: boolean
-        itm-rule:
-          description: ''
-          type: string
-        market-sector:
-          description: ''
-          type: string
-        product-subtype:
-          description: ''
-          type: string
-        product-type:
-          description: ''
-          type: string
-        root-symbol:
-          description: ''
-          type: string
-        settlement-delay-days:
-          description: ''
-          type: integer
-          format: int32
-        supported:
-          description: ''
-          type: boolean
-      description: FutureOptionProduct model
-    SearchableInstrumentDeserializer:
-      type: object
-      properties:
-        category:
-          description: ''
-          type: string
-        description:
-          description: ''
-          type: string
-        event-product-external-id:
-          description: ''
-          type: string
-        exchange:
-          description: ''
-          type: string
-        external-id:
-          description: ''
-          type: string
-        instrument-type:
-          description: ''
-          type: string
-        stops-trading-at:
-          description: ''
-          type: string
-          format: date-time
-        symbol:
-          description: ''
-          type: string
-        underlying-product:
-          description: ''
-          type: string
-        underlying-product-type:
-          description: ''
-          type: string
-      description: SearchableInstrumentDeserializer model
-    FutureProduct:
-      type: object
-      properties:
-        active-months:
-          description: ''
-          type: string
-        back-month-first-calendar-symbol:
-          description: ''
-          type: boolean
-        base-tick:
-          description: ''
-          type: integer
-          format: int32
-        cash-settled:
-          description: ''
-          type: boolean
-        code:
-          description: ''
-          type: string
-        contract-limit:
-          description: ''
-          type: integer
-          format: int32
-        description:
-          description: ''
-          type: string
-        display-factor:
-          description: ''
-          type: number
-          format: double
-        exchange:
-          description: ''
-          type: string
-        first-notice:
-          description: ''
-          type: boolean
-        listed-months:
-          description: ''
-          type: string
-        market-sector:
-          description: ''
-          type: string
-        notional-multiplier:
-          description: ''
-          type: number
-          format: double
-        price-format:
-          description: ''
-          type: string
-        product-subtype:
-          description: ''
-          type: string
-        product-type:
-          description: ''
-          type: string
-        security-group:
-          description: ''
-          type: string
-        small-notional:
-          description: ''
-          type: boolean
-        streamer-exchange-code:
-          description: ''
-          type: string
-        sub-tick:
-          description: ''
-          type: integer
-          format: int32
-        supported:
-          description: ''
-          type: boolean
-        root-symbol:
-          description: ''
-          type: string
-        tick-size:
-          description: ''
-          type: number
-          format: double
-        true-underlying-code:
-          description: ''
-          type: string
-        underlying-description:
-          description: ''
-          type: string
-        underlying-identifier:
-          description: ''
-          type: string
-      description: FutureProduct model
-    Cryptocurrency:
-      type: object
-      properties:
-        id:
-          description: ''
-          type: integer
-          format: int32
-        active:
-          description: ''
-          type: boolean
-        description:
-          description: ''
-          type: string
-        instrument-type:
-          description: ''
-          type: string
-        is-closing-only:
-          description: ''
-          type: boolean
-        short-description:
-          description: ''
-          type: string
-        streamer-symbol:
-          description: ''
-          type: string
-        symbol:
-          description: ''
-          type: string
-        tick-size:
-          description: ''
-          type: number
-          format: double
-      description: Cryptocurrency model
     FutureOption:
       type: object
       properties:
@@ -1319,33 +1315,16 @@ components:
               description: ''
               type: boolean
       description: FutureOption model
-    Equity:
+    Warrant:
       type: object
       properties:
         active:
           description: ''
           type: boolean
-        borrow-rate:
-          description: ''
-          type: number
-          format: double
-        bypass-manual-review:
-          description: ''
-          type: boolean
-        country-of-incorporation:
-          description: ''
-          type: string
-        country-of-taxation:
+        cusip:
           description: ''
           type: string
         description:
-          description: ''
-          type: string
-        halted-at:
-          description: ''
-          type: string
-          format: date-time
-        instrument-sub-type:
           description: ''
           type: string
         instrument-type:
@@ -1354,77 +1333,98 @@ components:
         is-closing-only:
           description: ''
           type: boolean
-        is-etf:
-          description: ''
-          type: boolean
-        is-fractional-quantity-eligible:
-          description: ''
-          type: boolean
-        is-illiquid:
-          description: ''
-          type: boolean
-        is-index:
-          description: ''
-          type: boolean
-        is-options-closing-only:
-          description: ''
-          type: boolean
-        lendability:
-          description: ''
-          type: string
         listed-market:
-          description: ''
-          type: string
-        market-time-instrument-collection:
-          description: ''
-          type: string
-        overnight-trading-permitted:
-          description: ''
-          type: boolean
-        short-description:
-          description: ''
-          type: string
-        stops-trading-at:
-          description: ''
-          type: string
-          format: date-time
-        streamer-symbol:
           description: ''
           type: string
         symbol:
           description: ''
           type: string
-        underlying-product-type:
+      description: Warrant model
+    FutureProduct:
+      type: object
+      properties:
+        active-months:
           description: ''
           type: string
-        option-tick-sizes:
+        back-month-first-calendar-symbol:
           description: ''
-          type: object
-          properties:
-            symbol:
-              description: ''
-              type: string
-            threshold:
-              description: ''
-              type: number
-              format: double
-            value:
-              description: ''
-              type: number
-              format: double
-        tick-sizes:
+          type: boolean
+        base-tick:
           description: ''
-          type: object
-          properties:
-            symbol:
-              description: ''
-              type: string
-            threshold:
-              description: ''
-              type: number
-              format: double
-            value:
-              description: ''
-              type: number
-              format: double
-      description: Equity model
+          type: integer
+          format: int32
+        cash-settled:
+          description: ''
+          type: boolean
+        code:
+          description: ''
+          type: string
+        contract-limit:
+          description: ''
+          type: integer
+          format: int32
+        description:
+          description: ''
+          type: string
+        display-factor:
+          description: ''
+          type: number
+          format: double
+        exchange:
+          description: ''
+          type: string
+        first-notice:
+          description: ''
+          type: boolean
+        listed-months:
+          description: ''
+          type: string
+        market-sector:
+          description: ''
+          type: string
+        notional-multiplier:
+          description: ''
+          type: number
+          format: double
+        price-format:
+          description: ''
+          type: string
+        product-subtype:
+          description: ''
+          type: string
+        product-type:
+          description: ''
+          type: string
+        security-group:
+          description: ''
+          type: string
+        small-notional:
+          description: ''
+          type: boolean
+        streamer-exchange-code:
+          description: ''
+          type: string
+        sub-tick:
+          description: ''
+          type: integer
+          format: int32
+        supported:
+          description: ''
+          type: boolean
+        root-symbol:
+          description: ''
+          type: string
+        tick-size:
+          description: ''
+          type: number
+          format: double
+        true-underlying-code:
+          description: ''
+          type: string
+        underlying-description:
+          description: ''
+          type: string
+        underlying-identifier:
+          description: ''
+          type: string
+      description: FutureProduct model
