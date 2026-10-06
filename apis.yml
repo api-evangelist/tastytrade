@@ -59,7 +59,7 @@ tags_raw:
   - Financial Services
 url: https://raw.githubusercontent.com/api-evangelist/tastytrade/refs/heads/main/apis.yml
 created: "2026-06-13"
-modified: "2026-06-13"
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - name: tastytrade DXLink Market Data Streaming API
@@ -970,6 +970,8 @@ apis:
   - type: RateLimits
     url: rate-limits/rate-limits.yml
 common:
+  - url: https://tastytrade.com/newsroom/
+    type: Blog
   - type: AgenticAccess
     url: agentic-access/tastytrade-agentic-access.yml
   - type: DomainSecurity
