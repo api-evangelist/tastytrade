@@ -50,3 +50,21 @@ plans:
       - Shared support channels with tastytrade engineering
       - Priority technical support
     cost: Contact for details
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: Open API (Standard)
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Partner Program
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
