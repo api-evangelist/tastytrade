@@ -603,34 +603,18 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    EquityOption:
+    Warrant:
       type: object
       properties:
         active:
           description: ''
           type: boolean
-        days-to-expiration:
-          description: ''
-          type: integer
-          format: int32
-        exercise-style:
+        cusip:
           description: ''
           type: string
-        expiration-date:
+        description:
           description: ''
           type: string
-          format: date
-        expiration-type:
-          description: ''
-          type: string
-        expires-at:
-          description: ''
-          type: string
-          format: date-time
-        halted-at:
-          description: ''
-          type: string
-          format: date-time
         instrument-type:
           description: ''
           type: string
@@ -640,53 +624,34 @@ components:
         listed-market:
           description: ''
           type: string
-        market-time-instrument-collection:
-          description: ''
-          type: string
-        old-security-number:
-          description: ''
-          type: string
-        option-chain-type:
-          description: ''
-          type: string
-        option-type:
-          description: ''
-          type: string
-        root-symbol:
-          description: ''
-          type: string
-        settlement-type:
-          description: ''
-          type: string
-        shares-per-contract:
-          description: ''
-          type: integer
-          format: int32
-        stops-trading-at:
-          description: ''
-          type: string
-          format: date-time
-        streamer-symbol:
-          description: ''
-          type: string
-        strike-price:
-          description: ''
-          type: number
-          format: double
         symbol:
           description: ''
           type: string
-        underlying-symbol:
-          description: ''
-          type: string
-      description: EquityOption model
-    FutureOptionProduct:
+      description: Warrant model
+    FutureProduct:
       type: object
       properties:
+        active-months:
+          description: ''
+          type: string
+        back-month-first-calendar-symbol:
+          description: ''
+          type: boolean
+        base-tick:
+          description: ''
+          type: integer
+          format: int32
         cash-settled:
           description: ''
           type: boolean
         code:
+          description: ''
+          type: string
+        contract-limit:
+          description: ''
+          type: integer
+          format: int32
+        description:
           description: ''
           type: string
         display-factor:
@@ -696,16 +661,20 @@ components:
         exchange:
           description: ''
           type: string
-        expiration-type:
-          description: ''
-          type: string
-        is-am-settled:
+        first-notice:
           description: ''
           type: boolean
-        itm-rule:
+        listed-months:
           description: ''
           type: string
         market-sector:
+          description: ''
+          type: string
+        notional-multiplier:
+          description: ''
+          type: number
+          format: double
+        price-format:
           description: ''
           type: string
         product-subtype:
@@ -714,17 +683,39 @@ components:
         product-type:
           description: ''
           type: string
-        root-symbol:
+        security-group:
           description: ''
           type: string
-        settlement-delay-days:
+        small-notional:
+          description: ''
+          type: boolean
+        streamer-exchange-code:
+          description: ''
+          type: string
+        sub-tick:
           description: ''
           type: integer
           format: int32
         supported:
           description: ''
           type: boolean
-      description: FutureOptionProduct model
+        root-symbol:
+          description: ''
+          type: string
+        tick-size:
+          description: ''
+          type: number
+          format: double
+        true-underlying-code:
+          description: ''
+          type: string
+        underlying-description:
+          description: ''
+          type: string
+        underlying-identifier:
+          description: ''
+          type: string
+      description: FutureProduct model
     Equity:
       type: object
       properties:
@@ -834,39 +825,6 @@ components:
               type: number
               format: double
       description: Equity model
-    Cryptocurrency:
-      type: object
-      properties:
-        id:
-          description: ''
-          type: integer
-          format: int32
-        active:
-          description: ''
-          type: boolean
-        description:
-          description: ''
-          type: string
-        instrument-type:
-          description: ''
-          type: string
-        is-closing-only:
-          description: ''
-          type: boolean
-        short-description:
-          description: ''
-          type: string
-        streamer-symbol:
-          description: ''
-          type: string
-        symbol:
-          description: ''
-          type: string
-        tick-size:
-          description: ''
-          type: number
-          format: double
-      description: Cryptocurrency model
     QuantityDecimalPrecision:
       type: object
       properties:
@@ -885,6 +843,202 @@ components:
           type: integer
           format: int32
       description: QuantityDecimalPrecision model
+    FutureOptionProduct:
+      type: object
+      properties:
+        cash-settled:
+          description: ''
+          type: boolean
+        code:
+          description: ''
+          type: string
+        display-factor:
+          description: ''
+          type: number
+          format: double
+        exchange:
+          description: ''
+          type: string
+        expiration-type:
+          description: ''
+          type: string
+        is-am-settled:
+          description: ''
+          type: boolean
+        itm-rule:
+          description: ''
+          type: string
+        market-sector:
+          description: ''
+          type: string
+        product-subtype:
+          description: ''
+          type: string
+        product-type:
+          description: ''
+          type: string
+        root-symbol:
+          description: ''
+          type: string
+        settlement-delay-days:
+          description: ''
+          type: integer
+          format: int32
+        supported:
+          description: ''
+          type: boolean
+      description: FutureOptionProduct model
+    FutureOption:
+      type: object
+      properties:
+        active:
+          description: ''
+          type: boolean
+        days-to-expiration:
+          description: ''
+          type: integer
+          format: int32
+        display-factor:
+          description: ''
+          type: number
+          format: double
+        exchange:
+          description: ''
+          type: string
+        exercise-style:
+          description: ''
+          type: string
+        expiration-date:
+          description: ''
+          type: string
+          format: date
+        expires-at:
+          description: ''
+          type: string
+          format: date-time
+        future-price-ratio:
+          description: ''
+          type: number
+          format: double
+        is-closing-only:
+          description: ''
+          type: boolean
+        is-confirmed:
+          description: ''
+          type: boolean
+        is-exercisable-weekly:
+          description: ''
+          type: boolean
+        is-primary-deliverable:
+          description: ''
+          type: boolean
+        is-vanilla:
+          description: ''
+          type: boolean
+        last-trade-time:
+          description: ''
+          type: string
+        maturity-date:
+          description: ''
+          type: string
+          format: date
+        multiplier:
+          description: ''
+          type: number
+          format: double
+        notional-value:
+          description: ''
+          type: number
+          format: double
+        option-root-symbol:
+          description: ''
+          type: string
+        option-type:
+          description: ''
+          type: string
+        product-code:
+          description: ''
+          type: string
+        root-symbol:
+          description: ''
+          type: string
+        security-id:
+          description: ''
+          type: string
+        settlement-type:
+          description: ''
+          type: string
+        stops-trading-at:
+          description: ''
+          type: string
+          format: date-time
+        streamer-symbol:
+          description: ''
+          type: string
+        strike-factor:
+          description: ''
+          type: number
+          format: double
+        strike-price:
+          description: ''
+          type: number
+          format: double
+        symbol:
+          description: ''
+          type: string
+        underlying-count:
+          description: ''
+          type: number
+          format: double
+        underlying-symbol:
+          description: ''
+          type: string
+        future-option-product:
+          description: ''
+          type: object
+          properties:
+            cash-settled:
+              description: ''
+              type: boolean
+            code:
+              description: ''
+              type: string
+            display-factor:
+              description: ''
+              type: number
+              format: double
+            exchange:
+              description: ''
+              type: string
+            expiration-type:
+              description: ''
+              type: string
+            is-am-settled:
+              description: ''
+              type: boolean
+            itm-rule:
+              description: ''
+              type: string
+            market-sector:
+              description: ''
+              type: string
+            product-subtype:
+              description: ''
+              type: string
+            product-type:
+              description: ''
+              type: string
+            root-symbol:
+              description: ''
+              type: string
+            settlement-delay-days:
+              description: ''
+              type: integer
+              format: int32
+            supported:
+              description: ''
+              type: boolean
+      description: FutureOption model
     SearchableInstrumentDeserializer:
       type: object
       properties:
@@ -920,6 +1074,39 @@ components:
           description: ''
           type: string
       description: SearchableInstrumentDeserializer model
+    Cryptocurrency:
+      type: object
+      properties:
+        id:
+          description: ''
+          type: integer
+          format: int32
+        active:
+          description: ''
+          type: boolean
+        description:
+          description: ''
+          type: string
+        instrument-type:
+          description: ''
+          type: string
+        is-closing-only:
+          description: ''
+          type: boolean
+        short-description:
+          description: ''
+          type: string
+        streamer-symbol:
+          description: ''
+          type: string
+        symbol:
+          description: ''
+          type: string
+        tick-size:
+          description: ''
+          type: number
+          format: double
+      description: Cryptocurrency model
     Future:
       type: object
       properties:
@@ -1164,7 +1351,7 @@ components:
               type: number
               format: double
       description: Future model
-    FutureOption:
+    EquityOption:
       type: object
       properties:
         active:
@@ -1174,13 +1361,6 @@ components:
           description: ''
           type: integer
           format: int32
-        display-factor:
-          description: ''
-          type: number
-          format: double
-        exchange:
-          description: ''
-          type: string
         exercise-style:
           description: ''
           type: string
@@ -1188,145 +1368,17 @@ components:
           description: ''
           type: string
           format: date
+        expiration-type:
+          description: ''
+          type: string
         expires-at:
           description: ''
           type: string
           format: date-time
-        future-price-ratio:
-          description: ''
-          type: number
-          format: double
-        is-closing-only:
-          description: ''
-          type: boolean
-        is-confirmed:
-          description: ''
-          type: boolean
-        is-exercisable-weekly:
-          description: ''
-          type: boolean
-        is-primary-deliverable:
-          description: ''
-          type: boolean
-        is-vanilla:
-          description: ''
-          type: boolean
-        last-trade-time:
-          description: ''
-          type: string
-        maturity-date:
-          description: ''
-          type: string
-          format: date
-        multiplier:
-          description: ''
-          type: number
-          format: double
-        notional-value:
-          description: ''
-          type: number
-          format: double
-        option-root-symbol:
-          description: ''
-          type: string
-        option-type:
-          description: ''
-          type: string
-        product-code:
-          description: ''
-          type: string
-        root-symbol:
-          description: ''
-          type: string
-        security-id:
-          description: ''
-          type: string
-        settlement-type:
-          description: ''
-          type: string
-        stops-trading-at:
+        halted-at:
           description: ''
           type: string
           format: date-time
-        streamer-symbol:
-          description: ''
-          type: string
-        strike-factor:
-          description: ''
-          type: number
-          format: double
-        strike-price:
-          description: ''
-          type: number
-          format: double
-        symbol:
-          description: ''
-          type: string
-        underlying-count:
-          description: ''
-          type: number
-          format: double
-        underlying-symbol:
-          description: ''
-          type: string
-        future-option-product:
-          description: ''
-          type: object
-          properties:
-            cash-settled:
-              description: ''
-              type: boolean
-            code:
-              description: ''
-              type: string
-            display-factor:
-              description: ''
-              type: number
-              format: double
-            exchange:
-              description: ''
-              type: string
-            expiration-type:
-              description: ''
-              type: string
-            is-am-settled:
-              description: ''
-              type: boolean
-            itm-rule:
-              description: ''
-              type: string
-            market-sector:
-              description: ''
-              type: string
-            product-subtype:
-              description: ''
-              type: string
-            product-type:
-              description: ''
-              type: string
-            root-symbol:
-              description: ''
-              type: string
-            settlement-delay-days:
-              description: ''
-              type: integer
-              format: int32
-            supported:
-              description: ''
-              type: boolean
-      description: FutureOption model
-    Warrant:
-      type: object
-      properties:
-        active:
-          description: ''
-          type: boolean
-        cusip:
-          description: ''
-          type: string
-        description:
-          description: ''
-          type: string
         instrument-type:
           description: ''
           type: string
@@ -1336,95 +1388,43 @@ components:
         listed-market:
           description: ''
           type: string
-        symbol:
+        market-time-instrument-collection:
           description: ''
           type: string
-      description: Warrant model
-    FutureProduct:
-      type: object
-      properties:
-        active-months:
+        old-security-number:
           description: ''
           type: string
-        back-month-first-calendar-symbol:
-          description: ''
-          type: boolean
-        base-tick:
-          description: ''
-          type: integer
-          format: int32
-        cash-settled:
-          description: ''
-          type: boolean
-        code:
+        option-chain-type:
           description: ''
           type: string
-        contract-limit:
-          description: ''
-          type: integer
-          format: int32
-        description:
+        option-type:
           description: ''
           type: string
-        display-factor:
-          description: ''
-          type: number
-          format: double
-        exchange:
-          description: ''
-          type: string
-        first-notice:
-          description: ''
-          type: boolean
-        listed-months:
-          description: ''
-          type: string
-        market-sector:
-          description: ''
-          type: string
-        notional-multiplier:
-          description: ''
-          type: number
-          format: double
-        price-format:
-          description: ''
-          type: string
-        product-subtype:
-          description: ''
-          type: string
-        product-type:
-          description: ''
-          type: string
-        security-group:
-          description: ''
-          type: string
-        small-notional:
-          description: ''
-          type: boolean
-        streamer-exchange-code:
-          description: ''
-          type: string
-        sub-tick:
-          description: ''
-          type: integer
-          format: int32
-        supported:
-          description: ''
-          type: boolean
         root-symbol:
           description: ''
           type: string
-        tick-size:
+        settlement-type:
+          description: ''
+          type: string
+        shares-per-contract:
+          description: ''
+          type: integer
+          format: int32
+        stops-trading-at:
+          description: ''
+          type: string
+          format: date-time
+        streamer-symbol:
+          description: ''
+          type: string
+        strike-price:
           description: ''
           type: number
           format: double
-        true-underlying-code:
+        symbol:
           description: ''
           type: string
-        underlying-description:
+        underlying-symbol:
           description: ''
           type: string
-        underlying-identifier:
-          description: ''
-          type: string
-      description: FutureProduct model
+      description: EquityOption model

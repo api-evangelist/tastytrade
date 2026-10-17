@@ -396,7 +396,30 @@ components:
           description: ''
           type: string
       description: CurrentSessionDeserializer model
-    PreviousSession:
+    SimpleSessionDeserializer:
+      type: object
+      properties:
+        close-at:
+          description: ''
+          type: string
+          format: date-time
+        close-at-ext:
+          description: ''
+          type: string
+          format: date-time
+        instrument-collection:
+          description: ''
+          type: string
+        open-at:
+          description: ''
+          type: string
+          format: date-time
+        start-at:
+          description: ''
+          type: string
+          format: date-time
+      description: SimpleSessionDeserializer model
+    NextSession:
       type: object
       properties:
         close-at:
@@ -422,7 +445,7 @@ components:
           description: ''
           type: string
           format: date-time
-      description: PreviousSession model
+      description: NextSession model
     CurrentSession:
       type: object
       properties:
@@ -503,7 +526,7 @@ components:
           description: ''
           type: string
       description: CurrentSession model
-    NextSession:
+    PreviousSession:
       type: object
       properties:
         close-at:
@@ -529,27 +552,4 @@ components:
           description: ''
           type: string
           format: date-time
-      description: NextSession model
-    SimpleSessionDeserializer:
-      type: object
-      properties:
-        close-at:
-          description: ''
-          type: string
-          format: date-time
-        close-at-ext:
-          description: ''
-          type: string
-          format: date-time
-        instrument-collection:
-          description: ''
-          type: string
-        open-at:
-          description: ''
-          type: string
-          format: date-time
-        start-at:
-          description: ''
-          type: string
-          format: date-time
-      description: SimpleSessionDeserializer model
+      description: PreviousSession model
