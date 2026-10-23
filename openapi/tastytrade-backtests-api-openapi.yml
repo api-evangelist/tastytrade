@@ -349,3 +349,9 @@ components:
       description: Backtest not found
     '500':
       description: Failed to process request
+x-provenance:
+  method: harvested
+  publisher: tastytrade
+  source: https://backtester.vast.tastyworks.com/openapi.yaml
+  note: split by refine-openapis from the provider's own published document, verified by fetch (openapi/_original/*.fetch.json);
+    stamped by stamp-openapi-provenance.py (roadmap#793)

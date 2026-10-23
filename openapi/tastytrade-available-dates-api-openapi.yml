@@ -45,3 +45,9 @@ components:
           type: string
         endDate:
           type: string
+x-provenance:
+  method: harvested
+  publisher: tastytrade
+  source: https://backtester.vast.tastyworks.com/openapi.yaml
+  note: split by refine-openapis from the provider's own published document, verified by fetch (openapi/_original/*.fetch.json);
+    stamped by stamp-openapi-provenance.py (roadmap#793)
